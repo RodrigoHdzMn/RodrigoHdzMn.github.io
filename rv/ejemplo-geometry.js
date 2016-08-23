@@ -15,7 +15,7 @@ forma.faces.push(new THREE.Face3(0,1,4));
 forma.faces.push(new THREE.Face3(1,2,4));
 forma.faces.push(new THREE.Face3(2,3,4));
 
-<!-- Se solicita el computo de la esfera de menor tamaño que acota al objeto-- >
+<!-- Se solicita el computo de la esfera de menor tamaño que acota al objeto-->
 forma.computeBoundingSphere();
 <!--Tipo de material al usar, se computan las normales de las caras -->
 forma.computeFaceNormals();
