@@ -8,7 +8,7 @@ figura.lineTo(10,40);
 figura.lineTo(40,40);
 figura.lineTo(10,10);
 
-var forma= new THREE.ExtrudeGeometry(figura,{amount:10});
+var forma= new THREE.ExtrudeGeometry(figura,{amount:50});
 //amoun->literal de objeto 
 
 var material=new THREE.MeshNormalMaterial();
