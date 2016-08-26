@@ -16,7 +16,7 @@ var circulo = new THREE.Mesh(forma, material);
 
 //cubo.rotateX(-Math.PI/4); 
 //circulo.rotateY(Math.PI/4);
-circulo.translateOnAxis(axisY,2);
+circulo.translate(0,2);
 escena.add(circulo);
 
 renderizador.render(escena,camara);
