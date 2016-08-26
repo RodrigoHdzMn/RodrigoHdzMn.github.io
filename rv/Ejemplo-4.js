@@ -9,7 +9,7 @@ renderizador.setSize( window.innerHeight*.95,
 			
 document.body.appendChild (renderizador.domElement);
 
-var forma = new THREE.CircleGeometry (1);
+var forma = new THREE.CircleGeometry (1,64);//radio,num de triangulos
 var material = new THREE.MeshNormalMaterial(); 
 var circulo = new THREE.Mesh(forma, material);
 
