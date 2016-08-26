@@ -1,8 +1,8 @@
 var escena = new THREE.Scene();
 
 var camara = new THREE.PerspectiveCamera();
-camara.position.z = 20;
-camara.position.y = 2;
+camara.position.z = 5;
+
 
 var renderizador = new THREE.WebGLRenderer();
 renderizador.setSize( window.innerHeight*.95,
@@ -16,6 +16,7 @@ var circulo = new THREE.Mesh(forma, material);
 
 //cubo.rotateX(-Math.PI/4); 
 //circulo.rotateY(Math.PI/4);
+circulo.translate(0,3);
 escena.add(circulo);
 
 renderizador.render(escena,camara);
