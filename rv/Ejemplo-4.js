@@ -6,8 +6,8 @@ camara.position.z = 10;
 
 
 var renderizador = new THREE.WebGLRenderer();
-renderizador.setSize( window.innerHeight*.95,
-                    	window.innerHeight*.95);
+renderizador.setSize( window.innerHeight*.75,
+                    	window.innerHeight*.75);
 			
 document.body.appendChild (renderizador.domElement);
 
