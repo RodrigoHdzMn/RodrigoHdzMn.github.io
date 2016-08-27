@@ -19,7 +19,7 @@ escena.add(rectangulo);
 var forma = new THREE.CircleGeometry (1,64);//radio,num de triangulos
 var material_1 = new THREE.MeshBasicMaterial({color: 0x0adc6d}); 
 var circulo = new THREE.Mesh(forma, material_1);
-circulo.translate(0,0.2,0);
+circulo.translate(0,2,0);
 escena.add(circulo);
 
 renderizador.render(escena,camara);
