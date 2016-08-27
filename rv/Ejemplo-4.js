@@ -16,7 +16,7 @@ var circulo = new THREE.Mesh(forma, material);
 escena.add(circulo);
 
 var forma2 = new THREE.BoxGeometry (1,4);
-var rectangulo = new THREE.Mesh(forma, material);
+var rectangulo = new THREE.Mesh(forma2, material);
 escena.add(rectangulo);
 //cubo.rotateX(-Math.PI/4); 
 //circulo.rotateY(Math.PI/4);
