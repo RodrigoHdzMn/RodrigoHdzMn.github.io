@@ -12,11 +12,11 @@ renderizador.setSize( window.innerHeight*.95,
 document.body.appendChild (renderizador.domElement);
 
 var forma = new THREE.CircleGeometry (1,64);//radio,num de triangulos
-var material_1 = new THREE.MeshBasicMaterial({color: #0adc6d}); 
+var material_1 = new THREE.MeshBasicMaterial({color: 0adc6d}); 
 var circulo = new THREE.Mesh(forma, material_1);
 
 var forma2 = new THREE.BoxGeometry (1,4);
-var material_2 = new THREE.MeshBasicMaterial({color: #75461c}); 
+var material_2 = new THREE.MeshBasicMaterial({color: 75461c}); 
 var rectangulo = new THREE.Mesh(forma2, material_2);
 
 escena.add(rectangulo);
