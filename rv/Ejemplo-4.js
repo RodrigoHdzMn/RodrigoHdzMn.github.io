@@ -16,8 +16,8 @@ var material_2 = new THREE.MeshBasicMaterial({color: 0x75461c});
 var rectangulo = new THREE.Mesh(forma2, material_2);
 escena.add(rectangulo);
 
-//var geometry1 = new THREE.SphereGeometry( 3, 32, 32 );
-var forma = new THREE.CircleGeometry (1,64);//radio,num de triangulos
+
+var forma = new THREE.SphereGeometry( 3, 64, 32 );
 var material_1 = new THREE.MeshBasicMaterial({color: 0x0adc6d}); 
 var circulo = new THREE.Mesh(forma, material_1);
 circulo.translate(0,1,0);
