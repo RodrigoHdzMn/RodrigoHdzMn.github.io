@@ -17,7 +17,7 @@ var circulo = new THREE.Mesh(forma, material);
 var forma2 = new THREE.BoxGeometry (1,4);
 var rectangulo = new THREE.Mesh(forma2, material);
 
-escena.add(circulo);
 escena.add(rectangulo);
+escena.add(circulo);
 
 renderizador.render(escena,camara);
