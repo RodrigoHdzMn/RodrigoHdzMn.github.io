@@ -2,7 +2,7 @@ var escena = new THREE.Scene();
 
 var camara = new THREE.PerspectiveCamera();
 camara.position.z = 5;
-camara.position.y = 1;
+//camara.position.y = 1;
 
 
 var renderizador = new THREE.WebGLRenderer();
@@ -19,7 +19,7 @@ escena.add(rectangulo);
 var forma = new THREE.CircleGeometry (1,64);//radio,num de triangulos
 var material_1 = new THREE.MeshBasicMaterial({color: 0x0adc6d}); 
 var circulo = new THREE.Mesh(forma, material_1);
-
+circulo.translate(0,1,0);
 escena.add(circulo);
 
 renderizador.render(escena,camara);
