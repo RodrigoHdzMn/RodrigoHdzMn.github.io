@@ -14,6 +14,7 @@ document.body.appendChild (renderizador.domElement);
 var forma2 = new THREE.BoxGeometry (1,4);
 var material_2 = new THREE.MeshBasicMaterial({color: 0x75461c}); 
 var rectangulo = new THREE.Mesh(forma2, material_2);
+forma2.translate(0,-0.5,0);
 escena.add(rectangulo);
 
 
