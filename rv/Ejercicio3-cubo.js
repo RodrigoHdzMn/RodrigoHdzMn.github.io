@@ -1,5 +1,5 @@
 
-var forma=new THREE.Geomtetry();
+var forma=new THREE.Geometry();
 //Coordenadas de los vértices
 forma.vertices.push(  new THREE.Vector3(1,1,1) );
 forma.vertices.push(  new THREE.Vector3(1,1,-1) );
