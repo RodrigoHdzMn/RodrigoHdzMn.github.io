@@ -19,10 +19,10 @@ forma.vertices.push(  new THREE.Vector3(-1,-1,-1) );
 //forma.faces.push(  new THREE.Face3(0,6,1) );
 //forma.faces.push(  new THREE.Face3(1,2,7) );
 //forma.faces.push(  new THREE.Face3(1,7,6) );
-forma.faces.push(  new THREE.Face3(7,4,2) );
-forma.faces.push(  new THREE.Face3(2,4,3) );
-//forma.faces.push(  new THREE.Face3(2,3,4) );
-//forma.faces.push(  new THREE.Face3(4,2,7) );
+//forma.faces.push(  new THREE.Face3(7,4,2) );bn
+//forma.faces.push(  new THREE.Face3(2,4,3) );bn
+forma.faces.push(  new THREE.Face3(7,4,5) );
+forma.faces.push(  new THREE.Face3(7,6,5) );
 
 //Se solicita el computo de la esfera de menor tamaño que acota al objeto
 forma.computeBoundingSphere();
