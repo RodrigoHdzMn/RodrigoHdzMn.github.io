@@ -22,7 +22,7 @@ forma.vertices.push(  new THREE.Vector3(-1,-1,-1) );
 //forma.faces.push(  new THREE.Face3(7,4,2) );bn
 //forma.faces.push(  new THREE.Face3(2,4,3) );bn
 forma.faces.push(  new THREE.Face3(7,4,5) );
-forma.faces.push(  new THREE.Face3(7,6,5) );
+forma.faces.push(  new THREE.Face3(7,5,6) );
 
 //Se solicita el computo de la esfera de menor tamaño que acota al objeto
 forma.computeBoundingSphere();
