@@ -19,12 +19,12 @@ forma.vertices.push(  new THREE.Vector3(-1,-1,-1) );
 
 //forma.faces.push(  new THREE.Face3(0,5,6) );
 //forma.faces.push(  new THREE.Face3(0,6,1) );
-
+//atras I
 forma.faces.push(  new THREE.Face3(1,2,7) );
 forma.faces.push(  new THREE.Face3(1,7,6) );
 
-//forma.faces.push(  new THREE.Face3(7,4,2) );
-//forma.faces.push(  new THREE.Face3(2,4,3) );
+forma.faces.push(  new THREE.Face3(7,4,2) );
+forma.faces.push(  new THREE.Face3(2,4,3) );
 //abajo
 forma.faces.push(  new THREE.Face3(7,4,5) );
 forma.faces.push(  new THREE.Face3(7,5,6) );
