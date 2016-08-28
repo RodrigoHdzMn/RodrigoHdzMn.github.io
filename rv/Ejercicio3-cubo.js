@@ -14,7 +14,7 @@ forma.vertices.push(  new THREE.Vector3(-1,-1,-1) );
 //forma.faces.push(  new THREE.Face3(0,1,2) );
 //forma.faces.push(  new THREE.Face3(0,2,3) );
 forma.faces.push(  new THREE.Face3(0,3,4) );
-//forma.faces.push(  new THREE.Face3(0,4,5) );
+forma.faces.push(  new THREE.Face3(0,4,5) );
 //forma.faces.push(  new THREE.Face3(0,5,6) );
 //forma.faces.push(  new THREE.Face3(0,6,1) );
 //forma.faces.push(  new THREE.Face3(1,7,2) );
