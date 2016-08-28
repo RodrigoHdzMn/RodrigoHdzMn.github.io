@@ -20,7 +20,7 @@ forma.vertices.push(  new THREE.Vector3(-1,-1,-1) );
 //forma.faces.push(  new THREE.Face3(1,2,7) );
 //forma.faces.push(  new THREE.Face3(1,7,6) );
 forma.faces.push(  new THREE.Face3(7,4,2) );
-forma.faces.push(  new THREE.Face3(7,5,6) );
+forma.faces.push(  new THREE.Face3(2,3,4) );
 //forma.faces.push(  new THREE.Face3(2,3,4) );
 //forma.faces.push(  new THREE.Face3(4,2,7) );
 
