@@ -11,8 +11,9 @@ forma.vertices.push(  new THREE.Vector3(1,-1,-1) );
 forma.vertices.push(  new THREE.Vector3(-1,-1,-1) );
 
 //Contruyendo las caras con los vértices
-//forma.faces.push(  new THREE.Face3(0,1,2) );
-//forma.faces.push(  new THREE.Face3(0,2,3) );
+//tapa
+forma.faces.push(  new THREE.Face3(0,1,2) );
+forma.faces.push(  new THREE.Face3(0,2,3) );
 //Frente D
 forma.faces.push(  new THREE.Face3(0,3,4) );
 forma.faces.push(  new THREE.Face3(0,4,5) );
