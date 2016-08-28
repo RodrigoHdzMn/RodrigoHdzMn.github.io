@@ -22,7 +22,7 @@ forma.vertices.push(  new THREE.Vector3(-1,-1,-1) );
 //atras I
 forma.faces.push(  new THREE.Face3(1,2,7) );
 forma.faces.push(  new THREE.Face3(1,7,6) );
-
+//frente I
 forma.faces.push(  new THREE.Face3(7,4,2) );
 forma.faces.push(  new THREE.Face3(2,4,3) );
 //abajo
