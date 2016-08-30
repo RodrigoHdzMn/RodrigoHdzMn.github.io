@@ -3,7 +3,7 @@ var baseForma= new THREE.CylinderGeometry(.02, .5, 1 );
 var esferaForma= new THREE.SphereGeometry(.65);
 esferaForma.translate(0,1,0);
 
-var baseMalla=new THREE.Mesh(troncoForma);
+var baseMalla=new THREE.Mesh(baseForma);
 var esferaMalla=new THREE.Mesh(esferaForma);
 
 var arbolForma=new THREE.Geometry();
