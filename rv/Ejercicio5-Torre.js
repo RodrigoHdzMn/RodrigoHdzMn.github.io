@@ -1,5 +1,5 @@
 
-var baseForma= new THREE.CylinderGeometry(.02, .01, 1 );
+var baseForma= new THREE.CylinderGeometry(.02, .1, 0.3 );
 var esferaForma= new THREE.SphereGeometry(.65);
 esferaForma.translate(0,1,0);
 
