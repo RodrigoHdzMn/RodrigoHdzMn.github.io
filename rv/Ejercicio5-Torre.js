@@ -1,15 +1,20 @@
 
 var baseForma= new THREE.CylinderGeometry(.6, .6, 0.3,60 );
-var esferaForma= new THREE.SphereGeometry(.65);
 esferaForma.translate(0,2,0);
 
+var points = [];
+for ( var i = 0; i < 10; i ++ ) {
+	points.push( new THREE.Vector2( Math.sin( i * 0.2 ) * 10 + 5, ( i - 5 ) * 2 ) );
+}
+var forma2 = new THREE.LatheGeometry( points );
+
 var baseMalla=new THREE.Mesh(baseForma);
-var esferaMalla=new THREE.Mesh(esferaForma);
+var forma2Malla=new THREE.Mesh(forma2);
 
 var torreForma=new THREE.Geometry();
 
 torreForma.merge(baseMalla.geometry, baseMalla.matrix);
-torreForma.merge(esferaMalla.geometry, esferaMalla.matrix);
+torreForma.merge(forma2Malla.geometry, formaMalla.matrix);
 
 var material=new THREE.MeshNormalMaterial();
 var torreMalla= new THREE.Mesh(torreForma,material);
