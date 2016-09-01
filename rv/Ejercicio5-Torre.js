@@ -1,15 +1,28 @@
+
+var baseForma= new THREE.CylinderGeometry(.6, .6, 0.3,60 );
+esferaForma.translate(0,2,0);
+
 var points = [];
 for ( var i = 0; i < 10; i ++ ) {
-	var x= Math.sin( i * 0.2 ) * 10 + 5;
-	var y=( i - 5 ) * 2;
-	points.push( new THREE.Vector2(  x , y  ) );
+	points.push( new THREE.Vector2( Math.sin( i * 0.02 ) * 10 + .5, ( i - .5 ) * 2 ) );
 }
-var geometry = new THREE.LatheGeometry( points,60 );
-var material = new THREE.MeshNormalMaterial(  );
-var lathe = new THREE.Mesh( geometry, material );
+var forma2 = new THREE.LatheGeometry( points );
+
+var baseMalla=new THREE.Mesh(baseForma);
+var forma2Malla=new THREE.Mesh(forma2);
+
+var torreForma=new THREE.Geometry();
+
+torreForma.merge(baseMalla.geometry, baseMalla.matrix);
+torreForma.merge(forma2Malla.geometry, forma2Malla.matrix);
+
+var material=new THREE.MeshNormalMaterial();
+var torreMalla= new THREE.Mesh(torreForma,material);
+
+torreMalla.rotateX(Math.PI/8);
 
 var escena=new THREE.Scene();
-escena.add(lathe);
+escena.add(torreMalla);
 
 var camara=new THREE.PerspectiveCamera();
 camara.position.z=5;
