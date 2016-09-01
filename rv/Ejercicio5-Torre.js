@@ -5,7 +5,9 @@ for ( var i = 0; i < 10; i ++ ) {
 var geometry = new THREE.LatheGeometry( points,60 );
 var material = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
 var lathe = new THREE.Mesh( geometry, material );
-scene.add( lathe );
+
+var escena=new THREE.Scene();
+escena.add(lathe);
 
 var camara=new THREE.PerspectiveCamera();
 camara.position.z=5;
