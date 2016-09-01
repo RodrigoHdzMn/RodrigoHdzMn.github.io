@@ -1,7 +1,7 @@
 
 var baseForma= new THREE.CylinderGeometry(.4, .4, 0.3 );
 var esferaForma= new THREE.SphereGeometry(.65);
-esferaForma.translate(0,1,0);
+esferaForma.translate(0,2,0);
 
 var baseMalla=new THREE.Mesh(baseForma);
 var esferaMalla=new THREE.Mesh(esferaForma);
