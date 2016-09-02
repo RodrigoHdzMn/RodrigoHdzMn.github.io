@@ -5,7 +5,7 @@ var figura =new THREE.Shape();
 figura.moveTo(20,10);
 figura.lineTo(60,100);
 figura.lineTo(100,10);
-figura.lineTo(40,50);
+figura.lineTo(60,35);
 //figura.lineTo();
 //figura.lineTo();
 
