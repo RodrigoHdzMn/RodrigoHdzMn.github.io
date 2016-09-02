@@ -6,7 +6,7 @@ figura.moveTo(20,10);
 figura.lineTo(60,100);
 figura.lineTo(100,10);
 figura.lineTo(40,50);
-figura.lineTo(30,80);
+//figura.lineTo(30,80);
 
 
 
