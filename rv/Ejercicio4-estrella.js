@@ -9,7 +9,7 @@ figura.lineTo(60,35);
 figura.moveTo(10,70);
 figura.lineTo(110,70);
 figura.lineTo(60,35);
-figura.lineTo(40,50);
+//figura.lineTo(40,50);
 
 
 
