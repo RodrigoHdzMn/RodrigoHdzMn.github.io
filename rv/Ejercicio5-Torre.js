@@ -3,7 +3,7 @@ var baseForma= new THREE.CylinderGeometry(.6, .6, 0.3,60 );
 
 var points = [];
 for ( var i = 0; i < 10; i ++ ) {
-	points.push( new THREE.Vector2( 0.3*( Math.sin( i * 0.02 ) * 10 + .5 ), 0.3*( ( i - .5 ) * 2) ) );
+	points.push( new THREE.Vector2( 0.1*( Math.sin( i * 0.02 ) * 10 + .5 ), 0.1*( ( i - .5 ) * 2) ) );
 }
 var forma2 = new THREE.LatheGeometry( points );
 
