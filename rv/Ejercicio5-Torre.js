@@ -1,5 +1,5 @@
 
-var baseForma= new THREE.CylinderGeometry(.6, .6, 0.2,60 );
+var baseForma= new THREE.CylinderGeometry(.8, .8, 0.2,60 );
 baseForma.translate(0,-1,0);
 
 var forma2 = new THREE.CylinderGeometry(.4, .4, 0.3,60 );
