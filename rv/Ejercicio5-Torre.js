@@ -1,6 +1,5 @@
 
 var baseForma= new THREE.CylinderGeometry(.6, .6, 0.3,60 );
-esferaForma.translate(0,2,0);
 
 var points = [];
 for ( var i = 0; i < 10; i ++ ) {
