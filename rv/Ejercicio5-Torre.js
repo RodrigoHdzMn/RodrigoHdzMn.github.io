@@ -2,7 +2,7 @@
 var baseForma= new THREE.CylinderGeometry(.8, .8, 0.2,60 );
 baseForma.translate(0,-1,0);
 
-var forma2 = new THREE.CylinderGeometry(.4, .4, 0.3,60 );
+var forma2 = new THREE.CylinderGeometry(.6, .6, 0.3,60 );
 forma2.translate(0,-0.7,0);
 
 var forma3 = new THREE.CylinderGeometry(.3, .4, 0.2,60 );
