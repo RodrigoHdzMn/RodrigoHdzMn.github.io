@@ -6,7 +6,7 @@ var forma2 = new THREE.CylinderGeometry(.6, .6, 0.2,60 );
 forma2.translate(0,-0.8,0);
 
 var forma3 = new THREE.CylinderGeometry(.6, .4, 0.2,60 );
-forma3.translate(0,-0.6,0);
+//forma3.translate(0,-0.6,0);
 
 var baseMalla=new THREE.Mesh(baseForma);
 var forma2Malla=new THREE.Mesh(forma2);
