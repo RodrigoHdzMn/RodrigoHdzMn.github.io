@@ -1,11 +1,8 @@
 
 var baseForma= new THREE.CylinderGeometry(.6, .6, 0.3,60 );
-baseForma.translate(0,1,0);
-var points = [];
-for ( var i = 0; i < 10; i ++ ) {
-	points.push( new THREE.Vector2( 0.1*( Math.sin( i * 0.02 ) * 10 + .5 ), 0.1*( ( i - .5 ) * 2) ) );
-}
-var forma2 = new THREE.LatheGeometry( points );
+baseForma.translate(0,-1,0);
+
+var forma2 = new THREE.CylinderGeometry(.4, .4, 0.3,60 );
 
 var baseMalla=new THREE.Mesh(baseForma);
 var forma2Malla=new THREE.Mesh(forma2);
