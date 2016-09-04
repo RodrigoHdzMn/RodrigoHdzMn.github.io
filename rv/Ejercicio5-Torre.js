@@ -14,11 +14,19 @@ var forma4 = new THREE.CylinderGeometry(.4, .4, 1.5,60 );
 var forma5 = new THREE.CylinderGeometry(.45, .4, 0.05,60 );
 forma5.translate(0,0.75,0);
 
+var forma6 = new THREE.CylinderGeometry(.45, .45, 0.05,60 );
+forma5.translate(0,0.8,0);
+
+var forma7 = new THREE.CylinderGeometry(.5, .45, 0.05,60 );
+forma5.translate(0,0.9,0);
+
 var baseMalla=new THREE.Mesh(baseForma);
 var forma2Malla=new THREE.Mesh(forma2);
 var forma3Malla=new THREE.Mesh(forma3);
 var forma4Malla=new THREE.Mesh(forma4);
 var forma5Malla=new THREE.Mesh(forma5);
+var forma4Malla=new THREE.Mesh(forma6);
+var forma5Malla=new THREE.Mesh(forma7);
 
 var torreForma=new THREE.Geometry();
 
@@ -27,6 +35,8 @@ torreForma.merge(forma2Malla.geometry, forma2Malla.matrix);
 torreForma.merge(forma3Malla.geometry, forma3Malla.matrix);
 torreForma.merge(forma4Malla.geometry, forma4Malla.matrix);
 torreForma.merge(forma5Malla.geometry, forma5Malla.matrix);
+torreForma.merge(forma6Malla.geometry, forma6Malla.matrix);
+torreForma.merge(forma7Malla.geometry, forma7Malla.matrix);
 
 var material=new THREE.MeshNormalMaterial();
 var torreMalla= new THREE.Mesh(torreForma,material);
