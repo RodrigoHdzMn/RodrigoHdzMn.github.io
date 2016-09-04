@@ -25,8 +25,8 @@ var forma2Malla=new THREE.Mesh(forma2);
 var forma3Malla=new THREE.Mesh(forma3);
 var forma4Malla=new THREE.Mesh(forma4);
 var forma5Malla=new THREE.Mesh(forma5);
-var forma4Malla=new THREE.Mesh(forma6);
-var forma5Malla=new THREE.Mesh(forma7);
+var forma6Malla=new THREE.Mesh(forma6);
+var forma7Malla=new THREE.Mesh(forma7);
 
 var torreForma=new THREE.Geometry();
 
