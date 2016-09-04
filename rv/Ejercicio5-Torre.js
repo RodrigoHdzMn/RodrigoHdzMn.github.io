@@ -34,10 +34,10 @@ var formaA2 = new THREE.CylinderGeometry(.1, .1, 0.4,60 );
 formaA2.translate(0,1.3,0.5);
 //AtrasI
 var formaA3 = new THREE.CylinderGeometry(.1, .1, 0.4,60 );
-formaA3.translate(-0.25,1.3,-0.43);
+formaA3.translate(-0.43,1.3,-0.25);
 //AtrasD
 var formaA4 = new THREE.CylinderGeometry(.1, .1, 0.4,60 );
-formaA4.translate(0.25,1.3,-0.43);
+formaA4.translate(0.43,1.3,-0.25);
 //FrenteI
 var formaA5 = new THREE.CylinderGeometry(.1, .1, 0.4,60 );
 formaA5.translate(-0.43,1.3,0.25);
