@@ -11,7 +11,7 @@ forma3.translate(0,-0.6,0);
 var forma4 = new THREE.CylinderGeometry(.4, .4, 1.5,60 );
 //forma4.translate(0,-0.15,0);
 
-var forma5 = new THREE.CylinderGeometry(.42, .4, 1.5,60 );
+var forma5 = new THREE.CylinderGeometry(.45, .4, 0.05,60 );
 
 var baseMalla=new THREE.Mesh(baseForma);
 var forma2Malla=new THREE.Mesh(forma2);
