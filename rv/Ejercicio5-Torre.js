@@ -23,7 +23,7 @@ forma7.translate(0,0.87,0);
 var forma8 = new THREE.CylinderGeometry(.6, .6, 0.25,60 );
 forma8.translate(0,1.04,0);
 
-var arriba1 = new THREE.RingGeometry(0.2, 0.1, 64,0,2 );
+var arriba1 = new THREE.RingGeometry(1, 1.5, 64,0,2 );
 forma8.translate(0,1.2,0);
 
 var baseMalla=new THREE.Mesh(baseForma);
