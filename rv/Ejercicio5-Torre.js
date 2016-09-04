@@ -40,10 +40,10 @@ var formaA4 = new THREE.CylinderGeometry(.1, .1, 0.4,60 );
 formaA4.translate(0.25,1.3,-0.43);
 //FrenteI
 var formaA5 = new THREE.CylinderGeometry(.1, .1, 0.4,60 );
-formaA5.translate(-0.25,.3,0.5);
+formaA5.translate(-0.43,1.3,0.25);
 //FrenteD
 var formaA6 = new THREE.CylinderGeometry(.1, .1, 0.4,60 );
-formaA6.translate(0.25,1.3,0.5);
+formaA6.translate(0.43,1.3,0.25);
 
 var baseMalla=new THREE.Mesh(baseForma);
 var forma2Malla=new THREE.Mesh(forma2);
