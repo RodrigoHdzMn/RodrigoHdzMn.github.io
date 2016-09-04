@@ -1,5 +1,5 @@
 
-var baseForma= new THREE.CylinderGeometry(.8, .8, 0.2,60 );
+var baseForma= new THREE.CylinderGeometry(.8, .8, 0.2,60 );//dia.inf, dia.sup, altura
 baseForma.translate(0,-1,0);
 
 var forma2 = new THREE.CylinderGeometry(.6, .6, 0.2,60 );
@@ -23,9 +23,9 @@ forma7.translate(0,0.87,0);
 var forma8 = new THREE.CylinderGeometry(.6, .6, 0.25,60 );
 forma8.translate(0,1.04,0);
 
-var arriba1 = new THREE.RingGeometry(0.5, 0.8, 64,0,2 );
+var arriba1 = new THREE.RingBufferGeometry(0.5, 0.8, 64,0,2 );
 
-arriba1.translate(0.3,1.2,0);
+arriba1.translate(0.5,1.2,0);
 
 var baseMalla=new THREE.Mesh(baseForma);
 var forma2Malla=new THREE.Mesh(forma2);
@@ -36,7 +36,7 @@ var forma6Malla=new THREE.Mesh(forma6);
 var forma7Malla=new THREE.Mesh(forma7);
 var forma8Malla=new THREE.Mesh(forma8);
 var arriba1Malla=new THREE.Mesh(arriba1);
-arriba1Malla.rotateX(Math.PI/2);
+//arriba1Malla.rotateX(Math.PI/2);
 
 var torreForma=new THREE.Geometry();
 
