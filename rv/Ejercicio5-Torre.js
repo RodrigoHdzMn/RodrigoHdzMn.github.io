@@ -36,7 +36,7 @@ var forma6Malla=new THREE.Mesh(forma6);
 var forma7Malla=new THREE.Mesh(forma7);
 var forma8Malla=new THREE.Mesh(forma8);
 var arriba1Malla=new THREE.Mesh(arriba1);
-arriba1.rotateX(Math.PI/2);
+//arriba1.rotateX(Math.PI/2);
 
 var torreForma=new THREE.Geometry();
 
