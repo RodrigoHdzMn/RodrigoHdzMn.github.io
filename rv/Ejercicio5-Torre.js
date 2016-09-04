@@ -23,6 +23,9 @@ forma7.translate(0,0.87,0);
 var forma8 = new THREE.CylinderGeometry(.6, .6, 0.25,60 );
 forma8.translate(0,1.04,0);
 
+var arriba1 = new THREE.RingGeometry( 1, 5, 32 );
+forma8.translate(0,1.2,0);
+
 var baseMalla=new THREE.Mesh(baseForma);
 var forma2Malla=new THREE.Mesh(forma2);
 var forma3Malla=new THREE.Mesh(forma3);
@@ -31,6 +34,7 @@ var forma5Malla=new THREE.Mesh(forma5);
 var forma6Malla=new THREE.Mesh(forma6);
 var forma7Malla=new THREE.Mesh(forma7);
 var forma8Malla=new THREE.Mesh(forma8);
+var arriba1Malla=new THREE.Mesh(arriba1);
 
 var torreForma=new THREE.Geometry();
 
@@ -42,6 +46,7 @@ torreForma.merge(forma5Malla.geometry, forma5Malla.matrix);
 torreForma.merge(forma6Malla.geometry, forma6Malla.matrix);
 torreForma.merge(forma7Malla.geometry, forma7Malla.matrix);
 torreForma.merge(forma8Malla.geometry, forma8Malla.matrix);
+torreForma.merge(arriba1Malla.geometry, arriba1Malla.matrix);
 
 var material=new THREE.MeshNormalMaterial();
 var torreMalla= new THREE.Mesh(torreForma,material);
