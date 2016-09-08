@@ -14,6 +14,12 @@ var forma = new THREE.BoxGeometry( 10,10,2);
 var material = new THREE.MeshBasicMaterial(0xffffff); 
 var cubo = new THREE.Mesh(forma, material);
 
+
+
+var forma2 = new THREE.BoxGeometry( 10,10,2);
+var material2 = new THREE.MeshBasicMaterial(0xcfcfcf); 
+var cubo2 = new THREE.Mesh(forma2, material2);
+cubo2.translate(0,5,0)
 //cubo.rotateX(-Math.PI/8);
 
 
