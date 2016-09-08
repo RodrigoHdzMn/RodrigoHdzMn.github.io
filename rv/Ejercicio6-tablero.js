@@ -24,5 +24,6 @@ cubo2.translate(0,10,0);
 
 
 escena.add(cubo);
+escena.add(cubo2);
 
 renderizador.render(escena,camara);
