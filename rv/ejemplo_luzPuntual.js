@@ -1,11 +1,5 @@
 
 
-var lienzo = document.getElementById("lambertMaterial");
-var renderizador=new THREE.WebGLRender({canvas:lienzo, antialias: true});
-
-renderizador.setSize(600,600);
-renderizador.render(escena,camara);
-
 var luzPuntual= new THREE.PointLight(0xFFFFFF);
 luzPuntual.position.x=10;
 luzPuntual.position.y=10;
