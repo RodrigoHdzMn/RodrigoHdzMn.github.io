@@ -7,7 +7,7 @@ var escena= new THREE.Scene();
 escena.add(malla);
 
 var camara= new THREE.PerpectiveCamera();
-camera.position.z=5;
+camara.position.z=5;
 
 var lienzo = document.getById("basicMaterial");
 var renderizador=new THREE.WebGLRender({canvas:lienzo, antialias: true});
