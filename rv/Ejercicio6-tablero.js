@@ -19,7 +19,8 @@ document.body.appendChild (renderizador.domElement);
 var forma2 = new THREE.BoxGeometry( 10,10,2);
 var material2 = new THREE.MeshBasicMaterial(0xcfcfcf); 
 var cubo2 = new THREE.Mesh(forma2, material2);
-cubo2.translate(10,10,0);
+cubo2.position.y=10;
+cubo2.position.x=10;
 //cubo.rotateX(-Math.PI/8);
 
 
