@@ -1,6 +1,4 @@
 
-
-
 var iluminacion= new THREE.AmbientLight(0xFFFFFF);
 
 var forma = new THREE.SphereGeometry(1);
