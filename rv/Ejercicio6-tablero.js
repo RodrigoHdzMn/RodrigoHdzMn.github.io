@@ -23,7 +23,7 @@ cubo2.translate(10,10,0);
 //cubo.rotateX(-Math.PI/8);
 
 
-escena.add(cubo);
+//escena.add(cubo);
 escena.add(cubo2);
 
 renderizador.render(escena,camara);
