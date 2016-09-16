@@ -23,10 +23,12 @@ var lienzo = document.getElementById("luzSinSombras");
 var renderizador=new THREE.WebGLRenderer({canvas:lienzo, antialias: true});
 
 renderizador.setSize(600,600);
-
-renderizador.render(escena,camara);
-
+//con las 4 lineas siguientes se pone sombra
 renderizador.shadowMap.Enabled=true;
 malla.castShadow=true;
 base.receiveShadow=true;
 iluminacion.castShadow=true;
+
+renderizador.render(escena,camara);
+
+
