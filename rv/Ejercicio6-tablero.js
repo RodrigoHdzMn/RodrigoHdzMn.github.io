@@ -11,7 +11,7 @@ renderizador.setSize( window.innerHeight*.95,
 			
 document.body.appendChild (renderizador.domElement);
 
-var forma = new THREE.BoxGeometry( 10,10,2);
+var forma = new THREE.BoxGeometry( 10,1,10);
 var material = new THREE.MeshBasicMaterial(0xffffff); 
 var cubo = new THREE.Mesh(forma, material);
 
