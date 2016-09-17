@@ -18,7 +18,7 @@ forma4.translate(0,Tb*1.25,0);
 
 var altura5=Tb/16;
 var forma5 = new THREE.CylinderGeometry(Tb*9/16, Tb/2, altura5,60 );
-forma5.translate(0,tb*35/16,0);
+forma5.translate(0,Tb*35/16,0);
 
 var altura6=altura5;
 var forma6 = new THREE.CylinderGeometry(Tb*9/16, Tb*9/16, altura6,60 );
@@ -102,7 +102,7 @@ var escena=new THREE.Scene();
 escena.add(torreMalla);
 
 var camara=new THREE.PerspectiveCamera();
-camara.position.z=6;
+camara.position.z=8;
 
 renderizador=new THREE.WebGLRenderer();
 renderizador.setSize(window.innerHeight*.75,window.innerHeight*.75 );
