@@ -39,22 +39,22 @@ var dm=Tb/8;//diametro miniCilindros
 var am=Tb/2;//altura mini
 //Atras
 var formaA1 = new THREE.CylinderGeometry(dm, dm, am,60 );
-formaA1.translate(0,2.2,-0.5);
+formaA1.translate(0,2.25,-0.5);
 //Afrente
 var formaA2 = new THREE.CylinderGeometry(dm, dm, am,60 );
-formaA2.translate(0,2.2,0.5);
+formaA2.translate(0,2.25,0.5);
 //AtrasI
 var formaA3 = new THREE.CylinderGeometry(dm, dm, am,60 );
-formaA3.translate(-0.43,2.2,-0.25);
+formaA3.translate(-0.43,2.25,-0.25);
 //AtrasD
 var formaA4 = new THREE.CylinderGeometry(dm, dm, am,60 );
-formaA4.translate(0.43,2.2,-0.25);
+formaA4.translate(0.43,2.25,-0.25);
 //FrenteI
 var formaA5 = new THREE.CylinderGeometry(dm, dm, am,60 );
-formaA5.translate(-0.43,2.2,0.25);
+formaA5.translate(-0.43,2.25,0.25);
 //FrenteD
 var formaA6 = new THREE.CylinderGeometry(dm, dm, am,60 );
-formaA6.translate(0.43,2.2,0.25);
+formaA6.translate(0.43,2.25,0.25);
 
 var baseMalla=new THREE.Mesh(baseForma);
 var forma2Malla=new THREE.Mesh(forma2);
