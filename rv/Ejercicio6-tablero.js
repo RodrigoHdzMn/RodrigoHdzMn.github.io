@@ -125,15 +125,25 @@ torreForma.merge(formaA4Malla.geometry,formaA4Malla.matrix);
 torreForma.merge(formaA5Malla.geometry,formaA5Malla.matrix);
 torreForma.merge(formaA6Malla.geometry,formaA6Malla.matrix);
 
-var materialN1=new THREE.MeshNormalMaterial();
-var torreMalla1= new THREE.Mesh(torreForma,material);
-var torreMalla2= new THREE.Mesh(torreForma,material);
-var torreMalla3= new THREE.Mesh(torreForma,material);
-var torreMalla4= new THREE.Mesh(torreForma,material);
+var materialN1=new THREE.MeshNormalMaterial( {color: 0xffffff} );
+var materialN2=new THREE.MeshNormalMaterial( {color: 0x727272});
 
-escena.add(torreMalla);
-escena.add(torreMalla);
-escena.add(torreMalla);
+var torreMalla1= new THREE.Mesh(torreForma,materialN1);
+
+var torreMalla2= new THREE.Mesh(torreForma,materialN1);
+torreMalla2.position.x=80;
+torreMalla2.position.z=10;
+var torreMalla3= new THREE.Mesh(torreForma,materialN2);
+torreMalla3.position.x=10;
+torreMalla3.position.z=80;
+var torreMalla4= new THREE.Mesh(torreForma,materialN2);
+torreMalla3.position.x=50;
+torreMalla4.position.z=50;
+
+escena.add(torreMalla1);
+escena.add(torreMalla2);
+escena.add(torreMalla3);
+escena.add(torreMalla4);
 //Fin Torre
 
 renderizador.render(escena,camara);
