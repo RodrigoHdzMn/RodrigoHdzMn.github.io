@@ -90,7 +90,7 @@ var torreMalla= new THREE.Mesh(torreForma,material);
 torreMalla.rotateX(Math.PI/8);
 
 var escena=new THREE.Scene();
-escena.add(torreMalla);
+escena.add(torreMalla*0.3);
 
 var camara=new THREE.PerspectiveCamera();
 camara.position.z=5;
