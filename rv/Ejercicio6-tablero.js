@@ -125,8 +125,8 @@ torreForma.merge(formaA4Malla.geometry,formaA4Malla.matrix);
 torreForma.merge(formaA5Malla.geometry,formaA5Malla.matrix);
 torreForma.merge(formaA6Malla.geometry,formaA6Malla.matrix);
 
-var materialN1=new THREE.MeshBasicMaterial( {color: 0xffffff} );
-var materialN2=new THREE.MeshBasicMaterial( {color: 0x727272});
+var materialN1=new THREE.MeshBasicMaterial( {color: 0xffe100} );
+var materialN2=new THREE.MeshBasicMaterial( {color: 0x000ef5});
 
 var torreMalla1= new THREE.Mesh(torreForma,materialN1);
 
