@@ -22,15 +22,15 @@ forma5.translate(0,Tb*35/16,0);
 
 var altura6=altura5;
 var forma6 = new THREE.CylinderGeometry(Tb*9/16, Tb*9/16, altura6,60 );
-forma6.translate(0,1.8,0);
+forma6.translate(0,Tb*9/4,0);
 
 var altura7=Tb/8;
 var forma7 = new THREE.CylinderGeometry(Tb*3/4, Tb*9/16, altura7,60 );
-forma7.translate(0,1.85,0);
+forma7.translate(0,Tb*36/17,0);
 
 var altura8=Tb*5/16;
 var forma8 = new THREE.CylinderGeometry(Tb*3/4, Tb*3/4, altura8,60 );
-forma8.translate(0,2,0);
+forma8.translate(0,Tb*5/2,0);
 
 //var arriba1 = new THREE.RingGeometry(0.5, 0.8, 64,0,2 );
 //arriba1.translate(0.5,1.2,0);
