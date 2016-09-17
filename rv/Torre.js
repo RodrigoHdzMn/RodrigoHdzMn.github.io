@@ -29,7 +29,7 @@ var forma7 = new THREE.CylinderGeometry(Tb*3/4, Tb*9/16, altura7,60 );
 forma7.translate(0,0.87,0);
 
 var altura8=Tb*5/16;
-var forma8 = new THREE.CylinderGeometry(.Tb*3/4, Tb*3/4, altura8,60 );
+var forma8 = new THREE.CylinderGeometry(Tb*3/4, Tb*3/4, altura8,60 );
 forma8.translate(0,1.04,0);
 
 //var arriba1 = new THREE.RingGeometry(0.5, 0.8, 64,0,2 );
