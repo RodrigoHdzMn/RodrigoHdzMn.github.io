@@ -46,50 +46,64 @@ for(var i=1; i<=8; i++)
 }
 
 //Inicio Torre
-var baseForma= new THREE.CylinderGeometry(.8, .8, 0.2,60 );//dia.inf, dia.sup, altura
-baseForma.translate(0,-1,0);
+var Tb=0.8*5/4;//tamaño base
+var altura1=Tb/4;
+var baseForma= new THREE.CylinderGeometry(Tb, Tb, altura1,60 );//dia.sup, dia.inf, altura
+baseForma.translate(0,0,0);
 
-var forma2 = new THREE.CylinderGeometry(.6, .6, 0.2,60 );
-forma2.translate(0,-0.8,0);
+var altura2=altura1;
+var forma2 = new THREE.CylinderGeometry(Tb*3/4, Tb*3/4, altura2,60 );
+forma2.translate(0,altura2,0);
 
-var forma3 = new THREE.CylinderGeometry(.4, .6, 0.2,60 );
-forma3.translate(0,-0.6,0);
+var altura3=altura1;
+var forma3 = new THREE.CylinderGeometry(Tb/2, Tb*3/4, altura3, 60 );
+forma3.translate(0,altura2+altura3,0);
 
-var forma4 = new THREE.CylinderGeometry(.4, .4, 1.5,60 );
-//forma4.translate(0,-0.15,0);
+var altura4=Tb*1.875;
+var forma4 = new THREE.CylinderGeometry(Tb/2, Tb/2, altura4, 60 );
+forma4.translate(0,Tb*1.25,0);
 
-var forma5 = new THREE.CylinderGeometry(.45, .4, 0.05,60 );
-forma5.translate(0,0.75,0);
+var altura5=Tb/16;
+var forma5 = new THREE.CylinderGeometry(Tb*9/16, Tb/2, altura5,60 );
+forma5.translate(0,Tb*35/16,0);
 
-var forma6 = new THREE.CylinderGeometry(.45, .45, 0.05,60 );
-forma6.translate(0,0.8,0);
+var altura6=altura5;
+var forma6 = new THREE.CylinderGeometry(Tb*9/16, Tb*9/16, altura6,60 );
+forma6.translate(0,Tb*9/4,0);
 
-var forma7 = new THREE.CylinderGeometry(.6, .45, 0.1,60 );
-forma7.translate(0,0.87,0);
+var altura7=Tb/8;
+var forma7 = new THREE.CylinderGeometry(Tb*3/4, Tb*9/16, altura7,60 );
+forma7.translate(0,Tb*37/16,0);
 
-var forma8 = new THREE.CylinderGeometry(.6, .6, 0.25,60 );
-forma8.translate(0,1.04,0);
+var altura8=Tb*5/16;
+var forma8 = new THREE.CylinderGeometry(Tb*3/4, Tb*3/4, altura8,60 );
+forma8.translate(0,Tb*5/2,0);
 
-//arriba
+var dm=Tb/8;//diametro miniCilindros
+var am=Tb/2;//altura mini
 
+var Y=Tb*45/16;
+var X=(Tb*3/4 - dm)*Math.sin(3.14/3);
+var Z=(Tb*3/4 - dm)*Math.cos(3.14/3);
 //Atras
-var formaA1 = new THREE.CylinderGeometry(.1, .1, 0.4,60 );
-formaA1.translate(0,1.3,-0.5);
+var formaA1 = new THREE.CylinderGeometry(dm, dm, am,60 );
+formaA1.translate(0,Y,-(Tb*3/4 - dm));
 //Afrente
-var formaA2 = new THREE.CylinderGeometry(.1, .1, 0.4,60 );
-formaA2.translate(0,1.3,0.5);
+var formaA2 = new THREE.CylinderGeometry(dm, dm, am,60 );
+formaA2.translate(0,Y,(Tb*3/4 - dm));
 //AtrasI
-var formaA3 = new THREE.CylinderGeometry(.1, .1, 0.4,60 );
-formaA3.translate(-0.43,1.3,-0.25);
+var formaA3 = new THREE.CylinderGeometry(dm, dm, am,60 );
+formaA3.translate(-X,Y,-Z);
 //AtrasD
-var formaA4 = new THREE.CylinderGeometry(.1, .1, 0.4,60 );
-formaA4.translate(0.43,1.3,-0.25);
+var formaA4 = new THREE.CylinderGeometry(dm, dm, am,60 );
+formaA4.translate(X,Y,-Z);
 //FrenteI
-var formaA5 = new THREE.CylinderGeometry(.1, .1, 0.4,60 );
-formaA5.translate(-0.43,1.3,0.25);
+var formaA5 = new THREE.CylinderGeometry(dm, dm, am,60 );
+formaA5.translate(-X,Y,Z);
 //FrenteD
-var formaA6 = new THREE.CylinderGeometry(.1, .1, 0.4,60 );
-formaA6.translate(0.43,1.3,0.25);
+var formaA6 = new THREE.CylinderGeometry(dm, dm, am,60 );
+formaA6.translate(X,Y,Z);
+
 
 var baseMalla=new THREE.Mesh(baseForma);
 var forma2Malla=new THREE.Mesh(forma2);
