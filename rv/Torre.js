@@ -1,14 +1,16 @@
 
 var Tb=0.8;//tamaño base
+var altura1=Tb/4;
+var baseForma= new THREE.CylinderGeometry(Tb, Tb, altura1,60 );//dia.inf, dia.sup, altura
+baseForma.translate(0,0,0);
 
-var baseForma= new THREE.CylinderGeometry(Tb, Tb, Tb/4,60 );//dia.inf, dia.sup, altura
-baseForma.translate(0,-1,0);
+var altura2=altura1;
+var forma2 = new THREE.CylinderGeometry(Tb*3/4, Tb*3/4, altura2,60 );
+forma2.translate(0,altura2,0);
 
-var forma2 = new THREE.CylinderGeometry(Tb*3/4, Tb*3/4, Tb/4,60 );
-forma2.translate(0,-0.8,0);
-
-var forma3 = new THREE.CylinderGeometry(.4, .6, 0.2,60 );
-forma3.translate(0,-0.6,0);
+var altura3=altura1;
+var forma3 = new THREE.CylinderGeometry(Tb/2, Tb*3/4, altura3, 60 );
+forma3.translate(0,altura2+altura3,0);
 
 var forma4 = new THREE.CylinderGeometry(.4, .4, 1.5,60 );
 //forma4.translate(0,-0.15,0);
