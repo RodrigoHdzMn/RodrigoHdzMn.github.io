@@ -15,15 +15,12 @@ var forma = new THREE.BoxGeometry( 10,10,1);
 var material = new THREE.MeshBasicMaterial( {color: 0xffffff}); 
 var cubo = new THREE.Mesh(forma, material);
 
-
-
 var forma2 = new THREE.BoxGeometry( 10,10,1);
-var material2 = new THREE.MeshBasicMaterial( {color: 0xcfcfcf}); 
+var material2 = new THREE.MeshBasicMaterial( {color: 0x727272}); //0xcfcfcf
 var cubo2 = new THREE.Mesh(forma2, material2);
 cubo2.position.y=10;
 cubo2.position.x=10;
 //cubo.rotateX(-Math.PI/8);
-
 
 escena.add(cubo);
 escena.add(cubo2);
