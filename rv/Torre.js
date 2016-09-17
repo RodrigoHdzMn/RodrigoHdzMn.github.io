@@ -39,8 +39,8 @@ var dm=Tb/8;//diametro miniCilindros
 var am=Tb/2;//altura mini
 
 var Y=Tb*45/16;
-var X=(Tb*3/4 - dm)*Math.sin(60);
-var Z=(Tb*3/4 - dm)*Math.cos(60);
+var X=(Tb*3/4 - dm)*Math.sin(3.14/3);
+var Z=(Tb*3/4 - dm)*Math.cos(3.14/3);
 //Atras
 var formaA1 = new THREE.CylinderGeometry(dm, dm, am,60 );
 formaA1.translate(0,Y,-(Tb*3/4 - dm));
