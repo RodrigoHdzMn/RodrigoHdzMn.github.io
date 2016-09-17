@@ -138,7 +138,7 @@ var torreMalla3= new THREE.Mesh(torreForma,materialN2);
 torreMalla3.position.x=10;
 torreMalla3.position.z=80;
 var torreMalla4= new THREE.Mesh(torreForma,materialN2);
-torreMalla3.position.x=80;
+torreMalla4.position.x=80;
 torreMalla4.position.z=80;
 
 escena.add(torreMalla1);
