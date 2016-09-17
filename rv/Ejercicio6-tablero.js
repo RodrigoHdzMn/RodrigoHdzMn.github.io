@@ -14,7 +14,11 @@ document.body.appendChild (renderizador.domElement);
 for(var i=1; i<=8; i++)
 {
 	var forma = new THREE.BoxGeometry( 10,10,1);
-	var material = new THREE.MeshBasicMaterial( {color: 0xffffff}); 
+		if(i%2 == 0)
+		var material = new THREE.MeshBasicMaterial( {color: 0xffffff}); 
+		else
+		var material = new THREE.MeshBasicMaterial( {color: 0x727272}); //0xcfcfcf
+	
 	var cubo = new THREE.Mesh(forma, material);
 	cubo.position.x=10*i;
 	escena.add(cubo);
