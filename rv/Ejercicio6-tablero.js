@@ -27,9 +27,9 @@ for(var i=1; i<=8; i++)
 	else
 	{
 		if(i%2 == 0)
-		var material = new THREE.MeshBasicMaterial( {color: 0xffffff}); 
-		else
 		var material = new THREE.MeshBasicMaterial( {color: 0x727272}); //0xcfcfcf
+		else
+		var material = new THREE.MeshBasicMaterial( {color: 0xffffff}); //0xcfcfcf
 		
 	}
 	
