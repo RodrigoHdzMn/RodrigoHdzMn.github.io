@@ -1,7 +1,10 @@
-var baseForma= new THREE.CylinderGeometry(.8, .8, 0.2,60 );//dia.inf, dia.sup, altura
+
+var Tb=0.8;//tamaño base
+
+var baseForma= new THREE.CylinderGeometry(Tb, Tb, Tb/4,60 );//dia.inf, dia.sup, altura
 baseForma.translate(0,-1,0);
 
-var forma2 = new THREE.CylinderGeometry(.6, .6, 0.2,60 );
+var forma2 = new THREE.CylinderGeometry(Tb*3/4, Tb*3/4, Tb/4,60 );
 forma2.translate(0,-0.8,0);
 
 var forma3 = new THREE.CylinderGeometry(.4, .6, 0.2,60 );
