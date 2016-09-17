@@ -129,7 +129,8 @@ var materialN1=new THREE.MeshBasicMaterial( {color: 0xffe100} );
 var materialN2=new THREE.MeshBasicMaterial( {color: 0x000ef5});
 
 var torreMalla1= new THREE.Mesh(torreForma,materialN1);
-
+torreMalla1.position.x=10;
+torreMalla1.position.z=10;
 var torreMalla2= new THREE.Mesh(torreForma,materialN1);
 torreMalla2.position.x=80;
 torreMalla2.position.z=10;
@@ -137,8 +138,8 @@ var torreMalla3= new THREE.Mesh(torreForma,materialN2);
 torreMalla3.position.x=10;
 torreMalla3.position.z=80;
 var torreMalla4= new THREE.Mesh(torreForma,materialN2);
-torreMalla3.position.x=50;
-torreMalla4.position.z=50;
+torreMalla3.position.x=80;
+torreMalla4.position.z=80;
 
 escena.add(torreMalla1);
 escena.add(torreMalla2);
