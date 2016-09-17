@@ -22,7 +22,7 @@ forma5.translate(0,Tb*35/16,0);
 
 var altura6=altura5;
 var forma6 = new THREE.CylinderGeometry(Tb*9/16, Tb*9/16, altura6,60 );
-forma6.translate(0,0.8,0);
+forma6.translate(0,1.8,0);
 
 var altura7=Tb/8;
 var forma7 = new THREE.CylinderGeometry(Tb*3/4, Tb*9/16, altura7,60 );
