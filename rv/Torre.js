@@ -37,24 +37,28 @@ forma8.translate(0,Tb*5/2,0);
 
 var dm=Tb/8;//diametro miniCilindros
 var am=Tb/2;//altura mini
+
+var Y=Tb*45/16;
+var X=(Tb*3/4 - dm)*Math.sin(60);
+var Z=(Tb*3/4 - dm)*Math.cos(60);
 //Atras
 var formaA1 = new THREE.CylinderGeometry(dm, dm, am,60 );
-formaA1.translate(0,2.25,-0.5);
+formaA1.translate(0,Y,-(Tb*3/4 - dm));
 //Afrente
 var formaA2 = new THREE.CylinderGeometry(dm, dm, am,60 );
-formaA2.translate(0,2.25,0.5);
+formaA2.translate(0,Y,(Tb*3/4 - dm));
 //AtrasI
 var formaA3 = new THREE.CylinderGeometry(dm, dm, am,60 );
-formaA3.translate(-0.43,2.25,-0.25);
+formaA3.translate(-X,Y,-Z);
 //AtrasD
 var formaA4 = new THREE.CylinderGeometry(dm, dm, am,60 );
-formaA4.translate(0.43,2.25,-0.25);
+formaA4.translate(X,Y,-Z);
 //FrenteI
 var formaA5 = new THREE.CylinderGeometry(dm, dm, am,60 );
-formaA5.translate(-0.43,2.25,0.25);
+formaA5.translate(-X,Y,Z);
 //FrenteD
 var formaA6 = new THREE.CylinderGeometry(dm, dm, am,60 );
-formaA6.translate(0.43,2.25,0.25);
+formaA6.translate(X,Y,Z);
 
 var baseMalla=new THREE.Mesh(baseForma);
 var forma2Malla=new THREE.Mesh(forma2);
