@@ -14,10 +14,11 @@ forma3.translate(0,altura2+altura3,0);
 
 var altura4=Tb*1.875;
 var forma4 = new THREE.CylinderGeometry(Tb/2, Tb/2, altura4, 60 );
-forma4.translate(0,1,0);
+forma4.translate(0,Tb*1.25,0);
 
-var forma5 = new THREE.CylinderGeometry(.45, .4, 0.05,60 );
-forma5.translate(0,0.75,0);
+var altura5=Tb/16;
+var forma5 = new THREE.CylinderGeometry(Tb*9/16, Tb/2, altura5,60 );
+forma5.translate(0,1.05,0);
 
 var forma6 = new THREE.CylinderGeometry(.45, .45, 0.05,60 );
 forma6.translate(0,0.8,0);
