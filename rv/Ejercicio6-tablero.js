@@ -11,18 +11,14 @@ renderizador.setSize( window.innerHeight*.95,
 			
 document.body.appendChild (renderizador.domElement);
 
-var forma = new THREE.BoxGeometry( 10,10,1);
-var material = new THREE.MeshBasicMaterial( {color: 0xffffff}); 
-var cubo = new THREE.Mesh(forma, material);
+for(var i=1; i<=8; i++)
+{
+	var forma = new THREE.BoxGeometry( 10,10,1);
+	var material = new THREE.MeshBasicMaterial( {color: 0xffffff}); 
+	var cubo = new THREE.Mesh(forma, material);
+	cubo.position.x=10*i;
+	escena.add(cubo);
+}
 
-var forma2 = new THREE.BoxGeometry( 10,10,1);
-var material2 = new THREE.MeshBasicMaterial( {color: 0x727272}); //0xcfcfcf
-var cubo2 = new THREE.Mesh(forma2, material2);
-cubo2.position.y=10;
-cubo2.position.x=10;
-//cubo.rotateX(-Math.PI/8);
-
-escena.add(cubo);
-escena.add(cubo2);
 
 renderizador.render(escena,camara);
