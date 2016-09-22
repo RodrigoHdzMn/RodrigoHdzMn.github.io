@@ -9,9 +9,16 @@ function init(p)
     camara=new THREE.PerpectiveCamera();
     renderizador=new THREE.WebGLRenderer();
     renderizador.setSize(100,700);
+    
+    document.body.appendChild(renderizador.domElement);
 }
 
 var main=function(p)
 {
     renderizador.render(escena,camara)
 }
+
+var escena,camara, renderizador;
+init(1);
+main(2);
+
