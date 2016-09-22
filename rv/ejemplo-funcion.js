@@ -6,7 +6,7 @@ function init(p)
     escena=new THREE.Scene();
     escena.add(malla);
     
-    camara=new THREE.PerpectiveCamera();
+    camara=new THREE.PerspectiveCamera();
     renderizador=new THREE.WebGLRenderer();
     renderizador.setSize(100,700);
     
