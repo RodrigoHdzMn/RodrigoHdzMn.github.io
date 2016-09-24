@@ -183,5 +183,6 @@ torreMalla2.castShadow=true;
 torreMalla3.castShadow=true;
 torreMalla4.castShadow=true;
 cubo.receiveShadow=true;
+LuzYellow.castShadow=true;
 
 renderizador.render(escena,camara);
