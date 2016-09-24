@@ -63,7 +63,7 @@ for(var i=1; i<=8; i++)
    }
 }
 
-var TableroMalla= new THREE.Mesh(Tablero);
+//var TableroMalla= new THREE.Mesh(Tablero);
 
 //Inicio Torre
 var Tb=0.8*5;//tamaño base
