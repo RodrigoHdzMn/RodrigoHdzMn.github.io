@@ -161,7 +161,7 @@ torreForma.merge(formaA6Malla.geometry,formaA6Malla.matrix);
 
 //var opaco25=new THREE.Material( {opacity:0.25} );
 var materialNum1=new THREE.MeshLambertMaterial( {color: 0xffe100} );
-var materialNum2=new THREE.MeshLambertMaterial( {color: 0x000ef5});
+var materialNum2=new THREE.MeshLambertMaterial( {color: 0x000ef5},{opacity:0.25});
 
 //var materialOp25=new THREE.MultiMaterial(opaco25,materialNum2);
 
