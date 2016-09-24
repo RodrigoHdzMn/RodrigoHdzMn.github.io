@@ -55,6 +55,7 @@ for(var i=1; i<=8; i++)
 	cubo.position.x=10*i;
 	cubo.position.z=10*j;
 	escena.add(cubo);
+	cubo.receiveShadow=true;
    }
 }
 
@@ -182,7 +183,7 @@ torreMalla1.castShadow=true;
 torreMalla2.castShadow=true;
 torreMalla3.castShadow=true;
 torreMalla4.castShadow=true;
-cubo.receiveShadow=true;
+
 LuzYellow.castShadow=true;
 
 renderizador.render(escena,camara);
