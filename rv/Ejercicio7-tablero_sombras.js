@@ -56,6 +56,16 @@ for(var i=1; i<=8; i++)
 	cubo.position.z=10*j;
 	escena.add(cubo);
 	
+	
+	escena.add(LuzYellow)
+renderizador.shadowMap.Enabled=true;
+torreMalla1.castShadow=true;
+torreMalla2.castShadow=true;
+torreMalla3.castShadow=true;
+torreMalla4.castShadow=true;
+cubo.receiveShadow=true;
+LuzYellow.castShadow=true;
+	
    }
 }
 
@@ -177,13 +187,6 @@ escena.add(torreMalla4);
 
 //escena.add(LuzMagenta)
 //escena.add(LuzCyan)
-escena.add(LuzYellow)
-renderizador.shadowMap.Enabled=true;
-torreMalla1.castShadow=true;
-torreMalla2.castShadow=true;
-torreMalla3.castShadow=true;
-torreMalla4.castShadow=true;
-cubo.receiveShadow=true;
-LuzYellow.castShadow=true;
+
 
 renderizador.render(escena,camara);
