@@ -178,5 +178,10 @@ escena.add(torreMalla4);
 //escena.add(LuzCyan)
 escena.add(LuzYellow)
 renderizador.shadowMap.Enabled=true;
+torreMalla1.castShadow=true;
+torreMalla2.castShadow=true;
+torreMalla3.castShadow=true;
+torreMalla4.castShadow=true;
+
 
 renderizador.render(escena,camara);
