@@ -173,7 +173,7 @@ torreMalla2.position.z=10;
 var torreMalla3= new THREE.Mesh(torreForma,materialOpaco25);
 torreMalla3.position.x=10;
 torreMalla3.position.z=80;
-var torreMalla4= new THREE.Mesh(torreForma,materialOpaco100);
+var torreMalla4= new THREE.Mesh(torreForma,materialOpaco75);
 torreMalla4.position.x=80;
 torreMalla4.position.z=80;
 
