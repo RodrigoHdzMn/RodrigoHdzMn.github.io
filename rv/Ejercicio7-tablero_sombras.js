@@ -62,6 +62,8 @@ for(var i=1; i<=8; i++)
    }
 }
 
+var TableroMalla= new THREE.Mesh(Tablero);
+
 //Inicio Torre
 var Tb=0.8*5;//tamaño base
 var altura1=Tb/4;
@@ -178,7 +180,7 @@ escena.add(torreMalla3);
 escena.add(torreMalla4);
 //Fin Torre
 
-escena.add(Tablero);
+escena.add(TableroMalla);
 //escena.add(LuzMagenta)
 //escena.add(LuzCyan)
 escena.add(LuzYellow)
