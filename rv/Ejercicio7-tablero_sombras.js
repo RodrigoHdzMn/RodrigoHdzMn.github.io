@@ -35,9 +35,9 @@ for(var i=1; i<=8; i++)
 	if(j%2 ==0)
 	{
 		if(i%2 == 0)
-		var material = new THREE.MeshBasicMaterial( {color: 0xffffff}); 
+		var material = new THREE.MeshLambertMaterial( {color: 0xffffff}); 
 		else
-		var material = new THREE.MeshBasicMaterial( {color: 0x727272}); //0xcfcfcf
+		var material = new THREE.MeshLambertMaterial( {color: 0x727272}); //0xcfcfcf
 	}
 	else
 	{
