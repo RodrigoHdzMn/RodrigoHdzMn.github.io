@@ -170,5 +170,5 @@ escena.add(torreMalla3);
 escena.add(torreMalla4);
 //Fin Torre
 
-escena.add(luzMagenta)
+escena.add(LuzMagenta)
 renderizador.render(escena,camara);
