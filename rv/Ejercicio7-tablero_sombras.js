@@ -1,14 +1,14 @@
 
 var escena = new THREE.Scene();
 
-//var LuzMagenta= new THREE.PointLight(0xff00ff);
-//LuzMagenta.position.y=40;
-//LuzMagenta.position.z=40;
+var LuzMagenta= new THREE.PointLight(0xff00ff);
+LuzMagenta.position.y=40;
+LuzMagenta.position.z=40;
 
-//var LuzCyan= new THREE.PointLight(0x00ffff);
-//LuzCyan.position.x=80;
-//LuzCyan.position.y=40;
-//LuzCyan.position.z=40;
+var LuzCyan= new THREE.PointLight(0x00ffff);
+LuzCyan.position.x=80;
+LuzCyan.position.y=40;
+LuzCyan.position.z=40;
 
 var LuzYellow= new THREE.PointLight(0xffff00);
 LuzYellow.position.x=40;
@@ -56,9 +56,9 @@ for(var i=1; i<=8; i++)
 	var cubo = new THREE.Mesh(forma, material);
 	cubo.position.x=10*i;
 	cubo.position.z=10*j;
-	//escena.add(cubo);
-	var Tablero = new THREE.Geometry();
-	Tablero.merge(cubo.geometry, cubo.matrix);
+	escena.add(cubo);
+	//var Tablero = new THREE.Geometry();
+	//Tablero.merge(cubo.geometry, cubo.matrix);
 
    }
 }
@@ -181,9 +181,9 @@ escena.add(torreMalla3);
 escena.add(torreMalla4);
 //Fin Torre
 
-escena.add(TableroMalla);
-//escena.add(LuzMagenta)
-//escena.add(LuzCyan)
+//escena.add(TableroMalla);
+escena.add(LuzMagenta)
+escena.add(LuzCyan)
 escena.add(LuzYellow)
 renderizador.shadowMap.Enabled=true;
 torreMalla1.castShadow=true;
