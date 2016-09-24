@@ -171,7 +171,7 @@ escena.add(torreMalla4);
 //Fin Torre
 
 escena.add(LuzMagenta)
-renderizador.shadowMapEnabled=true;
+renderizador.shadowMap.Enabled=true;
 torreMalla1.castShadow=true;
 torreMalla2.castShadow=true;
 torreMalla3.castShadow=true;
