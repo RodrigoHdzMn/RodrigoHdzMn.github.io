@@ -1,6 +1,15 @@
 
 var escena = new THREE.Scene();
 
+var LuzMagenta= new THREE.PointLight(0xff00ff);
+LuzMagenta.position.x=20;
+
+//var LuzCyan= new THREE.PointLight(0x00ffff);
+//LuzCyan.position.y=20;
+
+//var LuzYellow= new THREE.PointLight(0xffff00);
+//LuzYellow.position.y=20;
+
 var campoVision=30;// grado
 var relacionAspecto=window.innerWidth/window.innerHeight;
 var planoCercano=1;
@@ -161,4 +170,5 @@ escena.add(torreMalla3);
 escena.add(torreMalla4);
 //Fin Torre
 
+escena.add(luzMagenta)
 renderizador.render(escena,camara);
