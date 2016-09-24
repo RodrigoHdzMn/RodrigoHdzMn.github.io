@@ -102,8 +102,12 @@ var torreMalla= new THREE.Mesh(torreForma,material);
 
 torreMalla.rotateX(Math.PI/8);
 
+var iluminacion= new THREE.PointLight(0xFFFFFF);
+iluminacion.position.y=20;
+
 var escena=new THREE.Scene();
 escena.add(torreMalla);
+escena.add(iluminacion);
 
 var camara=new THREE.PerspectiveCamera();
 camara.position.z=15;
@@ -111,4 +115,5 @@ camara.position.z=15;
 renderizador=new THREE.WebGLRenderer();
 renderizador.setSize(window.innerHeight*.75,window.innerHeight*.75 );
 document.body.appendChild(renderizador.domElement);
+
 renderizador.render(escena,camara);
