@@ -167,7 +167,7 @@ torreMalla4.position.z=80;
 escena.add(torreMalla1);
 escena.add(torreMalla2);
 escena.add(torreMalla3);
-escena.add(torreMalla4);
+//escena.add(torreMalla4);
 //Fin Torre
 
 escena.add(LuzMagenta)
