@@ -104,6 +104,7 @@ torreMalla.rotateX(Math.PI/8);
 
 var iluminacion= new THREE.PointLight(0xFFFFFF);
 iluminacion.position.y=20;
+iluminacion.position.z=20;
 
 var escena=new THREE.Scene();
 escena.add(torreMalla);
