@@ -159,11 +159,11 @@ torreForma.merge(formaA4Malla.geometry,formaA4Malla.matrix);
 torreForma.merge(formaA5Malla.geometry,formaA5Malla.matrix);
 torreForma.merge(formaA6Malla.geometry,formaA6Malla.matrix);
 
-var opaco25=new THREE.Material( {opacity:0.25} );
+//var opaco25=new THREE.Material( {opacity:0.25} );
 var materialNum1=new THREE.MeshLambertMaterial( {color: 0xffe100} );
 var materialNum2=new THREE.MeshLambertMaterial( {color: 0x000ef5});
 
-var materialOp25=new THREE.MultiMaterial(opaco25,materialNum2);
+//var materialOp25=new THREE.MultiMaterial(opaco25,materialNum2);
 
 var torreMalla1= new THREE.Mesh(torreForma,materialNum1);
 torreMalla1.position.x=10;
@@ -171,7 +171,7 @@ torreMalla1.position.z=10;
 var torreMalla2= new THREE.Mesh(torreForma,materialNum1);
 torreMalla2.position.x=80;
 torreMalla2.position.z=10;
-var torreMalla3= new THREE.Mesh(torreForma,materialOp25);
+var torreMalla3= new THREE.Mesh(torreForma,materialNum2);
 torreMalla3.position.x=10;
 torreMalla3.position.z=80;
 var torreMalla4= new THREE.Mesh(torreForma,materialNum2);
