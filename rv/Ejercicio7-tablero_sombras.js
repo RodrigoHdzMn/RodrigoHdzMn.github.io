@@ -1,12 +1,14 @@
 
 var escena = new THREE.Scene();
 
-var LuzMagenta= new THREE.PointLight(0xff00ff);
-LuzMagenta.position.y=40;
-LuzMagenta.position.z=40;
+//var LuzMagenta= new THREE.PointLight(0xff00ff);
+//LuzMagenta.position.y=40;
+//LuzMagenta.position.z=40;
 
-//var LuzCyan= new THREE.PointLight(0x00ffff);
-//LuzCyan.position.y=20;
+var LuzCyan= new THREE.PointLight(0x00ffff);
+LuzCyan.position.x=80;
+LuzCyan.position.y=40;
+LuzCyan.position.z=40;
 
 //var LuzYellow= new THREE.PointLight(0xffff00);
 //LuzYellow.position.y=20;
@@ -171,7 +173,8 @@ escena.add(torreMalla3);
 escena.add(torreMalla4);
 //Fin Torre
 
-escena.add(LuzMagenta)
+//escena.add(LuzMagenta)
+escena.add(LuzCyan)
 renderizador.shadowMap.Enabled=true;
 
 renderizador.render(escena,camara);
