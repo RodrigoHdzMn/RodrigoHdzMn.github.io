@@ -30,7 +30,7 @@ renderizador.setSize( window.innerHeight*.95,
 			
 document.body.appendChild (renderizador.domElement);
 
-var Tablero = new THREE.Geometry();
+//var Tablero = new THREE.Geometry();
 
 for(var i=1; i<=8; i++)
 {
@@ -57,6 +57,7 @@ for(var i=1; i<=8; i++)
 	cubo.position.x=10*i;
 	cubo.position.z=10*j;
 	//escena.add(cubo);
+	var Tablero = new THREE.Geometry();
 	Tablero.merge(cubo.geometry, cubo.matrix);
 
    }
