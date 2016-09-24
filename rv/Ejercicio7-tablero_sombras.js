@@ -30,6 +30,8 @@ renderizador.setSize( window.innerHeight*.95,
 			
 document.body.appendChild (renderizador.domElement);
 
+var Tablero = new THREE.Geometry();
+
 for(var i=1; i<=8; i++)
 {
    for(var j=1; j<=8; j++)
@@ -54,8 +56,8 @@ for(var i=1; i<=8; i++)
 	var cubo = new THREE.Mesh(forma, material);
 	cubo.position.x=10*i;
 	cubo.position.z=10*j;
-	escena.add(cubo);
-	
+	//escena.add(cubo);
+	Tablero.merge(cubo.geometry, cubo.matrix);
 
    }
 }
@@ -176,6 +178,7 @@ escena.add(torreMalla3);
 escena.add(torreMalla4);
 //Fin Torre
 
+escena.add(Tablero);
 //escena.add(LuzMagenta)
 //escena.add(LuzCyan)
 escena.add(LuzYellow)
@@ -184,7 +187,7 @@ torreMalla1.castShadow=true;
 torreMalla2.castShadow=true;
 torreMalla3.castShadow=true;
 torreMalla4.castShadow=true;
-cubo.receiveShadow=true;
+Tablero.receiveShadow=true;
 LuzYellow.castShadow=true;
 
 renderizador.render(escena,camara);
