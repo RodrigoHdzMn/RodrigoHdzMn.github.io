@@ -178,8 +178,8 @@ escena.add(torreMalla2);
 escena.add(torreMalla3);
 escena.add(torreMalla4);
 //Fin Torre
-
-var TableroMalla= new THREE.Mesh(Tablero,new THREE.MeshLambertMaterial( {transparent:true,opacity:0.95}));
+//{transparent:true,opacity:0.95}
+var TableroMalla= new THREE.Mesh(Tablero,new THREE.MeshLambertMaterial( ));
 TableroMalla.position.x=45;
 TableroMalla.position.z=45;
 TableroMalla.position.y=0.1;
