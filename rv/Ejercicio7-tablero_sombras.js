@@ -179,7 +179,7 @@ escena.add(torreMalla3);
 escena.add(torreMalla4);
 //Fin Torre
 
-var TableroMalla= new THREE.Mesh(Tablero,new THREE.MeshLambertMaterial( {transparent:true,opacity:0.75}));
+var TableroMalla= new THREE.Mesh(Tablero,new THREE.MeshLambertMaterial( {transparent:true,opacity:0.95}));
 TableroMalla.position.x=45;
 TableroMalla.position.z=45;
 TableroMalla.position.y=0.1;
