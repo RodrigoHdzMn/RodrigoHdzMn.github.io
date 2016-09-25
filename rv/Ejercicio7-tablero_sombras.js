@@ -30,7 +30,7 @@ renderizador.setSize( window.innerHeight*.85,
 			
 document.body.appendChild (renderizador.domElement);
 
-var Tablero = new THREE.Geometry();
+var Tablero = new THREE.BoxGeometry(80,.1,80);
 var forma = new THREE.BoxGeometry( 10,.1,10);
 
 for(var i=1; i<=8; i++)
@@ -60,8 +60,6 @@ for(var i=1; i<=8; i++)
 
    }
 }
-
-//var TableroMalla= new THREE.Mesh(Tablero);
 
 //Inicio Torre
 var Tb=0.8*5;//tamaño base
@@ -181,6 +179,7 @@ escena.add(torreMalla3);
 escena.add(torreMalla4);
 //Fin Torre
 
+var TableroMalla= new THREE.Mesh(Tablero,new THREE.MeshLambertMaterial( {transparent:true,opacity:0.85}));
 //escena.add(TableroMalla);
 escena.add(LuzMagenta)
 escena.add(LuzCyan)
