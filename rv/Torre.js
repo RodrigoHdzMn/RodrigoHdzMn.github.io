@@ -107,7 +107,7 @@ iluminacion.position.y=20;
 iluminacion.position.z=20;
 
 var base = new THREE.Mesh(new THREE.BoxGeometry(5,.1,5),new THREE.MeshLambertMaterial({color:0xFFFFFF}));
-
+base.rotateX(Math.PI/8);
 
 var escena=new THREE.Scene();
 escena.add(torreMalla);
