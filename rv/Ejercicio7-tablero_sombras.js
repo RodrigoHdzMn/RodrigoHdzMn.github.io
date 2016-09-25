@@ -185,8 +185,8 @@ TableroMalla.position.z=45;
 TableroMalla.position.y=0.1;
 
 escena.add(TableroMalla);
-escena.add(LuzMagenta)
-escena.add(LuzCyan)
+//escena.add(LuzMagenta)
+//escena.add(LuzCyan)
 escena.add(LuzYellow)
 
 renderizador.shadowMap.Enabled=true;
@@ -195,8 +195,8 @@ torreMalla2.castShadow=true;
 torreMalla3.castShadow=true;
 torreMalla4.castShadow=true;
 TableroMalla.receiveShadow=true;
-LuzMagenta.castShadow=true;
-LuzCyan.castShadow=true;
+//LuzMagenta.castShadow=true;
+//LuzCyan.castShadow=true;
 LuzYellow.castShadow=true;
 
 renderizador.render(escena,camara);
