@@ -104,7 +104,7 @@ torreMalla.rotateX(Math.PI/8);
 
 var iluminacion= new THREE.PointLight(0xFFFFFF);
 iluminacion.position.y=20;
-iluminacion.position.z=-20;
+iluminacion.position.z=-10;
 
 var base = new THREE.Mesh(new THREE.BoxGeometry(10,.1,10),new THREE.MeshLambertMaterial({color:0xFFFFFF}));
 base.rotateX(Math.PI/8);
