@@ -180,7 +180,7 @@ escena.add(torreMalla4);
 //Fin Torre
 
 var TableroMalla= new THREE.Mesh(Tablero,new THREE.MeshLambertMaterial( {transparent:true,opacity:0.85}));
-//escena.add(TableroMalla);
+escena.add(TableroMalla);
 escena.add(LuzMagenta)
 escena.add(LuzCyan)
 escena.add(LuzYellow)
