@@ -10,7 +10,7 @@ LuzCyan.position.x=80;
 LuzCyan.position.y=40;
 LuzCyan.position.z=40;
 
-var LuzYellow= new THREE.PointLight(0xffffff);
+var LuzYellow= new THREE.PointLight(0xffff00);
 LuzYellow.position.x=40;
 LuzYellow.position.y=40;
 
@@ -57,7 +57,6 @@ for(var i=1; i<=8; i++)
 	cubo.position.z=10*j;
 	escena.add(cubo);
 	//Tablero.merge(cubo.geometry, cubo.matrix);
-
    }
 }
 
@@ -179,14 +178,14 @@ escena.add(torreMalla3);
 escena.add(torreMalla4);
 //Fin Torre
 //{transparent:true,opacity:0.95}
-var TableroMalla= new THREE.Mesh(Tablero,new THREE.MeshLambertMaterial( ));
+var TableroMalla= new THREE.Mesh(Tablero,new THREE.MeshLambertMaterial( {transparent:true,opacity:0.01}));
 TableroMalla.position.x=45;
 TableroMalla.position.z=45;
 TableroMalla.position.y=0.1;
 
 escena.add(TableroMalla);
-//escena.add(LuzMagenta)
-//escena.add(LuzCyan)
+escena.add(LuzMagenta)
+escena.add(LuzCyan)
 escena.add(LuzYellow)
 
 renderizador.shadowMap.Enabled=true;
@@ -195,8 +194,8 @@ torreMalla2.castShadow=true;
 torreMalla3.castShadow=true;
 torreMalla4.castShadow=true;
 TableroMalla.receiveShadow=true;
-//LuzMagenta.castShadow=true;
-//LuzCyan.castShadow=true;
+LuzMagenta.castShadow=true;
+LuzCyan.castShadow=true;
 LuzYellow.castShadow=true;
 
 renderizador.render(escena,camara);
