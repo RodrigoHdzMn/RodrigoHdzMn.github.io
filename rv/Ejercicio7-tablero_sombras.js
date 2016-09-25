@@ -30,14 +30,13 @@ renderizador.setSize( window.innerHeight*.85,
 			
 document.body.appendChild (renderizador.domElement);
 
-//var Tablero = new THREE.Geometry();
+var Tablero = new THREE.Geometry();
+var forma = new THREE.BoxGeometry( 10,.1,10);
 
 for(var i=1; i<=8; i++)
 {
    for(var j=1; j<=8; j++)
    {
-	var forma = new THREE.BoxGeometry( 10,.1,10);
-	
 	if(j%2 ==0)
 	{
 		if(i%2 == 0)
@@ -187,6 +186,7 @@ escena.add(torreMalla4);
 escena.add(LuzMagenta)
 escena.add(LuzCyan)
 escena.add(LuzYellow)
+
 renderizador.shadowMap.Enabled=true;
 torreMalla1.castShadow=true;
 torreMalla2.castShadow=true;
