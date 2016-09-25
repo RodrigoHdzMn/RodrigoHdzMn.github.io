@@ -107,10 +107,10 @@ iluminacion.position.x=20;
 iluminacion.position.y=50;
 iluminacion.position.z=-10;
 
-var LuzMagenta= new THREE.PointLight(0xff00ff);
-LuzMagenta.position.x=-20;
-LuzMagenta.position.y=50;
-LuzMagenta.position.z=-10;
+//var LuzMagenta= new THREE.PointLight(0xff00ff);
+//LuzMagenta.position.x=-20;
+//LuzMagenta.position.y=50;
+//LuzMagenta.position.z=-10;
 
 var base = new THREE.Mesh(new THREE.BoxGeometry(10,.1,10),new THREE.MeshLambertMaterial({color:0xFFFFFF}));
 base.rotateX(Math.PI/8);
