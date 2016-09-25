@@ -108,6 +108,7 @@ iluminacion.position.y=50;
 iluminacion.position.z=-10;
 
 var LuzMagenta= new THREE.PointLight(0xff00ff);
+LuzMagenta.position.x=-20;
 LuzMagenta.position.y=50;
 LuzMagenta.position.z=-10;
 
