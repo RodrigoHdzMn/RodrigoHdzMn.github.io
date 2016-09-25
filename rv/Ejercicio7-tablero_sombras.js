@@ -57,7 +57,7 @@ for(var i=1; i<=8; i++)
 	cubo.position.z=10*j;
 	escena.add(cubo);
 	//var Tablero = new THREE.Geometry();
-	//Tablero.merge(cubo.geometry, cubo.matrix);
+	Tablero.merge(cubo.geometry, cubo.matrix);
 
    }
 }
