@@ -181,7 +181,7 @@ escena.add(torreMalla2);
 escena.add(torreMalla3);
 escena.add(torreMalla4);
 //Fin Torre
-var TableroMalla= new THREE.Mesh(Tablero,materialOpaco100);
+var TableroMalla= new THREE.Mesh(Tablero);
 escena.add(TableroMalla);
 escena.add(LuzMagenta)
 escena.add(LuzCyan)
