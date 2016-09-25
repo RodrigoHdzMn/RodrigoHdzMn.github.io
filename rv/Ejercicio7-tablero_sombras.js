@@ -161,17 +161,17 @@ var materialOpaco50=new THREE.MeshLambertMaterial( {color: 0x000ef5,transparent:
 var materialOpaco25=new THREE.MeshLambertMaterial( {color: 0x000ef5,transparent:true,opacity:0.25});
 
 var torreMalla1= new THREE.Mesh(torreForma,materialOpaco100);
-torreMalla1.position.x=10;
-torreMalla1.position.z=10;
+torreMalla1.position.x=20;
+torreMalla1.position.z=20;
 var torreMalla2= new THREE.Mesh(torreForma,materialOpaco75);
-torreMalla2.position.x=80;
-torreMalla2.position.z=10;
+torreMalla2.position.x=70;
+torreMalla2.position.z=20;
 var torreMalla3= new THREE.Mesh(torreForma,materialOpaco25);
-torreMalla3.position.x=10;
-torreMalla3.position.z=80;
+torreMalla3.position.x=20;
+torreMalla3.position.z=70;
 var torreMalla4= new THREE.Mesh(torreForma,materialOpaco50);
-torreMalla4.position.x=80;
-torreMalla4.position.z=80;
+torreMalla4.position.x=70;
+torreMalla4.position.z=70;
 
 escena.add(torreMalla1);
 escena.add(torreMalla2);
@@ -195,6 +195,8 @@ torreMalla2.castShadow=true;
 torreMalla3.castShadow=true;
 torreMalla4.castShadow=true;
 TableroMalla.receiveShadow=true;
+LuzMagenta.castShadow=true;
+LuzCyan.castShadow=true;
 LuzYellow.castShadow=true;
 
 renderizador.render(escena,camara);
