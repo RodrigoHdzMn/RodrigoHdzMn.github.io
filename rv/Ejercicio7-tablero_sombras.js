@@ -55,14 +55,14 @@ for(var i=1; i<=8; i++)
 	var cubo = new THREE.Mesh(forma, material);
 	cubo.position.x=10*i;
 	cubo.position.z=10*j;
-	escena.add(cubo);
+	//escena.add(cubo);
 	//var Tablero = new THREE.Geometry();
 	Tablero.merge(cubo.geometry, cubo.matrix);
 
    }
 }
 
-//var TableroMalla= new THREE.Mesh(Tablero);
+var TableroMalla= new THREE.Mesh(Tablero);
 
 //Inicio Torre
 var Tb=0.8*5;//tamaño base
@@ -182,7 +182,7 @@ escena.add(torreMalla3);
 escena.add(torreMalla4);
 //Fin Torre
 
-//escena.add(TableroMalla);
+escena.add(TableroMalla);
 escena.add(LuzMagenta)
 escena.add(LuzCyan)
 escena.add(LuzYellow)
