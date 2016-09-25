@@ -106,7 +106,7 @@ var iluminacion= new THREE.PointLight(0xFFFFFF);
 iluminacion.position.y=20;
 iluminacion.position.z=20;
 
-var base = new THREE.Mesh(new THREE.BoxGeometry(5,.1,5),new THREE.MeshLambertMaterial({color:0xFFFFFF}));
+var base = new THREE.Mesh(new THREE.BoxGeometry(10,.1,10),new THREE.MeshLambertMaterial({color:0xFFFFFF}));
 base.rotateX(Math.PI/8);
 
 var escena=new THREE.Scene();
@@ -120,5 +120,10 @@ camara.position.z=15;
 renderizador=new THREE.WebGLRenderer();
 renderizador.setSize(window.innerHeight*.75,window.innerHeight*.75 );
 document.body.appendChild(renderizador.domElement);
+
+renderizador.shadowMapEnabled=true;
+torreMalla.castShadow=true;
+base.receiveShadow=true;
+iluminacion.castShadow=true;
 
 renderizador.render(escena,camara);
