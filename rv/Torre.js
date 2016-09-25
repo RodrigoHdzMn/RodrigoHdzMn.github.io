@@ -118,7 +118,7 @@ base.rotateX(Math.PI/8);
 var escena=new THREE.Scene();
 escena.add(torreMalla);
 escena.add(base);
-//escena.add(iluminacion);
+escena.add(iluminacion);
 escena.add(LuzMagenta);
 
 var camara=new THREE.PerspectiveCamera();
@@ -131,7 +131,7 @@ document.body.appendChild(renderizador.domElement);
 renderizador.shadowMap.Enabled=true;
 torreMalla.castShadow=true;
 base.receiveShadow=true;
-//iluminacion.castShadow=true;
-LuzMagenta.castShadow=true;
+iluminacion.castShadow=true;
+//LuzMagenta.castShadow=true;
 
 renderizador.render(escena,camara);
