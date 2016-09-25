@@ -103,6 +103,7 @@ var torreMalla= new THREE.Mesh(torreForma,material);
 torreMalla.rotateX(Math.PI/8);
 
 var iluminacion= new THREE.PointLight(0xFFFFFF);
+iluminacion.position.x=20;
 iluminacion.position.y=20;
 iluminacion.position.z=-10;
 
