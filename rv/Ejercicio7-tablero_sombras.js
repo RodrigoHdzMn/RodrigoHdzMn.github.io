@@ -10,7 +10,7 @@ LuzCyan.position.x=80;
 LuzCyan.position.y=40;
 LuzCyan.position.z=40;
 
-var LuzYellow= new THREE.PointLight(0xffff00);
+var LuzYellow= new THREE.PointLight(0xffffff);
 LuzYellow.position.x=40;
 LuzYellow.position.y=40;
 
