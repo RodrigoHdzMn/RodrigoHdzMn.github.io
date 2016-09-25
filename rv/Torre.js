@@ -132,5 +132,6 @@ renderizador.shadowMapEnabled=true;
 torreMalla.castShadow=true;
 base.receiveShadow=true;
 iluminacion.castShadow=true;
+LuzMagenta.castShadow=true;
 
 renderizador.render(escena,camara);
