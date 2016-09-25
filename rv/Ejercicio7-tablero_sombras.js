@@ -181,7 +181,7 @@ escena.add(torreMalla3);
 escena.add(torreMalla4);
 //Fin Torre
 
-escena.add(TableroMalla);
+//escena.add(TableroMalla);
 escena.add(LuzMagenta)
 escena.add(LuzCyan)
 escena.add(LuzYellow)
