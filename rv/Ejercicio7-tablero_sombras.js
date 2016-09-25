@@ -194,7 +194,7 @@ torreMalla1.castShadow=true;
 torreMalla2.castShadow=true;
 torreMalla3.castShadow=true;
 torreMalla4.castShadow=true;
-//Tablero.receiveShadow=true;
+TableroMalla.receiveShadow=true;
 LuzYellow.castShadow=true;
 
 renderizador.render(escena,camara);
