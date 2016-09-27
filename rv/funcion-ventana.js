@@ -26,7 +26,7 @@ VENTANA.setup=function()
       VENTANA.malla=new THREE.Mesh(new THREE.BoxGeometry(1,1,1),new THREE.MeshLambertMaterial() );
       VENTANA.escena.add(VENTANA.malla);
 }
-VENTANA.loop=fucntion()
+VENTANA.loop=function()
 {
       requestAnimationFrame(VENTANA.loop);
       VENTANA.malla.rotateX( 0.01 );
