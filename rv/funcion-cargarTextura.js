@@ -37,4 +37,4 @@ TEXTURA.loop=function()
 }
 
 TEXTURA.setup();
-TEXTURE.loop();
+TEXTURA.loop();
