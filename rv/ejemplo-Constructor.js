@@ -26,7 +26,7 @@ CONSTRUCTOR.setup = function()
       arbol1.malla.position.x = -5;
       arbol2.malla.position.x =  5;
       
-      CONSTRUCTOR.camara = new THREE.PerpectiveCamera();
+      CONSTRUCTOR.camara = new THREE.PerspectiveCamera();
       CONSTRUCTOR.camara.position.z = 20;
       
       var lienzo = document.getElementById("ejemplo-constructor");
