@@ -21,9 +21,9 @@ PROTOTIPO.ArbolGeometry.prototype = new THREE.Geometry();
 
 PROTOTIPO.setup = function()
 {
-      var arbol1= new TRHEE.Mesh( new PROTOTIPO.ArbolGeometry(),
+      var arbol1= new THREE.Mesh( new PROTOTIPO.ArbolGeometry(),
                              new PROTOTIPO.MeshNormalMaterial());
-      var arbol2= new TRHEE.Mesh( new PROTOTIPO.ArbolGeometry(),
+      var arbol2= new THREE.Mesh( new PROTOTIPO.ArbolGeometry(),
                              new PROTOTIPO.MeshNormalMaterial());
       
       arbol1.malla.position.x = -5;
