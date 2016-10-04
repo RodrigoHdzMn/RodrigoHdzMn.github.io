@@ -1,7 +1,7 @@
 
 function Arbol()
 {
-      var troncoForma = new THREE.CylinderGeometry(-25,.5,1);
+      var troncoForma = new THREE.CylinderGeometry(-.25,.5,1);
       var esferaForma = new THREE.SphereGeometry(0.65);
       esferaForma.translate(0,1,0);
       
