@@ -23,8 +23,8 @@ CONSTRUCTOR.setup = function()
       var arbol1= new Arbol();
       var arbol2= new Arbol();
       
-      arbol1.malla.position.x = -5:
-      arbol2.malla.position.x =  5:
+      arbol1.malla.position.x = -5;
+      arbol2.malla.position.x =  5;
       
       CONSTRUCTOR.camara = new THREE.PerpectiveCamera();
       CONSTRUCTOR.camara.position.z = 20;
@@ -32,4 +32,17 @@ CONSTRUCTOR.setup = function()
       var lienzo = document.get ElementById("ejemplo-constructor");
       CONSTRUCTOR.renderizador = new THREE.WebGLRenderer({canvas:lienzo, antialias:true});
       CONSTRUCTOR.renderizador.setSize(600,600);
+      
+      CONSTRUCTOR.escena = new THREE.Scene();
+      CONSTRUCTOR.escena.add(arbol1.malla);
+      CONSTRUCTOR.escena.add(arbol2.malla);
 }
+
+CONSTRUCTOR.loop = function()
+{
+      requestAnimationFrame( CONSTRUCTOR.loop );
+      CONSTRUCTOR.renderizador.render( CONSTRUCTOR.escena, CONSTRUCTOR.camara );
+}
+
+CONSTRUCTOR.setup();
+CONSTRUCTOR.loop();
