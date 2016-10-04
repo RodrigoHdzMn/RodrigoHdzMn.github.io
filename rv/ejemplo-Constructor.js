@@ -29,7 +29,7 @@ CONSTRUCTOR.setup = function()
       CONSTRUCTOR.camara = new THREE.PerpectiveCamera();
       CONSTRUCTOR.camara.position.z = 20;
       
-      var lienzo = document.get ElementById("ejemplo-constructor");
+      var lienzo = document.getElementById("ejemplo-constructor");
       CONSTRUCTOR.renderizador = new THREE.WebGLRenderer({canvas:lienzo, antialias:true});
       CONSTRUCTOR.renderizador.setSize(600,600);
       
