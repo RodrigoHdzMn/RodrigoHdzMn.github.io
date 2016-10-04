@@ -16,7 +16,7 @@ function Arbol()
       this.malla = new THREE.Mesh(arbolForma,material);
 }
 
-var CONSTRUCTOR = new Objetct();
+var CONSTRUCTOR = new Object();
 
 CONSTRUCTOR.setup = function()
 {
