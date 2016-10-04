@@ -3,6 +3,7 @@ var PROTOTIPO = new Object();
 
 PROTOTIPO.ArbolGeometry = function()
 {
+      THREE.Geometry.call(this);
       var troncoForma = new THREE.CylinderGeometry(-.25,.5,1);
       var esferaForma = new THREE.SphereGeometry(0.65);
       esferaForma.translate(0,1,0);
@@ -12,9 +13,6 @@ PROTOTIPO.ArbolGeometry = function()
       
       this.merge(troncoMalla.geometry, troncoMalla.matrix);
       this.merge(esferaMalla.geometry, esferaMalla.matrix);
-      
-      var material = new THREE.MeshNormalMaterial();
-      this.malla = new THREE.Mesh(arbolForma,material);
 }
 
 PROTOTIPO.ArbolGeometry.prototype = new THREE.Geometry();
