@@ -1,5 +1,5 @@
 
-funcion Torre()
+function Torre()
 {
 	//Inicio Torre
 	var Tb=0.8*5;//tamaño base
