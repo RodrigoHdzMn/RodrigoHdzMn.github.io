@@ -53,12 +53,10 @@ TEXTURA.setup=function()
       var lienzo=document.getElementById("tablero_texturas");
       TEXTURA.renderizador=new THREE.WebGLRenderer({canvas:lienzo, antialias: true});
       TEXTURA.renderizador.setSize(600,600);
-}
-
-TEXTURA.main=function()
-{
+	
       TEXTURA.renderizador.render(TEXTURA.escena,TEXTURA.camara)
 }
 
+
 TEXTURA.setup();
-TEXTURA.main();
+//TEXTURA.main();
