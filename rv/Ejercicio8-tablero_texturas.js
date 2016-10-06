@@ -94,7 +94,7 @@ function Torre()
 	torreForma.merge(formaA5Malla.geometry,formaA5Malla.matrix);
 	torreForma.merge(formaA6Malla.geometry,formaA6Malla.matrix);
 	
-        var material = new THREE.MeshBasicMaterial();
+        var material = new THREE.MescNormalMaterial();
         this.malla = new THREE.Mesh(torreForma,material);
 }
 
