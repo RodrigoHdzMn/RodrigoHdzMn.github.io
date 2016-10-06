@@ -10,7 +10,7 @@ camara.position.z = 200;
 camara.position.y = 25;
 camara.position.x = 50;
 
-var lienzo=document.getElementById("ejemplo-textura");
+var lienzo=document.getElementById("tablero_texturas");
 var renderizador = new THREE.WebGLRenderer({canvas:lienzo, antialias: true});
 renderizador.setSize( window.innerHeight*.85,
                     	window.innerHeight*.85);
