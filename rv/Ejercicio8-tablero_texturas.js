@@ -2,9 +2,9 @@ var TEXTURA=new Object();
 
 TEXTURA.retrollamada = function(textura)
 {
-      var material= new THREE.MeshBasicMaterial( {map:textura} );
-      var forma = new THREE.BoxGeometry( 10,.1,10);
-      TEXTURA.mallaCubo= new THREE.Mesh(forma,material);
+      material_cubo= new THREE.MeshBasicMaterial( {map:textura} );
+      forma_cubo = new THREE.BoxGeometry( 10,.1,10);
+     
 }
 
 TEXTURA.setup=function()
@@ -42,7 +42,8 @@ TEXTURA.setup=function()
 		            cargador.load("Textura_marmol_negro.jpg",TEXTURA.retrollamada);
 	            }
 	
-	            TEXTURA.mallaCubo.position.x=10*i;
+	            TEXTURA.mallaCubo= new THREE.Mesh(forma_cubo,material_cubo);
+		    TEXTURA.mallaCubo.position.x=10*i;
 	            TEXTURA.mallaCubo.position.z=10*j;
 	            TEXTURA.escena.add(TEXTURA.mallaCubo);
             }
