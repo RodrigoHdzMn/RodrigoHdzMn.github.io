@@ -38,8 +38,8 @@ TEXTURA.setup=function()
 	            {
 		            if(i%2 == 0)
 		            cargador.load("Textura_marmol_blanco.jpg",TEXTURA.retrollamada);
-		      else
-		           cargador.load("Textura_marmol_negro.jpg",TEXTURA.retrollamada);
+		      	    else
+		            cargador.load("Textura_marmol_negro.jpg",TEXTURA.retrollamada);
 	            }
 	
 	            TEXTURA.mallaCubo.position.x=10*i;
