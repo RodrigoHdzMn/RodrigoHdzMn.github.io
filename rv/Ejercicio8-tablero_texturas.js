@@ -102,10 +102,10 @@ var CONSTRUCTOR = new Object();
 
 CONSTRUCTOR.setup = function()
 {
-        var torre1= new Arbol();
-        var torre2= new Arbol();
-	var torre3= new Arbol();
-        var torre4= new Arbol();
+        var torre1= new Torre();
+        var torre2= new Torre();
+	var torre3= new Torre();
+        var torre4= new Torre();
       
         torre1.malla.position.x = 10;
         torre1.malla.position.z = 10;
