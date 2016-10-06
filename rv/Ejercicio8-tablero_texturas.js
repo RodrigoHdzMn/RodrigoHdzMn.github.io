@@ -20,7 +20,8 @@ TEXTURA.setup=function()
       TEXTURA.camara.position.z=5;
       
       TEXTURA.renderizador=new THREE.WebGLRenderer();
-      TEXTURA.renderizador.setSize(600,600);
+      TEXTURA.renderizador.setSize( window.innerHeight*.85,
+                    	window.innerHeight*.85);
 }
 
 TEXTURA.loop=function()
