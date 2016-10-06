@@ -24,9 +24,9 @@ TEXTURA.setup=function()
       
       var cargador = new THREE.TextureLoader();
 
-      for(var i=1; i<=8; i++)
+      for(var i=1; i<=2; i++)
       {
-            for(var j=1; j<=8; j++)
+            for(var j=1; j<=2; j++)
             {
 	            if(j%2 ==0)
 	            {
