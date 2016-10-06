@@ -1,6 +1,6 @@
 var TEXTURA=new Object();
- material_cubo;
- forma_cubo;
+ var material_cubo;
+ var forma_cubo;
 TEXTURA.retrollamada = function(textura)
 {
       material_cubo= new THREE.MeshBasicMaterial( {map:textura} );
