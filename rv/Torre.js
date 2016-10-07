@@ -12,7 +12,7 @@ var altura3=altura1;
 var forma3 = new THREE.CylinderGeometry(Tb/2, Tb*3/4, altura3, 60 );
 forma3.translate(0,altura2+altura3,0);
 
-var altura4=Tb*1.875;
+//var altura4
 var points = [];
 for ( var i = 0; i < 10; i ++ ) {
 	var a= Math.sin( i * 0.2 ) * 10 + 5 ;
