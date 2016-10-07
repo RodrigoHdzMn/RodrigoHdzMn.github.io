@@ -22,12 +22,12 @@ for ( var i = 0; i < 10; i ++ )
 }
 var forma4 = new THREE.LatheGeometry( points );
 forma4.rotateX(Math.PI);
-forma4.translate(0,Tb*1.13,0);
+forma4.translate(0,Tb*1.125,0);
 
 var altura5=Tb/16;
 var forma5 = new THREE.TorusGeometry( 0.4, 0.2, 5, 100 );//(radius, tube, radialSegments)
 forma5.rotateX(Math.PI/2);
-forma5.translate(0,Tb*1.65,0);
+forma5.translate(0,Tb*1.7,0);
 
 var altura6=altura5;
 var forma6 = new THREE.SphereGeometry( 0.9, 32, 32 );
