@@ -113,7 +113,7 @@ for ( var i = 0; i < 10; i ++ ) {
 }
 var geometry = new THREE.LatheBufferGeometry( points );
 geometry.rotateX(Math.PI);
-geometry.translate(0,0.8,0);
+geometry.translate(0,Tb*1.25,0);
 var materiall = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
 var lathe = new THREE.Mesh( geometry, materiall );
 
