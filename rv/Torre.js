@@ -14,13 +14,14 @@ forma3.translate(0,altura2+altura3,0);
 
 //var altura4
 var points = [];
-for ( var i = 0; i < 10; i ++ ) {
+for ( var i = 0; i < 10; i ++ ) 
+{
 	var a= Math.sin( i * 0.2 ) * 10 + 5 ;
 	var b=( i - 5 ) * 2;
 	points.push( new THREE.Vector2( 0.06*a, 0.1*b ) );
 }
 var forma4 = new THREE.LatheBufferGeometry( points );
-forma4.rotateX(Math.PI);
+//forma4.rotateX(Math.PI);
 forma4.translate(0,Tb*1.125,0);
 
 
