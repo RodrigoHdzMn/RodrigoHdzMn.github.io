@@ -30,7 +30,7 @@ forma5.rotateX(Math.PI/2);
 forma5.translate(0,Tb*1.65,0);
 
 var altura6=altura5;
-var forma6 = var geometry = new THREE.SphereGeometry( 0.2, 32, 32 );
+var forma6 = new THREE.SphereGeometry( 0.2, 32, 32 );
 forma6.translate(0,Tb*9/4,0);
 
 var altura7=Tb/8;
