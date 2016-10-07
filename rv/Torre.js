@@ -112,9 +112,9 @@ for ( var i = 0; i < 10; i ++ ) {
 	points.push( new THREE.Vector2( 0.1*a, 0.2*b ) );
 }
 var geometry = new THREE.LatheBufferGeometry( points );
+geometry.translate(0,0.8,0);
 var materiall = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
 var lathe = new THREE.Mesh( geometry, materiall );
-lathe.translateOnAxis( y, 0.8 );
 lathe.rotateX(Math.PI);
 
 var escena=new THREE.Scene();
