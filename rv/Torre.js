@@ -116,6 +116,7 @@ geometry.rotateX(Math.PI);
 geometry.translate(0,Tb*1.25,0);
 var materiall = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
 var lathe = new THREE.Mesh( geometry, materiall );
+lathe.rotateX(Math.PI/8);
 
 
 var escena=new THREE.Scene();
