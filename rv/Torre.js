@@ -102,24 +102,22 @@ var torreMalla= new THREE.Mesh(torreForma,material);
 
 torreMalla.rotateX(Math.PI/8);
 
-//var iluminacion= new THREE.PointLight(0xFFFFFF);
-//iluminacion.position.x=20;
-//iluminacion.position.y=50;
-//iluminacion.position.z=-10;
-
-//var LuzMagenta= new THREE.PointLight(0xff00ff);
-//LuzMagenta.position.x=-20;
-//LuzMagenta.position.y=50;
-//LuzMagenta.position.z=-10;
-
 var base = new THREE.Mesh(new THREE.BoxGeometry(10,.1,10),new THREE.MeshBasicMaterial({color:0xFFFFFF}));
 base.rotateX(Math.PI/8);
+
+var points = [];
+for ( var i = 0; i < 10; i ++ ) {
+	points.push( new THREE.Vector2( Math.sin( i * 0.2 ) * 10 + 5, ( i - 5 ) * 2 ) );
+}
+var geometry = new THREE.LatheBufferGeometry( points );
+var materiall = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
+var lathe = new THREE.Mesh( geometry, materiall );
+
 
 var escena=new THREE.Scene();
 escena.add(torreMalla);
 escena.add(base);
-//escena.add(iluminacion);
-//escena.add(LuzMagenta);
+escena.add(lathe);
 
 var camara=new THREE.PerspectiveCamera();
 camara.position.z=15;
@@ -127,11 +125,5 @@ camara.position.z=15;
 renderizador=new THREE.WebGLRenderer();
 renderizador.setSize(window.innerHeight*.75,window.innerHeight*.75 );
 document.body.appendChild(renderizador.domElement);
-
-//renderizador.shadowMap.Enabled=true;
-//torreMalla.castShadow=true;
-//base.receiveShadow=true;
-//iluminacion.castShadow=true;
-//LuzMagenta.castShadow=true;
 
 renderizador.render(escena,camara);
