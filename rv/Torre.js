@@ -32,8 +32,6 @@ var altura8=Tb*5/16;
 var forma8 = new THREE.CylinderGeometry(Tb*3/4, Tb*3/4, altura8,60 );
 forma8.translate(0,Tb*5/2,0);
 
-//var arriba1 = new THREE.RingGeometry(0.5, 0.8, 64,0,2 );
-//arriba1.translate(0.5,1.2,0);
 
 var dm=Tb/8;//diametro miniCilindros
 var am=Tb/2;//altura mini
@@ -105,24 +103,9 @@ torreMalla.rotateX(Math.PI/8);
 var base = new THREE.Mesh(new THREE.BoxGeometry(10,.1,10),new THREE.MeshBasicMaterial({color:0xFFFFFF}));
 base.rotateX(Math.PI/8);
 
-var points = [];
-for ( var i = 0; i < 10; i ++ ) {
-	var a= Math.sin( i * 0.2 ) * 10 + 5 ;
-	var b=( i - 5 ) * 2;
-	points.push( new THREE.Vector2( 0.06*a, 0.1*b ) );
-}
-var geometry = new THREE.LatheBufferGeometry( points );
-geometry.rotateX(Math.PI);
-geometry.translate(0,1.8,0);
-var materiall = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
-var lathe = new THREE.Mesh( geometry, materiall );
-lathe.rotateX(Math.PI/8);
-
-
 var escena=new THREE.Scene();
 escena.add(torreMalla);
 escena.add(base);
-escena.add(lathe);
 
 var camara=new THREE.PerspectiveCamera();
 camara.position.z=15;
