@@ -97,15 +97,15 @@ torreForma.merge(formaA4Malla.geometry,formaA4Malla.matrix);
 torreForma.merge(formaA5Malla.geometry,formaA5Malla.matrix);
 torreForma.merge(formaA6Malla.geometry,formaA6Malla.matrix);
 
-var material=new THREE.MeshLambertMaterial({transparent:true,opacity:0.9});
+var material=new THREE.MeshBasicMaterial({transparent:true,opacity:0.9});
 var torreMalla= new THREE.Mesh(torreForma,material);
 
 torreMalla.rotateX(Math.PI/8);
 
-var iluminacion= new THREE.PointLight(0xFFFFFF);
-iluminacion.position.x=20;
-iluminacion.position.y=50;
-iluminacion.position.z=-10;
+//var iluminacion= new THREE.PointLight(0xFFFFFF);
+//iluminacion.position.x=20;
+//iluminacion.position.y=50;
+//iluminacion.position.z=-10;
 
 //var LuzMagenta= new THREE.PointLight(0xff00ff);
 //LuzMagenta.position.x=-20;
@@ -118,7 +118,7 @@ base.rotateX(Math.PI/8);
 var escena=new THREE.Scene();
 escena.add(torreMalla);
 escena.add(base);
-escena.add(iluminacion);
+//escena.add(iluminacion);
 //escena.add(LuzMagenta);
 
 var camara=new THREE.PerspectiveCamera();
