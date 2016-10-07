@@ -20,7 +20,7 @@ for ( var i = 0; i < 10; i ++ ) {
 	points.push( new THREE.Vector2( 0.06*a, 0.1*b ) );
 }
 var forma4 = new THREE.LatheBufferGeometry( points );
-geometry.rotateX(Math.PI);
+forma4.rotateX(Math.PI);
 forma4.translate(0,Tb*1.125,0);
 
 var altura5=Tb/16;
