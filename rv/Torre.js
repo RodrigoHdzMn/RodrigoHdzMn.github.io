@@ -13,7 +13,7 @@ var forma3 = new THREE.CylinderGeometry(Tb/2, Tb*3/4, altura3, 60 );
 forma3.translate(0,altura2+altura3,0);
 
 var altura4=Tb*1.875;
-var forma4 = new THREE.CylinderGeometry(Tb/4, Tb/4, altura4, 60 );//
+var forma4 = new THREE.CylinderGeometry(Tb/8, Tb/8, altura4, 60 );//
 forma4.translate(0,Tb*1.25,0);
 
 var altura5=Tb/16;
@@ -112,10 +112,11 @@ for ( var i = 0; i < 10; i ++ ) {
 	points.push( new THREE.Vector2( 0.1*a, 0.2*b ) );
 }
 var geometry = new THREE.LatheBufferGeometry( points );
+geometry.rotateX(Math.PI);
 geometry.translate(0,0.8,0);
 var materiall = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
 var lathe = new THREE.Mesh( geometry, materiall );
-lathe.rotateX(Math.PI);
+
 
 var escena=new THREE.Scene();
 escena.add(torreMalla);
