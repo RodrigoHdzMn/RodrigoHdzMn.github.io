@@ -25,7 +25,7 @@ forma4.rotateX(Math.PI);
 forma4.translate(0,Tb*1.125,0);
 
 var altura5=Tb/16;
-var forma5 = new THREE.TorusGeometry( 0.4, 0.4, 3, 100 );
+var forma5 = new THREE.TorusGeometry( 0.4, 0.5, 3, 100 );
 forma5.rotateX(Math.PI/2);
 forma5.translate(0,Tb*1.5,0);
 
@@ -117,7 +117,7 @@ escena.add(torreMalla);
 escena.add(base);
 
 var camara=new THREE.PerspectiveCamera();
-camara.position.z=15;
+camara.position.z=10;
 
 renderizador=new THREE.WebGLRenderer();
 renderizador.setSize(window.innerHeight*.75,window.innerHeight*.75 );
