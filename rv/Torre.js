@@ -109,7 +109,7 @@ var points = [];
 for ( var i = 0; i < 10; i ++ ) {
 	var a= Math.sin( i * 0.2 ) * 10 + 5 ;
 	var b=( i - 5 ) * 2;
-	points.push( new THREE.Vector2( 0.5*a, 0.5*b ) );
+	points.push( new THREE.Vector2( 0.2*a, 0.2*b ) );
 }
 var geometry = new THREE.LatheBufferGeometry( points );
 var materiall = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
