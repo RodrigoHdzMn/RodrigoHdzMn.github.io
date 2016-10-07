@@ -107,7 +107,7 @@ base.rotateX(Math.PI/8);
 
 var points = [];
 for ( var i = 0; i < 10; i ++ ) {
-	points.push( new THREE.Vector2( Math.sin( i * 0.2 ) * 10 + 5, ( i - 5 ) * 2 ) );
+	points.push( new THREE.Vector2(0.5*( Math.sin( i * 0.2 ) * 10 + 5, ( i - 5 ) * 2 )) );
 }
 var geometry = new THREE.LatheBufferGeometry( points );
 var materiall = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
@@ -120,7 +120,7 @@ escena.add(base);
 escena.add(lathe);
 
 var camara=new THREE.PerspectiveCamera();
-camara.position.z=100;
+camara.position.z=50;
 
 renderizador=new THREE.WebGLRenderer();
 renderizador.setSize(window.innerHeight*.75,window.innerHeight*.75 );
