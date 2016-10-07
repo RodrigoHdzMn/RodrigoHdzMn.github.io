@@ -120,7 +120,7 @@ escena.add(base);
 escena.add(lathe);
 
 var camara=new THREE.PerspectiveCamera();
-camara.position.z=150;
+camara.position.z=100;
 
 renderizador=new THREE.WebGLRenderer();
 renderizador.setSize(window.innerHeight*.75,window.innerHeight*.75 );
