@@ -27,7 +27,7 @@ forma4.translate(0,Tb*1.125,0);
 var altura5=Tb/16;
 var forma5 = new THREE.TorusGeometry( 0.4, 0.4, 3, 100 );
 forma5.rotateX(Math.PI/2);
-forma5.translate(0,Tb*1.25,0);
+forma5.translate(0,Tb*1.5,0);
 
 var altura6=altura5;
 var forma6 = new THREE.CylinderGeometry(Tb*9/16, Tb*9/16, altura6,60 );
