@@ -13,8 +13,15 @@ var forma3 = new THREE.CylinderGeometry(Tb/2, Tb*3/4, altura3, 60 );
 forma3.translate(0,altura2+altura3,0);
 
 var altura4=Tb*1.875;
-var forma4 = new THREE.CylinderGeometry(Tb/8, Tb/8, altura4, 60 );//
-forma4.translate(0,Tb*1.25,0);
+var points = [];
+for ( var i = 0; i < 10; i ++ ) {
+	var a= Math.sin( i * 0.2 ) * 10 + 5 ;
+	var b=( i - 5 ) * 2;
+	points.push( new THREE.Vector2( 0.06*a, 0.1*b ) );
+}
+var forma4 = new THREE.LatheBufferGeometry( points );
+geometry.rotateX(Math.PI);
+forma4.translate(0,Tb*1.125,0);
 
 var altura5=Tb/16;
 var forma5 = new THREE.CylinderGeometry(Tb*9/16, Tb/2, altura5,60 );
