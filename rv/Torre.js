@@ -128,10 +128,10 @@ renderizador=new THREE.WebGLRenderer();
 renderizador.setSize(window.innerHeight*.75,window.innerHeight*.75 );
 document.body.appendChild(renderizador.domElement);
 
-renderizador.shadowMap.Enabled=true;
-torreMalla.castShadow=true;
-base.receiveShadow=true;
-iluminacion.castShadow=true;
+//renderizador.shadowMap.Enabled=true;
+//torreMalla.castShadow=true;
+//base.receiveShadow=true;
+//iluminacion.castShadow=true;
 //LuzMagenta.castShadow=true;
 
 renderizador.render(escena,camara);
