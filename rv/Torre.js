@@ -112,7 +112,7 @@ for ( var i = 0; i < 10; i ++ ) {
 var geometry = new THREE.LatheBufferGeometry( points );
 var materiall = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
 var lathe = new THREE.Mesh( geometry, materiall );
-
+lathe.rotateX(Math.PI);
 
 var escena=new THREE.Scene();
 escena.add(torreMalla);
