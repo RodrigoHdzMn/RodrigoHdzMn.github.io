@@ -24,10 +24,9 @@ var forma4 = new THREE.LatheGeometry( points );
 forma4.rotateX(Math.PI);
 forma4.translate(0,Tb*1.125,0);
 
-
 var altura5=Tb/16;
-var forma5 = new THREE.CylinderGeometry(Tb*9/16, Tb/2, altura5,60 );
-forma5.translate(0,Tb*35/16,0);
+var forma5 = new THREE.TorusGeometry( 6, 1.4, 3, 100 );
+forma5.translate(0,Tb*1.125,0);
 
 var altura6=altura5;
 var forma6 = new THREE.CylinderGeometry(Tb*9/16, Tb*9/16, altura6,60 );
