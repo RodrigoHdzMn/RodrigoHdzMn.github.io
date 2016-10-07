@@ -22,7 +22,7 @@ for ( var i = 0; i < 10; i ++ )
 }
 var forma4 = new THREE.LatheBufferGeometry( points );
 //forma4.rotateX(Math.PI);
-forma4.translate(0,Tb*1.125,0);
+//forma4.translate(0,Tb*1.125,0);
 
 
 var altura5=Tb/16;
