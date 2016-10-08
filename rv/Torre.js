@@ -8,17 +8,9 @@ var Tb=0.8*2;//tamaño base
 	baseForma2.rotateX(Math.PI/2);
 	baseForma2.translate(0,0.72,0);
 
-	var baseForma3= new THREE.TorusGeometry( 1.4, 0.2, 15, 100 );
-	baseForma3.rotateX(Math.PI/2);
-	baseForma3.translate(0,1.3,0);
-	
-	var altura2=2*altura1;
-	var forma2 = new THREE.CylinderGeometry(Tb/2, Tb, altura2,60 );
-	forma2.translate(0,6,0);
-	
-	var forma3 = new THREE.TorusGeometry( Tb/4, Tb/8, Tb*3.125, 100 );//(radius, tube, radialSegments)
+	var forma3 = new THREE.TorusGeometry( 1.4, 0.2, 15, 100 );
 	forma3.rotateX(Math.PI/2);
-	forma3.translate(0,Tb*1.65,0);
+	forma3.translate(0,1.3,0);
 	
 var points = [];
 for ( var i = 4; i < 20; i ++ )
@@ -85,8 +77,6 @@ var forma4 = new THREE.LatheGeometry( points ,64);
 
 	var baseMalla=new THREE.Mesh(baseForma);
 	var base2Malla=new THREE.Mesh(baseForma2);
-	var base3Malla=new THREE.Mesh(baseForma3);	
-	var forma2Malla=new THREE.Mesh(forma2);
 	var forma3Malla=new THREE.Mesh(forma3);
 	var forma4Malla=new THREE.Mesh(forma4);
 	var forma5Malla=new THREE.Mesh(forma5);
@@ -112,8 +102,6 @@ var forma4 = new THREE.LatheGeometry( points ,64);
 
 	torreForma.merge(baseMalla.geometry, baseMalla.matrix);
 	torreForma.merge(base2Malla.geometry, base2Malla.matrix);
-	torreForma.merge(base3Malla.geometry, base3Malla.matrix);
-	torreForma.merge(forma2Malla.geometry, forma2Malla.matrix);
 	torreForma.merge(forma3Malla.geometry, forma3Malla.matrix);
 	torreForma.merge(forma4Malla.geometry, forma4Malla.matrix);
 	torreForma.merge(forma5Malla.geometry, forma5Malla.matrix);
