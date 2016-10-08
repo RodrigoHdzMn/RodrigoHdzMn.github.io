@@ -14,9 +14,17 @@ var Tb=0.8*2;//tamaño base
 	var forma3 = new THREE.CylinderGeometry(Tb/2, Tb*3/4, altura3, 60 );
 	forma3.translate(0,altura2+altura3,0);
 	
+var points = [];
+for ( var i = 3; i < 18; i ++ )
+{
+	var a= Math.cos( i * 0.2 ) * 5 + 10 ;
+	var b=( i - 5 ) * 2;
+	points.push( new THREE.Vector2( 0.75*a, 0.75*b ) );//new THREE.Vector2( 0.06*a, 0.1*b )
+	
+}
+var forma4 = new THREE.LatheGeometry( points );
 
-	var altura4=Tb*1.875;
-	var forma4 = new THREE.CylinderGeometry(Tb/2, Tb/2, altura4, 60 );
+	//var altura4=Tb*1.875;
 	forma4.translate(0,Tb*1.25,0);
 	
 
