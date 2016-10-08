@@ -1,7 +1,7 @@
 
 var escena=new THREE.Scene();
 var points = [];
-for ( var i = 0; i < 10; i ++ )
+for ( var i = 0; i < 30; i ++ )
 {
 	var a= Math.cos( i * 0.2 ) * 10 + 5 ;
 	var b=( i - 5 ) * 2;
