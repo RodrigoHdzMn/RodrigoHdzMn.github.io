@@ -25,7 +25,7 @@ for ( var i = 3; i < 18; i ++ )
 var forma4 = new THREE.LatheGeometry( points );
 
 	//var altura4=Tb*1.875;
-	forma4.translate(0,Tb,0);
+	forma4.translate(0,Tb/2,0);
 	
 
 	var altura5=Tb/16;
