@@ -24,46 +24,10 @@ var forma4 = new THREE.LatheGeometry( points ,64);
 	forma4.translate(0,1.7,0);
 	
 
-	var dm=Tb/8;//diametro miniCilindros
-	var am=Tb/2;//altura mini
-	
-
-	var Y=Tb*45/16;
-	var X=(Tb*3/4 - dm)*Math.sin(3.14/3);
-	var Z=(Tb*3/4 - dm)*Math.cos(3.14/3);
-	//Atras
-	var formaA1 = new THREE.CylinderGeometry(dm, dm, am,60 );
-	formaA1.translate(0,Y,-(Tb*3/4 - dm));
-	//Afrente
-	var formaA2 = new THREE.CylinderGeometry(dm, dm, am,60 );
-	formaA2.translate(0,Y,(Tb*3/4 - dm));
-	//AtrasI
-	var formaA3 = new THREE.CylinderGeometry(dm, dm, am,60 );
-	formaA3.translate(-X,Y,-Z);
-	//AtrasD
-	var formaA4 = new THREE.CylinderGeometry(dm, dm, am,60 );
-	formaA4.translate(X,Y,-Z);
-	//FrenteI
-	var formaA5 = new THREE.CylinderGeometry(dm, dm, am,60 );
-	formaA5.translate(-X,Y,Z);
-	//FrenteD
-	var formaA6 = new THREE.CylinderGeometry(dm, dm, am,60 );
-	formaA6.translate(X,Y,Z);
-	
-
 	var baseMalla=new THREE.Mesh(baseForma);
 	var base2Malla=new THREE.Mesh(baseForma2);
 	var forma3Malla=new THREE.Mesh(forma3);
 	var forma4Malla=new THREE.Mesh(forma4);
-
-	var formaA1Malla=new THREE.Mesh(formaA1);
-	var formaA2Malla=new THREE.Mesh(formaA2);
-	var formaA3Malla=new THREE.Mesh(formaA3);
-	var formaA4Malla=new THREE.Mesh(formaA4);
-	var formaA5Malla=new THREE.Mesh(formaA5);
-	var formaA6Malla=new THREE.Mesh(formaA6);
-	
-
 	
 	var torreForma=new THREE.Geometry();
 	
@@ -73,14 +37,6 @@ var forma4 = new THREE.LatheGeometry( points ,64);
 	torreForma.merge(forma3Malla.geometry, forma3Malla.matrix);
 	torreForma.merge(forma4Malla.geometry, forma4Malla.matrix);
 	
-	torreForma.merge(formaA1Malla.geometry,formaA1Malla.matrix);
-	torreForma.merge(formaA2Malla.geometry,formaA2Malla.matrix);
-	torreForma.merge(formaA3Malla.geometry,formaA3Malla.matrix);
-	torreForma.merge(formaA4Malla.geometry,formaA4Malla.matrix);
-	torreForma.merge(formaA5Malla.geometry,formaA5Malla.matrix);
-	torreForma.merge(formaA6Malla.geometry,formaA6Malla.matrix);
-	
-
 	var material=new THREE.MeshNormalMaterial();
 	var torreMalla= new THREE.Mesh(torreForma,material);
 	
