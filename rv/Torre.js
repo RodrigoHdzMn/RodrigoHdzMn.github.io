@@ -10,7 +10,7 @@ var Tb=0.8*2;//tamaño base
 
 	var baseForma3= new THREE.TorusGeometry( 1, 0.8, 15, 100 );
 	baseForma3.rotateX(Math.PI/2);
-	baseForma3.translate(0,0.9,0);
+	baseForma3.translate(0,1.2,0);
 	
 	var altura2=2*altura1;
 	var forma2 = new THREE.CylinderGeometry(Tb/2, Tb, altura2,60 );
@@ -136,7 +136,7 @@ var forma4 = new THREE.LatheGeometry( points );
 	var torreMalla= new THREE.Mesh(torreForma,material);
 	
 
-	//torreMalla.rotateX(Math.PI/8);
+	torreMalla.rotateX(Math.PI/8);
 	
 
 	var iluminacion= new THREE.PointLight(0xFFFFFF);
@@ -152,7 +152,7 @@ var forma4 = new THREE.LatheGeometry( points );
 	
 
 	var base = new THREE.Mesh(new THREE.BoxGeometry(10,.1,10),new THREE.MeshLambertMaterial({color:0xFFFFFF}));
-	//base.rotateX(Math.PI/8);
+	base.rotateX(Math.PI/8);
 	
 
 	var escena=new THREE.Scene();
