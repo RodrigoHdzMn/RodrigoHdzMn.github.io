@@ -60,7 +60,7 @@ escena.add(torreMalla);
 escena.add(base);
 
 var camara=new THREE.PerspectiveCamera();
-camara.position.z=50;
+camara.position.z=15;
 
 renderizador=new THREE.WebGLRenderer();
 renderizador.setSize(window.innerHeight*.75,window.innerHeight*.75 );
