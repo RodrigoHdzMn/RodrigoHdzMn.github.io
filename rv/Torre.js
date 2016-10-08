@@ -35,6 +35,16 @@ var Tb=0.8*2;//tamaño base
 	forma7.rotateX(Math.PI/2);
 	forma7.translate(0,5.2,0);
 
+	var points2 = [];
+	for ( var i = 0; i < 10; i ++ )
+	{
+		var a= Math.cos( i * 0.2 ) * 5 + 10 ;
+		var b=( i - 5 ) * 2;
+		points2.push( new THREE.Vector2( 0.01*a, 0.01*b ) );//new THREE.Vector2( 0.06*a, 0.1*b )
+	}
+	var forma8 = new THREE.LatheGeometry( points ,64);
+	forma8.translate(0,5.5,0);
+
 	var baseMalla=new THREE.Mesh(baseForma);
 	var base2Malla=new THREE.Mesh(baseForma2);
 	var forma3Malla=new THREE.Mesh(forma3);
@@ -42,7 +52,8 @@ var Tb=0.8*2;//tamaño base
 	var forma5Malla=new THREE.Mesh(forma5);
 	var forma6Malla=new THREE.Mesh(forma6);
 	var forma7Malla=new THREE.Mesh(forma7);
-	
+	var forma8Malla=new THREE.Mesh(forma8);
+
 	var torreForma=new THREE.Geometry();
 	
 	torreForma.merge(baseMalla.geometry, baseMalla.matrix);
@@ -52,6 +63,7 @@ var Tb=0.8*2;//tamaño base
 	torreForma.merge(forma5Malla.geometry, forma5Malla.matrix);
 	torreForma.merge(forma6Malla.geometry, forma6Malla.matrix);
 	torreForma.merge(forma7Malla.geometry, forma7Malla.matrix);
+	torreForma.merge(forma8Malla.geometry, forma8Malla.matrix);
 
 	var material=new THREE.MeshNormalMaterial();
 	var torreMalla= new THREE.Mesh(torreForma,material);
