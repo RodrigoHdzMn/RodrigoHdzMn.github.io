@@ -23,15 +23,20 @@ var Tb=0.8*2;//tamaño base
 	var forma4 = new THREE.LatheGeometry( points ,64);
 	forma4.translate(0,1.7,0);
 
-	var forma5 = new THREE.TorusGeometry( 0.6, 0.2, 8, 100 );
+	var forma5 = new THREE.TorusGeometry( 0.6, 0.2, 5, 100 );
 	forma5.rotateX(Math.PI/2);
 	forma5.translate(0,4.7,0);
+
+	var forma6 = new THREE.TorusGeometry( 0.3, 0.2, 8, 100 );
+	forma6.rotateX(Math.PI/2);
+	forma6.translate(0,5,0);
 
 	var baseMalla=new THREE.Mesh(baseForma);
 	var base2Malla=new THREE.Mesh(baseForma2);
 	var forma3Malla=new THREE.Mesh(forma3);
 	var forma4Malla=new THREE.Mesh(forma4);
 	var forma5Malla=new THREE.Mesh(forma5);
+	var forma6Malla=new THREE.Mesh(forma6);
 	
 	var torreForma=new THREE.Geometry();
 	
@@ -41,12 +46,13 @@ var Tb=0.8*2;//tamaño base
 	torreForma.merge(forma3Malla.geometry, forma3Malla.matrix);
 	torreForma.merge(forma4Malla.geometry, forma4Malla.matrix);
 	torreForma.merge(forma5Malla.geometry, forma5Malla.matrix);
+	torreForma.merge(forma6Malla.geometry, forma6Malla.matrix);
 	
 	var material=new THREE.MeshNormalMaterial();
 	var torreMalla= new THREE.Mesh(torreForma,material);
 	
 
-	torreMalla.rotateX(Math.PI/4);
+	torreMalla.rotateX(Math.PI/5);
 	
 
 	var iluminacion= new THREE.PointLight(0xFFFFFF);
@@ -55,7 +61,7 @@ var Tb=0.8*2;//tamaño base
 	iluminacion.position.z=-10;
 	
 	var base = new THREE.Mesh(new THREE.BoxGeometry(10,.1,10),new THREE.MeshLambertMaterial({color:0xFFFFFF}));
-	base.rotateX(Math.PI/4);
+	base.rotateX(Math.PI/5);
 	
 	var escena=new THREE.Scene();
 	escena.add(torreMalla);
