@@ -18,7 +18,7 @@ for ( var i = 0; i < 10; i ++ )
 {
 	var a= Math.sin( i * 0.2 ) * 10 + 5 ;
 	var b=( i - 5 ) * 2;
-	points.push( new THREE.Vector2( (3/80)*a, (1/16)*b ) );//new THREE.Vector2( 0.06*a, 0.1*b )
+	points.push( new THREE.Vector2( (Tb*3/80)*a, (Tb*1/16)*b ) );//new THREE.Vector2( 0.06*a, 0.1*b )
 }
 var forma4 = new THREE.LatheGeometry( points );
 forma4.rotateX(Math.PI);
