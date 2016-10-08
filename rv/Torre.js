@@ -114,7 +114,7 @@ var Tb=0.8*2;//tamaño base
 	torreForma.merge(formaA6Malla.geometry,formaA6Malla.matrix);
 	
 
-	var material=new THREE.MeshLambertMaterial({transparent:true,opacity:0.9});
+	var material=new THREE.MeshNormalMaterial();
 	var torreMalla= new THREE.Mesh(torreForma,material);
 	
 
