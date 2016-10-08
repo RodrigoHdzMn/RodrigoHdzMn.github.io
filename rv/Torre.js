@@ -40,7 +40,7 @@ var Tb=0.8*2;//tamaño base
 	{
 		var a= Math.cos( i * 0.2 ) * 10 + 5 ;
 		var b=( i - 5 ) * 2;
-		points2.push( new THREE.Vector2( 0.01*a, 0.01*b ) );//new THREE.Vector2( 0.06*a, 0.1*b )
+		points2.push( new THREE.Vector2( 0.1*a, 0.1*b ) );//new THREE.Vector2( 0.06*a, 0.1*b )
 	}
 	var forma8 = new THREE.LatheGeometry( points2 ,64);
 	forma8.translate(0,5.5,0);
