@@ -24,11 +24,11 @@ var forma4 = new THREE.LatheGeometry( points );
 forma4.rotateX(Math.PI);
 forma4.translate(0,Tb*1.125,0);
 
-var forma5 = new THREE.TorusGeometry( 0.4, 0.2, 5, 100 );//(radius, tube, radialSegments)
+var forma5 = new THREE.TorusGeometry( Tb/4, Tb/8, Tb*3.125, 100 );//(radius, tube, radialSegments)
 forma5.rotateX(Math.PI/2);
 forma5.translate(0,Tb*1.65,0);
 
-var forma6 = new THREE.SphereGeometry( 1, 32, 32 );
+var forma6 = new THREE.SphereGeometry( Tb*5/8, 20*Tb, 20*Tb );
 forma6.translate(0,Tb*2.3,0);
 
 var baseMalla=new THREE.Mesh(baseForma);
