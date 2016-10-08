@@ -24,30 +24,6 @@ var forma4 = new THREE.LatheGeometry( points ,64);
 	forma4.translate(0,1.7,0);
 	
 
-	var altura5=Tb/16;
-	var forma5 = new THREE.CylinderGeometry(Tb*9/16, Tb/2, altura5,60 );
-	forma5.translate(0,Tb*35/16,0);
-	
-
-	var altura6=altura5;
-	var forma6 = new THREE.CylinderGeometry(Tb*9/16, Tb*9/16, altura6,60 );
-	forma6.translate(0,Tb*9/4,0);
-	
-
-	var altura7=Tb/8;
-	var forma7 = new THREE.CylinderGeometry(Tb*3/4, Tb*9/16, altura7,60 );
-	forma7.translate(0,Tb*37/16,0);
-	
-
-	var altura8=Tb*5/16;
-	var forma8 = new THREE.CylinderGeometry(Tb*3/4, Tb*3/4, altura8,60 );
-	forma8.translate(0,Tb*5/2,0);
-	
-
-	//var arriba1 = new THREE.RingGeometry(0.5, 0.8, 64,0,2 );
-	//arriba1.translate(0.5,1.2,0);
-	
-
 	var dm=Tb/8;//diametro miniCilindros
 	var am=Tb/2;//altura mini
 	
@@ -79,13 +55,6 @@ var forma4 = new THREE.LatheGeometry( points ,64);
 	var base2Malla=new THREE.Mesh(baseForma2);
 	var forma3Malla=new THREE.Mesh(forma3);
 	var forma4Malla=new THREE.Mesh(forma4);
-	var forma5Malla=new THREE.Mesh(forma5);
-	var forma6Malla=new THREE.Mesh(forma6);
-	var forma7Malla=new THREE.Mesh(forma7);
-	var forma8Malla=new THREE.Mesh(forma8);
-	//var arriba1Malla=new THREE.Mesh(arriba1);
-	//arriba1Malla.rotateX(Math.PI/4);
-	
 
 	var formaA1Malla=new THREE.Mesh(formaA1);
 	var formaA2Malla=new THREE.Mesh(formaA2);
@@ -96,7 +65,6 @@ var forma4 = new THREE.LatheGeometry( points ,64);
 	
 
 	
-
 	var torreForma=new THREE.Geometry();
 	
 
@@ -104,12 +72,7 @@ var forma4 = new THREE.LatheGeometry( points ,64);
 	torreForma.merge(base2Malla.geometry, base2Malla.matrix);
 	torreForma.merge(forma3Malla.geometry, forma3Malla.matrix);
 	torreForma.merge(forma4Malla.geometry, forma4Malla.matrix);
-	torreForma.merge(forma5Malla.geometry, forma5Malla.matrix);
-	torreForma.merge(forma6Malla.geometry, forma6Malla.matrix);
-	torreForma.merge(forma7Malla.geometry, forma7Malla.matrix);
-	torreForma.merge(forma8Malla.geometry, forma8Malla.matrix);
 	
-
 	torreForma.merge(formaA1Malla.geometry,formaA1Malla.matrix);
 	torreForma.merge(formaA2Malla.geometry,formaA2Malla.matrix);
 	torreForma.merge(formaA3Malla.geometry,formaA3Malla.matrix);
@@ -149,7 +112,7 @@ var forma4 = new THREE.LatheGeometry( points ,64);
 	
 
 	var camara=new THREE.PerspectiveCamera();
-	camara.position.z=12;
+	camara.position.z=13;
 	
 
 	renderizador=new THREE.WebGLRenderer();
