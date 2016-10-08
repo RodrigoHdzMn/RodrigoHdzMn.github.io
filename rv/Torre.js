@@ -10,6 +10,7 @@ for ( var i = 0; i < 10; i ++ )
 var geometry = new THREE.LatheGeometry( points );
 var material = new THREE.MeshNormalMaterial(  );
 var lathe = new THREE.Mesh( geometry, material );
+lathe.rotateX(Math.PI/6);
 escena.add( lathe );
 
 var camara=new THREE.PerspectiveCamera();
