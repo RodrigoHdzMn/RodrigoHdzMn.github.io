@@ -5,7 +5,7 @@ var Tb=0.8*2;//tamaño base
 	baseForma.translate(0,0,0);
 	
 	var altura2=altura1;
-	var forma2 = new THREE.CylinderGeometry(Tb*3/4, Tb, altura2,60 );
+	var forma2 = new THREE.CylinderGeometry(Tb/2, Tb, altura2,60 );
 	forma2.translate(0,2*altura2,0);
 	
 	var forma3 = new THREE.TorusGeometry( Tb/4, Tb/8, Tb*3.125, 100 );//(radius, tube, radialSegments)
