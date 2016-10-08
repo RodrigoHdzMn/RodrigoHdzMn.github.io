@@ -23,7 +23,7 @@ var Tb=0.8*2;//tamaño base
 	var forma4 = new THREE.LatheGeometry( points ,64);
 	forma4.translate(0,1.7,0);
 
-	var forma5 = new THREE.TorusGeometry( 0.8, 0.2, 15, 100 );
+	var forma5 = new THREE.TorusGeometry( 0.6, 0.2, 15, 100 );
 	forma5.rotateX(Math.PI/2);
 	forma5.translate(0,4.5,0);
 
