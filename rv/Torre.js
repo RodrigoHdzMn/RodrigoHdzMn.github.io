@@ -31,13 +31,18 @@ var Tb=0.8*2;//tamaño base
 	forma6.rotateX(Math.PI/2);
 	forma6.translate(0,4.9,0);
 
+	var forma7 = new THREE.TorusGeometry( 0.4, 0.2, 20, 100 );
+	forma7.rotateX(Math.PI/2);
+	forma7.translate(0,5.5,0);
+
 	var baseMalla=new THREE.Mesh(baseForma);
 	var base2Malla=new THREE.Mesh(baseForma2);
 	var forma3Malla=new THREE.Mesh(forma3);
 	var forma4Malla=new THREE.Mesh(forma4);
 	var forma5Malla=new THREE.Mesh(forma5);
 	var forma6Malla=new THREE.Mesh(forma6);
-	//var forma7Malla=new THREE.Mesh(forma7);
+	var forma7Malla=new THREE.Mesh(forma7);
+	
 	var torreForma=new THREE.Geometry();
 	
 	torreForma.merge(baseMalla.geometry, baseMalla.matrix);
@@ -46,7 +51,7 @@ var Tb=0.8*2;//tamaño base
 	torreForma.merge(forma4Malla.geometry, forma4Malla.matrix);
 	torreForma.merge(forma5Malla.geometry, forma5Malla.matrix);
 	torreForma.merge(forma6Malla.geometry, forma6Malla.matrix);
-	//torreForma.merge(forma7Malla.geometry, forma7Malla.matrix);
+	torreForma.merge(forma7Malla.geometry, forma7Malla.matrix);
 
 	var material=new THREE.MeshNormalMaterial();
 	var torreMalla= new THREE.Mesh(torreForma,material);
