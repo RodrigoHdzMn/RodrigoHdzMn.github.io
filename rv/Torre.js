@@ -81,7 +81,7 @@ var forma4 = new THREE.LatheGeometry( points );
 	
 
 	var baseMalla=new THREE.Mesh(baseForma);
-	var baseMalla2=new THREE.Mesh(baseForma2);
+	var base2Malla=new THREE.Mesh(baseForma2);
 	var forma2Malla=new THREE.Mesh(forma2);
 	var forma3Malla=new THREE.Mesh(forma3);
 	var forma4Malla=new THREE.Mesh(forma4);
@@ -107,6 +107,7 @@ var forma4 = new THREE.LatheGeometry( points );
 	
 
 	torreForma.merge(baseMalla.geometry, baseMalla.matrix);
+	torreForma.merge(base2Malla.geometry, base2Malla.matrix);
 	torreForma.merge(forma2Malla.geometry, forma2Malla.matrix);
 	torreForma.merge(forma3Malla.geometry, forma3Malla.matrix);
 	torreForma.merge(forma4Malla.geometry, forma4Malla.matrix);
