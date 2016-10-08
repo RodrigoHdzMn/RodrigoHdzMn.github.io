@@ -4,14 +4,13 @@ var Tb=0.8*2;//tamaño base
 	var baseForma= new THREE.CylinderGeometry(Tb, Tb, altura1,60 );//dia.sup, dia.inf, altura
 	baseForma.translate(0,0,0);
 	
-	var altura2=altura1;
+	var altura2=altura1*2;
 	var forma2 = new THREE.CylinderGeometry(Tb*3/4, Tb, altura2,60 );
 	forma2.translate(0,altura2,0);
 	
-
-	var altura3=altura1;
-	var forma3 = new THREE.CylinderGeometry(Tb/2, Tb*3/4, altura3, 60 );
-	forma3.translate(0,altura2+altura3,0);
+	var forma3 = new THREE.TorusGeometry( Tb/4, Tb/8, Tb*3.125, 100 );//(radius, tube, radialSegments)
+	forma3.rotateX(Math.PI/2);
+	forma3.translate(0,Tb*1.65,0);
 	
 var points = [];
 for ( var i = 4; i < 18; i ++ )
