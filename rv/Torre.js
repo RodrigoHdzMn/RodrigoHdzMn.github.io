@@ -1,8 +1,11 @@
 
 var escena=new THREE.Scene();
 var points = [];
-for ( var i = 0; i < 10; i ++ ) {
-	points.push( new THREE.Vector2( Math.cos( i * 0.2 ) * 10 + 5, ( i - 5 ) * 2 ) );
+for ( var i = 0; i < 10; i ++ )
+{
+	var a= Math.sin( i * 0.2 ) * 10 + 5 ;
+	var b=( i - 5 ) * 2;
+	points.push( new THREE.Vector2( 0.06*a, 0.1*b ) );//new THREE.Vector2( 0.06*a, 0.1*b )
 }
 var geometry = new THREE.LatheGeometry( points );
 var material = new THREE.MeshNormalMaterial(  );
