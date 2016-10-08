@@ -52,7 +52,7 @@ var torreMalla= new THREE.Mesh(torreForma,material);
 
 torreMalla.rotateX(Math.PI/8);
 
-var base = new THREE.Mesh(new THREE.BoxGeometry(10,.1,10),new THREE.MeshNormalMaterial());
+var base = new THREE.Mesh(new THREE.BoxGeometry(10,.1,10),new THREE.MeshNormalMaterial({color:0xFFFFFF}));
 base.rotateX(Math.PI/8);
 
 var escena=new THREE.Scene();
