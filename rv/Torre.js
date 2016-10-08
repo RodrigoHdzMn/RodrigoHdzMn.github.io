@@ -163,7 +163,7 @@ var forma4 = new THREE.LatheGeometry( points );
 	
 
 	var camara=new THREE.PerspectiveCamera();
-	camara.position.z=15;
+	camara.position.z=12;
 	
 
 	renderizador=new THREE.WebGLRenderer();
