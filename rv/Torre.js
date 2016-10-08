@@ -25,7 +25,7 @@ var Tb=0.8*2;//tamaño base
 
 	var forma5 = new THREE.TorusGeometry( 0.6, 0.2, 15, 100 );
 	forma5.rotateX(Math.PI/2);
-	forma5.translate(0,4.5,0);
+	forma5.translate(0,4.6,0);
 
 	var baseMalla=new THREE.Mesh(baseForma);
 	var base2Malla=new THREE.Mesh(baseForma2);
