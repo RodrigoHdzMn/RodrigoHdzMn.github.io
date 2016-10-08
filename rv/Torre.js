@@ -63,7 +63,7 @@ var Tb=0.8*2;//tamaño base
 	escena.add(iluminacion);
 
 	var camara=new THREE.PerspectiveCamera();
-	camara.position.z=15;
+	camara.position.z=7;
 	
 	renderizador=new THREE.WebGLRenderer();
 	renderizador.setSize(window.innerHeight*.75,window.innerHeight*.75 );
