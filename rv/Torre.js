@@ -6,6 +6,7 @@ for ( var i = 0; i < 15; i ++ )
 	var a= Math.cos( i * 0.2 ) * 10 + 5 ;
 	var b=( i - 5 ) * 2;
 	points.push( new THREE.Vector2( 0.75*a, 0.75*b ) );//new THREE.Vector2( 0.06*a, 0.1*b )
+	//puntos.push( new THREE.Vector2(Math.sin(i*0.2)*15+50, (i-5)*2) );
 }
 var geometry = new THREE.LatheGeometry( points );
 var material = new THREE.MeshNormalMaterial(  );
