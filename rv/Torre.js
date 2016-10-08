@@ -28,7 +28,7 @@ for ( var i = 2; i < 18; i ++ )
 	points.push( new THREE.Vector2( 0.1*a, 0.1*b ) );//new THREE.Vector2( 0.06*a, 0.1*b )
 	
 }
-var forma4 = new THREE.LatheGeometry( points );
+var forma4 = new THREE.LatheGeometry( points ,64);
 	forma4.translate(0,2.2,0);
 	
 
