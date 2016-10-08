@@ -4,9 +4,12 @@ var Tb=0.8*2;//tamaño base
 	var baseForma= new THREE.CylinderGeometry(Tb, Tb, altura1,60 );//dia.sup, dia.inf, altura
 	baseForma.translate(0,0,0);
 	
+	var baseForma2= new THREE.TorusGeometry( 0.2, 0.4, 10, 100 );
+	baseForma2.rotateX(Math.PI/2);
+
 	var altura2=2*altura1;
 	var forma2 = new THREE.CylinderGeometry(Tb/2, Tb, altura2,60 );
-	forma2.translate(0,0.8,0);
+	forma2.translate(0,1.5,0);
 	
 	var forma3 = new THREE.TorusGeometry( Tb/4, Tb/8, Tb*3.125, 100 );//(radius, tube, radialSegments)
 	forma3.rotateX(Math.PI/2);
@@ -78,6 +81,7 @@ var forma4 = new THREE.LatheGeometry( points );
 	
 
 	var baseMalla=new THREE.Mesh(baseForma);
+	var baseMalla2=new THREE.Mesh(baseForma2);
 	var forma2Malla=new THREE.Mesh(forma2);
 	var forma3Malla=new THREE.Mesh(forma3);
 	var forma4Malla=new THREE.Mesh(forma4);
