@@ -47,4 +47,25 @@ var Tb=0.8*3;//tamaño base
 	torreForma.merge(forma6Malla.geometry, forma6Malla.matrix);
 	
 	var material = new THREE.MeshNormalMaterial();
-        this.malla = new THREE.Mesh(torreForma,material);
+       
+var torreMalla= new THREE.Mesh(torreForma,material);
+
+torreMalla.rotateX(Math.PI/8);
+
+var base = new THREE.Mesh(new THREE.BoxGeometry(10,.1,10),new THREE.MeshLambertMaterial({color:0xFFFFFF}));
+base.rotateX(Math.PI/8);
+
+var escena=new THREE.Scene();
+escena.add(torreMalla);
+escena.add(base);
+
+var camara=new THREE.PerspectiveCamera();
+camara.position.z=15;
+
+renderizador=new THREE.WebGLRenderer();
+renderizador.setSize(window.innerHeight*.75,window.innerHeight*.75 );
+document.body.appendChild(renderizador.domElement);
+
+renderizador.shadowMap.Enabled=true;
+renderizador.render(escena,camara);
+
