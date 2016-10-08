@@ -130,7 +130,7 @@ var forma4 = new THREE.LatheGeometry( points );
 	var torreMalla= new THREE.Mesh(torreForma,material);
 	
 
-	torreMalla.rotateX(Math.PI/8);
+	//torreMalla.rotateX(Math.PI/8);
 	
 
 	var iluminacion= new THREE.PointLight(0xFFFFFF);
@@ -146,7 +146,7 @@ var forma4 = new THREE.LatheGeometry( points );
 	
 
 	var base = new THREE.Mesh(new THREE.BoxGeometry(10,.1,10),new THREE.MeshLambertMaterial({color:0xFFFFFF}));
-	base.rotateX(Math.PI/8);
+	//base.rotateX(Math.PI/8);
 	
 
 	var escena=new THREE.Scene();
