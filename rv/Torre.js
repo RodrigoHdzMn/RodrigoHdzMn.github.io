@@ -7,10 +7,14 @@ var Tb=0.8*2;//tamaño base
 	var baseForma2= new THREE.TorusGeometry( 1, 0.8, 15, 100 );
 	baseForma2.rotateX(Math.PI/2);
 	baseForma2.translate(0,0.72,0);
+
+	var baseForma3= new THREE.TorusGeometry( 1, 0.8, 15, 100 );
+	baseForma3.rotateX(Math.PI/2);
+	baseForma3.translate(0,0.9,0);
 	
 	var altura2=2*altura1;
 	var forma2 = new THREE.CylinderGeometry(Tb/2, Tb, altura2,60 );
-	forma2.translate(0,2.2,0);
+	forma2.translate(0,2.5,0);
 	
 	var forma3 = new THREE.TorusGeometry( Tb/4, Tb/8, Tb*3.125, 100 );//(radius, tube, radialSegments)
 	forma3.rotateX(Math.PI/2);
@@ -27,7 +31,7 @@ for ( var i = 4; i < 18; i ++ )
 var forma4 = new THREE.LatheGeometry( points );
 
 	//var altura4=Tb*1.875;
-	forma4.translate(0,Tb*1.8,0);
+	forma4.translate(0,Tb*2.2,0);
 	
 
 	var altura5=Tb/16;
@@ -83,6 +87,7 @@ var forma4 = new THREE.LatheGeometry( points );
 
 	var baseMalla=new THREE.Mesh(baseForma);
 	var base2Malla=new THREE.Mesh(baseForma2);
+	var base3Malla=new THREE.Mesh(baseForma3);	
 	var forma2Malla=new THREE.Mesh(forma2);
 	var forma3Malla=new THREE.Mesh(forma3);
 	var forma4Malla=new THREE.Mesh(forma4);
@@ -109,6 +114,7 @@ var forma4 = new THREE.LatheGeometry( points );
 
 	torreForma.merge(baseMalla.geometry, baseMalla.matrix);
 	torreForma.merge(base2Malla.geometry, base2Malla.matrix);
+	torreForma.merge(base3Malla.geometry, base3Malla.matrix);
 	torreForma.merge(forma2Malla.geometry, forma2Malla.matrix);
 	torreForma.merge(forma3Malla.geometry, forma3Malla.matrix);
 	torreForma.merge(forma4Malla.geometry, forma4Malla.matrix);
@@ -130,7 +136,7 @@ var forma4 = new THREE.LatheGeometry( points );
 	var torreMalla= new THREE.Mesh(torreForma,material);
 	
 
-	torreMalla.rotateX(Math.PI/8);
+	//torreMalla.rotateX(Math.PI/8);
 	
 
 	var iluminacion= new THREE.PointLight(0xFFFFFF);
@@ -146,7 +152,7 @@ var forma4 = new THREE.LatheGeometry( points );
 	
 
 	var base = new THREE.Mesh(new THREE.BoxGeometry(10,.1,10),new THREE.MeshLambertMaterial({color:0xFFFFFF}));
-	base.rotateX(Math.PI/8);
+	//base.rotateX(Math.PI/8);
 	
 
 	var escena=new THREE.Scene();
