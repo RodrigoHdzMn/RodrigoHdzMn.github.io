@@ -29,7 +29,7 @@ for ( var i = 4; i < 18; i ++ )
 	
 }
 var forma4 = new THREE.LatheGeometry( points ,64);
-	forma4.translate(0,2,0);
+	forma4.translate(0,1.8,0);
 	
 
 	var altura5=Tb/16;
