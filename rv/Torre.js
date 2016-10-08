@@ -8,7 +8,7 @@ var Tb=0.8*2;//tamaño base
 	baseForma2.rotateX(Math.PI/2);
 	baseForma2.translate(0,0.72,0);
 
-	var baseForma3= new THREE.TorusGeometry( 1, 0.2, 15, 100 );
+	var baseForma3= new THREE.TorusGeometry( 1.5, 0.2, 15, 100 );
 	baseForma3.rotateX(Math.PI/2);
 	baseForma3.translate(0,1.2,0);
 	
