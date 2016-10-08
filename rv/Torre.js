@@ -12,17 +12,20 @@ var Tb=0.8*2;//tamaño base
 	forma3.rotateX(Math.PI/2);
 	forma3.translate(0,1.3,0);
 	
-var points = [];
-for ( var i = 4; i < 20; i ++ )
-{
-	var a= Math.cos( i * 0.2 ) * 5 + 10 ;
-	var b=( i - 5 ) * 2;
-	points.push( new THREE.Vector2( 0.1*a, 0.1*b ) );//new THREE.Vector2( 0.06*a, 0.1*b )
+	var points = [];
+	for ( var i = 4; i < 20; i ++ )
+	{
+		var a= Math.cos( i * 0.2 ) * 5 + 10 ;
+		var b=( i - 5 ) * 2;
+		points.push( new THREE.Vector2( 0.1*a, 0.1*b ) );//new THREE.Vector2( 0.06*a, 0.1*b )
 	
-}
-var forma4 = new THREE.LatheGeometry( points ,64);
+	}
+	var forma4 = new THREE.LatheGeometry( points ,64);
 	forma4.translate(0,1.7,0);
-	
+
+	var forma5 = new THREE.TorusGeometry( 0.4, 0.2, 15, 100 );
+	forma5.rotateX(Math.PI/2);
+	forma5.translate(0,2.2,0);
 
 	var baseMalla=new THREE.Mesh(baseForma);
 	var base2Malla=new THREE.Mesh(baseForma2);
@@ -49,28 +52,17 @@ var forma4 = new THREE.LatheGeometry( points ,64);
 	iluminacion.position.y=50;
 	iluminacion.position.z=-10;
 	
-
-	//var LuzMagenta= new THREE.PointLight(0xff00ff);
-	//LuzMagenta.position.x=-20;
-	//LuzMagenta.position.y=50;
-	//LuzMagenta.position.z=-10;
-	
-
 	var base = new THREE.Mesh(new THREE.BoxGeometry(10,.1,10),new THREE.MeshLambertMaterial({color:0xFFFFFF}));
 	base.rotateX(Math.PI/8);
 	
-
 	var escena=new THREE.Scene();
 	escena.add(torreMalla);
 	escena.add(base);
 	escena.add(iluminacion);
-	//escena.add(LuzMagenta);
-	
 
 	var camara=new THREE.PerspectiveCamera();
 	camara.position.z=15;
 	
-
 	renderizador=new THREE.WebGLRenderer();
 	renderizador.setSize(window.innerHeight*.75,window.innerHeight*.75 );
 	document.body.appendChild(renderizador.domElement);
@@ -82,5 +74,4 @@ var forma4 = new THREE.LatheGeometry( points ,64);
 	iluminacion.castShadow=true;
 	//LuzMagenta.castShadow=true;
 	
-
 	renderizador.render(escena,camara);
