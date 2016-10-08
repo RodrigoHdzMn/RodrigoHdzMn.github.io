@@ -16,7 +16,7 @@ forma3.translate(0,altura2+altura3,0);
 var points = [];
 for ( var i = 0; i < 10; i ++ ) 
 {
-	var a= Math.sin( i * 0.2 ) * 10 + 5 ;
+	var a= Math.sin( i * 0.2 ) * 10 - 5 ;
 	var b=( i - 5 ) * 2;
 	points.push( new THREE.Vector2( 0.06*a, 0.1*b ) );
 }
@@ -24,12 +24,10 @@ var forma4 = new THREE.LatheGeometry( points );
 forma4.rotateX(Math.PI);
 forma4.translate(0,Tb*1.125,0);
 
-var altura5=Tb/16;
 var forma5 = new THREE.TorusGeometry( 0.4, 0.2, 5, 100 );//(radius, tube, radialSegments)
 forma5.rotateX(Math.PI/2);
 forma5.translate(0,Tb*1.65,0);
 
-var altura6=altura5;
 var forma6 = new THREE.SphereGeometry( 1, 32, 32 );
 forma6.translate(0,Tb*2.3,0);
 
