@@ -43,7 +43,7 @@ var Tb=0.8*2;//tamaño base
 		points2.push( new THREE.Vector2( 0.06*a, 0.06*b ) );//new THREE.Vector2( 0.06*a, 0.1*b )
 	}
 	var forma8 = new THREE.LatheGeometry( points2 ,64);
-	forma8.translate(0,6.2,0);
+	forma8.translate(0,6.1,0);
 
 	var baseMalla=new THREE.Mesh(baseForma);
 	var base2Malla=new THREE.Mesh(baseForma2);
