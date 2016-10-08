@@ -38,7 +38,7 @@ var Tb=0.8*2;//tamaño base
 	var points2 = [];
 	for ( var i = 1; i < 10; i ++ )
 	{
-		var a= Math.sin( i * 0.2 ) * 10 + 5 ;
+		var a= Math.sin( i * 0.2 ) * 5 + 5 ;
 		var b=( i - 5 ) * 2;
 		points2.push( new THREE.Vector2( 0.06*a, 0.06*b ) );//new THREE.Vector2( 0.06*a, 0.1*b )
 	}
