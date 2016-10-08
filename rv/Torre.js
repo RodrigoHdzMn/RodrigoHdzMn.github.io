@@ -38,7 +38,7 @@ var Tb=0.8*2;//tamaño base
 	var points2 = [];
 	for ( var i = -4; i < 8; i ++ )
 	{
-		var a= Math.cos( i * 0.3 ) * 6 + 4 ;
+		var a= Math.cos( i * 0.35 ) * 6 + 4 ;
 		var b=( i - 5 ) * 2;
 		points2.push( new THREE.Vector2( 0.06*a, 0.06*b ) );//new THREE.Vector2( 0.06*a, 0.1*b )
 	}
