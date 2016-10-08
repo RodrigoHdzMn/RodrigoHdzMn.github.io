@@ -15,7 +15,7 @@ var Tb=0.8*2;//tamaño base
 	forma3.translate(0,altura2+altura3,0);
 	
 var points = [];
-for ( var i = 3; i < 18; i ++ )
+for ( var i = 4; i < 18; i ++ )
 {
 	var a= Math.cos( i * 0.2 ) * 5 + 10 ;
 	var b=( i - 5 ) * 2;
