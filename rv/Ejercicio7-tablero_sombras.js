@@ -169,10 +169,10 @@ torreMalla4.position.z=70;
 	mallaa.position.x=45;
 	mallaa.position.z=45
 	
-	var base = new THREE.Mesh(new THREE.BoxGeometry(90,.1,90),new THREE.MeshLambertMaterial({color:0x804000}));
-	base.position.y=-0.1;
-	base.position.x=45;
-	base.position.z=45;
+var base = new THREE.Mesh(new THREE.BoxGeometry(90,.1,90),new THREE.MeshLambertMaterial({color:0x804000}));
+base.position.y=-0.1;
+base.position.x=45;
+base.position.z=45;
 
 var escena=new THREE.Scene();
 escena.add(base);
