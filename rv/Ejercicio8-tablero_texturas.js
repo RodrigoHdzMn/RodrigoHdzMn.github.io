@@ -153,7 +153,7 @@ function Peon()
 
 function Alfil()
 {
-	var Tb=0.8*2;//tamaño base
+	var Tb=0.8*4;//tamaño base
         var altura1=Tb/4;
         var baseForma= new THREE.CylinderGeometry(Tb, Tb*1.25, altura1,60 );//dia.sup, dia.inf, altura
         baseForma.translate(0,0,0);
@@ -270,11 +270,11 @@ CONSTRUCTOR.setup = function()
 	var alfil3= new Alfil();
         var alfil4= new Alfil();
 	
-	alfil1.malla.position.x = 10;
-        alfil1.malla.position.z = 30;
+	alfil1.malla.position.x = 30;
+        alfil1.malla.position.z = 10;
 	
-	alfil2.malla.position.x = 10;
-        alfil2.malla.position.z = 60;
+	alfil2.malla.position.x = 60;
+        alfil2.malla.position.z = 10;
 	
 	alfil3.malla.position.x = 30;
         alfil3.malla.position.z = 80;
