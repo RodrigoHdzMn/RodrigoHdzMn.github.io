@@ -85,7 +85,6 @@ var Tb=0.8*2;//tamaño base
 	torreForma.merge(forma7Malla.geometry, forma7Malla.matrix);
 	torreForma.merge(forma8Malla.geometry, forma8Malla.matrix);
 	
-
 	torreForma.merge(formaA1Malla.geometry,formaA1Malla.matrix);
 	torreForma.merge(formaA2Malla.geometry,formaA2Malla.matrix);
 	torreForma.merge(formaA3Malla.geometry,formaA3Malla.matrix);
@@ -125,10 +124,10 @@ var Tb=0.8*2;//tamaño base
 	renderizador.setSize(window.innerHeight*.75,window.innerHeight*.75 );
 	document.body.appendChild(renderizador.domElement);
 	
-	renderizador.shadowMap.Enabled=true;
-	torreForma.castShadow=true;
-	iluminacion.castShadow=true;	
+	renderizador.shadowMapEnabled=true;
+	torreForma.castShadow=true;	
 	base.receiveShadow=true;
+	iluminacion.castShadow=true;
 	
 	//LuzMagenta.castShadow=true;
 	
