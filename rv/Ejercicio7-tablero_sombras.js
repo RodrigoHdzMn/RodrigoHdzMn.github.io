@@ -52,11 +52,11 @@ for(var i=1; i<=8; i++)
 		else
 		material = new THREE.MeshLambertMaterial( {color: 0xffffff}); //0xcfcfcf
 	}
-	cont=cont++;
+	
 	tablero[cont] = new THREE.Mesh(forma, material);
 	tablero[cont].translateX=10*i;
 	tablero[cont].translateZ=10*j;
-	
+	cont=cont++;
    }
 }
 
@@ -181,7 +181,7 @@ escena.add(torreMalla4);
 escena.add(LuzMagenta)
 escena.add(LuzCyan)
 escena.add(LuzYellow)
-for ( var n=1; n<=64; n ++)
+for ( var n=0; n<64; n ++)
 escena.add(tablero[n]);
 
 renderizador.shadowMap.Enabled=true;
