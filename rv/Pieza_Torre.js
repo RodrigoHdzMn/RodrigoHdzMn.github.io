@@ -1,5 +1,5 @@
 
-var Tb=0.8*0.85;//tamaño base
+var Tb=0.8*2;//tamaño base
 	var altura1=Tb/4;
 	var baseForma= new THREE.CylinderGeometry(Tb, Tb, altura1,60 );//dia.sup, dia.inf, altura
 	baseForma.translate(0,0,0);
@@ -95,6 +95,7 @@ var Tb=0.8*0.85;//tamaño base
 	var material=new THREE.MeshLambertMaterial({transparent:true,opacity:0.9});
 	var torreMalla= new THREE.Mesh(torreForma,material);
 	torreMalla.position.x=2;
+	torreMalla.position.z=1;
 	//torreMalla.rotateX(Math.PI/8);
 var formaa = new THREE.SphereGeometry(1);
 var materiall=new THREE.MeshLambertMaterial({color:0x00cc00});
