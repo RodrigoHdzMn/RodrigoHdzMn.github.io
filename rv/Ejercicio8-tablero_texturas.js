@@ -265,10 +265,10 @@ CONSTRUCTOR.setup = function()
 	peon4.malla.position.x = 70;
         peon4.malla.position.z = 70;
 	
-	var alfil1= new Peon();
-        var alfil2= new Peon();
-	var alfil3= new Peon();
-        var alfil4= new Peon()
+	var alfil1= new Alfil();
+        var alfil2= new Alfil();
+	var alfil3= new Alfil();
+        var alfil4= new Alfil();
 	
 	alfil1.malla.position.x = 10;
         alfil1.malla.position.z = 30;
