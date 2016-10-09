@@ -175,8 +175,8 @@ var formaa = new THREE.SphereGeometry(4);
 var materiall=new THREE.MeshLambertMaterial({color:0x00cc00});
 var mallaa= new THREE.Mesh(formaa,materiall);
 mallaa.position.y=5;
-mallaa.position.x=40;
-mallaa.position.z=40;
+mallaa.position.x=45;
+mallaa.position.z=45;
 escena.add(mallaa);
 
 //escena.add(torreMalla1);
