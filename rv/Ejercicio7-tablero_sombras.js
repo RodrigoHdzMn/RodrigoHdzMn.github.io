@@ -168,10 +168,10 @@ torreMalla4.position.z=70;
 
 var renderizador = new THREE.WebGLRenderer();
 
-var formaa = new THREE.SphereGeometry(1);
+var formaa = new THREE.SphereGeometry(4);
 var materiall=new THREE.MeshLambertMaterial({color:0x00cc00});
 var mallaa= new THREE.Mesh(formaa,materiall);
-mallaa.position.y=3;
+mallaa.position.y=5;
 mallaa.position.x=40;
 mallaa.position.z=40;
 escena.add(mallaa);
