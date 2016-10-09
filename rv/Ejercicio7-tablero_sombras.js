@@ -172,14 +172,14 @@ torreMalla4.position.z=70;
 var renderizador = new THREE.WebGLRenderer();
 
 var formaa = new THREE.SphereGeometry(4);
-var materiall=new THREE.MeshLambertMaterial({color:0x00cc00});
+var materiall=new THREE.MeshLambertMaterial({color:0x00CC00});
 var mallaa= new THREE.Mesh(formaa,materiall);
 mallaa.position.y=5;
 mallaa.position.x=45;
 mallaa.position.z=45;
 escena.add(mallaa);
 
-var base = new THREE.Mesh(new THREE.BoxGeometry(80,.1,80),new THREE.MeshLambertMaterial({color:0xFFFFFF}));
+var base = new THREE.Mesh(new THREE.BoxGeometry(20,.1,20),new THREE.MeshLambertMaterial({color:0xFFFFFF}));
 base.position.y=0.4;
 base.position.x=45;
 base.position.z=45;
