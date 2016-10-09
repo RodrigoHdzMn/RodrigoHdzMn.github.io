@@ -161,13 +161,6 @@ torreMalla3.position.z=70;
 var torreMalla4= new THREE.Mesh(torreForma,materialOpaco50);
 torreMalla4.position.x=70;
 torreMalla4.position.z=70;
-
-	var formaa = new THREE.SphereGeometry(4);
-	var materiall=new THREE.MeshLambertMaterial({color:0x00CC00});
-	var mallaa= new THREE.Mesh(formaa,materiall);
-	mallaa.position.y=5;
-	mallaa.position.x=45;
-	mallaa.position.z=45
 	
 var base = new THREE.Mesh(new THREE.BoxGeometry(90,.1,90),new THREE.MeshLambertMaterial({color:0x804000}));
 base.position.y=-0.1;
@@ -183,7 +176,6 @@ escena.add(torreMalla4);
 escena.add(LuzMagenta);
 escena.add(LuzCyan);
 escena.add(LuzYellow);
-escena.add(mallaa);
 for ( var n=0; n<64; n ++)
 escena.add(tablero[n]);
 	
@@ -200,9 +192,7 @@ torreMalla4.castShadow=true;
 LuzMagenta.castShadow=true;
 LuzCyan.castShadow=true;
 LuzYellow.castShadow=true;
-mallaa.castShadow=true;
 for ( var n=0; n<64; n ++)
 tablero[n].receiveShadow = true;
-
 	
 renderizador.render(escena,camara);
