@@ -168,6 +168,12 @@ torreMalla4.position.z=70;
 
 var renderizador = new THREE.WebGLRenderer();
 
+var formaa = new THREE.SphereGeometry(1);
+var materiall=new THREE.MeshLambertMaterial({color:0x00cc00});
+var mallaa= new THREE.Mesh(formaa,materiall);
+mallaa.position.y=2;
+escena.add(mallaa);
+
 escena.add(torreMalla1);
 escena.add(torreMalla2);
 escena.add(torreMalla3);
@@ -185,7 +191,7 @@ torreMalla1.castShadow=true;
 torreMalla2.castShadow=true;
 torreMalla3.castShadow=true;
 torreMalla4.castShadow=true;
-
+mallaa.castShadow=true;
 for ( var n=0; n<64; n ++)
 tablero[n].receiveShadow = true;
 
