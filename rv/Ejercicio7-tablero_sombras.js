@@ -32,6 +32,7 @@ document.body.appendChild (renderizador.domElement);
 
 var tablero = new Array();
 var forma = new THREE.BoxGeometry( 10,.1,10);
+var material;
 var cont=0;
 for(var i=1; i<=8; i++)
 {
@@ -40,16 +41,16 @@ for(var i=1; i<=8; i++)
 	if(j%2 ==0)
 	{
 		if(i%2 == 0)
-		var material = new THREE.MeshLambertMaterial( {color: 0xffffff}); 
+		material = new THREE.MeshLambertMaterial( {color: 0xffffff}); 
 		else
-		var material = new THREE.MeshLambertMaterial( {color: 0x727272}); //0xcfcfcf
+		material = new THREE.MeshLambertMaterial( {color: 0x727272}); //0xcfcfcf
 	}
 	else
 	{
 		if(i%2 == 0)
-		var material = new THREE.MeshLambertMaterial( {color: 0x727272}); //0xcfcfcf
+		material = new THREE.MeshLambertMaterial( {color: 0x727272}); //0xcfcfcf
 		else
-		var material = new THREE.MeshLambertMaterial( {color: 0xffffff}); //0xcfcfcf
+		material = new THREE.MeshLambertMaterial( {color: 0xffffff}); //0xcfcfcf
 	}
 	cont=cont++;
 	tablero[cont] = new THREE.Mesh(forma, material);
