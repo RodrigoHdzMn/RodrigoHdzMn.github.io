@@ -152,7 +152,7 @@ function Peon()
 
 function Alfil()
 {
-	var Tb=0.8*2;//tamaño base
+	var Tb=0.8*4;//tamaño base
         var altura1=Tb/4;
         var baseForma= new THREE.CylinderGeometry(Tb, Tb*1.25, altura1,60 );//dia.sup, dia.inf, altura
         baseForma.translate(0,0,0);
