@@ -1,17 +1,17 @@
 
 var LuzMagenta=new THREE.PointLight(0xFF00FF);
 LuzMagenta.position.x=0;
-LuzMagenta.position.y=50;
+LuzMagenta.position.y=20;
 LuzMagenta.position.z=40;
 
 var LuzCyan= new THREE.PointLight(0x00FFFF);
 LuzCyan.position.x=80;
-LuzCyan.position.y=50;
+LuzCyan.position.y=40;
 LuzCyan.position.z=40;
 
 var LuzYellow= new THREE.PointLight(0xFFFF00);
 LuzYellow.position.x=40;
-LuzYellow.position.y=50;
+LuzYellow.position.y=40;
 LuzYellow.position.z=0;
 
 var campoVision=30;// grado
