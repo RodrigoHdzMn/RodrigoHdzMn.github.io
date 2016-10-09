@@ -36,7 +36,7 @@ var Tb=0.8*2;//tamaño base
 	var forma5Malla=new THREE.Mesh(forma5);
 	var forma6Malla=new THREE.Mesh(forma6);
 
-	var torreForma=new THREE.Geometry();
+	var peonForma=new THREE.Geometry();
 
 	peonForma.merge(baseMalla.geometry, baseMalla.matrix);
 	peonForma.merge(forma2Malla.geometry, forma2Malla.matrix);
