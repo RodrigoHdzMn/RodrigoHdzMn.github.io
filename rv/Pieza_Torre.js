@@ -96,7 +96,7 @@ var Tb=0.8*2;//tamaño base
 	var material=new THREE.MeshLambertMaterial({transparent:true,opacity:0.9});
 	var torreMalla= new THREE.Mesh(torreForma,material);
 	
-	torreMalla.rotateX(Math.PI/8);
+	//torreMalla.rotateX(Math.PI/8);
 	
 	var iluminacion= new THREE.PointLight(0xFFFFFF);
 	iluminacion.position.x=30;
@@ -109,7 +109,7 @@ var Tb=0.8*2;//tamaño base
 	//LuzMagenta.position.z=-10;
 	
 	var base = new THREE.Mesh(new THREE.BoxGeometry(10,.1,10),new THREE.MeshLambertMaterial({color:0xFFFFFF}));
-	base.rotateX(Math.PI/8);
+	//base.rotateX(Math.PI/8);//
 	
 	var escena=new THREE.Scene();
 	escena.add(torreMalla);
@@ -119,7 +119,8 @@ var Tb=0.8*2;//tamaño base
 	
 	var camara=new THREE.PerspectiveCamera();
 	camara.position.z=15;
-	
+	camara.position.y=5;
+
 	renderizador=new THREE.WebGLRenderer();
 	renderizador.setSize(window.innerHeight*.75,window.innerHeight*.75 );
 	document.body.appendChild(renderizador.domElement);
