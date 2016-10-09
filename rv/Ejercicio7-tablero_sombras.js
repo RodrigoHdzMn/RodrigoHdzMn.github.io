@@ -56,7 +56,7 @@ for(var i=1; i<=8; i++)
 	tablero[cont] = new THREE.Mesh(forma, material);
 	tablero[cont].position.x=10*i;
 	tablero[cont].position.z=10*j;
-	cont=cont++;
+	cont=cont+1;
    }
 }
 
