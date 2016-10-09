@@ -112,7 +112,7 @@ mallaa.position.y=2;
 	//LuzMagenta.position.y=50;
 	//LuzMagenta.position.z=-10;
 	
-	var base = new THREE.Mesh(new THREE.BoxGeometry(10,.1,10),new THREE.MeshLambertMaterial({color:0xFFFFFF}));
+	var base = new THREE.Mesh(new THREE.BoxGeometry(10,.1,10),new THREE.MeshLambertMaterial({color:0xFF00FF}));
 	//base.rotateX(Math.PI/8);//
 	
 	var escena=new THREE.Scene();
