@@ -162,7 +162,6 @@ var torreMalla4= new THREE.Mesh(torreForma,materialOpaco50);
 torreMalla4.position.x=70;
 torreMalla4.position.z=70;
 
-
 	var formaa = new THREE.SphereGeometry(4);
 	var materiall=new THREE.MeshLambertMaterial({color:0x00CC00});
 	var mallaa= new THREE.Mesh(formaa,materiall);
@@ -170,8 +169,8 @@ torreMalla4.position.z=70;
 	mallaa.position.x=45;
 	mallaa.position.z=45
 	
-	var base = new THREE.Mesh(new THREE.BoxGeometry(100,.1,100),new THREE.MeshLambertMaterial({color:0x804000}));
-	base.position.y=0;
+	var base = new THREE.Mesh(new THREE.BoxGeometry(90,.1,90),new THREE.MeshLambertMaterial({color:0x804000}));
+	base.position.y=-0.1;
 	base.position.x=45;
 	base.position.z=45;
 
