@@ -181,7 +181,7 @@ escena.add(LuzMagenta)
 escena.add(LuzCyan)
 escena.add(LuzYellow)
 for ( var n=1; n<=64; n ++)
-escena.add(tablero[cont]);
+escena.add(tablero[n]);
 
 renderizador.shadowMap.Enabled=true;
 torreMalla1.castShadow=true;
