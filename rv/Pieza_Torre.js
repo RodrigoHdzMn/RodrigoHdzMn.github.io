@@ -1,5 +1,5 @@
 
-var Tb=0.8*2;//tamaño base
+var Tb=0.8*0.5;//tamaño base
 	var altura1=Tb/4;
 	var baseForma= new THREE.CylinderGeometry(Tb, Tb, altura1,60 );//dia.sup, dia.inf, altura
 	baseForma.translate(0,0,0);
@@ -94,7 +94,7 @@ var Tb=0.8*2;//tamaño base
 	
 	var material=new THREE.MeshLambertMaterial({transparent:true,opacity:0.9});
 	var torreMalla= new THREE.Mesh(torreForma,material);
-	
+	torreMalla.position.x=2;
 	//torreMalla.rotateX(Math.PI/8);
 var formaa = new THREE.SphereGeometry(1);
 var materiall=new THREE.MeshLambertMaterial({color:0x00cc00});
@@ -115,7 +115,7 @@ mallaa.position.y=2;
 	//base.rotateX(Math.PI/8);//
 	
 	var escena=new THREE.Scene();
-	//escena.add(torreMalla);
+	escena.add(torreMalla);
 	escena.add(base);
 	escena.add(iluminacion);
 	//escena.add(LuzMagenta);
@@ -130,7 +130,7 @@ mallaa.position.y=2;
 	document.body.appendChild(renderizador.domElement);
 	
 	renderizador.shadowMapEnabled=true;
-	//torreMalla.castShadow=true;	
+	torreMalla.castShadow=true;	
 	base.receiveShadow=true;
 	iluminacion.castShadow=true;
 	mallaa.castShadow=true;
