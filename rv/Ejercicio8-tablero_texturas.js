@@ -100,10 +100,10 @@ function Torre()
 
 function Peon()
 {
-	var Tb=0.8*3;//tamaño base
+	var Tb=0.8*2;//tamaño base
 	var altura1=Tb/4;
 	var baseForma= new THREE.CylinderGeometry(Tb, Tb, altura1,60 );//dia.sup, dia.inf, altura
-	baseForma.translate(0,0,0);
+      	baseForma.translate(0,0,0);
 
 	var altura2=altura1;
 	var forma2 = new THREE.CylinderGeometry(Tb*3/4, Tb*3/4, altura2,60 );
@@ -113,19 +113,18 @@ function Peon()
 	var forma3 = new THREE.CylinderGeometry(Tb/2, Tb*3/4, altura3, 60 );
 	forma3.translate(0,altura2+altura3,0);
 
-	//var altura4
 	var points = [];
-	for ( var i = 0; i < 10; i ++ ) 
-	{
-		var a= Math.sin( i * 0.2 ) * 10 + 5 ;
-		var b=( i - 5 ) * 2;
-		points.push( new THREE.Vector2( (Tb*3/80)*a, (Tb*1/16)*b ) );//new THREE.Vector2( 0.06*a, 0.1*b )
+      	for ( var i = 0; i < 10; i ++ ) 
+      	{
+	      	  var a= Math.sin( i * 0.2 ) * 10 + 5 ;
+		  var b=( i - 5 ) * 2;
+		  points.push( new THREE.Vector2( (Tb*3/80)*a, (Tb*1/16)*b ) );//new THREE.Vector2( 0.06*a, 0.1*b )
 	}
 	var forma4 = new THREE.LatheGeometry( points );
 	forma4.rotateX(Math.PI);
 	forma4.translate(0,Tb*1.125,0);
 
-	var forma5 = new THREE.TorusGeometry( Tb/4, Tb/8, Tb*3.125, 100 );//(radius, tube, radialSegments)
+      	var forma5 = new THREE.TorusGeometry( Tb/4, Tb/8, Tb*3.125, 100 );//(radius, tube, radialSegments)
 	forma5.rotateX(Math.PI/2);
 	forma5.translate(0,Tb*1.65,0);
 
@@ -139,17 +138,93 @@ function Peon()
 	var forma5Malla=new THREE.Mesh(forma5);
 	var forma6Malla=new THREE.Mesh(forma6);
 
-	var torreForma=new THREE.Geometry();
+	var peonForma=new THREE.Geometry();
 
-	torreForma.merge(baseMalla.geometry, baseMalla.matrix);
-	torreForma.merge(forma2Malla.geometry, forma2Malla.matrix);
-	torreForma.merge(forma3Malla.geometry, forma3Malla.matrix);
-	torreForma.merge(forma4Malla.geometry, forma4Malla.matrix);
-	torreForma.merge(forma5Malla.geometry, forma5Malla.matrix);
-	torreForma.merge(forma6Malla.geometry, forma6Malla.matrix);
+	peonForma.merge(baseMalla.geometry, baseMalla.matrix);
+	peonForma.merge(forma2Malla.geometry, forma2Malla.matrix);
+	peonForma.merge(forma3Malla.geometry, forma3Malla.matrix);
+	peonForma.merge(forma4Malla.geometry, forma4Malla.matrix);
+	peonForma.merge(forma5Malla.geometry, forma5Malla.matrix);
+	peonForma.merge(forma6Malla.geometry, forma6Malla.matrix);
 	
 	var material = new THREE.MeshNormalMaterial();
-        this.malla = new THREE.Mesh(torreForma,material);
+        this.malla = new THREE.Mesh(peonForma,material);
+}
+
+function Alfil()
+{
+	var Tb=0.8*2;//tamaño base
+        var altura1=Tb/4;
+        var baseForma= new THREE.CylinderGeometry(Tb, Tb*1.25, altura1,60 );//dia.sup, dia.inf, altura
+        baseForma.translate(0,0,0);
+	
+        var baseForma2= new THREE.TorusGeometry( 1, 0.8, 15, 100 );
+        baseForma2.rotateX(Math.PI/2);
+        baseForma2.translate(0,0.72,0);
+
+        var forma3 = new THREE.TorusGeometry( 1.4, 0.2, 15, 100 );
+        forma3.rotateX(Math.PI/2);
+        forma3.translate(0,1.3,0);
+	
+        var points = [];
+	for ( var i = 4; i < 20; i ++ )
+	{
+		  var a= Math.cos( i * 0.2 ) * 5 + 10 ;
+		  var b=( i - 5 ) * 2;
+		  points.push( new THREE.Vector2( 0.1*a, 0.1*b ) );//new THREE.Vector2( 0.06*a, 0.1*b )
+	}
+	var forma4 = new THREE.LatheGeometry( points ,64);
+	forma4.translate(0,1.7,0);
+
+	var forma5 = new THREE.TorusGeometry( 0.6, 0.2, 6, 100 );
+	forma5.rotateX(Math.PI/2);
+        forma5.translate(0,4.7,0);
+
+	var forma6 = new THREE.TorusGeometry( 0.4, 0.2, 20, 100 );
+	forma6.rotateX(Math.PI/2);
+	forma6.translate(0,4.9,0);
+
+	var forma7 = new THREE.TorusGeometry( 0.4, 0.13, 20, 100 );
+	forma7.rotateX(Math.PI/2);
+        forma7.translate(0,5.2,0);
+
+	var points2 = [];
+	for ( var i = -4; i < 7; i ++ )
+	{
+		  var a= Math.cos( i * 0.4 ) * 6 + 5.5 ;
+		  var b=( i - 5 ) * 2;
+		   points2.push( new THREE.Vector2( 0.06*a, 0.06*b ) );//new THREE.Vector2( 0.06*a, 0.1*b )
+	}
+	var forma8 = new THREE.LatheGeometry( points2 ,64);
+	forma8.translate(0,6.3,0);
+
+	var forma9 = new THREE.SphereGeometry( 0.2, 32, 32 );
+	forma9.translate(0,6.5,0);
+
+  	var baseMalla=new THREE.Mesh(baseForma);
+	var base2Malla=new THREE.Mesh(baseForma2);
+	var forma3Malla=new THREE.Mesh(forma3);
+	var forma4Malla=new THREE.Mesh(forma4);
+	var forma5Malla=new THREE.Mesh(forma5);
+	var forma6Malla=new THREE.Mesh(forma6);
+	var forma7Malla=new THREE.Mesh(forma7);
+	var forma8Malla=new THREE.Mesh(forma8);
+	var forma9Malla=new THREE.Mesh(forma9);
+
+	var alfilForma=new THREE.Geometry();
+	
+	alfilForma.merge(baseMalla.geometry, baseMalla.matrix);
+	alfilForma.merge(base2Malla.geometry, base2Malla.matrix);
+	alfilForma.merge(forma3Malla.geometry, forma3Malla.matrix);
+	alfilForma.merge(forma4Malla.geometry, forma4Malla.matrix);
+	alfilForma.merge(forma5Malla.geometry, forma5Malla.matrix);
+     	alfilForma.merge(forma6Malla.geometry, forma6Malla.matrix);
+	alfilForma.merge(forma7Malla.geometry, forma7Malla.matrix);
+	alfilForma.merge(forma8Malla.geometry, forma8Malla.matrix);
+	alfilForma.merge(forma9Malla.geometry, forma9Malla.matrix);
+
+	var material=new THREE.MeshNormalMaterial();
+	this.malla = new THREE.Mesh(alfilForma,material);
 }
 
 var CONSTRUCTOR = new Object();
@@ -190,6 +265,23 @@ CONSTRUCTOR.setup = function()
 	peon4.malla.position.x = 70;
         peon4.malla.position.z = 70;
 	
+	var alfil1= new Peon();
+        var alfil2= new Peon();
+	var alfil3= new Peon();
+        var alfil4= new Peon()
+	
+	alfil1.malla.position.x = 10;
+        alfil1.malla.position.z = 30;
+	
+	alfil2.malla.position.x = 10;
+        alfil2.malla.position.z = 60;
+	
+	alfil3.malla.position.x = 30;
+        alfil3.malla.position.z = 80;
+	
+	alfil4.malla.position.x = 60;
+        alfil4.malla.position.z = 80;
+	
 	var campoVision=30;// grado
 	var relacionAspecto=window.innerWidth/window.innerHeight;
 	var planoCercano=1;
@@ -213,7 +305,12 @@ CONSTRUCTOR.setup = function()
         CONSTRUCTOR.escena.add(peon2.malla);
         CONSTRUCTOR.escena.add(peon3.malla);
         CONSTRUCTOR.escena.add(peon4.malla);
+	CONSTRUCTOR.escena.add(alfil1.malla);
+        CONSTRUCTOR.escena.add(alfil2.malla);
+        CONSTRUCTOR.escena.add(alfil3.malla);
+        CONSTRUCTOR.escena.add(alfil4.malla);
 }
+
 
 CONSTRUCTOR.loop = function()
 {
