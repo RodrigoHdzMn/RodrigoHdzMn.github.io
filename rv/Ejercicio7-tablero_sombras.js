@@ -30,9 +30,9 @@ renderizador.setSize( window.innerHeight*.85,
 			
 document.body.appendChild (renderizador.domElement);
 
-var Tablero = new THREE.BoxGeometry(80,.1,80);
+var tablero = new Array();
 var forma = new THREE.BoxGeometry( 10,.1,10);
-
+var cont=0;
 for(var i=1; i<=8; i++)
 {
    for(var j=1; j<=8; j++)
@@ -51,12 +51,11 @@ for(var i=1; i<=8; i++)
 		else
 		var material = new THREE.MeshLambertMaterial( {color: 0xffffff}); //0xcfcfcf
 	}
-	
-	var cubo = new THREE.Mesh(forma, material);
-	cubo.position.x=10*i;
-	cubo.position.z=10*j;
-	escena.add(cubo);
-	//Tablero.merge(cubo.geometry, cubo.matrix);
+	cont=cont++;
+	var tablero[cont] = new THREE.Mesh(forma, material);
+	tablero[cont].position.x=10*i;
+	tablero[cont].position.z=10*j;
+	escena.add(tablero[cont]);
    }
 }
 
@@ -177,13 +176,7 @@ escena.add(torreMalla2);
 escena.add(torreMalla3);
 escena.add(torreMalla4);
 //Fin Torre
-//{transparent:true,opacity:0.95}
-var TableroMalla= new THREE.Mesh(Tablero,new THREE.MeshLambertMaterial( {transparent:true,opacity:0.01}));
-TableroMalla.position.x=45;
-TableroMalla.position.z=45;
-TableroMalla.position.y=0.1;
 
-escena.add(TableroMalla);
 escena.add(LuzMagenta)
 escena.add(LuzCyan)
 escena.add(LuzYellow)
@@ -193,10 +186,12 @@ torreMalla1.castShadow=true;
 torreMalla2.castShadow=true;
 torreMalla3.castShadow=true;
 torreMalla4.castShadow=true;
-TableroMalla.receiveShadow=true;
 LuzMagenta.castShadow=true;
 LuzCyan.castShadow=true;
 LuzYellow.castShadow=true;
+for ( var n=0; n<64; n ++)
+tablero[n].receiveShadow = true;
+MMesa.receiveShadow = true;
 
 renderizador.render(escena,camara);
 
