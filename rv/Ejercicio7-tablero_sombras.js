@@ -27,7 +27,6 @@ mallaa.position.y=2;
 	document.body.appendChild(renderizador.domElement);
 	
 	renderizador.shadowMapEnabled=true;
-	torreMalla.castShadow=true;	
 	base.receiveShadow=true;
 	iluminacion.castShadow=true;
 	mallaa.castShadow=true;
