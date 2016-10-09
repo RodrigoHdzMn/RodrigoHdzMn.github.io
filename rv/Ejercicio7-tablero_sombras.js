@@ -25,10 +25,6 @@ camara.position.y = 25;
 camara.position.x = 50;
 
 var renderizador = new THREE.WebGLRenderer();
-renderizador.setSize( window.innerHeight*.85,
-                    	window.innerHeight*.85);
-			
-document.body.appendChild (renderizador.domElement);
 
 var tablero = new Array();
 var forma = new THREE.BoxGeometry( 10,.1,10);
@@ -196,5 +192,8 @@ tablero[n].receiveShadow = true;
 LuzMagenta.castShadow=true;
 LuzCyan.castShadow=true;
 LuzYellow.castShadow=true;
+
+renderizador.setSize( window.innerHeight*.85,window.innerHeight*.85);		
+document.body.appendChild (renderizador.domElement);
 renderizador.render(escena,camara);
 
