@@ -126,8 +126,9 @@ var Tb=0.8*2;//tamaño base
 	
 	renderizador.shadowMap.Enabled=true;
 	torreMalla.castShadow=true;
+	iluminacion.castShadow=true;	
 	base.receiveShadow=true;
-	iluminacion.castShadow=true;
+	
 	//LuzMagenta.castShadow=true;
 	
 	renderizador.render(escena,camara);
