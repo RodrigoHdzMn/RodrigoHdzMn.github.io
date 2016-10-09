@@ -194,8 +194,8 @@ escena.add(base);
 escena.add(LuzMagenta);
 //escena.add(LuzCyan);
 //escena.add(LuzYellow);
-for ( var n=0; n<64; n ++)
-escena.add(tablero[n]);
+//for ( var n=0; n<64; n ++)
+//escena.add(tablero[n]);
 
 renderizador.shadowMap.Enabled=true;
 //torreMalla1.castShadow=true;
@@ -204,8 +204,8 @@ renderizador.shadowMap.Enabled=true;
 //torreMalla4.castShadow=true;
 mallaa.castShadow=true;
 base.receiveShadow=true;
-for ( var n=0; n<64; n ++)
-tablero[n].receiveShadow = true;
+//for ( var n=0; n<64; n ++)
+//tablero[n].receiveShadow = true;
 
 LuzMagenta.castShadow=true;
 //LuzCyan.castShadow=true;
