@@ -70,7 +70,7 @@ var Tb=0.8*2;//tamaño base
 	alfilForma.merge(forma9Malla.geometry, forma9Malla.matrix);
 
 	var material=new THREE.MeshNormalMaterial();
-	var torreMalla= new THREE.Mesh(alfilForma,material);
+	var alfilMalla= new THREE.Mesh(alfilForma,material);
 	
 	alfilMalla.rotateX(Math.PI/5);
 
