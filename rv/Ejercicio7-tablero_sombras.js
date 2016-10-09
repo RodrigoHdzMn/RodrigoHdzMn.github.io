@@ -1,7 +1,7 @@
 
 var escena = new THREE.Scene();
 
-var LuzMagenta=new THREE.PointLight(0xff00f0);
+var LuzMagenta=new THREE.PointLight(0xff00ff);
 LuzMagenta.position.y=40;
 LuzMagenta.position.x=40;
 LuzMagenta.position.z=40;
@@ -178,6 +178,12 @@ mallaa.position.y=5;
 mallaa.position.x=45;
 mallaa.position.z=45;
 escena.add(mallaa);
+
+var base = new THREE.Mesh(new THREE.BoxGeometry(80,.1,80),new THREE.MeshLambertMaterial({color:0xFFFFFF}));
+base.position.y=1;
+base.position.x=45;
+base.position.z=45;
+escena.add(base);
 
 //escena.add(torreMalla1);
 //escena.add(torreMalla2);
