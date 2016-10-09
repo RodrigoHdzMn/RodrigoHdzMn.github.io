@@ -170,8 +170,8 @@ torreMalla4.position.z=70;
 	mallaa.position.x=45;
 	mallaa.position.z=45
 	
-	var base = new THREE.Mesh(new THREE.BoxGeometry(80,.1,80),new THREE.MeshLambertMaterial({color:0xFFFFFF}));
-	base.position.y=0.4;
+	var base = new THREE.Mesh(new THREE.BoxGeometry(100,.1,100),new THREE.MeshLambertMaterial({color:0x804000}));
+	base.position.y=0;
 	base.position.x=45;
 	base.position.z=45;
 
