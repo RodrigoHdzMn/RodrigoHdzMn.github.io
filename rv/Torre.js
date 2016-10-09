@@ -31,7 +31,7 @@ var Tb=0.8*2;//tamaño base
 	forma6.rotateX(Math.PI/2);
 	forma6.translate(0,4.9,0);
 
-	var forma7 = new THREE.TorusGeometry( 0.4, 0.14, 20, 100 );
+	var forma7 = new THREE.TorusGeometry( 0.4, 0.12, 20, 100 );
 	forma7.rotateX(Math.PI/2);
 	forma7.translate(0,5.2,0);
 
