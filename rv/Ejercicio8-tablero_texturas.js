@@ -86,7 +86,6 @@ function Torre()
 	torreForma.merge(forma6Malla.geometry, forma6Malla.matrix);
 	torreForma.merge(forma7Malla.geometry, forma7Malla.matrix);
 	torreForma.merge(forma8Malla.geometry, forma8Malla.matrix);
-
 	torreForma.merge(formaA1Malla.geometry,formaA1Malla.matrix);
 	torreForma.merge(formaA2Malla.geometry,formaA2Malla.matrix);
 	torreForma.merge(formaA3Malla.geometry,formaA3Malla.matrix);
@@ -153,7 +152,7 @@ function Peon()
 
 function Alfil()
 {
-	var Tb=0.8*4;//tamaño base
+	var Tb=0.8*2;//tamaño base
         var altura1=Tb/4;
         var baseForma= new THREE.CylinderGeometry(Tb, Tb*1.25, altura1,60 );//dia.sup, dia.inf, altura
         baseForma.translate(0,0,0);
