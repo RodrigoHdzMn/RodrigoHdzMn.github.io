@@ -174,8 +174,8 @@ escena.add(torreMalla3);
 escena.add(torreMalla4);
 //Fin Torre
 
-escena.add(LuzMagenta)
-//escena.add(LuzCyan)
+//escena.add(LuzMagenta)
+escena.add(LuzCyan)
 //escena.add(LuzYellow)
 for ( var n=0; n<64; n ++)
 escena.add(tablero[n]);
@@ -189,8 +189,8 @@ torreMalla4.castShadow=true;
 for ( var n=0; n<64; n ++)
 tablero[n].receiveShadow = true;
 
-LuzMagenta.castShadow=true;
-//LuzCyan.castShadow=true;
+//LuzMagenta.castShadow=true;
+LuzCyan.castShadow=true;
 //LuzYellow.castShadow=true;
 
 renderizador.setSize( window.innerHeight*.85,window.innerHeight*.85);		
