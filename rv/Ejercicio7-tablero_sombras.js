@@ -2,15 +2,15 @@
 var LuzMagenta=new THREE.PointLight(0xFF00FF);
 LuzMagenta.position.x=0;
 LuzMagenta.position.y=30;
-LuzMagenta.position.z=40;
+LuzMagenta.position.z=45;
 
 var LuzCyan= new THREE.PointLight(0x00FFFF);
 LuzCyan.position.x=80;
 LuzCyan.position.y=30;
-LuzCyan.position.z=40;
+LuzCyan.position.z=45;
 
 var LuzYellow= new THREE.PointLight(0xFFFF00);
-LuzYellow.position.x=40;
+LuzYellow.position.x=45;
 LuzYellow.position.y=30;
 LuzYellow.position.z=0;
 
