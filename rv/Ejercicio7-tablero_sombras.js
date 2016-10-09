@@ -1,27 +1,37 @@
+var campoVision=30;// grado
+var relacionAspecto=window.innerWidth/window.innerHeight;
+var planoCercano=1;
+var planoLejano=1000;
 
-var formaa = new THREE.SphereGeometry(1);
-var materiall=new THREE.MeshLambertMaterial({color:0x00cc00});
-var mallaa= new THREE.Mesh(formaa,materiall);
-mallaa.position.y=2;
+var camara=new THREE.PerspectiveCamera(campoVision,relacionAspecto,planoCercano,planoLejano);
+camara.position.z = 200;
+camara.position.y = 25;
+camara.position.x = 50;
+
+
+	var formaa = new THREE.SphereGeometry(4);
+	var materiall=new THREE.MeshLambertMaterial({color:0x00CC00});
+	var mallaa= new THREE.Mesh(formaa,materiall);
+	mallaa.position.y=5;
+	mallaa.position.x=45;
+	mallaa.position.z=45
+
 	
 	var iluminacion= new THREE.PointLight(0xFFFFFF);
 	iluminacion.position.x=10;
 	iluminacion.position.y=20
 	iluminacion.position.z=0;
 	
-	var base = new THREE.Mesh(new THREE.BoxGeometry(10,.1,10),new THREE.MeshLambertMaterial({color:0xFF00FF}));
-	//base.rotateX(Math.PI/8);//
-	
+	var base = new THREE.Mesh(new THREE.BoxGeometry(80,.1,80),new THREE.MeshLambertMaterial({color:0xFFFFFF}));
+	base.position.y=0.4;
+	base.position.x=45;
+	base.position.z=45;
+
 	var escena=new THREE.Scene();
 	escena.add(base);
 	escena.add(iluminacion);
-	//escena.add(LuzMagenta);
         escena.add(mallaa);
 	
-	var camara=new THREE.PerspectiveCamera();
-	camara.position.z=15;
-	camara.position.y=5;
-
 	renderizador=new THREE.WebGLRenderer();
 	renderizador.setSize(window.innerHeight*.75,window.innerHeight*.75 );
 	document.body.appendChild(renderizador.domElement);
