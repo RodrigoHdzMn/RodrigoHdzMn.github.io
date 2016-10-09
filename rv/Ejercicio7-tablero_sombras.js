@@ -192,8 +192,8 @@ torreMalla4.castShadow=true;
 LuzMagenta.castShadow=true;
 LuzCyan.castShadow=true;
 LuzYellow.castShadow=true;
-//for ( var n=1; n<=64; n ++)
-//tablero[n].receiveShadow = true;
+for ( var n=0; n<64; n ++)
+tablero[n].receiveShadow = true;
 
 renderizador.render(escena,camara);
 
