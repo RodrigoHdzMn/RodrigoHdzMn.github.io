@@ -71,7 +71,7 @@ var Tb=0.8*2;//tamaño base
 	document.body.appendChild(renderizador.domElement);
 
 	renderizador.shadowMap.Enabled=true;
-	torreMalla.castShadow=true;
+	peonMalla.castShadow=true;
 	base.receiveShadow=true;
 	iluminacion.castShadow=true;
 	
