@@ -33,7 +33,7 @@ var Tb=0.8*2;//tamaño base
 
 	var forma7 = new THREE.TorusGeometry( 0.4, 0.13, 20, 100 );
 	forma7.rotateX(Math.PI/2);
-	forma7.translate(0,5.2,0);
+	forma7.translate(0,5.1,0);
 
 	var points2 = [];
 	for ( var i = -4; i < 7; i ++ )
