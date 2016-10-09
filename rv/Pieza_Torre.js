@@ -99,7 +99,7 @@ var Tb=0.8*2;//tamaño base
 	//torreMalla.rotateX(Math.PI/8);
 	
 	var iluminacion= new THREE.PointLight(0xFFFFFF);
-	//iluminacion.position.x=20;
+	iluminacion.position.x=10;
 	iluminacion.position.y=20
 	iluminacion.position.z=0;
 	
@@ -112,7 +112,7 @@ var Tb=0.8*2;//tamaño base
 	//base.rotateX(Math.PI/8);//
 	
 	var escena=new THREE.Scene();
-	escena.add(torreMalla);
+	escena.add(torreForma);
 	escena.add(base);
 	escena.add(iluminacion);
 	//escena.add(LuzMagenta);
