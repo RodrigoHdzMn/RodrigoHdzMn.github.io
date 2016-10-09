@@ -171,7 +171,9 @@ var renderizador = new THREE.WebGLRenderer();
 var formaa = new THREE.SphereGeometry(1);
 var materiall=new THREE.MeshLambertMaterial({color:0x00cc00});
 var mallaa= new THREE.Mesh(formaa,materiall);
-mallaa.position.y=2;
+mallaa.position.y=3;
+mallaa.position.x=40;
+mallaa.position.z=40;
 escena.add(mallaa);
 
 escena.add(torreMalla1);
