@@ -46,7 +46,7 @@ var Tb=0.8*2;//tamaño base
 	forma8.translate(0,6.4,0);
 
 	var forma9 = new THREE.SphereGeometry( 0.2, 32, 32 );
-	forma8.translate(0,6.8,0);
+	forma9.translate(0,6.8,0);
 
 	var baseMalla=new THREE.Mesh(baseForma);
 	var base2Malla=new THREE.Mesh(baseForma2);
