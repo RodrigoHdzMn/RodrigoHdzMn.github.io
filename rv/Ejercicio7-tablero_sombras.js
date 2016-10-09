@@ -176,30 +176,30 @@ mallaa.position.x=40;
 mallaa.position.z=40;
 escena.add(mallaa);
 
-escena.add(torreMalla1);
-escena.add(torreMalla2);
-escena.add(torreMalla3);
-escena.add(torreMalla4);
+//escena.add(torreMalla1);
+//escena.add(torreMalla2);
+//escena.add(torreMalla3);
+//escena.add(torreMalla4);
 //Fin Torre
 
-//escena.add(LuzMagenta);
+escena.add(LuzMagenta);
 //escena.add(LuzCyan);
-escena.add(LuzYellow);
+//escena.add(LuzYellow);
 for ( var n=0; n<64; n ++)
 escena.add(tablero[n]);
 
 renderizador.shadowMap.Enabled=true;
-torreMalla1.castShadow=true;
-torreMalla2.castShadow=true;
-torreMalla3.castShadow=true;
-torreMalla4.castShadow=true;
+//torreMalla1.castShadow=true;
+//torreMalla2.castShadow=true;
+//torreMalla3.castShadow=true;
+//torreMalla4.castShadow=true;
 mallaa.castShadow=true;
 for ( var n=0; n<64; n ++)
 tablero[n].receiveShadow = true;
 
-//LuzMagenta.castShadow=true;
+LuzMagenta.castShadow=true;
 //LuzCyan.castShadow=true;
-LuzYellow.castShadow=true;
+//LuzYellow.castShadow=true;
 
 renderizador.setSize( window.innerHeight*.85,window.innerHeight*.85);		
 document.body.appendChild (renderizador.domElement);
