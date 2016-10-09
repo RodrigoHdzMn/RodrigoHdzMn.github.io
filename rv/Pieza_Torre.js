@@ -112,7 +112,7 @@ var Tb=0.8*2;//tamaño base
 	//base.rotateX(Math.PI/8);//
 	
 	var escena=new THREE.Scene();
-	escena.add(torreForma);
+	escena.add(torreMalla);
 	escena.add(base);
 	escena.add(iluminacion);
 	//escena.add(LuzMagenta);
@@ -126,7 +126,7 @@ var Tb=0.8*2;//tamaño base
 	document.body.appendChild(renderizador.domElement);
 	
 	renderizador.shadowMap.Enabled=true;
-	torreMalla.castShadow=true;
+	torreForma.castShadow=true;
 	iluminacion.castShadow=true;	
 	base.receiveShadow=true;
 	
