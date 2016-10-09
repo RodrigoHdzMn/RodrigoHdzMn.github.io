@@ -55,7 +55,7 @@ for(var i=1; i<=8; i++)
 	tablero[cont] = new THREE.Mesh(forma, material);
 	tablero[cont].position.x=10*i;
 	tablero[cont].position.z=10*j;
-	escena.add(tablero[cont]);
+	
    }
 }
 
@@ -180,6 +180,8 @@ escena.add(torreMalla4);
 escena.add(LuzMagenta)
 escena.add(LuzCyan)
 escena.add(LuzYellow)
+for ( var n=1; n<=64; n ++)
+escena.add(tablero[cont]);
 
 renderizador.shadowMap.Enabled=true;
 torreMalla1.castShadow=true;
@@ -189,7 +191,7 @@ torreMalla4.castShadow=true;
 LuzMagenta.castShadow=true;
 LuzCyan.castShadow=true;
 LuzYellow.castShadow=true;
-for ( var n=0; n<64; n ++)
+for ( var n=1; n<=64; n ++)
 tablero[n].receiveShadow = true;
 
 renderizador.render(escena,camara);
