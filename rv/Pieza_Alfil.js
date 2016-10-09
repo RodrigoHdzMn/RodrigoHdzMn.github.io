@@ -59,20 +59,20 @@ var Tb=0.8*2;//tamaño base
 
 	var torreForma=new THREE.Geometry();
 	
-	torreForma.merge(baseMalla.geometry, baseMalla.matrix);
-	torreForma.merge(base2Malla.geometry, base2Malla.matrix);
-	torreForma.merge(forma3Malla.geometry, forma3Malla.matrix);
-	torreForma.merge(forma4Malla.geometry, forma4Malla.matrix);
-	torreForma.merge(forma5Malla.geometry, forma5Malla.matrix);
-     	torreForma.merge(forma6Malla.geometry, forma6Malla.matrix);
-	torreForma.merge(forma7Malla.geometry, forma7Malla.matrix);
-	torreForma.merge(forma8Malla.geometry, forma8Malla.matrix);
-	torreForma.merge(forma9Malla.geometry, forma9Malla.matrix);
+	alfilForma.merge(baseMalla.geometry, baseMalla.matrix);
+	alfilForma.merge(base2Malla.geometry, base2Malla.matrix);
+	alfilForma.merge(forma3Malla.geometry, forma3Malla.matrix);
+	alfilForma.merge(forma4Malla.geometry, forma4Malla.matrix);
+	alfilForma.merge(forma5Malla.geometry, forma5Malla.matrix);
+     	alfilForma.merge(forma6Malla.geometry, forma6Malla.matrix);
+	alfilForma.merge(forma7Malla.geometry, forma7Malla.matrix);
+	alfilForma.merge(forma8Malla.geometry, forma8Malla.matrix);
+	alfilForma.merge(forma9Malla.geometry, forma9Malla.matrix);
 
 	var material=new THREE.MeshNormalMaterial();
-	var torreMalla= new THREE.Mesh(torreForma,material);
+	var torreMalla= new THREE.Mesh(alfilForma,material);
 	
-	torreMalla.rotateX(Math.PI/5);
+	alfilMalla.rotateX(Math.PI/5);
 
 	var iluminacion= new THREE.PointLight(0xFFFFFF);
 	iluminacion.position.x=20;
@@ -83,7 +83,7 @@ var Tb=0.8*2;//tamaño base
 	base.rotateX(Math.PI/5);
 	
 	var escena=new THREE.Scene();
-	escena.add(torreMalla);
+	escena.add(alfilMalla);
 	escena.add(base);
 	escena.add(iluminacion);
 
