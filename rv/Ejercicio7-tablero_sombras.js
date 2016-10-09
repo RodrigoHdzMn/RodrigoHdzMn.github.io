@@ -33,8 +33,8 @@ camara.position.x = 50;
         escena.add(mallaa);
 	
 	renderizador=new THREE.WebGLRenderer();
-	renderizador.setSize(window.innerHeight*.75,window.innerHeight*.75 );
-	document.body.appendChild(renderizador.domElement);
+	renderizador.setSize( window.innerHeight*.85,window.innerHeight*.85);		
+	document.body.appendChild (renderizador.domElement);
 	
 	renderizador.shadowMapEnabled=true;
 	base.receiveShadow=true;
