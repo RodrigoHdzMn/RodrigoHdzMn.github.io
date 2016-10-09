@@ -101,7 +101,7 @@ var Tb=0.8*2;//tamaño base
 	var iluminacion= new THREE.PointLight(0xFFFFFF);
 	iluminacion.position.x=20;
 	iluminacion.position.y=50;
-	iluminacion.position.z=-10;
+	iluminacion.position.z=0;
 	
 	//var LuzMagenta= new THREE.PointLight(0xff00ff);
 	//LuzMagenta.position.x=-20;
