@@ -57,7 +57,7 @@ var Tb=0.8*2;//tamaño base
 	var forma8Malla=new THREE.Mesh(forma8);
 	var forma9Malla=new THREE.Mesh(forma9);
 
-	var torreForma=new THREE.Geometry();
+	var alfilForma=new THREE.Geometry();
 	
 	alfilForma.merge(baseMalla.geometry, baseMalla.matrix);
 	alfilForma.merge(base2Malla.geometry, base2Malla.matrix);
