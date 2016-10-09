@@ -38,16 +38,16 @@ var Tb=0.8*2;//tamaño base
 
 	var torreForma=new THREE.Geometry();
 
-	torreForma.merge(baseMalla.geometry, baseMalla.matrix);
-	torreForma.merge(forma2Malla.geometry, forma2Malla.matrix);
-	torreForma.merge(forma3Malla.geometry, forma3Malla.matrix);
-	torreForma.merge(forma4Malla.geometry, forma4Malla.matrix);
-	torreForma.merge(forma5Malla.geometry, forma5Malla.matrix);
-	torreForma.merge(forma6Malla.geometry, forma6Malla.matrix);
+	peonForma.merge(baseMalla.geometry, baseMalla.matrix);
+	peonForma.merge(forma2Malla.geometry, forma2Malla.matrix);
+	peonForma.merge(forma3Malla.geometry, forma3Malla.matrix);
+	peonForma.merge(forma4Malla.geometry, forma4Malla.matrix);
+	peonForma.merge(forma5Malla.geometry, forma5Malla.matrix);
+	peonForma.merge(forma6Malla.geometry, forma6Malla.matrix);
 	
 	var material = new THREE.MeshNormalMaterial();
 	
-  	var peonMalla= new THREE.Mesh(torreForma,material);
+  	var peonMalla= new THREE.Mesh(peonForma,material);
 	peonMalla.rotateX(Math.PI/8);
 
 	var iluminacion= new THREE.PointLight(0xFFFFFF);
