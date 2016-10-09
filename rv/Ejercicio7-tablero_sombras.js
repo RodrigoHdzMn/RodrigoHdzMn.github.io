@@ -1,7 +1,7 @@
 
 var escena = new THREE.Scene();
 
-var LuzMagenta= new THREE.PointLight(0xff00ff);
+var LuzMagenta=new THREE.PointLight(0x00ffff); //new THREE.PointLight(0xff00ff);
 LuzMagenta.position.y=50;
 LuzMagenta.position.z=40;
 
