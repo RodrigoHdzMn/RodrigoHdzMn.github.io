@@ -180,7 +180,7 @@ mallaa.position.z=45;
 escena.add(mallaa);
 
 var base = new THREE.Mesh(new THREE.BoxGeometry(80,.1,80),new THREE.MeshLambertMaterial({color:0xFFFFFF}));
-base.position.y=1;
+base.position.y=0.4;
 base.position.x=45;
 base.position.z=45;
 escena.add(base);
@@ -203,6 +203,7 @@ renderizador.shadowMap.Enabled=true;
 //torreMalla3.castShadow=true;
 //torreMalla4.castShadow=true;
 mallaa.castShadow=true;
+base.receiveShadow=true;
 for ( var n=0; n<64; n ++)
 tablero[n].receiveShadow = true;
 
