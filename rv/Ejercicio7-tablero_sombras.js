@@ -24,8 +24,6 @@ camara.position.z = 200;
 camara.position.y = 25;
 camara.position.x = 50;
 
-var renderizador = new THREE.WebGLRenderer();
-
 var tablero = new Array();
 var forma = new THREE.BoxGeometry( 10,.1,10);
 var material;
@@ -168,6 +166,8 @@ var torreMalla4= new THREE.Mesh(torreForma,materialOpaco50);
 torreMalla4.position.x=70;
 torreMalla4.position.z=70;
 
+var renderizador = new THREE.WebGLRenderer();
+
 escena.add(torreMalla1);
 escena.add(torreMalla2);
 escena.add(torreMalla3);
@@ -190,8 +190,8 @@ for ( var n=0; n<64; n ++)
 tablero[n].receiveShadow = true;
 
 LuzMagenta.castShadow=true;
-LuzCyan.castShadow=true;
-LuzYellow.castShadow=true;
+//LuzCyan.castShadow=true;
+//LuzYellow.castShadow=true;
 
 renderizador.setSize( window.innerHeight*.85,window.innerHeight*.85);		
 document.body.appendChild (renderizador.domElement);
