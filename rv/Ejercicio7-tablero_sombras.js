@@ -2,17 +2,17 @@
 var escena = new THREE.Scene();
 
 var LuzMagenta= new THREE.PointLight(0xff00ff);
-LuzMagenta.position.y=40;
+LuzMagenta.position.y=50;
 LuzMagenta.position.z=40;
 
 var LuzCyan= new THREE.PointLight(0x00ffff);
 LuzCyan.position.x=80;
-LuzCyan.position.y=40;
+LuzCyan.position.y=50;
 LuzCyan.position.z=40;
 
 var LuzYellow= new THREE.PointLight(0xffff00);
 LuzYellow.position.x=40;
-LuzYellow.position.y=40;
+LuzYellow.position.y=50;
 
 var campoVision=30;// grado
 var relacionAspecto=window.innerWidth/window.innerHeight;
