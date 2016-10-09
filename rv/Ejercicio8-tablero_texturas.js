@@ -1,7 +1,6 @@
 
 function Torre()
 {
-	//Inicio Torre
 	var Tb=0.8*5;//tamaño base
 	var altura1=Tb/4;
 	var baseForma= new THREE.CylinderGeometry(Tb, Tb, altura1,60 );//dia.sup, dia.inf, altura
@@ -309,7 +308,6 @@ CONSTRUCTOR.setup = function()
         CONSTRUCTOR.escena.add(alfil3.malla);
         CONSTRUCTOR.escena.add(alfil4.malla);
 }
-
 
 CONSTRUCTOR.loop = function()
 {
