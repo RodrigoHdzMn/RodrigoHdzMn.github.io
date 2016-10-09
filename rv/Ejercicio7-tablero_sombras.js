@@ -21,7 +21,7 @@ var planoLejano=1000;
 
 var camara=new THREE.PerspectiveCamera(campoVision,relacionAspecto,planoCercano,planoLejano);
 camara.position.z = 200;
-//camara.position.y = 25;
+camara.position.y = 25;
 camara.position.x = 105;//50
 
 var tablero = new Array();
