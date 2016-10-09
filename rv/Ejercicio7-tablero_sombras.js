@@ -39,7 +39,7 @@ camara.position.x = 50;
 var escena=new THREE.Scene();
 escena.add(base);
 //escena.add(LuzMagenta);
-//escena.add(LuzCyan);
+escena.add(LuzCyan);
 escena.add(LuzYellow);
 escena.add(mallaa);
 	
@@ -50,7 +50,7 @@ document.body.appendChild (renderizador.domElement);
 renderizador.shadowMapEnabled=true;
 base.receiveShadow=true;
 //LuzMagenta.castShadow=true;
-//LuzCyan.castShadow=true;
+LuzCyan.castShadow=true;
 LuzYellow.castShadow=true;
 mallaa.castShadow=true;
 	
