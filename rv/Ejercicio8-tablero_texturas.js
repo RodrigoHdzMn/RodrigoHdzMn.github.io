@@ -219,9 +219,19 @@ function Alfil()
 	alfilForma.merge(forma7Malla.geometry, forma7Malla.matrix);
 	alfilForma.merge(forma8Malla.geometry, forma8Malla.matrix);
 	alfilForma.merge(forma9Malla.geometry, forma9Malla.matrix);
-
-	var material=new THREE.MeshNormalMaterial();
-	this.malla = new THREE.Mesh(alfilForma,material);
+	
+	//var material = new THREE.MeshNormalMaterial();
+       // this.malla = new THREE.Mesh(alfilForma,material);
+	
+	var cargadorTextura = new THREE.TextureLoader();
+	cargadorTextura.load( 
+		"Textura_marmol_negro",
+	        function(textura)
+		{
+			var material = new THREE.MeshBasicMaterial({map:texture});
+		}
+	);
+	 this.malla = new THREE.Mesh(alfilForma,cargadorTextura);
 }
 
 var CONSTRUCTOR = new Object();
@@ -234,14 +244,11 @@ CONSTRUCTOR.setup = function()
         var torre4= new Torre();
       
         torre1.malla.position.x = 10;
-        torre1.malla.position.z = 10;
-	
+        torre1.malla.position.z = 10;	
 	torre2.malla.position.x = 80;
-        torre2.malla.position.z = 10;
-	
+        torre2.malla.position.z = 10;	
 	torre3.malla.position.x = 10;
-        torre3.malla.position.z = 80;
-	
+        torre3.malla.position.z = 80;	
 	torre4.malla.position.x = 80;
         torre4.malla.position.z = 80;
 	
@@ -251,14 +258,11 @@ CONSTRUCTOR.setup = function()
         var peon4= new Peon();
 	
 	peon1.malla.position.x = 20;
-        peon1.malla.position.z = 20;
-	
+        peon1.malla.position.z = 20;	
 	peon2.malla.position.x = 70;
         peon2.malla.position.z = 20;
-	
 	peon3.malla.position.x = 20;
         peon3.malla.position.z = 70;
-	
 	peon4.malla.position.x = 70;
         peon4.malla.position.z = 70;
 	
@@ -268,14 +272,11 @@ CONSTRUCTOR.setup = function()
         var alfil4= new Alfil();
 	
 	alfil1.malla.position.x = 30;
-        alfil1.malla.position.z = 10;
-	
+        alfil1.malla.position.z = 10;	
 	alfil2.malla.position.x = 60;
-        alfil2.malla.position.z = 10;
-	
+        alfil2.malla.position.z = 10;	
 	alfil3.malla.position.x = 30;
-        alfil3.malla.position.z = 80;
-	
+        alfil3.malla.position.z = 80;	
 	alfil4.malla.position.x = 60;
         alfil4.malla.position.z = 80;
 	
@@ -288,12 +289,9 @@ CONSTRUCTOR.setup = function()
 	CONSTRUCTOR.camara.position.z = 200;
 	CONSTRUCTOR.camara.position.y = 25;
 	CONSTRUCTOR.camara.position.x = 50;
-
-        var lienzo = document.getElementById("tablero_texturas");
-        CONSTRUCTOR.renderizador = new THREE.WebGLRenderer({canvas:lienzo, antialias:true});
-        CONSTRUCTOR.renderizador.setSize(window.innerHeight*.85,window.innerHeight*.85);
       
         CONSTRUCTOR.escena = new THREE.Scene();
+	
         CONSTRUCTOR.escena.add(torre1.malla);
         CONSTRUCTOR.escena.add(torre2.malla);
         CONSTRUCTOR.escena.add(torre3.malla);
@@ -306,6 +304,10 @@ CONSTRUCTOR.setup = function()
         CONSTRUCTOR.escena.add(alfil2.malla);
         CONSTRUCTOR.escena.add(alfil3.malla);
         CONSTRUCTOR.escena.add(alfil4.malla);
+	
+	var lienzo = document.getElementById("tablero_texturas");
+        CONSTRUCTOR.renderizador = new THREE.WebGLRenderer({canvas:lienzo, antialias:true});
+        CONSTRUCTOR.renderizador.setSize(window.innerHeight*.85,window.innerHeight*.85);
 }
 
 CONSTRUCTOR.loop = function()
