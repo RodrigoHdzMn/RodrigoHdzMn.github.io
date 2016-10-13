@@ -226,12 +226,11 @@ function Alfil()
 	var progreso = 0;
 	var cargadorTextura = new THREE.TextureLoader();
 	cargadorTextura.load( 
-		"earth_atmos_2048.jpg",
+		"Textura_marmol_negro.jpg",
 	        function(textura)
 		{
 			materialAlfil = new THREE.MeshBasicMaterial({map:textura});
-		},
-		
+		},		
 		// Function called when download progresses
 	function ( xhr ) 
 		{
@@ -325,7 +324,7 @@ CONSTRUCTOR.setup = function()
 CONSTRUCTOR.loop = function()
 {
       requestAnimationFrame( CONSTRUCTOR.loop );
-	if( alfil1.progreso && alfil2.progreso && alfil3.progreso && alfil1.progreso == 200)
+	if( alfil1.progreso && alfil2.progreso && alfil3.progreso && alfil1.progreso === 200)
 		CONSTRUCTOR.setup();
 	
       CONSTRUCTOR.renderizador.render( CONSTRUCTOR.escena, CONSTRUCTOR.camara );
