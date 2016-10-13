@@ -313,7 +313,7 @@ var setupDone = false;
 CONSTRUCTOR.loop = function()
 {
       requestAnimationFrame( CONSTRUCTOR.loop );
-	if( this.malla !== undefined)
+	//if( this.malla !== undefined)
 		//setup2();
 	
       CONSTRUCTOR.renderizador.render( CONSTRUCTOR.escena, CONSTRUCTOR.camara );
