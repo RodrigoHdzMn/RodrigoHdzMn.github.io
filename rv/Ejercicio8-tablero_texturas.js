@@ -67,7 +67,6 @@ function Torre()
 	var forma6Malla=new THREE.Mesh(forma6);
 	var forma7Malla=new THREE.Mesh(forma7);
 	var forma8Malla=new THREE.Mesh(forma8);
-
 	var formaA1Malla=new THREE.Mesh(formaA1);
 	var formaA2Malla=new THREE.Mesh(formaA2);
 	var formaA3Malla=new THREE.Mesh(formaA3);
