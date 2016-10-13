@@ -228,7 +228,7 @@ function Alfil()
 		"Textura_marmol_negro.jpg",
 	        function(textura)
 		{
-			var material = new THREE.MeshBasicMaterial({map:texture});
+			var material = new THREE.MeshBasicMaterial({map:textura});
 		}
 	);
 	 this.malla = new THREE.Mesh(alfilForma,cargadorTextura);
