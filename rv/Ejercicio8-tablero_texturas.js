@@ -231,7 +231,7 @@ function Alfil()
 			var material = new THREE.MeshBasicMaterial({map:textura});
 		}
 	);
-	 CONSTRUCTOR.this.malla = new THREE.Mesh(alfilForma,cargadorTextura);
+	this.malla = new THREE.Mesh(alfilForma,cargadorTextura);
 }
 
 var CONSTRUCTOR = new Object();
@@ -309,15 +309,19 @@ CONSTRUCTOR.setup = function()
         CONSTRUCTOR.renderizador = new THREE.WebGLRenderer({canvas:lienzo, antialias:true});
         CONSTRUCTOR.renderizador.setSize(window.innerHeight*.85,window.innerHeight*.85);
 }
-
+var setupDone = false;
 CONSTRUCTOR.loop = function()
 {
       requestAnimationFrame( CONSTRUCTOR.loop );
-	if( CONSTRUCTOR.this.malla !== undefined)
+	if( this.malla !== undefined)
 	{
 		setup2();
 	}
       CONSTRUCTOR.renderizador.render( CONSTRUCTOR.escena, CONSTRUCTOR.camara );
+}
+function setup2()
+{
+	setupDone=true;
 }
 
 CONSTRUCTOR.setup();
