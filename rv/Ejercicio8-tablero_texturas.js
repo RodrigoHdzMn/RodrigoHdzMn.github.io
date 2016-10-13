@@ -231,7 +231,7 @@ function Alfil()
 			var material = new THREE.MeshBasicMaterial({map:textura});
 		}
 	);
-	 this.malla = new THREE.Mesh(alfilForma,cargadorTextura);
+	 CONSTRUCTOR.this.malla = new THREE.Mesh(alfilForma,cargadorTextura);
 }
 
 var CONSTRUCTOR = new Object();
@@ -313,6 +313,10 @@ CONSTRUCTOR.setup = function()
 CONSTRUCTOR.loop = function()
 {
       requestAnimationFrame( CONSTRUCTOR.loop );
+	if( CONSTRUCTOR.this.malla !== undefined)
+	{
+		setup2();
+	}
       CONSTRUCTOR.renderizador.render( CONSTRUCTOR.escena, CONSTRUCTOR.camara );
 }
 
