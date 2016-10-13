@@ -321,12 +321,12 @@ CONSTRUCTOR.setup = function()
         CONSTRUCTOR.renderizador = new THREE.WebGLRenderer({canvas:lienzo, antialias:true});
         CONSTRUCTOR.renderizador.setSize(window.innerHeight*.85,window.innerHeight*.85);
 }
-var setupDone = false;
+
 CONSTRUCTOR.loop = function()
 {
       requestAnimationFrame( CONSTRUCTOR.loop );
-	//if( this.malla !== undefined)
-		//setup2();
+	if( progreso.alfil1 && progreso.alfil2 && progreso.alfil3 && progreso.alfil1 == 100)
+		CONSTRUCTOR.setup();
 	
       CONSTRUCTOR.renderizador.render( CONSTRUCTOR.escena, CONSTRUCTOR.camara );
 }
