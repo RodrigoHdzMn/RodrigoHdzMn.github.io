@@ -242,7 +242,7 @@ function Alfil()
 		console.log( 'An error happened' );
 		}
 	);
-	this.malla = new THREE.Mesh(alfilForma,materialAlfil);
+	this.malla = new THREE.Mesh(alfilForma,cargadorTextura);
 }
 
 var CONSTRUCTOR = new Object();
