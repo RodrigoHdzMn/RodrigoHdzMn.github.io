@@ -229,6 +229,17 @@ function Alfil()
 	        function(textura)
 		{
 			materialAlfil = new THREE.MeshBasicMaterial({map:textura});
+		},
+		
+		// Function called when download progresses
+	function ( xhr ) 
+		{
+		console.log( (xhr.loaded / xhr.total * 100) + '% loaded' );
+		},
+	// Function called when download errors
+	function ( xhr ) 
+		{
+		console.log( 'An error happened' );
 		}
 	);
 	this.malla = new THREE.Mesh(alfilForma,materialAlfil);
