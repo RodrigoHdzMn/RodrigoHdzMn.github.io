@@ -325,7 +325,7 @@ CONSTRUCTOR.setup = function()
 CONSTRUCTOR.loop = function()
 {
       requestAnimationFrame( CONSTRUCTOR.loop );
-	if( alfil1.progreso && alfil2.progreso && alfil3.progreso && alfil1.progreso == 100)
+	if( alfil1.progreso && alfil2.progreso && alfil3.progreso && alfil1.progreso == 200)
 		CONSTRUCTOR.setup();
 	
       CONSTRUCTOR.renderizador.render( CONSTRUCTOR.escena, CONSTRUCTOR.camara );
