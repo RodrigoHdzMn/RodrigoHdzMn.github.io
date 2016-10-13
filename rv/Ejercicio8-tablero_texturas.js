@@ -245,7 +245,7 @@ function Alfil()
 		}
 	);
 	this.progreso = progreso;
-	this.malla = new THREE.Mesh(alfilForma,cargadorTextura);
+	this.malla = new THREE.Mesh(alfilForma,materialAlfil);
 }
 
 var CONSTRUCTOR = new Object();
@@ -329,10 +329,6 @@ CONSTRUCTOR.loop = function()
 		CONSTRUCTOR.setup();
 	
       CONSTRUCTOR.renderizador.render( CONSTRUCTOR.escena, CONSTRUCTOR.camara );
-}
-function setup2()
-{
-	setupDone=true;
 }
 
 CONSTRUCTOR.setup();
