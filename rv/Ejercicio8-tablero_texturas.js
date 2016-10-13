@@ -222,16 +222,16 @@ function Alfil()
 	
 	//var material = new THREE.MeshNormalMaterial();
        // this.malla = new THREE.Mesh(alfilForma,material);
-	
+	var materialAlfil;
 	var cargadorTextura = new THREE.TextureLoader();
 	cargadorTextura.load( 
 		"Textura_marmol_negro.jpg",
 	        function(textura)
 		{
-			var material = new THREE.MeshBasicMaterial({map:textura});
+			materialAlfil = new THREE.MeshBasicMaterial({map:textura});
 		}
 	);
-	this.malla = new THREE.Mesh(alfilForma,cargadorTextura);
+	this.malla = new THREE.Mesh(alfilForma,materialAlfil);
 }
 
 var CONSTRUCTOR = new Object();
@@ -314,9 +314,8 @@ CONSTRUCTOR.loop = function()
 {
       requestAnimationFrame( CONSTRUCTOR.loop );
 	if( this.malla !== undefined)
-	{
-		setup2();
-	}
+		//setup2();
+	
       CONSTRUCTOR.renderizador.render( CONSTRUCTOR.escena, CONSTRUCTOR.camara );
 }
 function setup2()
