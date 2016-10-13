@@ -250,13 +250,21 @@ function Alfil()
 
 var CONSTRUCTOR = new Object();
 
-CONSTRUCTOR.setup = function()
-{
         var torre1= new Torre();
         var torre2= new Torre();
 	var torre3= new Torre();
         var torre4= new Torre();
-      
+	var peon1= new Peon();
+        var peon2= new Peon();
+	var peon3= new Peon();
+        var peon4= new Peon();
+	var alfil1= new Alfil();
+        var alfil2= new Alfil();
+	var alfil3= new Alfil();
+        var alfil4= new Alfil();
+
+CONSTRUCTOR.setup = function()
+{
         torre1.malla.position.x = 10;
         torre1.malla.position.z = 10;	
 	torre2.malla.position.x = 80;
@@ -266,11 +274,6 @@ CONSTRUCTOR.setup = function()
 	torre4.malla.position.x = 80;
         torre4.malla.position.z = 80;
 	
-	var peon1= new Peon();
-        var peon2= new Peon();
-	var peon3= new Peon();
-        var peon4= new Peon();
-	
 	peon1.malla.position.x = 20;
         peon1.malla.position.z = 20;	
 	peon2.malla.position.x = 70;
@@ -279,11 +282,6 @@ CONSTRUCTOR.setup = function()
         peon3.malla.position.z = 70;
 	peon4.malla.position.x = 70;
         peon4.malla.position.z = 70;
-	
-	var alfil1= new Alfil();
-        var alfil2= new Alfil();
-	var alfil3= new Alfil();
-        var alfil4= new Alfil();
 	
 	alfil1.malla.position.x = 30;
         alfil1.malla.position.z = 10;	
