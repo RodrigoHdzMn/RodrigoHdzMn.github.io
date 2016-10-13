@@ -226,7 +226,7 @@ function Alfil()
 	var progreso = 0;
 	var cargadorTextura = new THREE.TextureLoader();
 	cargadorTextura.load( 
-		"Textura_marmol_negro.jpg",
+		"earth_atmos_2048.jpg",
 	        function(textura)
 		{
 			materialAlfil = new THREE.MeshBasicMaterial({map:textura});
