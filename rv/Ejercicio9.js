@@ -104,7 +104,7 @@ var alfil1=new Alfil();
 TEXTURA.retrollamada = function(textura)
 {
       var material= new THREE.MeshBasicMaterial( {map:textura} );
-      TEXTURA.malla= new THREE.Mesh(new THREE.SphereGeometry(1), material);
+      TEXTURA.malla= new THREE.Mesh(new THREE.SphereGeometry(5), material);
       TEXTURA.escena.add(TEXTURA.malla);
 }
 
@@ -117,7 +117,7 @@ TEXTURA.setup=function()
       
       TEXTURA.camara= new THREE.PerspectiveCamera(75,window.innerWidth / window.innerHeight,0.1,1000);
       
-      TEXTURA.camara.position.z=5;
+      TEXTURA.camara.position.z=17;
       
       var lienzo=document.getElementById("tablero_texturas");
       TEXTURA.renderizador=new THREE.WebGLRenderer({canvas:lienzo, antialias: true});
