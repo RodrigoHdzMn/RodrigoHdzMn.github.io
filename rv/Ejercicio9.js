@@ -105,9 +105,15 @@ TEXTURA.setup=function()
 		}
 	);
       
-      TEXTURA.camara= new THREE.PerspectiveCamera(75,window.innerWidth / window.innerHeight,0.1,1000);
-      
-      TEXTURA.camara.position.z=17;
+        var campoVision=30;// grado
+	var relacionAspecto=window.innerWidth/window.innerHeight;
+	var planoCercano=1;
+	var planoLejano=1000;
+
+	TEXTURA.camara=new THREE.PerspectiveCamera(campoVision,relacionAspecto,planoCercano,planoLejano);
+	TEXTURA.camara.position.z = 200;
+	TEXTURA.camara.position.y = 25;
+	TEXTURA.camara.position.x = 50;
       
       var lienzo=document.getElementById("tablero_texturas");
       TEXTURA.renderizador=new THREE.WebGLRenderer({canvas:lienzo, antialias: true});
