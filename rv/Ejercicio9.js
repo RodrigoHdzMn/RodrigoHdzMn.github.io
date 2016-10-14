@@ -80,8 +80,7 @@ function Alfil()
 	        function(textura)
 		{
 			material= new THREE.MeshBasicMaterial( {map:textura} );
-      			mallaAlfil= new THREE.Mesh(alfilForma, material);
-			escena.add(mallaAlfil);	
+      			
 		},		
 		// Function called when download progresses
 	function ( xhr ) 
@@ -95,6 +94,8 @@ function Alfil()
 		console.log( 'An error happened' );
 		}
 	);
+	mallaAlfil= new THREE.Mesh(alfilForma, material);
+			escena.add(mallaAlfil);	
 }
 
 var alfil1=new Alfil();
