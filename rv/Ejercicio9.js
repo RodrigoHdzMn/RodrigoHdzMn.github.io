@@ -109,7 +109,9 @@ TEXTURA.setup=function()
 		"Textura_marmol_negro.jpg",
 	        function(textura)
 		{
-			materialAlfil = new THREE.MeshBasicMaterial({map:textura});
+			var material= new THREE.MeshBasicMaterial( {map:textura} );
+      			TEXTURA.malla= new THREE.Mesh(new THREE.SphereGeometry(5), material);
+     			TEXTURA.escena.add(TEXTURA.malla);
 		},		
 		// Function called when download progresses
 	function ( xhr ) 
