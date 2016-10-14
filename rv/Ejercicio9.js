@@ -79,8 +79,8 @@ function Alfil()
 var TEXTURA=new Object();
 
 var alfil1=new Alfil();
-	alfil1.malla.position.x = 30;
-        alfil1.malla.position.z = 10;
+	alfil1.position.x = 30;
+        alfil1.position.z = 10;
 TEXTURA.setup=function()
 {
       TEXTURA.escena = new THREE.Scene();
