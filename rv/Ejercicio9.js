@@ -95,8 +95,8 @@ function Alfil()
 		console.log( 'An error happened' );
 		}
 	);
-	this.mallaAlfil;
-			//escena.add(mallaAlfil);	
+	//this.mallaAlfil;
+	escena.add(mallaAlfil);	
 }
 
 var alfil1=new Alfil();
@@ -115,7 +115,7 @@ var setup=function()
 	camara.position.y = 25;
 	//TEXTURA.camara.position.x = 50;
 	
-	escena.add(alfil1.mallaAlfil);
+	//escena.add(alfil1.mallaAlfil);
       var lienzo=document.getElementById("tablero_texturas");
       renderizador=new THREE.WebGLRenderer({canvas:lienzo, antialias: true});
       renderizador.setSize(600,600);
