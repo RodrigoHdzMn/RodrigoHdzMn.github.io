@@ -125,7 +125,7 @@ var setup=function()
 
 var loop=function()
 {
-      requestAnimationFrame(TEXTURA.loop);
+      requestAnimationFrame(loop);
       //if(TEXTURA.malla !== undefined)
 
       renderizador.render(escena,camara)
