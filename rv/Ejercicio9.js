@@ -111,9 +111,9 @@ TEXTURA.setup=function()
 	var planoLejano=1000;
 
 	TEXTURA.camara=new THREE.PerspectiveCamera(campoVision,relacionAspecto,planoCercano,planoLejano);
-	TEXTURA.camara.position.z = 200;
+	TEXTURA.camara.position.z = 100;
 	TEXTURA.camara.position.y = 25;
-	TEXTURA.camara.position.x = 50;
+	//TEXTURA.camara.position.x = 50;
       
       var lienzo=document.getElementById("tablero_texturas");
       TEXTURA.renderizador=new THREE.WebGLRenderer({canvas:lienzo, antialias: true});
