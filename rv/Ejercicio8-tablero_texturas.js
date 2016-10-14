@@ -325,7 +325,7 @@ CONSTRUCTOR.loop = function()
 {
       requestAnimationFrame( CONSTRUCTOR.loop );
 	//if( alfil1.malla && alfil2.malla && alfil3.malla && alfil1.malla !== undefined)
-	if( alfil1.progreso !== undefined)		
+	if( alfil1.malla !== undefined)		
 	{
 		CONSTRUCTOR.escena.add(alfil1.malla);
         	CONSTRUCTOR.escena.add(alfil2.malla);
