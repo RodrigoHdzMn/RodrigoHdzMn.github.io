@@ -79,7 +79,8 @@ function Alfil()
 var TEXTURA=new Object();
 
 var alfil1=new Alfil();
-
+	alfil1.malla.position.x = 30;
+        alfil1.malla.position.z = 10;
 TEXTURA.setup=function()
 {
       TEXTURA.escena = new THREE.Scene();
@@ -117,11 +118,8 @@ TEXTURA.setup=function()
 TEXTURA.loop=function()
 {
       requestAnimationFrame(TEXTURA.loop);
-      if(TEXTURA.malla !== undefined)
-      {
-            TEXTURA.malla.rotateX( 0.01 );
-            TEXTURA.malla.rotateY( 0.01 );
-      }
+      //if(TEXTURA.malla !== undefined)
+
       TEXTURA.renderizador.render(TEXTURA.escena,TEXTURA.camara)
 }
 
