@@ -20,7 +20,7 @@ TEXTURA.setup=function()
       
       var lienzo=document.getElementById("tablero-texturas");
       TEXTURA.renderizador=new THREE.WebGLRenderer({canvas:lienzo, antialias: true});
-      TEXTURA.renderizador.setSize(600,600);
+
 }
 
 TEXTURA.loop=function()
