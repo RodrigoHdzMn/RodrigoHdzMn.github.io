@@ -73,16 +73,15 @@ function Alfil()
 	//var material = new THREE.MeshNormalMaterial();
        // this.malla = new THREE.Mesh(alfilForma,material);
 	
-	var material;
+	var material,mallaAlfil;
 	 var cargadorTextura = new THREE.TextureLoader();
 	cargadorTextura.load( 
 		"Textura_marmol_blanco.jpg",
 	        function(textura)
 		{
 			material= new THREE.MeshBasicMaterial( {map:textura} );
-      			var malla= new THREE.Mesh(alfilForma, material);
-			escena.add(malla);
-			
+      			mallaAlfil= new THREE.Mesh(alfilForma, material);
+			escena.add(mallaAlfil);	
 		},		
 		// Function called when download progresses
 	function ( xhr ) 
@@ -96,9 +95,6 @@ function Alfil()
 		console.log( 'An error happened' );
 		}
 	);
-	
-	
-
 }
 
 var alfil1=new Alfil();
