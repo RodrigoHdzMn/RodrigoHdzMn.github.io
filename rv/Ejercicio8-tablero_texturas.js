@@ -311,10 +311,10 @@ CONSTRUCTOR.setup = function()
         CONSTRUCTOR.escena.add(peon2.malla);
         CONSTRUCTOR.escena.add(peon3.malla);
         CONSTRUCTOR.escena.add(peon4.malla);
-	CONSTRUCTOR.escena.add(alfil1.malla);
-        CONSTRUCTOR.escena.add(alfil2.malla);
-        CONSTRUCTOR.escena.add(alfil3.malla);
-        CONSTRUCTOR.escena.add(alfil4.malla);
+	//CONSTRUCTOR.escena.add(alfil1.malla);
+        //CONSTRUCTOR.escena.add(alfil2.malla);
+        //CONSTRUCTOR.escena.add(alfil3.malla);
+        //CONSTRUCTOR.escena.add(alfil4.malla);
 	
 	var lienzo = document.getElementById("tablero_texturas");
         CONSTRUCTOR.renderizador = new THREE.WebGLRenderer({canvas:lienzo, antialias:true});
@@ -324,8 +324,15 @@ CONSTRUCTOR.setup = function()
 CONSTRUCTOR.loop = function()
 {
       requestAnimationFrame( CONSTRUCTOR.loop );
-	if( alfil1.malla && alfil2.malla && alfil3.malla && alfil1.malla !== undefined)
-		CONSTRUCTOR.setup();
+	//if( alfil1.malla && alfil2.malla && alfil3.malla && alfil1.malla !== undefined)
+	if( alfil1.progreso && alfil2.progreso && alfil3.progreso && alfil1.progreso == 100)		
+	{
+		CONSTRUCTOR.escena.add(alfil1.malla);
+        	CONSTRUCTOR.escena.add(alfil2.malla);
+        	CONSTRUCTOR.escena.add(alfil3.malla);
+        	CONSTRUCTOR.escena.add(alfil4.malla);
+	}
+	
 	
       CONSTRUCTOR.renderizador.render( CONSTRUCTOR.escena, CONSTRUCTOR.camara );
 }
