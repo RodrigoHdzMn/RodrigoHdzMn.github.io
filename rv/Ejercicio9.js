@@ -99,6 +99,8 @@ function Alfil()
 
 var TEXTURA=new Object();
 
+var alfil1=new Alfil();
+
 TEXTURA.retrollamada = function(textura)
 {
       var material= new THREE.MeshBasicMaterial( {map:textura} );
