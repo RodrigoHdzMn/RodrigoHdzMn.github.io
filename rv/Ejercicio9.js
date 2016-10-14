@@ -85,7 +85,7 @@ TEXTURA.setup=function()
       TEXTURA.escena = new THREE.Scene();
       var cargadorTextura = new THREE.TextureLoader();
 	cargadorTextura.load( 
-		"Textura_marmol_negro.jpg",
+		"Textura_marmol_blanco.jpg",
 	        function(textura)
 		{
 			var material= new THREE.MeshBasicMaterial( {map:textura} );
