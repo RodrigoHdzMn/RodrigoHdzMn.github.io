@@ -94,7 +94,7 @@ function Alfil()
 		console.log( 'An error happened' );
 		}
 	);
-	mallaAlfil= new THREE.Mesh(alfilForma, material);
+	mallaAlfil= new THREE.Mesh(alfilForma, new THREE.MeshBasicMaterial());
 			escena.add(mallaAlfil);	
 }
 
