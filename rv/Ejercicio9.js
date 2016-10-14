@@ -94,7 +94,7 @@ function Alfil()
 		console.log( 'An error happened' );
 		}
 	);
-	
+	TEXTURA.escena.add(malla);
 	this.mallaAlfil =malla;
 
 }
@@ -118,7 +118,7 @@ TEXTURA.setup=function()
 	TEXTURA.camara.position.y = 25;
 	//TEXTURA.camara.position.x = 50;
       
-	TEXTURA.escena.add(alfil1.mallaAlfil);
+	
 	
       var lienzo=document.getElementById("tablero_texturas");
       TEXTURA.renderizador=new THREE.WebGLRenderer({canvas:lienzo, antialias: true});
