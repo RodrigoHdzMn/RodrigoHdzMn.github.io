@@ -99,21 +99,30 @@ function Alfil()
 
 var TEXTURA=new Object();
 
-var alfil1=new Alfil();
-
-TEXTURA.retrollamada = function(textura)
-{
-      var material= new THREE.MeshBasicMaterial( {map:textura} );
-      TEXTURA.malla= new THREE.Mesh(new THREE.SphereGeometry(5), material);
-      TEXTURA.escena.add(TEXTURA.malla);
-}
+//var alfil1=new Alfil();
 
 TEXTURA.setup=function()
 {
       TEXTURA.escena = new THREE.Scene();
-      
-      var cargador = new THREE.TextureLoader();
-      cargador.load("Textura_marmol_negro.jpg",TEXTURA.retrollamada);
+      var cargadorTextura = new THREE.TextureLoader();
+	cargadorTextura.load( 
+		"Textura_marmol_negro.jpg",
+	        function(textura)
+		{
+			materialAlfil = new THREE.MeshBasicMaterial({map:textura});
+		},		
+		// Function called when download progresses
+	function ( xhr ) 
+		{
+		console.log( (xhr.loaded / xhr.total * 100) + '% loaded' );
+			progreso=(xhr.loaded / xhr.total * 100) ;
+		},
+	// Function called when download errors
+	function ( xhr ) 
+		{
+		console.log( 'An error happened' );
+		}
+	);
       
       TEXTURA.camara= new THREE.PerspectiveCamera(75,window.innerWidth / window.innerHeight,0.1,1000);
       
