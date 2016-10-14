@@ -80,8 +80,8 @@ function Alfil()
 	        function(textura)
 		{
 			material= new THREE.MeshBasicMaterial( {map:textura} );
-      			var malla= new THREE.Mesh(alfilForma, material);
-			escena.add(malla);
+      			//var malla= new THREE.Mesh(alfilForma, material);
+			//escena.add(malla);
 		},		
 		// Function called when download progresses
 	function ( xhr ) 
@@ -95,7 +95,7 @@ function Alfil()
 		console.log( 'An error happened' );
 		}
 	);
-	//this.mallaAlfil;
+	this.mallaAlfil=new THREE.Mesh(alfilForma, material);
 	
 }
 
@@ -115,7 +115,7 @@ var setup=function()
 	camara.position.y = 25;
 	//TEXTURA.camara.position.x = 50;
 	
-	//escena.add(alfil1.mallaAlfil);
+	escena.add(alfil1.mallaAlfil);
       var lienzo=document.getElementById("tablero_texturas");
       renderizador=new THREE.WebGLRenderer({canvas:lienzo, antialias: true});
       renderizador.setSize(600,600);
