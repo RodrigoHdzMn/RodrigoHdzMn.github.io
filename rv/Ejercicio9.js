@@ -101,13 +101,11 @@ function Alfil()
 
 }
 
-var TEXTURA=new Object();
-
 var alfil1=new Alfil();
 
-TEXTURA.setup=function()
+var setup=function()
 {
-      TEXTURA.escena = new THREE.Scene();
+        escena = new THREE.Scene();
      
       
         var campoVision=30;// grado
@@ -115,25 +113,25 @@ TEXTURA.setup=function()
 	var planoCercano=1;
 	var planoLejano=1000;
 
-	TEXTURA.camara=new THREE.PerspectiveCamera(campoVision,relacionAspecto,planoCercano,planoLejano);
-	TEXTURA.camara.position.z = 100;
-	TEXTURA.camara.position.y = 25;
+	camara=new THREE.PerspectiveCamera(campoVision,relacionAspecto,planoCercano,planoLejano);
+	camara.position.z = 100;
+	camara.position.y = 25;
 	//TEXTURA.camara.position.x = 50;
-      
-	
 	
       var lienzo=document.getElementById("tablero_texturas");
-      TEXTURA.renderizador=new THREE.WebGLRenderer({canvas:lienzo, antialias: true});
-      TEXTURA.renderizador.setSize(600,600);
+      renderizador=new THREE.WebGLRenderer({canvas:lienzo, antialias: true});
+      renderizador.setSize(600,600);
 }
 
-TEXTURA.loop=function()
+var loop=function()
 {
       requestAnimationFrame(TEXTURA.loop);
       //if(TEXTURA.malla !== undefined)
 
-      TEXTURA.renderizador.render(TEXTURA.escena,TEXTURA.camara)
+      renderizador.render(escena,camara)
 }
 
-TEXTURA.setup();
-TEXTURA.loop();
+var escena, camara, renderizador;
+
+setup();
+loop();
