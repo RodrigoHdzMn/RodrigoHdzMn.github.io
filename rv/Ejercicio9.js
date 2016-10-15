@@ -126,8 +126,6 @@ for(i=1; i<=8; i++)
 	{
 		if(i%2 == 0)
 		{
-			var posX=10*i;
-			var posZ=10*j;
 			var cargadorTextura = new THREE.TextureLoader();
 			cargadorTextura.load("Textura_marmol_negro.jpg",
 					    function(textura)
@@ -135,8 +133,8 @@ for(i=1; i<=8; i++)
 					     	//var forma = new THREE.BoxGeometry( 10,.1,10);
 					     	var material= new THREE.MeshBasicMaterial( {map:textura} );
 						tablero[cont]=new THREE.Mesh(forma, material);
-						tablero[cont].x=posX;
-						tablero[cont].z=posZ;
+						tablero[cont].x=10*i;
+						tablero[cont].z=10*j;
 						grupo.add(tablero[cont]);
 					     }
 					    );
