@@ -73,14 +73,12 @@ function Alfil()
 	//var material = new THREE.MeshNormalMaterial();
        // this.malla = new THREE.Mesh(alfilForma,material);
 	
-	var material,mallaAlfil;
-	
 	 var cargadorTextura = new THREE.TextureLoader();
 	cargadorTextura.load( 
 		"Textura_marmol_blanco.jpg",
 	        function(textura)
 		{
-			material= new THREE.MeshBasicMaterial( {map:textura} );
+			var material= new THREE.MeshBasicMaterial( {map:textura} );
 			var malla=new THREE.Mesh(alfilForma, material);
 			grupo.add(malla);
 			//var malla= new THREE.Mesh(alfilForma, material);
@@ -97,9 +95,7 @@ function Alfil()
 		{
 		console.log( 'An error happened' );
 		}
-	);
-	
-	
+	);	
 }
 var grupo= new THREE.Group();
 var alfil1=new Alfil();
@@ -118,7 +114,7 @@ var setup=function()
 	camara.position.y = 25;
 	//TEXTURA.camara.position.x = 50;
 	
-	escena.add(grupo);
+	//escena.add(grupo);
       var lienzo=document.getElementById("tablero_texturas");
       renderizador=new THREE.WebGLRenderer({canvas:lienzo, antialias: true});
       renderizador.setSize(600,600);
