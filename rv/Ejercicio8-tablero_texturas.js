@@ -393,7 +393,7 @@ function Alfil(posX,posZ,materialTextura)
 	);
 }
 	var grupo= new THREE.Group();
-	var tablero= new THREE.Tablero();
+	var tablero= new Tablero();
 	
         var torre1= new Torre(10,10,"Textura_madera.jpg");
         var torre2= new Torre(80,10,"Textura_madera.jpg");
