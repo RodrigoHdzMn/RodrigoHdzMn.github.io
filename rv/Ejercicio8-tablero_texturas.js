@@ -72,7 +72,7 @@ for(i=1; i<=8; i++)
    }
 }
 
-function Torre()
+function Torre(posX,posZ,materialTextura)
 {
 	var Tb=0.8*5;//tamaño base
 	var altura1=Tb/4;
@@ -163,12 +163,34 @@ function Torre()
 	torreForma.merge(formaA4Malla.geometry,formaA4Malla.matrix);
 	torreForma.merge(formaA5Malla.geometry,formaA5Malla.matrix);
 	torreForma.merge(formaA6Malla.geometry,formaA6Malla.matrix);
-	
+	/*
         var material = new THREE.MeshNormalMaterial();
-        this.malla = new THREE.Mesh(torreForma,material);
+        this.malla = new THREE.Mesh(torreForma,material);*/
+	var cargadorTextura = new THREE.TextureLoader();
+	cargadorTextura.load( 
+		materialTextura,
+	        function(textura)
+		{
+			var material= new THREE.MeshBasicMaterial( {map:textura} );
+			var malla=new THREE.Mesh(alfilForma, material);
+			malla.position.x=posX;
+			malla.position.z=posZ;
+			grupo.add(malla);
+		},		
+		// Function called when download progresses
+		function ( xhr ) 
+		{
+		console.log( (xhr.loaded / xhr.total * 100) + '% loaded' );
+		},
+		// Function called when download errors
+		function ( xhr ) 
+		{
+		console.log( 'An error happened' );
+		}
+	);
 }
 
-function Peon()
+function Peon(posX,posZ,materialTextura)
 {
 	var Tb=0.8*3;//tamaño base
 	var altura1=Tb/4;
@@ -216,9 +238,31 @@ function Peon()
 	peonForma.merge(forma4Malla.geometry, forma4Malla.matrix);
 	peonForma.merge(forma5Malla.geometry, forma5Malla.matrix);
 	peonForma.merge(forma6Malla.geometry, forma6Malla.matrix);
-	
+	/*
 	var material = new THREE.MeshNormalMaterial();
-        this.malla = new THREE.Mesh(peonForma,material);
+        this.malla = new THREE.Mesh(peonForma,material);*/
+	var cargadorTextura = new THREE.TextureLoader();
+	cargadorTextura.load( 
+		materialTextura,
+	        function(textura)
+		{
+			var material= new THREE.MeshBasicMaterial( {map:textura} );
+			var malla=new THREE.Mesh(alfilForma, material);
+			malla.position.x=posX;
+			malla.position.z=posZ;
+			grupo.add(malla);
+		},		
+		// Function called when download progresses
+		function ( xhr ) 
+		{
+		console.log( (xhr.loaded / xhr.total * 100) + '% loaded' );
+		},
+		// Function called when download errors
+		function ( xhr ) 
+		{
+		console.log( 'An error happened' );
+		}
+	);
 }
 
 function Alfil(posX,posZ,materialTextura)
@@ -319,21 +363,23 @@ function Alfil(posX,posZ,materialTextura)
 	);
 }
 	var grupo= new THREE.Group();
-        var torre1= new Torre();
-        var torre2= new Torre();
-	var torre3= new Torre();
-        var torre4= new Torre();
-	var peon1= new Peon();
-        var peon2= new Peon();
-	var peon3= new Peon();
-        var peon4= new Peon();
+        var torre1= new Torre(10,10,"Textura_marmol_blanco.jpg");
+        var torre2= new Torre(80,10,"Textura_marmol_blanco.jpg");
+	var torre3= new Torre(10,80,"Textura_marmol_negro.jpg");
+        var torre4= new Torre(80,80,"Textura_marmol_negro.jpg");
+
+	var peon1= new Peon(20,20,"Textura_marmol_blanco.jpg");
+        var peon2= new Peon(70,20,"Textura_marmol_blanco.jpg");
+	var peon3= new Peon(20,20,"Textura_marmol_negro.jpg");
+        var peon4= new Peon(70,70,"Textura_marmol_negro.jpg");
+
 	var alfil1= new Alfil(30,10,"Textura_marmol_blanco.jpg");
         var alfil2= new Alfil(60,10,"Textura_marmol_blanco.jpg");
 	var alfil3= new Alfil(30,80,"Textura_marmol_negro.jpg");
         var alfil4= new Alfil(60,80,"Textura_marmol_negro.jpg");
 
 var setup = function()
-{
+{/*
         torre1.malla.position.x = 10;
         torre1.malla.position.z = 10;	
 	torre2.malla.position.x = 80;
@@ -341,8 +387,8 @@ var setup = function()
 	torre3.malla.position.x = 10;
         torre3.malla.position.z = 80;	
 	torre4.malla.position.x = 80;
-        torre4.malla.position.z = 80;
-	
+        torre4.malla.position.z = 80;*/
+	/*
 	peon1.malla.position.x = 20;
         peon1.malla.position.z = 20;	
 	peon2.malla.position.x = 70;
@@ -350,7 +396,7 @@ var setup = function()
 	peon3.malla.position.x = 20;
         peon3.malla.position.z = 70;
 	peon4.malla.position.x = 70;
-        peon4.malla.position.z = 70;
+        peon4.malla.position.z = 70;/*
 	/*
 	alfil1.malla.position.x = 30;
         alfil1.malla.position.z = 10;	
@@ -387,6 +433,7 @@ var setup = function()
       
         escena = new THREE.Scene();
 	//escena.add(base);
+	/*
         escena.add(torre1.malla);
         escena.add(torre2.malla);
         escena.add(torre3.malla);
@@ -394,7 +441,7 @@ var setup = function()
 	escena.add(peon1.malla);
         escena.add(peon2.malla);
         escena.add(peon3.malla);
-        escena.add(peon4.malla);/*
+        escena.add(peon4.malla);
 	escena.add(alfil1.malla);
         escena.add(alfil2.malla);
         escena.add(alfil3.malla);
