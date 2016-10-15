@@ -99,6 +99,7 @@ function Alfil()
 }
 var grupo= new THREE.Group();
 var alfil1=new Alfil();
+alfil1.position.x=20;
 
 var setup=function()
 {
@@ -114,7 +115,7 @@ var setup=function()
 	camara.position.y = 25;
 	//TEXTURA.camara.position.x = 50;
 	
-	//escena.add(grupo);
+	escena.add(grupo);
       var lienzo=document.getElementById("tablero_texturas");
       renderizador=new THREE.WebGLRenderer({canvas:lienzo, antialias: true});
       renderizador.setSize(600,600);
