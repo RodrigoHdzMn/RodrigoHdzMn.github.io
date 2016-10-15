@@ -126,7 +126,7 @@ for(i=1; i<=8; i++)
 		if(i%2 == 0)
 		{
 			var cargadorTextura = new THREE.TextureLoader();
-			cargadorTextura.load("Textura_marmol_negro.jpg",
+			cargadorTextura.load("Textura_marmol_blanco.jpg",
 					    function(textura)
 					     {
 					     	//var forma = new THREE.BoxGeometry( 10,.1,10);
