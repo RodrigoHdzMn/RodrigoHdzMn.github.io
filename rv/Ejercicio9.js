@@ -182,7 +182,7 @@ for(i=1; i<=8; i++)
 	cont=cont+1;
    }
 }
-}
+
 	
 	escena.add(grupo);
       var lienzo=document.getElementById("tablero_texturas");
