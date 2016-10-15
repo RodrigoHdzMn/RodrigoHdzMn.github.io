@@ -334,8 +334,8 @@ var setup = function()
 					     	var forma = new THREE.BoxGeometry(90,.1,90);
 					     	var material= new THREE.MeshBasicMaterial( {map:textura} );
 						var malla=new THREE.Mesh(forma, material);
-						malla.position.x=-0.1;
-						malla.position.y=45;
+						malla.position.x=45;
+						malla.position.y=-0.1;
 						malla.position.z=45;
 						grupo.add(malla);
 					     }
