@@ -1,7 +1,7 @@
-
-for(var i=1; i<=8; i++)
+var i,j;
+for(i=1; i<=8; i++)
 {
-   for(var j=1; j<=8; j++)
+   for(j=1; j<=8; j++)
    {
 	var cargadorTextura = new THREE.TextureLoader();
 	if(j%2 ==0)
