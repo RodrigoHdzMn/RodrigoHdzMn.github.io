@@ -138,6 +138,7 @@ for(i=1; i<=8; i++)
 						grupo.add(tablero[cont]);
 					     }
 					    );
+			cont=cont+1;
 		}
 		else
 		{
@@ -167,7 +168,7 @@ for(i=1; i<=8; i++)
 			grupo.add(cubo);
 		}
 	}
-	cont=cont+1;
+//	cont=cont+1;
    }
 }
 
