@@ -111,7 +111,7 @@ var setup=function()
 	camara=new THREE.PerspectiveCamera(campoVision,relacionAspecto,planoCercano,planoLejano);
 	camara.position.z = 100;
 	camara.position.y = 25;
-	//TEXTURA.camara.position.x = 50;
+	camara.position.x = 50;
 	
 	var i,j;
 	var tablero= new Array();
