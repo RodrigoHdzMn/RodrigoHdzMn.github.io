@@ -24,7 +24,7 @@ for(var i=1; i<=8; i++)
 	var cubo = new THREE.Mesh(forma, material);
 	cubo.position.x=10*i;
 	cubo.position.z=10*j;
-	escena.add(cubo);
+	grupo.add(cubo);
    }
 }
 }
