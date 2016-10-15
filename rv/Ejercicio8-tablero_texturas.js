@@ -393,10 +393,10 @@ var setup = function()
         escena.add(peon2.malla);
         escena.add(peon3.malla);
         escena.add(peon4.malla);
-	//escena.add(alfil1.malla);
-        //escena.add(alfil2.malla);
-        //escena.add(alfil3.malla);
-        //escena.add(alfil4.malla);
+	escena.add(alfil1.malla);
+        escena.add(alfil2.malla);
+        escena.add(alfil3.malla);
+        escena.add(alfil4.malla);
 	escena.add(grupo);
 	var lienzo = document.getElementById("tablero_texturas");
         renderizador = new THREE.WebGLRenderer({canvas:lienzo, antialias:true});
