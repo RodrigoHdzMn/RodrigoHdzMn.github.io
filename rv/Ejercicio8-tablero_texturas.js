@@ -221,7 +221,7 @@ function Peon()
         this.malla = new THREE.Mesh(peonForma,material);
 }
 
-function Alfil()
+function Alfil(posX,posZ)
 {
 	var Tb=0.8*4.5;//tamaño base
         var altura1=Tb/4;
@@ -295,13 +295,16 @@ function Alfil()
 	
 	//var material = new THREE.MeshNormalMaterial();
        // this.malla = new THREE.Mesh(alfilForma,material);
-	var materialAlfil;
 	var cargadorTextura = new THREE.TextureLoader();
 	cargadorTextura.load( 
 		"Textura_marmol_negro.jpg",
 	        function(textura)
 		{
-			materialAlfil = new THREE.MeshBasicMaterial({map:textura});
+			var material= new THREE.MeshBasicMaterial( {map:textura} );
+			var malla=new THREE.Mesh(alfilForma, material);
+			malla.position.x=posX;
+			malla.position.z=posZ;
+			grupo.add(malla);
 		},		
 		// Function called when download progresses
 		function ( xhr ) 
@@ -314,7 +317,6 @@ function Alfil()
 		console.log( 'An error happened' );
 		}
 	);
-	this.malla = new THREE.Mesh(alfilForma,materialAlfil);
 }
 	var grupo= new THREE.Group();
         var torre1= new Torre();
@@ -325,10 +327,10 @@ function Alfil()
         var peon2= new Peon();
 	var peon3= new Peon();
         var peon4= new Peon();
-	var alfil1= new Alfil();
-        var alfil2= new Alfil();
-	var alfil3= new Alfil();
-        var alfil4= new Alfil();
+	var alfil1= new Alfil(30,10);
+        var alfil2= new Alfil(60,10);
+	var alfil3= new Alfil(30,80);
+        var alfil4= new Alfil(60,80);
 
 var setup = function()
 {
@@ -349,7 +351,7 @@ var setup = function()
         peon3.malla.position.z = 70;
 	peon4.malla.position.x = 70;
         peon4.malla.position.z = 70;
-	
+	/*
 	alfil1.malla.position.x = 30;
         alfil1.malla.position.z = 10;	
 	alfil2.malla.position.x = 60;
@@ -358,7 +360,7 @@ var setup = function()
         alfil3.malla.position.z = 80;	
 	alfil4.malla.position.x = 60;
         alfil4.malla.position.z = 80;
-	
+	*/
 	var cargadorTextura = new THREE.TextureLoader();
 	cargadorTextura.load("Textura_madera_cafe.jpg",
 					    function(textura)
@@ -392,11 +394,11 @@ var setup = function()
 	escena.add(peon1.malla);
         escena.add(peon2.malla);
         escena.add(peon3.malla);
-        escena.add(peon4.malla);
+        escena.add(peon4.malla);/*
 	escena.add(alfil1.malla);
         escena.add(alfil2.malla);
         escena.add(alfil3.malla);
-        escena.add(alfil4.malla);
+        escena.add(alfil4.malla);*/
 	escena.add(grupo);
 	var lienzo = document.getElementById("tablero_texturas");
         renderizador = new THREE.WebGLRenderer({canvas:lienzo, antialias:true});
