@@ -10,11 +10,18 @@ for(var i=1; i<=8; i++)
 	{
 		if(i%2 == 0)
 		{
-			var material = new THREE.MeshBasicMaterial( {color: 0xffffff});
-			var cubo = new THREE.Mesh(forma, material);
-			cubo.position.x=10*i;
-			cubo.position.z=10*j;
-			grupo.add(cubo);
+			var cargadorTextura = new THREE.TextureLoader();
+			cargadorTextura.load("Textura_marmol_negro.jpg",
+					    function(textura)
+					     {
+					     	var forma = new THREE.BoxGeometry( 10,.1,10);
+					     	var material= new THREE.MeshBasicMaterial( {map:textura} );
+						var malla=new THREE.Mesh(forma, material);
+						malla.position.x=10*i;
+						malla.position.z=10*j;
+						grupo.add(malla);
+					     }
+					    );
 		}
 		else
 		{
