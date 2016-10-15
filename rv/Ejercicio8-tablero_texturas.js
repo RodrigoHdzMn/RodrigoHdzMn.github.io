@@ -352,7 +352,7 @@ var setup = function()
 	camara.position.x = 50;
       
         escena = new THREE.Scene();
-	escena.add(base);
+	//escena.add(base);
         escena.add(torre1.malla);
         escena.add(torre2.malla);
         escena.add(torre3.malla);
