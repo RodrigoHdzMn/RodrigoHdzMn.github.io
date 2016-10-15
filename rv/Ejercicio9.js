@@ -88,7 +88,6 @@ function Alfil()
 	function ( xhr ) 
 		{
 		console.log( (xhr.loaded / xhr.total * 100) + '% loaded' );
-			progreso=(xhr.loaded / xhr.total * 100) ;
 		},
 	// Function called when download errors
 	function ( xhr ) 
