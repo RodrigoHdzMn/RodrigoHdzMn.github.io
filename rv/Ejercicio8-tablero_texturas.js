@@ -9,16 +9,16 @@ for(var i=1; i<=8; i++)
 	if(j%2 ==0)
 	{
 		if(i%2 == 0)
-		material = new THREE.MeshNormalMaterial( {color: 0xffffff}); 
+		material = new THREE.MeshBasicMaterial( {color: 0xffffff}); 
 		else
-		material = new THREE.MeshNormalMaterial( {color: 0x727272}); //0xcfcfcf
+		material = new THREE.MeshBasicMaterial( {color: 0x727272}); //0xcfcfcf
 	}
 	else
 	{
 		if(i%2 == 0)
-		material = new THREE.MeshNormalMaterial( {color: 0x727272}); //0xcfcfcf
+		material = new THREE.MeshBasicMaterial( {color: 0x727272}); //0xcfcfcf
 		else
-		material = new THREE.MeshNormalMaterial( {color: 0xffffff}); //0xcfcfcf
+		material = new THREE.MeshBasicMaterial( {color: 0xffffff}); //0xcfcfcf
 	}
 	tablero[cont] = new THREE.Mesh(forma, material);
 	tablero[cont].position.x=10*i;
