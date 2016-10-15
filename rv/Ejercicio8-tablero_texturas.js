@@ -11,6 +11,8 @@ for(i=1; i<=8; i++)
 	{
 		if(i%2 == 0)
 		{
+			var posX=10*i;
+			var posZ=10*j;
 			var cargadorTextura = new THREE.TextureLoader();
 			cargadorTextura.load("Textura_marmol_negro.jpg",
 					    function(textura)
@@ -18,8 +20,8 @@ for(i=1; i<=8; i++)
 					     	//var forma = new THREE.BoxGeometry( 10,.1,10);
 					     	var material= new THREE.MeshBasicMaterial( {map:textura} );
 						var malla=new THREE.Mesh(forma, material);
-						malla.position.x=10*i;
-						malla.position.z=10*j;
+						malla.position.x=posX;
+						malla.position.z=posZ;
 						grupo.add(malla);
 					     },		
 		// Function called when download progresses
