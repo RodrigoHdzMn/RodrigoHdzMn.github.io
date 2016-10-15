@@ -328,7 +328,7 @@ var setup = function()
         alfil4.malla.position.z = 80;
 	
 	var cargadorTextura = new THREE.TextureLoader();
-	cargadorTextura.load("Textura_madera.jpg",
+	cargadorTextura.load("Textura_madera_cafe.jpg",
 					    function(textura)
 					     {
 					     	var forma = new THREE.BoxGeometry(90,.1,90);
