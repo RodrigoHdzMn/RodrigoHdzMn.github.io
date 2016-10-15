@@ -1,3 +1,31 @@
+var tablero = new Array();
+var forma = new THREE.BoxGeometry( 10,.1,10);
+var material;
+var cont=0;
+for(var i=1; i<=8; i++)
+{
+   for(var j=1; j<=8; j++)
+   {
+	if(j%2 ==0)
+	{
+		if(i%2 == 0)
+		material = new THREE.MeshNormalMaterial( {color: 0xffffff}); 
+		else
+		material = new THREE.MeshNormalMaterial( {color: 0x727272}); //0xcfcfcf
+	}
+	else
+	{
+		if(i%2 == 0)
+		material = new THREE.MeshNormalMaterial( {color: 0x727272}); //0xcfcfcf
+		else
+		material = new THREE.MeshNormalMaterial( {color: 0xffffff}); //0xcfcfcf
+	}
+	tablero[cont] = new THREE.Mesh(forma, material);
+	tablero[cont].position.x=10*i;
+	tablero[cont].position.z=10*j;
+	cont=cont+1;
+   }
+}
 
 function Torre()
 {
@@ -313,6 +341,8 @@ var setup = function()
         //escena.add(alfil2.malla);
         //escena.add(alfil3.malla);
         //escena.add(alfil4.malla);
+	for ( var n=0; n<64; n ++)
+	escena.add(tablero[n]);
 	
 	var lienzo = document.getElementById("tablero_texturas");
         renderizador = new THREE.WebGLRenderer({canvas:lienzo, antialias:true});
