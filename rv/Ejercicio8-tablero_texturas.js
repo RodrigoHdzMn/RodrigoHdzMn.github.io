@@ -221,7 +221,7 @@ function Peon()
         this.malla = new THREE.Mesh(peonForma,material);
 }
 
-function Alfil(posX,posZ)
+function Alfil(posX,posZ,materialTextura)
 {
 	var Tb=0.8*4.5;//tamaño base
         var altura1=Tb/4;
@@ -297,7 +297,7 @@ function Alfil(posX,posZ)
        // this.malla = new THREE.Mesh(alfilForma,material);
 	var cargadorTextura = new THREE.TextureLoader();
 	cargadorTextura.load( 
-		"Textura_marmol_negro.jpg",
+		materialTextura,
 	        function(textura)
 		{
 			var material= new THREE.MeshBasicMaterial( {map:textura} );
@@ -327,10 +327,10 @@ function Alfil(posX,posZ)
         var peon2= new Peon();
 	var peon3= new Peon();
         var peon4= new Peon();
-	var alfil1= new Alfil(30,10);
-        var alfil2= new Alfil(60,10);
-	var alfil3= new Alfil(30,80);
-        var alfil4= new Alfil(60,80);
+	var alfil1= new Alfil(30,10,"Textura_marmol_blanco.jpg");
+        var alfil2= new Alfil(60,10,"Textura_marmol_blanco.jpg");
+	var alfil3= new Alfil(30,80,"Textura_marmol_negro.jpg");
+        var alfil4= new Alfil(60,80,"Textura_marmol_negro.jpg");
 
 var setup = function()
 {
