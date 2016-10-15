@@ -1,19 +1,6 @@
 
 var grupo= new THREE.Group();
 
-var setup=function()
-{
-        escena = new THREE.Scene();
-      
-        var campoVision=30;// grado
-	var relacionAspecto=window.innerWidth/window.innerHeight;
-	var planoCercano=1;
-	var planoLejano=1000;
-
-	camara=new THREE.PerspectiveCamera(campoVision,relacionAspecto,planoCercano,planoLejano);
-	camara.position.z = 200;
-	camara.position.y = 25;
-	camara.position.x = 50;
 	
 	//var tablero= new Array();
 	//var cont=0;
@@ -76,7 +63,22 @@ for(var i=1; i<=8; i++)
 	}
 //	cont=cont+1;
    }
-}	
+}
+
+var setup=function()
+{
+        escena = new THREE.Scene();
+      
+        var campoVision=30;// grado
+	var relacionAspecto=window.innerWidth/window.innerHeight;
+	var planoCercano=1;
+	var planoLejano=1000;
+
+	camara=new THREE.PerspectiveCamera(campoVision,relacionAspecto,planoCercano,planoLejano);
+	camara.position.z = 200;
+	camara.position.y = 25;
+	camara.position.x = 50;
+	
       escena.add(grupo);
       var lienzo=document.getElementById("tablero_texturas");
       renderizador=new THREE.WebGLRenderer({canvas:lienzo, antialias: true});
