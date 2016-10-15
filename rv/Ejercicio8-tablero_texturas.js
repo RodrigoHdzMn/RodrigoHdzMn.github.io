@@ -19,22 +19,51 @@ for(var i=1; i<=8; i++)
 						grupo.add(malla);
 					     }
 					    );
-		
 		}
 		else
 		{
-		material = new THREE.MeshBasicMaterial( {color: 0x727272}); //0xcfcfcf
+			cargadorTextura.load("Textura_marmol_blanco.jpg",
+					    function(textura)
+					     {
+					     	var forma = new THREE.BoxGeometry( 10,.1,10);
+					     	var material= new THREE.MeshBasicMaterial( {map:textura} );
+						var malla=new THREE.Mesh(forma, material);
+						malla.position.x=10*i;
+						malla.position.z=10*j;
+						grupo.add(malla);
+					     }
+					    );
 		}
 	}
 	else
 	{
 		if(i%2 == 0)
 		{
-		material = new THREE.MeshBasicMaterial( {color: 0x727272}); //0xcfcfcf
+			cargadorTextura.load("Textura_marmol_blanco.jpg",
+					    function(textura)
+					     {
+					     	var forma = new THREE.BoxGeometry( 10,.1,10);
+					     	var material= new THREE.MeshBasicMaterial( {map:textura} );
+						var malla=new THREE.Mesh(forma, material);
+						malla.position.x=10*i;
+						malla.position.z=10*j;
+						grupo.add(malla);
+					     }
+					    );
 		}
 		else
 		{
-		material = new THREE.MeshBasicMaterial( {color: 0xffffff}); //0xcfcfcf
+			cargadorTextura.load("Textura_marmol_negro.jpg",
+					    function(textura)
+					     {
+					     	var forma = new THREE.BoxGeometry( 10,.1,10);
+					     	var material= new THREE.MeshBasicMaterial( {map:textura} );
+						var malla=new THREE.Mesh(forma, material);
+						malla.position.x=10*i;
+						malla.position.z=10*j;
+						grupo.add(malla);
+					     }
+					    );
 		}
 	}
    }
