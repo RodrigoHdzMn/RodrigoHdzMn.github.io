@@ -20,7 +20,17 @@ for(var i=1; i<=8; i++)
 						malla.position.x=10*i;
 						malla.position.z=10*j;
 						grupo.add(malla);
-					     }
+					     },		
+		// Function called when download progresses
+		function ( xhr ) 
+		{
+		console.log( (xhr.loaded / xhr.total * 100) + '% loaded' );
+		},
+		// Function called when download errors
+		function ( xhr ) 
+		{
+		console.log( 'An error happened' );
+		}
 					    );
 		}
 		else
