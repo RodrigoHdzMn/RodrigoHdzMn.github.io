@@ -3,11 +3,11 @@ for(i=1; i<=8; i++)
 {
    for(j=1; j<=8; j++)
    {
-	var cargadorTextura = new THREE.TextureLoader();
 	if(j%2 ==0)
 	{
 		if(i%2 == 0)
 		{
+			var cargadorTextura = new THREE.TextureLoader();
 			cargadorTextura.load("Textura_marmol_negro.jpg",
 					    function(textura)
 					     {
@@ -22,6 +22,7 @@ for(i=1; i<=8; i++)
 		}
 		else
 		{
+			var cargadorTextura = new THREE.TextureLoader();
 			cargadorTextura.load("Textura_marmol_blanco.jpg",
 					    function(textura)
 					     {
@@ -39,6 +40,7 @@ for(i=1; i<=8; i++)
 	{
 		if(i%2 == 0)
 		{
+			var cargadorTextura = new THREE.TextureLoader();
 			cargadorTextura.load("Textura_marmol_blanco.jpg",
 					    function(textura)
 					     {
@@ -53,6 +55,7 @@ for(i=1; i<=8; i++)
 		}
 		else
 		{
+			var cargadorTextura = new THREE.TextureLoader();
 			cargadorTextura.load("Textura_marmol_negro.jpg",
 					    function(textura)
 					     {
