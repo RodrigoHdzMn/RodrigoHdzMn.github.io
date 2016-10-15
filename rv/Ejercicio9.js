@@ -98,7 +98,8 @@ function Alfil()
 	);	
 }
 var grupo= new THREE.Group();
-var alfil1=new Alfil();
+var alfil1=new Alfil();}
+var alfil2=new Alfil();
 
 var setup=function()
 {
