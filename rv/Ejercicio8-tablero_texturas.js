@@ -331,7 +331,7 @@ var setup = function()
 	cargadorTextura.load("Textura_madera.jpg",
 					    function(textura)
 					     {
-					     	var forma = new THREE.BoxGeometry(90,.1,90),
+					     	var forma = new THREE.BoxGeometry(90,.1,90);
 					     	var material= new THREE.MeshBasicMaterial( {map:textura} );
 						var malla=new THREE.Mesh(forma, material);
 						malla.position.x=-0.1;
