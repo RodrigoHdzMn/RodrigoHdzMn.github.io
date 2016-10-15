@@ -66,10 +66,8 @@ for(i=1; i<=8; i++)
 			grupo.add(cubo);
 		}
 	}
-	
-	
-   }
 	cont=cont+1
+   }
 }
 }
 /*var i,j;
