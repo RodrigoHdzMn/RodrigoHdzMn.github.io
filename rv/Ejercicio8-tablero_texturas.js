@@ -247,8 +247,6 @@ function Alfil()
 	this.malla = new THREE.Mesh(alfilForma,materialAlfil);
 }
 
-var CONSTRUCTOR = new Object();
-
         var torre1= new Torre();
         var torre2= new Torre();
 	var torre3= new Torre();
@@ -262,7 +260,7 @@ var CONSTRUCTOR = new Object();
 	var alfil3= new Alfil();
         var alfil4= new Alfil();
 
-CONSTRUCTOR.setup = function()
+var setup = function()
 {
         torre1.malla.position.x = 10;
         torre1.malla.position.z = 10;	
@@ -296,45 +294,40 @@ CONSTRUCTOR.setup = function()
 	var planoCercano=1;
 	var planoLejano=1000;
 
-	CONSTRUCTOR.camara=new THREE.PerspectiveCamera(campoVision,relacionAspecto,planoCercano,planoLejano);
-	CONSTRUCTOR.camara.position.z = 200;
-	CONSTRUCTOR.camara.position.y = 25;
-	CONSTRUCTOR.camara.position.x = 50;
+	camara=new THREE.PerspectiveCamera(campoVision,relacionAspecto,planoCercano,planoLejano);
+	camara.position.z = 200;
+	camara.position.y = 25;
+	camara.position.x = 50;
       
-        CONSTRUCTOR.escena = new THREE.Scene();
+        escena = new THREE.Scene();
 	
-        CONSTRUCTOR.escena.add(torre1.malla);
-        CONSTRUCTOR.escena.add(torre2.malla);
-        CONSTRUCTOR.escena.add(torre3.malla);
-        CONSTRUCTOR.escena.add(torre4.malla);
-	CONSTRUCTOR.escena.add(peon1.malla);
-        CONSTRUCTOR.escena.add(peon2.malla);
-        CONSTRUCTOR.escena.add(peon3.malla);
-        CONSTRUCTOR.escena.add(peon4.malla);
-	//CONSTRUCTOR.escena.add(alfil1.malla);
-        //CONSTRUCTOR.escena.add(alfil2.malla);
-        //CONSTRUCTOR.escena.add(alfil3.malla);
-        //CONSTRUCTOR.escena.add(alfil4.malla);
+        escena.add(torre1.malla);
+        escena.add(torre2.malla);
+        escena.add(torre3.malla);
+        escena.add(torre4.malla);
+	escena.add(peon1.malla);
+        escena.add(peon2.malla);
+        escena.add(peon3.malla);
+        escena.add(peon4.malla);
+	//escena.add(alfil1.malla);
+        //escena.add(alfil2.malla);
+        //escena.add(alfil3.malla);
+        //escena.add(alfil4.malla);
 	
 	var lienzo = document.getElementById("tablero_texturas");
-        CONSTRUCTOR.renderizador = new THREE.WebGLRenderer({canvas:lienzo, antialias:true});
-        CONSTRUCTOR.renderizador.setSize(window.innerHeight*.85,window.innerHeight*.85);
+        renderizador = new THREE.WebGLRenderer({canvas:lienzo, antialias:true});
+        renderizador.setSize(window.innerHeight*.85,window.innerHeight*.85);
 }
 
-CONSTRUCTOR.loop = function()
+var loop = function()
 {
       requestAnimationFrame( CONSTRUCTOR.loop );
 	//if( alfil1.malla && alfil2.malla && alfil3.malla && alfil1.malla !== undefined)
-	if( alfil1.malla && alfil2.malla !== undefined)		
-	{
-		CONSTRUCTOR.escena.add(alfil1.malla);
-        	CONSTRUCTOR.escena.add(alfil2.malla);
-        	CONSTRUCTOR.escena.add(alfil3.malla);
-        	CONSTRUCTOR.escena.add(alfil4.malla);
-	}
-		
-      CONSTRUCTOR.renderizador.render( CONSTRUCTOR.escena, CONSTRUCTOR.camara );
+	//if( alfil1.malla && alfil2.malla !== undefined)		
+			
+      renderizador.render( escena, camara );
 }
+var escena, camara, renderizador;
 
-CONSTRUCTOR.setup();
-CONSTRUCTOR.loop();
+setup();
+loop();
