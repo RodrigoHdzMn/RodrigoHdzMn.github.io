@@ -1,6 +1,8 @@
 function Tablero()
 {
 	var i,j;
+	var tablero= new Array();
+	var cont=0;
 for(i=1; i<=8; i++)
 {
    for(j=1; j<=8; j++)
@@ -19,10 +21,10 @@ for(i=1; i<=8; i++)
 					     {
 					     	//var forma = new THREE.BoxGeometry( 10,.1,10);
 					     	var material= new THREE.MeshBasicMaterial( {map:textura} );
-						var malla=new THREE.Mesh(forma, material);
-						malla.position.x=posX;
-						malla.position.z=posZ;
-						grupo.add(malla);
+						tablero[cont]=new THREE.Mesh(forma, material);
+						tablero[cont].x=posX;
+						tablero[cont].z=posZ;
+						grupo.add(tablero[cont]);
 					     },		
 		// Function called when download progresses
 		function ( xhr ) 
@@ -67,6 +69,7 @@ for(i=1; i<=8; i++)
 	
 	
    }
+	cont=cont+1
 }
 }
 /*var i,j;
