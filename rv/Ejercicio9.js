@@ -97,7 +97,7 @@ function Alfil()
 	);	
 }
 var grupo= new THREE.Group();
-var alfil1=new Alfil();
+//var alfil1=new Alfil();
 
 var setup=function()
 {
@@ -138,17 +138,7 @@ for(i=1; i<=8; i++)
 						tablero[cont].x=posX;
 						tablero[cont].z=posZ;
 						grupo.add(tablero[cont]);
-					     },		
-		// Function called when download progresses
-		function ( xhr ) 
-		{
-		console.log( (xhr.loaded / xhr.total * 100) + '% loaded' );
-		},
-		// Function called when download errors
-		function ( xhr ) 
-		{
-		console.log( 'An error happened' );
-		}
+					     }
 					    );
 		}
 		else
