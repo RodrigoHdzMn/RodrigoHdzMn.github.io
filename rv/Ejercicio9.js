@@ -31,9 +31,9 @@ for(i=1; i<=8; i++)
 			cargadorTextura.load("Textura_marmol_blanco.jpg",
 					    function(textura)
 					     {
-					     	//var forma = new THREE.BoxGeometry( 10,.1,10);
+					     	var forma2 = new THREE.BoxGeometry( 10,.1,10);
 					     	var material= new THREE.MeshBasicMaterial( {map:textura} );
-						tablero[cont]=new THREE.Mesh(forma, material);
+						tablero[cont]=new THREE.Mesh(forma2, material);
 						tablero[cont].position.x=10*i;
 						tablero[cont].position.z=10*j;
 						grupo.add(tablero[cont]);
