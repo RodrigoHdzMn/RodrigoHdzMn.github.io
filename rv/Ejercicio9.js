@@ -99,7 +99,7 @@ function Alfil()
 }
 var grupo= new THREE.Group();
 var alfil1=new Alfil();
-alfil1.traslate.X=20;
+alfil1.traslate.x=20;
 
 var setup=function()
 {
