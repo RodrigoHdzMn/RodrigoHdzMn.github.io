@@ -99,7 +99,6 @@ function Alfil()
 }
 var grupo= new THREE.Group();
 var alfil1=new Alfil();
-alfil1.translate(5,0,0);
 
 var setup=function()
 {
