@@ -24,7 +24,7 @@ for(i=1; i<=8; i++)
 						tablero[cont]=new THREE.Mesh(forma, material);
 						tablero[cont].x=posX;
 						tablero[cont].z=posZ;
-						grupo.add(tablero[cont]);
+						escena.add(tablero[cont]);
 					     },		
 		// Function called when download progresses
 		function ( xhr ) 
