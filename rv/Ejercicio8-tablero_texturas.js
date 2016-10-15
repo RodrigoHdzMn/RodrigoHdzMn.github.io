@@ -317,6 +317,11 @@ var setup = function()
 	alfil4.malla.position.x = 60;
         alfil4.malla.position.z = 80;
 	
+	var base = new THREE.Mesh(new THREE.BoxGeometry(90,.1,90),new THREE.MeshLambertMaterial({color:0x804000}));
+	base.position.y=-0.1;
+	base.position.x=45;
+	base.position.z=45;
+	
 	var campoVision=30;// grado
 	var relacionAspecto=window.innerWidth/window.innerHeight;
 	var planoCercano=1;
@@ -343,6 +348,7 @@ var setup = function()
         //escena.add(alfil4.malla);
 	for ( var n=0; n<64; n ++)
 	escena.add(tablero[n]);
+	escena.add(base);
 	
 	var lienzo = document.getElementById("tablero_texturas");
         renderizador = new THREE.WebGLRenderer({canvas:lienzo, antialias:true});
