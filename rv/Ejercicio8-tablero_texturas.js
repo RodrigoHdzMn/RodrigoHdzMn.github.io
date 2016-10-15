@@ -343,9 +343,6 @@ var setup = function()
         //escena.add(alfil2.malla);
         //escena.add(alfil3.malla);
         //escena.add(alfil4.malla);
-	for ( var n=0; n<64; n ++)
-	escena.add(tablero[n]);
-	
 	
 	var lienzo = document.getElementById("tablero_texturas");
         renderizador = new THREE.WebGLRenderer({canvas:lienzo, antialias:true});
