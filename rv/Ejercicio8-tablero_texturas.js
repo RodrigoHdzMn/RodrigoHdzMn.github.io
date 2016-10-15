@@ -9,22 +9,43 @@ for(var i=1; i<=8; i++)
 	if(j%2 ==0)
 	{
 		if(i%2 == 0)
-		var material = new THREE.MeshBasicMaterial( {color: 0xffffff}); 
+		{
+			var material = new THREE.MeshBasicMaterial( {color: 0xffffff});
+			var cubo = new THREE.Mesh(forma, material);
+			cubo.position.x=10*i;
+			cubo.position.z=10*j;
+			grupo.add(cubo);
+		}
 		else
-		var material = new THREE.MeshBasicMaterial( {color: 0x727272}); //0xcfcfcf
+		{
+		        var material = new THREE.MeshBasicMaterial( {color: 0x727272}); //0xcfcfcf
+			var cubo = new THREE.Mesh(forma, material);
+			cubo.position.x=10*i;
+			cubo.position.z=10*j;
+			grupo.add(cubo);
+		}
 	}
 	else
 	{
 		if(i%2 == 0)
-		var material = new THREE.MeshBasicMaterial( {color: 0x727272}); //0xcfcfcf
+		{
+			var material = new THREE.MeshBasicMaterial( {color: 0x727272}); //0xcfcfcf
+			var cubo = new THREE.Mesh(forma, material);
+			cubo.position.x=10*i;
+			cubo.position.z=10*j;
+			grupo.add(cubo);
+		}
 		else
-		var material = new THREE.MeshBasicMaterial( {color: 0xffffff}); //0xcfcfcf
+		{
+			var material = new THREE.MeshBasicMaterial( {color: 0xffffff}); //0xcfcfcf
+			var cubo = new THREE.Mesh(forma, material);
+			cubo.position.x=10*i;
+			cubo.position.z=10*j;
+			grupo.add(cubo);
+		}
 	}
 	
-	var cubo = new THREE.Mesh(forma, material);
-	cubo.position.x=10*i;
-	cubo.position.z=10*j;
-	grupo.add(cubo);
+	
    }
 }
 }
