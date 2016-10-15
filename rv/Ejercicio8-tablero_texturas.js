@@ -1,3 +1,5 @@
+function Tablero()
+{
 for(var i=1; i<=8; i++)
 {
    for(var j=1; j<=8; j++)
@@ -24,6 +26,7 @@ for(var i=1; i<=8; i++)
 	cubo.position.z=10*j;
 	escena.add(cubo);
    }
+}
 }
 /*var i,j;
 for(i=1; i<=8; i++)
@@ -390,6 +393,8 @@ function Alfil(posX,posZ,materialTextura)
 	);
 }
 	var grupo= new THREE.Group();
+	var tablero= new THREE.Tablero();
+	
         var torre1= new Torre(10,10,"Textura_madera.jpg");
         var torre2= new Torre(80,10,"Textura_madera.jpg");
 	var torre3= new Torre(10,80,"Textura_marmol_negro.jpg");
