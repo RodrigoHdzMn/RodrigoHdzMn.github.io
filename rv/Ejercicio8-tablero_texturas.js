@@ -1,7 +1,4 @@
-var tablero = new Array();
-var forma = new THREE.BoxGeometry( 10,.1,10);
-var material;
-var cont=0;
+
 for(var i=1; i<=8; i++)
 {
    for(var j=1; j<=8; j++)
@@ -9,21 +6,37 @@ for(var i=1; i<=8; i++)
 	if(j%2 ==0)
 	{
 		if(i%2 == 0)
-		material = new THREE.MeshBasicMaterial( {color: 0xffffff}); 
+		{
+			var cargadorTextura = new THREE.TextureLoader();
+			cargadorTextura.load("Textura_marmol_negro.jpg",
+					    funcion(textura)
+					     {
+					     	var forma = new THREE.BoxGeometry( 10,.1,10);
+					     	var material= new THREE.MeshBasicMaterial( {map:textura} );
+						var malla=new THREE.Mesh(forma, material);
+						malla.position.x=10*i;
+						malla.position.z=10*j;
+						escena.add(malla);
+					     }
+					    );
+		
+		}
 		else
+		{
 		material = new THREE.MeshBasicMaterial( {color: 0x727272}); //0xcfcfcf
+		}
 	}
 	else
 	{
 		if(i%2 == 0)
+		{
 		material = new THREE.MeshBasicMaterial( {color: 0x727272}); //0xcfcfcf
+		}
 		else
+		{
 		material = new THREE.MeshBasicMaterial( {color: 0xffffff}); //0xcfcfcf
+		}
 	}
-	tablero[cont] = new THREE.Mesh(forma, material);
-	tablero[cont].position.x=10*i;
-	tablero[cont].position.z=10*j;
-	cont=cont+1;
    }
 }
 
