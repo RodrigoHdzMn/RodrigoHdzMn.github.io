@@ -120,8 +120,7 @@ for(i=1; i<=8; i++)
 {
    for(j=1; j<=8; j++)
    {
-	var forma = new THREE.BoxGeometry( 10,.1,10);
-	
+	var forma = new THREE.BoxGeometry( 10,.1,10);	
 	if(j%2 ==0)
 	{
 		if(i%2 == 0)
@@ -133,8 +132,8 @@ for(i=1; i<=8; i++)
 					     	//var forma = new THREE.BoxGeometry( 10,.1,10);
 					     	var material= new THREE.MeshBasicMaterial( {map:textura} );
 						tablero[cont]=new THREE.Mesh(forma, material);
-						tablero[cont].x=10*i;
-						tablero[cont].z=10*j;
+						tablero[cont].position.x=10*i;
+						tablero[cont].position.z=10*j;
 						grupo.add(tablero[cont]);
 					     }
 					    );
