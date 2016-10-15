@@ -15,9 +15,8 @@ var setup=function()
 	camara.position.y = 25;
 	camara.position.x = 50;
 	
-	
-	var tablero= new Array();
-	var cont=0;
+	//var tablero= new Array();
+	//var cont=0;
 for(i=1; i<=8; i++)
 {
    for(j=1; j<=8; j++)
@@ -33,10 +32,10 @@ for(i=1; i<=8; i++)
 					     {
 					     	var forma2 = new THREE.BoxGeometry( 10,.1,10);
 					     	var material= new THREE.MeshBasicMaterial( {map:textura} );
-						tablero[cont]=new THREE.Mesh(forma2, material);
-						tablero[cont].position.x=10*i;
-						tablero[cont].position.z=10*j;
-						grupo.add(tablero[cont]);
+						var malla=new THREE.Mesh(forma2, material);
+						malla.position.x=10*i;
+						malla.position.z=10*j;
+						grupo.add(malla);
 					     }
 					    );
 			cont=cont+1;
@@ -71,10 +70,8 @@ for(i=1; i<=8; i++)
 	}
 //	cont=cont+1;
    }
-}
-
-	
-	escena.add(grupo);
+}	
+      escena.add(grupo);
       var lienzo=document.getElementById("tablero_texturas");
       renderizador=new THREE.WebGLRenderer({canvas:lienzo, antialias: true});
       renderizador.setSize(600,600);
@@ -83,7 +80,6 @@ for(i=1; i<=8; i++)
 var loop=function()
 {
       requestAnimationFrame(loop);
-      //if(TEXTURA.malla !== undefined)
 
       renderizador.render(escena,camara)
 }
