@@ -5,8 +5,8 @@ var setup=function()
 {
         escena = new THREE.Scene();
       
-        var campoVision=25;// grado
-	var relacionAspecto=window.innerWidth/window.innerHeight;
+        var campoVision=30;// grado
+	var relacionAspecto=window.innerWidth/window.innerWidth;
 	var planoCercano=1;
 	var planoLejano=1000;
 
