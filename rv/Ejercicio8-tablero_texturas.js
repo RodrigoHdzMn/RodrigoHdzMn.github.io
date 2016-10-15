@@ -327,10 +327,19 @@ var setup = function()
 	alfil4.malla.position.x = 60;
         alfil4.malla.position.z = 80;
 	
-	var base = new THREE.Mesh(new THREE.BoxGeometry(90,.1,90),new THREE.MeshBasicMaterial({color:0x804000}));
-	base.position.y=-0.1;
-	base.position.x=45;
-	base.position.z=45;
+	var cargadorTextura = new THREE.TextureLoader();
+	cargadorTextura.load("Textura_madera.jpg",
+					    function(textura)
+					     {
+					     	var forma = new THREE.BoxGeometry(90,.1,90),
+					     	var material= new THREE.MeshBasicMaterial( {map:textura} );
+						var malla=new THREE.Mesh(forma, material);
+						malla.position.x=-0.1;
+						malla.position.y=45;
+						malla.position.z=45;
+						grupo.add(malla);
+					     }
+					    );
 	
 	var campoVision=30;// grado
 	var relacionAspecto=window.innerWidth/window.innerHeight;
