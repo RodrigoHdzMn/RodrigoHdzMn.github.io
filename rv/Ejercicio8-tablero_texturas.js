@@ -16,7 +16,7 @@ for(var i=1; i<=8; i++)
 						var malla=new THREE.Mesh(forma, material);
 						malla.position.x=10*i;
 						malla.position.z=10*j;
-						escena.add(malla);
+						grupo.add(malla);
 					     }
 					    );
 		
@@ -284,7 +284,7 @@ function Alfil()
 	);
 	this.malla = new THREE.Mesh(alfilForma,materialAlfil);
 }
-
+	var grupo= new THREE.Group();
         var torre1= new Torre();
         var torre2= new Torre();
 	var torre3= new Torre();
@@ -356,7 +356,7 @@ var setup = function()
         //escena.add(alfil2.malla);
         //escena.add(alfil3.malla);
         //escena.add(alfil4.malla);
-	
+	escena.add(grupo);
 	var lienzo = document.getElementById("tablero_texturas");
         renderizador = new THREE.WebGLRenderer({canvas:lienzo, antialias:true});
         renderizador.setSize(window.innerHeight*.85,window.innerHeight*.85);
