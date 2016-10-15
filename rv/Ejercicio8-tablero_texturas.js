@@ -172,7 +172,7 @@ function Torre(posX,posZ,materialTextura)
 	        function(textura)
 		{
 			var material= new THREE.MeshBasicMaterial( {map:textura} );
-			var malla=new THREE.Mesh(alfilForma, material);
+			var malla=new THREE.Mesh(torreForma, material);
 			malla.position.x=posX;
 			malla.position.z=posZ;
 			grupo.add(malla);
@@ -247,7 +247,7 @@ function Peon(posX,posZ,materialTextura)
 	        function(textura)
 		{
 			var material= new THREE.MeshBasicMaterial( {map:textura} );
-			var malla=new THREE.Mesh(alfilForma, material);
+			var malla=new THREE.Mesh(peonForma, material);
 			malla.position.x=posX;
 			malla.position.z=posZ;
 			grupo.add(malla);
