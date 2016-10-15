@@ -321,7 +321,7 @@ var setup = function()
 
 var loop = function()
 {
-      requestAnimationFrame( CONSTRUCTOR.loop );
+      requestAnimationFrame( loop );
 	//if( alfil1.malla && alfil2.malla && alfil3.malla && alfil1.malla !== undefined)
 	//if( alfil1.malla && alfil2.malla !== undefined)		
 			
