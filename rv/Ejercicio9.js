@@ -75,7 +75,7 @@ function Alfil()
 	
 	 var cargadorTextura = new THREE.TextureLoader();
 	cargadorTextura.load( 
-		"Textura_marmol_blanco.jpg",
+		"Textura_madera.jpg",
 	        function(textura)
 		{
 			var material= new THREE.MeshBasicMaterial( {map:textura} );
