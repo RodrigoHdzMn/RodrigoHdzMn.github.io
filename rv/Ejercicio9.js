@@ -1,6 +1,6 @@
 
 var grupo= new THREE.Group();
-var i,j;
+
 var setup=function()
 {
         escena = new THREE.Scene();
@@ -17,9 +17,9 @@ var setup=function()
 	
 	//var tablero= new Array();
 	//var cont=0;
-for(i=1; i<=8; i++)
+for(var i=1; i<=8; i++)
 {
-   for(j=1; j<=8; j++)
+   for(var j=1; j<=8; j++)
    {
 	var forma = new THREE.BoxGeometry( 10,.1,10);	
 	if(j%2 ==0)
