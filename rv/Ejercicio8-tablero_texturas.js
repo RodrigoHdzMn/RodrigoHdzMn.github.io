@@ -333,7 +333,7 @@ var setup = function()
 	camara.position.x = 50;
       
         escena = new THREE.Scene();
-	
+	escena.add(base);
         escena.add(torre1.malla);
         escena.add(torre2.malla);
         escena.add(torre3.malla);
@@ -348,7 +348,7 @@ var setup = function()
         //escena.add(alfil4.malla);
 	for ( var n=0; n<64; n ++)
 	escena.add(tablero[n]);
-	escena.add(base);
+	
 	
 	var lienzo = document.getElementById("tablero_texturas");
         renderizador = new THREE.WebGLRenderer({canvas:lienzo, antialias:true});
