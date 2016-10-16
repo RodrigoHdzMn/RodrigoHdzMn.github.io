@@ -13,8 +13,8 @@ for(var i=1; i<=8; i++)
 			var X=i;
 			var Y=j;
 			var cargadorTextura = new THREE.TextureLoader();
-			cargadorTextura.load("Textura_marmol_blanco.jpg",X,Y,
-					    function(textura,X,Y)
+			cargadorTextura.load("Textura_marmol_blanco.jpg",
+					    function(textura)
 					     {
 					     	var forma2 = new THREE.BoxGeometry( 10,.1,10);
 					     	var material= new THREE.MeshBasicMaterial( {map:textura} );
