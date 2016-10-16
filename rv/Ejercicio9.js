@@ -30,19 +30,12 @@ for( i=1; i<=8; i++)
 		}
 		else
 		{
-		        var cargadorTextura = new THREE.TextureLoader();
-			cargadorTextura.load("Textura_marmol_negro.jpg",
-					    function(textura,j,i)
-					     {
-					     	var forma3 = new THREE.BoxGeometry( 10,.1,10);
-					     	var material= new THREE.MeshBasicMaterial( {map:textura} );
-						var malla=new THREE.Mesh(forma3, material);
-						malla.position.x=10*i;
-						malla.position.z=10*j;
-						console.log( 'i-j:  '+ i + '  '+ j );
-						grupo.add(malla);
-					     }
-					    );
+			var material = new THREE.MeshBasicMaterial( {color: 0xffffff}); //0xcfcfcf
+			var cubo = new THREE.Mesh(forma, material);
+			cubo.position.x=10*i;
+			cubo.position.z=10*j;
+			grupo.add(cubo);
+			console.log( 'i-j:  '+ i + '  '+ j );
 		}
 	}
 	else
