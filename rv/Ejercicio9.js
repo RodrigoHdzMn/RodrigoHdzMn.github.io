@@ -30,7 +30,7 @@ for(var i=1; i<=8; i++)
 		{
 		        var cargadorTextura = new THREE.TextureLoader();
 			cargadorTextura.load("Textura_marmol_negro.jpg",
-					    function(textura)
+					    function(textura,j,i)
 					     {
 					     	var forma3 = new THREE.BoxGeometry( 10,.1,10);
 					     	var material= new THREE.MeshBasicMaterial( {map:textura} );
