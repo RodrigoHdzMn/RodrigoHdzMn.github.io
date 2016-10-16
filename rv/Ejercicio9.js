@@ -30,7 +30,7 @@ for( i=1; i<=8; i++)
 		}
 		else
 		{
-			var material = new THREE.MeshBasicMaterial( {color: 0xffffff}); //0xcfcfcf
+			var material = new THREE.MeshBasicMaterial( {color: 0x727272}); //0xcfcfcf
 			var cubo = new THREE.Mesh(forma, material);
 			cubo.position.x=10*i;
 			cubo.position.z=10*j;
