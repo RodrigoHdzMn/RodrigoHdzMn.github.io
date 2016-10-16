@@ -1,8 +1,8 @@
 
 var grupo= new THREE.Group();
 
-var i=0;
-var j=0;
+i=0;
+j=0;
 	//var tablero= new Array();
 	//var cont=0;
 for( i=1; i<=8; i++)
