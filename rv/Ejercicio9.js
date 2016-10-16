@@ -22,7 +22,7 @@ for(var i=1; i<=8; i++)
 						var malla=new THREE.Mesh(forma2, material);
 						malla.position.x=10*i;
 						malla.position.z=10*j;
-						console.log( 'i-j:'+ i + '  '+ j );
+						console.log( 'i-j:  '+ i + '  '+ j );
 						grupo.add(malla);
 					     }
 					    );
@@ -38,7 +38,7 @@ for(var i=1; i<=8; i++)
 						var malla=new THREE.Mesh(forma3, material);
 						malla.position.x=10*i;
 						malla.position.z=10*j;
-						console.log( 'i-j:'+ i + '  '+ j );
+						console.log( 'i-j:  '+ i + '  '+ j );
 						grupo.add(malla);
 					     }
 					    );
@@ -53,7 +53,7 @@ for(var i=1; i<=8; i++)
 			cubo.position.x=10*i;
 			cubo.position.z=10*j;
 			grupo.add(cubo);
-			console.log( 'i-j:'+ i + '  '+ j );
+			console.log( 'i-j:  '+ i + '  '+ j );
 		}
 		else
 		{
@@ -62,7 +62,7 @@ for(var i=1; i<=8; i++)
 			cubo.position.x=10*i;
 			cubo.position.z=10*j;
 			grupo.add(cubo);
-			console.log( 'i-j:'+ i + '  '+ j );
+			console.log( 'i-j:  '+ i + '  '+ j );
 		}
 	}
 //	cont=cont+1;
