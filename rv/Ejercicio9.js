@@ -51,6 +51,7 @@ for(var i=1; i<=8; i++)
 			cubo.position.x=10*i;
 			cubo.position.z=10*j;
 			grupo.add(cubo);
+			printf(i,j);
 		}
 		else
 		{
