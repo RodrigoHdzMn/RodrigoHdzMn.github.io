@@ -1,12 +1,13 @@
 
 var grupo= new THREE.Group();
 
-	
+var i=0;
+var j=0;
 	//var tablero= new Array();
 	//var cont=0;
-for(var i=1; i<=8; i++)
+for( i=1; i<=8; i++)
 {
-   for(var j=1; j<=8; j++)
+   for( j=1; j<=8; j++)
    {
 	var forma = new THREE.BoxGeometry( 10,.1,10);	
 	if(j%2 ==0)
