@@ -21,7 +21,7 @@ for(var i=1; i<=8; i++)
 						var malla=new THREE.Mesh(forma2, material);
 						malla.position.x=10*X;
 						malla.position.z=10*Y;
-						console.log( 'i-j:  '+ X + '  '+ X );
+						console.log( 'i-j:  '+ X + '  '+ Y );
 						grupo.add(malla);
 					     }
 					    );
