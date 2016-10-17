@@ -9,8 +9,9 @@ function Cuadro(posX,posZ,materialTextura)
 		materialTextura,
 	        function(textura)
 		{
+			var forma = new THREE.BoxGeometry( 10,.1,10);
 			var material= new THREE.MeshBasicMaterial( {map:textura} );
-			var malla=new THREE.Mesh(torreForma, material);
+			var malla=new THREE.Mesh(forma, material);
 			malla.position.x=posX;
 			malla.position.z=posZ;
 			grupo.add(malla);
