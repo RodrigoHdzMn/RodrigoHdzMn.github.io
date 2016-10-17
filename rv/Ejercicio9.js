@@ -10,9 +10,6 @@ function Tablero()
 	cargadorTextura.load( materialTexturaNegra,
 	        function(texturaNegra)
 		{
-			var forma = new THREE.BoxGeometry( 10,.1,10);
-			var material= new THREE.MeshBasicMaterial( {map:texturaNegra} );
-			var malla=new THREE.Mesh(forma, material);
 			for(var i=1; i<=8; i++)
 			{
 				for(var j=1; j<=8; j++)
@@ -21,6 +18,9 @@ function Tablero()
 					{
 						if(i%2 ==0)
 						{
+							var forma = new THREE.BoxGeometry( 10,.1,10);
+							var material= new THREE.MeshBasicMaterial( {map:texturaNegra} );
+							var malla=new THREE.Mesh(forma, material);
 							malla.position.x=i;
 							malla.position.z=j;
 							grupo.add(malla);
@@ -37,6 +37,9 @@ function Tablero()
 						}
 						else
 						{
+							var forma = new THREE.BoxGeometry( 10,.1,10);
+							var material= new THREE.MeshBasicMaterial( {map:texturaNegra} );
+							var malla=new THREE.Mesh(forma, material);
 							malla.position.x=i;
 							malla.position.z=j;
 							grupo.add(malla);
@@ -50,9 +53,6 @@ function Tablero()
 	cargadorTextura.load( materialTexturaBlanca,
 	        function(texturaBlanca)
 		{
-			var forma = new THREE.BoxGeometry( 10,.1,10);
-			var material= new THREE.MeshBasicMaterial( {map:texturaBlanca} );
-			var malla=new THREE.Mesh(forma, material);
 			for(var i=1; i<=8; i++)
 			{
 				for(var j=1; j<=8; j++)
@@ -64,6 +64,9 @@ function Tablero()
 						}
 						else
 						{
+							var forma = new THREE.BoxGeometry( 10,.1,10);
+							var material= new THREE.MeshBasicMaterial( {map:texturaBlanca} );
+							var malla=new THREE.Mesh(forma, material);
 							malla.position.x=i;
 							malla.position.z=j;
 							grupo.add(malla);
@@ -74,6 +77,9 @@ function Tablero()
 					{
 						if(i%2 ==0)
 						{
+							var forma = new THREE.BoxGeometry( 10,.1,10);
+							var material= new THREE.MeshBasicMaterial( {map:texturaBlanca} );
+							var malla=new THREE.Mesh(forma, material);
 							malla.position.x=i;
 							malla.position.z=j;
 							grupo.add(malla);
