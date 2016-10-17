@@ -290,18 +290,18 @@ var setup = function()
 {
 	var torre1= new Torre(10,10,"Textura_madera.jpg");
         var torre2= new Torre(80,10,"Textura_madera.jpg");
-	var torre3= new Torre(10,80,"Textura_marmol_negro.jpg");
-        var torre4= new Torre(80,80,"Textura_marmol_negro.jpg");
+	var torre3= new Torre(10,80,"Textura_madera_oscura.jpg");
+        var torre4= new Torre(80,80,"Textura_madera_oscura.jpg");
 
 	var peon1= new Peon(20,20,"Textura_madera.jpg");
         var peon2= new Peon(70,20,"Textura_madera.jpg");
-	var peon3= new Peon(20,20,"Textura_marmol_negro.jpg");
-        var peon4= new Peon(70,70,"Textura_marmol_negro.jpg");
+	var peon3= new Peon(20,20,"Textura_madera_oscura.jpg");
+        var peon4= new Peon(70,70,"Textura_madera_oscura.jpg");
 
 	var alfil1= new Alfil(30,10,"Textura_madera.jpg");
         var alfil2= new Alfil(60,10,"Textura_madera.jpg");
-	var alfil3= new Alfil(30,80,"Textura_marmol_negro.jpg");
-        var alfil4= new Alfil(60,80,"Textura_marmol_negro.jpg");
+	var alfil3= new Alfil(30,80,"Textura_madera_oscura.jpg");
+        var alfil4= new Alfil(60,80,"Textura_madera_oscura.jpg");
 	/*
         torre1.malla.position.x = 10;
         torre1.malla.position.z = 10;	
