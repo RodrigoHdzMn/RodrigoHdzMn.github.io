@@ -1,70 +1,94 @@
 
 var grupo= new THREE.Group();
-	
-for(var i=1; i<=8; i++)
-{
-   for(var j=1; j<=8; j++)
-   {
-	var forma = new THREE.BoxGeometry( 10,.1,10);	
-	if(j%2 ==0)
-	{
-		if(i%2 == 0)
-		{
-			var X=i;
-			var Y=j;
-			var cargadorTextura = new THREE.TextureLoader();
-			cargadorTextura.load("Textura_marmol_blanco.jpg",
-					    function(textura)
-					     {
-					     	var forma2 = new THREE.BoxGeometry( 10,.1,10);
-					     	var material= new THREE.MeshBasicMaterial( {map:textura} );
-						var malla=new THREE.Mesh(forma2, material);
-						malla.position.x=10*X;
-						malla.position.z=10*Y;
-						console.log( 'i-j:  '+ X + '  '+ Y );
-						grupo.add(malla);
-					     }
-					    );
-		}
-		else
-		{
-			var material = new THREE.MeshBasicMaterial( {color: 0x727272}); //0xcfcfcf
-			var cubo = new THREE.Mesh(forma, material);
-			cubo.position.x=10*i;
-			cubo.position.z=10*j;
-			grupo.add(cubo);
-			console.log( 'i-j:  '+ i + '  '+ j );
-		}
-	}
-	else
-	{
-		if(i%2 == 0)
-		{
-			var material = new THREE.MeshBasicMaterial( {color: 0x727272}); //0xcfcfcf
-			var cubo = new THREE.Mesh(forma, material);
-			cubo.position.x=10*i;
-			cubo.position.z=10*j;
-			grupo.add(cubo);
-			console.log( 'i-j:  '+ i + '  '+ j );
-		}
-		else
-		{
-			var material = new THREE.MeshBasicMaterial( {color: 0xffffff}); //0xcfcfcf
-			var cubo = new THREE.Mesh(forma, material);
-			cubo.position.x=10*i;
-			cubo.position.z=10*j;
-			grupo.add(cubo);
-			console.log( 'i-j:  '+ i + '  '+ j );
-		}
-	}
-//	cont=cont+1;
-   }
-}
 
+function Tablero()
+{
+	var materialTexturaNegra =" ";
+	var materialTexturaBlanca =" ";
+	
+	var cargadorTextura= new THREE.TextureLoader();
+	cargadorTextura.load( materialTexturaNegra,
+	        function(texturaNegra)
+		{
+			var forma = new THREE.BoxGeometry( 10,.1,10);
+			var material= new THREE.MeshBasicMaterial( {map:textura} );
+			var malla=new THREE.Mesh(forma, material);
+			for(var i=1; i<=8; i++)
+			{
+				for(var j=1; j<=8; j++)
+				{
+					if(j%2 ==0)
+					{
+						if(i%2 ==0)
+						{
+							malla.position.x=i;
+							malla.position.z=j;
+							grupo.add(malla);
+						}
+						else
+						{
+						}
+					}
+					else
+					{
+						if(i%2 ==0)
+						{
+						}
+						else
+						{
+							malla.position.x=i;
+							malla.position.z=j;
+							grupo.add(malla);
+						}
+					}//Fin primer IF
+				}//Fin For J
+			}//Fin for i	
+		});
+		
+	cargadorTextura.load( materialTexturaBlanca,
+	        function(texturaBlanca)
+		{
+			var forma = new THREE.BoxGeometry( 10,.1,10);
+			var material= new THREE.MeshBasicMaterial( {map:textura} );
+			var malla=new THREE.Mesh(Forma, material);
+			for(var i=1; i<=8; i++)
+			{
+				for(var j=1; j<=8; j++)
+				{
+					if(j%2 ==0)
+					{
+						if(i%2 ==0)
+						{
+						}
+						else
+						{
+							malla.position.x=i;
+							malla.position.z=j;
+							grupo.add(malla);
+						}
+					}
+					else
+					{
+						if(i%2 ==0)
+						{
+							malla.position.x=i;
+							malla.position.z=j;
+							grupo.add(malla);
+						}
+						else
+						{
+						}
+					}//Fin primer IF
+				}//Fin For J
+			}//Fin for i
+		});
+}
+//	cont=cont+1;   console.log( 'i-j:  '+ i + '  '+ j );
 var setup=function()
 {
         escena = new THREE.Scene();
-      
+        var tablero= new Tablero();
+	
         var campoVision=30;// grado
 	var relacionAspecto=window.innerWidth/window.innerHeight;
 	var planoCercano=1;
