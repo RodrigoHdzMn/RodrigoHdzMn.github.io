@@ -21,6 +21,7 @@ for(i=1; i<=8; i++)
 			var posX=10*i;
 			var posZ=10*j;
 			console.log( 'i-j:  '+ posX + '  '+ posZ );
+			console.log( 'contador : '+ cont );
 			cargadorTextura[cont] = new THREE.TextureLoader();
 			cargadorTextura[cont].load("Textura_marmol_negro.jpg",
 					    function(textura)
