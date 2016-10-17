@@ -103,16 +103,6 @@ function Torre(posX,posZ,materialTextura)
 			malla.position.x=posX;
 			malla.position.z=posZ;
 			grupo.add(malla);
-		},		
-		// Function called when download progresses
-		function ( xhr ) 
-		{
-		console.log( (xhr.loaded / xhr.total * 100) + '% loaded' );
-		},
-		// Function called when download errors
-		function ( xhr ) 
-		{
-		console.log( 'An error happened' );
 		}
 	);
 }
@@ -178,16 +168,6 @@ function Peon(posX,posZ,materialTextura)
 			malla.position.x=posX;
 			malla.position.z=posZ;
 			grupo.add(malla);
-		},		
-		// Function called when download progresses
-		function ( xhr ) 
-		{
-		console.log( (xhr.loaded / xhr.total * 100) + '% loaded' );
-		},
-		// Function called when download errors
-		function ( xhr ) 
-		{
-		console.log( 'An error happened' );
 		}
 	);
 }
@@ -357,7 +337,7 @@ var setup = function()
 		{
 			if(j%2 ==0)
 			{
-				if(j%2 ==0)
+				if(i%2 ==0)
 				{
 					var cuadro = new Cuadro(10*i,10*j,"Textura_marmol_blanco.jpg");
 				}
@@ -368,7 +348,7 @@ var setup = function()
 			}
 			else
 			{
-				if(j%2 ==0)
+				if(i%2 ==0)
 				{
 					var cuadro = new Cuadro(10*i,10*j,"Textura_marmol_negro.jpg");
 				}
