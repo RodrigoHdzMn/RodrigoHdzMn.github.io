@@ -26,7 +26,7 @@ var setup=function()
 							var malla=new THREE.Mesh(forma, material);
 							malla.position.x=i;
 							malla.position.z=j;
-							escena.add(malla);
+							grupo.add(malla);
 							console.log( 'i-j:  '+ i + '  '+ j );
 						}
 						else
@@ -45,7 +45,7 @@ var setup=function()
 							var malla=new THREE.Mesh(forma, material);
 							malla.position.x=i;
 							malla.position.z=j;
-							escena.add(malla);
+							grupo.add(malla);
 							console.log( 'i-j:  '+ i + '  '+ j );
 						}
 					}//Fin primer IF
