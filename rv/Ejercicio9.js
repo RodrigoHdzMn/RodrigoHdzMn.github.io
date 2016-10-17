@@ -34,7 +34,7 @@ for(i=1; i<=8; i++)
 	{
 		if(i%2 == 0)
 		{
-			var cuadro = new Cuadro(i,j,"Textura_marmol_negro.jpg");
+			var cuadro = new Cuadro(10*i,10*j,"Textura_marmol_negro.jpg");
 		}
 		else
 		{
