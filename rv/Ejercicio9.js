@@ -22,51 +22,35 @@ var setup=function()
 {
         escena = new THREE.Scene();
         //////////////////////////
-	var tablero= new Array();
-	cont =0;
-for(i=1; i<=8; i++)
-{
-   for(j=1; j<=8; j++)
-   {
-	var forma = new THREE.BoxGeometry( 10,.1,10);
+for(var i=1; i<=8; i++)
+	{
+		for(var j=1; j<=8; j++)
+		{
+			if(j%2 ==0)
+			{
+				if(i%2 ==0)
+				{
+					var cuadro = new Cuadro(10*i,10*j,"Textura_marmol_blanco.jpg");
+				}
+				else
+				{
+					var cuadro = new Cuadro(10*i,10*j,"Textura_marmol_negro.jpg");
+				}
+			}
+			else
+			{
+				if(i%2 ==0)
+				{
+					var cuadro = new Cuadro(10*i,10*j,"Textura_marmol_negro.jpg");
+				}
+				else
+				{
+					var cuadro = new Cuadro(10*i,10*j,"Textura_marmol_blanco.jpg");
+				}
+			}
+		}
+	}
 	
-	if(j%2 ==0)
-	{
-		if(i%2 == 0)
-		{
-			var cuadro = new Cuadro(10*i,10*j,"Textura_marmol_negro.jpg");
-		}
-		else
-		{
-		        var material = new THREE.MeshBasicMaterial( {color: 0x727272}); //0xcfcfcf
-			var cubo = new THREE.Mesh(forma, material);
-			cubo.position.x=10*i;
-			cubo.position.z=10*j;
-			grupo.add(cubo);
-		}
-	}
-	else
-	{
-		if(i%2 == 0)
-		{
-			var material = new THREE.MeshBasicMaterial( {color: 0x727272}); //0xcfcfcf
-			var cubo = new THREE.Mesh(forma, material);
-			cubo.position.x=10*i;
-			cubo.position.z=10*j;
-			grupo.add(cubo);
-		}
-		else
-		{
-			var material = new THREE.MeshBasicMaterial( {color: 0xffffff}); //0xcfcfcf
-			var cubo = new THREE.Mesh(forma, material);
-			cubo.position.x=10*i;
-			cubo.position.z=10*j;
-			grupo.add(cubo);
-		}
-	}
-	cont=cont+1;
-   }
-}
 
 	///////////////////////////////
 	
