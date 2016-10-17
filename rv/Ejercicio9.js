@@ -29,7 +29,7 @@ for(i=1; i<=8; i++)
 						var malla=new THREE.Mesh(forma2, material);
 						malla.position.x=posX;
 						malla.position.z=posZ;
-						escena.add(malla);
+						grupo.add(malla);
 						console.log( 'i-j:  '+ posX + '  '+ posZ );
 					     },		
 		// Function called when download progresses
