@@ -11,7 +11,7 @@ function Tablero()
 	        function(texturaNegra)
 		{
 			var forma = new THREE.BoxGeometry( 10,.1,10);
-			var material= new THREE.MeshBasicMaterial( {map:textura} );
+			var material= new THREE.MeshBasicMaterial( {map:texturaNegra} );
 			var malla=new THREE.Mesh(forma, material);
 			for(var i=1; i<=8; i++)
 			{
@@ -49,7 +49,7 @@ function Tablero()
 	        function(texturaBlanca)
 		{
 			var forma = new THREE.BoxGeometry( 10,.1,10);
-			var material= new THREE.MeshBasicMaterial( {map:textura} );
+			var material= new THREE.MeshBasicMaterial( {map:texturaBlanca} );
 			var malla=new THREE.Mesh(Forma, material);
 			for(var i=1; i<=8; i++)
 			{
