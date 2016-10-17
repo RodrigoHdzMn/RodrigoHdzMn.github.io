@@ -1,148 +1,3 @@
-function Tablero()
-{
-	var i,j;
-	var tablero= new Array();
-	var cont=0;
-for(i=1; i<=8; i++)
-{
-   for(j=1; j<=8; j++)
-   {
-	var forma = new THREE.BoxGeometry( 10,.1,10);
-	
-	if(j%2 ==0)
-	{
-		if(i%2 == 0)
-		{
-			var posX=10*i;
-			var posZ=10*j;
-			var cargadorTextura = new THREE.TextureLoader();
-			cargadorTextura.load("Textura_marmol_negro.jpg",
-					    function(textura)
-					     {
-					     	//var forma = new THREE.BoxGeometry( 10,.1,10);
-					     	var material= new THREE.MeshBasicMaterial( {map:textura} );
-						tablero[cont]=new THREE.Mesh(forma, material);
-						tablero[cont].x=posX;
-						tablero[cont].z=posZ;
-						escena.add(tablero[cont]);
-					     },		
-		// Function called when download progresses
-		function ( xhr ) 
-		{
-		console.log( (xhr.loaded / xhr.total * 100) + '% loaded' );
-		},
-		// Function called when download errors
-		function ( xhr ) 
-		{
-		console.log( 'An error happened' );
-		}
-					    );
-		}
-		else
-		{
-		        var material = new THREE.MeshBasicMaterial( {color: 0x727272}); //0xcfcfcf
-			var cubo = new THREE.Mesh(forma, material);
-			cubo.position.x=10*i;
-			cubo.position.z=10*j;
-			grupo.add(cubo);
-		}
-	}
-	else
-	{
-		if(i%2 == 0)
-		{
-			var material = new THREE.MeshBasicMaterial( {color: 0x727272}); //0xcfcfcf
-			var cubo = new THREE.Mesh(forma, material);
-			cubo.position.x=10*i;
-			cubo.position.z=10*j;
-			grupo.add(cubo);
-		}
-		else
-		{
-			var material = new THREE.MeshBasicMaterial( {color: 0xffffff}); //0xcfcfcf
-			var cubo = new THREE.Mesh(forma, material);
-			cubo.position.x=10*i;
-			cubo.position.z=10*j;
-			grupo.add(cubo);
-		}
-	}
-	cont=cont+1;
-   }
-}
-}
-/*var i,j;
-for(i=1; i<=8; i++)
-{
-   for(j=1; j<=8; j++)
-   {
-	if(j%2 ==0)
-	{
-		if(i%2 == 0)
-		{
-			var cargadorTextura = new THREE.TextureLoader();
-			cargadorTextura.load("Textura_marmol_negro.jpg",
-					    function(textura)
-					     {
-					     	var forma = new THREE.BoxGeometry( 10,.1,10);
-					     	var material= new THREE.MeshBasicMaterial( {map:textura} );
-						var malla=new THREE.Mesh(forma, material);
-						malla.position.x=10*i;
-						malla.position.z=10*j;
-						grupo.add(malla);
-					     }
-					    );
-		}
-		else
-		{
-			var cargadorTextura = new THREE.TextureLoader();
-			cargadorTextura.load("Textura_marmol_blanco.jpg",
-					    function(textura)
-					     {
-					     	var forma = new THREE.BoxGeometry( 10,.1,10);
-					     	var material= new THREE.MeshBasicMaterial( {map:textura} );
-						var malla=new THREE.Mesh(forma, material);
-						malla.position.x=10*i;
-						malla.position.z=10*j;
-						grupo.add(malla);
-					     }
-					    );
-		}
-	}
-	else
-	{
-		if(i%2 == 0)
-		{
-			var cargadorTextura = new THREE.TextureLoader();
-			cargadorTextura.load("Textura_marmol_blanco.jpg",
-					    function(textura)
-					     {
-					     	var forma = new THREE.BoxGeometry( 10,.1,10);
-					     	var material= new THREE.MeshBasicMaterial( {map:textura} );
-						var malla=new THREE.Mesh(forma, material);
-						malla.position.x=10*i;
-						malla.position.z=10*j;
-						grupo.add(malla);
-					     }
-					    );
-		}
-		else
-		{
-			var cargadorTextura = new THREE.TextureLoader();
-			cargadorTextura.load("Textura_marmol_negro.jpg",
-					    function(textura)
-					     {
-					     	var forma = new THREE.BoxGeometry( 10,.1,10);
-					     	var material= new THREE.MeshBasicMaterial( {map:textura} );
-						var malla=new THREE.Mesh(forma, material);
-						malla.position.x=10*i;
-						malla.position.z=10*j;
-						grupo.add(malla);
-					     }
-					    );
-		}
-	}
-   }
-}*/
 
 function Torre(posX,posZ,materialTextura)
 {
@@ -434,10 +289,26 @@ function Alfil(posX,posZ,materialTextura)
 		}
 	);
 }
+
+function Cuadro(posX,posZ,materialTextura)
+{
+	var cargadorTextura = new THREE.TextureLoader();
+	cargadorTextura.load( materialTextura,
+	        function(textura)
+		{
+			var forma = new THREE.BoxGeometry( 10,.1,10);
+			var material= new THREE.MeshBasicMaterial( {map:textura} );
+			var malla=new THREE.Mesh(forma, material);
+			malla.position.x=posX;
+			malla.position.z=posZ;
+			grupo.add(malla);
+		});
+}
 	var grupo= new THREE.Group();
-	var tablero= new Tablero();
-	
-        var torre1= new Torre(10,10,"Textura_madera.jpg");
+
+var setup = function()
+{
+	var torre1= new Torre(10,10,"Textura_madera.jpg");
         var torre2= new Torre(80,10,"Textura_madera.jpg");
 	var torre3= new Torre(10,80,"Textura_marmol_negro.jpg");
         var torre4= new Torre(80,80,"Textura_marmol_negro.jpg");
@@ -451,9 +322,7 @@ function Alfil(posX,posZ,materialTextura)
         var alfil2= new Alfil(60,10,"Textura_madera.jpg");
 	var alfil3= new Alfil(30,80,"Textura_marmol_negro.jpg");
         var alfil4= new Alfil(60,80,"Textura_marmol_negro.jpg");
-
-var setup = function()
-{/*
+	/*
         torre1.malla.position.x = 10;
         torre1.malla.position.z = 10;	
 	torre2.malla.position.x = 80;
@@ -481,6 +350,36 @@ var setup = function()
 	alfil4.malla.position.x = 60;
         alfil4.malla.position.z = 80;
 	*/
+	//Creando Tablero
+	for(var i=1; i<=8; i++)
+	{
+		for(var j=1; j<=8; j++)
+		{
+			if(j%2 ==0)
+			{
+				if(j%2 ==0)
+				{
+					var cuadro = new Cuadro(10*i,10*j,"Textura_marmol_blanco.jpg");
+				}
+				else
+				{
+					var cuadro = new Cuadro(10*i,10*j,"Textura_marmol_negro.jpg");
+				}
+			}
+			else
+			{
+				if(j%2 ==0)
+				{
+					var cuadro = new Cuadro(10*i,10*j,"Textura_marmol_negro.jpg");
+				}
+				else
+				{
+					var cuadro = new Cuadro(10*i,10*j,"Textura_marmol_blanco.jpg");
+				}
+			}
+		}
+	}
+	//Fin Tablero
 	var cargadorTextura = new THREE.TextureLoader();
 	cargadorTextura.load("Textura_madera_cafe.jpg",
 					    function(textura)
