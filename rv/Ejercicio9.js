@@ -3,8 +3,8 @@ var grupo= new THREE.Group();
 
 function Tablero()
 {
-	var materialTexturaNegra =" ";
-	var materialTexturaBlanca =" ";
+	var materialTexturaNegra ="Textura_marmol_negro.jpg";
+	var materialTexturaBlanca ="Textura_marmol_blanco.jpg";
 	
 	var cargadorTextura= new THREE.TextureLoader();
 	cargadorTextura.load( materialTexturaNegra,
