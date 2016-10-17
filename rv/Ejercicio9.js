@@ -50,7 +50,7 @@ function Tablero()
 		{
 			var forma = new THREE.BoxGeometry( 10,.1,10);
 			var material= new THREE.MeshBasicMaterial( {map:texturaBlanca} );
-			var malla=new THREE.Mesh(Forma, material);
+			var malla=new THREE.Mesh(forma, material);
 			for(var i=1; i<=8; i++)
 			{
 				for(var j=1; j<=8; j++)
