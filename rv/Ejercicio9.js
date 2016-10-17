@@ -6,8 +6,8 @@ function Tablero()
 	var materialTexturaNegra ="Textura_marmol_negro.jpg";
 	var materialTexturaBlanca ="Textura_marmol_blanco.jpg";
 	
-	var cargadorTextura= new THREE.TextureLoader();
-	cargadorTextura.load( materialTexturaNegra,
+	var cargador1Textura= new THREE.TextureLoader();
+	cargador1Textura.load( materialTexturaNegra,
 	        function(texturaNegra)
 		{
 			for(var i=1; i<=8; i++)
@@ -49,8 +49,8 @@ function Tablero()
 				}//Fin For J
 			}//Fin for i	
 		});
-		
-	cargadorTextura.load( materialTexturaBlanca,
+	var cargador2Textura= new THREE.TextureLoader();	
+	cargador2Textura.load( materialTexturaBlanca,
 	        function(texturaBlanca)
 		{
 			for(var i=1; i<=8; i++)
