@@ -23,7 +23,7 @@ function Tablero()
 							var malla=new THREE.Mesh(forma, material);
 							malla.position.x=i;
 							malla.position.z=j;
-							grupo.add(malla);
+							escena.add(malla);
 							console.log( 'i-j:  '+ i + '  '+ j );
 						}
 						else
@@ -42,7 +42,7 @@ function Tablero()
 							var malla=new THREE.Mesh(forma, material);
 							malla.position.x=i;
 							malla.position.z=j;
-							grupo.add(malla);
+							escena.add(malla);
 							console.log( 'i-j:  '+ i + '  '+ j );
 						}
 					}//Fin primer IF
@@ -69,7 +69,7 @@ function Tablero()
 							var malla=new THREE.Mesh(forma, material);
 							malla.position.x=i;
 							malla.position.z=j;
-							grupo.add(malla);
+							escena.add(malla);
 							console.log( 'i-j:  '+ i + '  '+ j );
 						}
 					}
@@ -82,7 +82,7 @@ function Tablero()
 							var malla=new THREE.Mesh(forma, material);
 							malla.position.x=i;
 							malla.position.z=j;
-							grupo.add(malla);
+							escena.add(malla);
 							console.log( 'i-j:  '+ i + '  '+ j );
 						}
 						else
