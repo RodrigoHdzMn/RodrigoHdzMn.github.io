@@ -1,8 +1,11 @@
 
 var grupo= new THREE.Group();
 
-function Tablero()
+//	cont=cont+1;   console.log( 'i-j:  '+ i + '  '+ j );
+var setup=function()
 {
+        escena = new THREE.Scene();
+        //////////////////////////
 	var materialTexturaNegra ="Textura_marmol_negro.jpg";
 	var materialTexturaBlanca ="Textura_marmol_blanco.jpg";
 	
@@ -92,12 +95,7 @@ function Tablero()
 				}//Fin For J
 			}//Fin for i
 		});
-}
-//	cont=cont+1;   console.log( 'i-j:  '+ i + '  '+ j );
-var setup=function()
-{
-        escena = new THREE.Scene();
-        var tablero= new Tablero();
+	///////////////////////////////
 	
         var campoVision=30;// grado
 	var relacionAspecto=window.innerWidth/window.innerHeight;
