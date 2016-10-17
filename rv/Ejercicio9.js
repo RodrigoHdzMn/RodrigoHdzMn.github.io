@@ -21,7 +21,7 @@ for(i=1; i<=8; i++)
 			var posX=10*i;
 			var posZ=10*j;
 			cargadorTextura[cont] = new THREE.TextureLoader();
-			cargadorTextura.load("Textura_marmol_negro.jpg",
+			cargadorTextura[cont].load("Textura_marmol_negro.jpg",
 					    function(textura)
 					     {
 					     	//var forma = new THREE.BoxGeometry( 10,.1,10);
