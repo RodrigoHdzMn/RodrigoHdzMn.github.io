@@ -24,6 +24,7 @@ function Tablero()
 							malla.position.x=i;
 							malla.position.z=j;
 							grupo.add(malla);
+							console.log( 'i-j:  '+ i + '  '+ j );
 						}
 						else
 						{
@@ -39,6 +40,7 @@ function Tablero()
 							malla.position.x=i;
 							malla.position.z=j;
 							grupo.add(malla);
+							console.log( 'i-j:  '+ i + '  '+ j );
 						}
 					}//Fin primer IF
 				}//Fin For J
@@ -65,6 +67,7 @@ function Tablero()
 							malla.position.x=i;
 							malla.position.z=j;
 							grupo.add(malla);
+							console.log( 'i-j:  '+ i + '  '+ j );
 						}
 					}
 					else
@@ -74,6 +77,7 @@ function Tablero()
 							malla.position.x=i;
 							malla.position.z=j;
 							grupo.add(malla);
+							console.log( 'i-j:  '+ i + '  '+ j );
 						}
 						else
 						{
