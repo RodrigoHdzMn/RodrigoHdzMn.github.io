@@ -1,12 +1,26 @@
 
-var grupo= new THREE.Group();
+var grupo= new THREE.Group(posX,posZ,materialTextura);
 
 //	cont=cont+1;   console.log( 'i-j:  '+ i + '  '+ j );
+function Cuadro()
+{
+	var cargadorTextura = new THREE.TextureLoader();
+	cargadorTextura.load( 
+		materialTextura,
+	        function(textura)
+		{
+			var material= new THREE.MeshBasicMaterial( {map:textura} );
+			var malla=new THREE.Mesh(torreForma, material);
+			malla.position.x=posX;
+			malla.position.z=posZ;
+			grupo.add(malla);
+		},
+}
 var setup=function()
 {
         escena = new THREE.Scene();
         //////////////////////////
-	var cargadorTextura= new Array();
+	var tablero= new Array();
 	cont =0;
 for(i=1; i<=8; i++)
 {
@@ -18,33 +32,7 @@ for(i=1; i<=8; i++)
 	{
 		if(i%2 == 0)
 		{
-			var posX=10*i;
-			var posZ=10*j;
-			console.log( 'i-j:  '+ posX + '  '+ posZ );
-			console.log( 'contador : '+ cont );
-			cargadorTextura[cont] = new THREE.TextureLoader();
-			cargadorTextura[cont].load("Textura_marmol_negro.jpg",
-					    function(textura)
-					     {
-					     	var forma2 = new THREE.BoxGeometry( 10,.1,10);
-					     	var material= new THREE.MeshBasicMaterial( {map:textura} );
-						var malla=new THREE.Mesh(forma2, material);
-						malla.position.x=posX;
-						malla.position.z=posZ;
-						grupo.add(malla);
-						
-					     },		
-		// Function called when download progresses
-		function ( xhr ) 
-		{
-		console.log( (xhr.loaded / xhr.total * 100) + '% loaded' );
-		},
-		// Function called when download errors
-		function ( xhr ) 
-		{
-		console.log( 'An error happened' );
-		}
-					    );
+			var cuadro = new Cuadro(i,j"Textura_marmol_negro.jpg");
 		}
 		else
 		{
