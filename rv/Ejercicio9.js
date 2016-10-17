@@ -7,7 +7,7 @@ var setup=function()
         escena = new THREE.Scene();
         //////////////////////////
 	var cargadorTextura= new Array();
-	cont =0:
+	cont =0;
 for(i=1; i<=8; i++)
 {
    for(j=1; j<=8; j++)
