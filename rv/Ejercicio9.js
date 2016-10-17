@@ -20,6 +20,7 @@ for(i=1; i<=8; i++)
 		{
 			var posX=10*i;
 			var posZ=10*j;
+			console.log( 'i-j:  '+ posX + '  '+ posZ );
 			cargadorTextura[cont] = new THREE.TextureLoader();
 			cargadorTextura[cont].load("Textura_marmol_negro.jpg",
 					    function(textura)
@@ -30,7 +31,7 @@ for(i=1; i<=8; i++)
 						malla.position.x=posX;
 						malla.position.z=posZ;
 						grupo.add(malla);
-						console.log( 'i-j:  '+ posX + '  '+ posZ );
+						
 					     },		
 		// Function called when download progresses
 		function ( xhr ) 
