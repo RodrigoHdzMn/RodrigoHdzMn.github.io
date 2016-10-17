@@ -24,12 +24,13 @@ for(i=1; i<=8; i++)
 			cargadorTextura[cont].load("Textura_marmol_negro.jpg",
 					    function(textura)
 					     {
-					     	//var forma = new THREE.BoxGeometry( 10,.1,10);
+					     	var forma2 = new THREE.BoxGeometry( 10,.1,10);
 					     	var material= new THREE.MeshBasicMaterial( {map:textura} );
-						var malla=new THREE.Mesh(forma, material);
+						var malla=new THREE.Mesh(forma2, material);
 						malla.position.x=posX;
 						malla.position.z=posZ;
 						escena.add(malla);
+						console.log( 'i-j:  '+ posX + '  '+ posZ );
 					     },		
 		// Function called when download progresses
 		function ( xhr ) 
