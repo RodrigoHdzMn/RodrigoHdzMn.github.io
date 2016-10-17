@@ -1,8 +1,8 @@
 
-var grupo= new THREE.Group(posX,posZ,materialTextura);
+var grupo= new THREE.Group();
 
 //	cont=cont+1;   console.log( 'i-j:  '+ i + '  '+ j );
-function Cuadro()
+function Cuadro(posX,posZ,materialTextura)
 {
 	var cargadorTextura = new THREE.TextureLoader();
 	cargadorTextura.load( 
@@ -14,8 +14,9 @@ function Cuadro()
 			malla.position.x=posX;
 			malla.position.z=posZ;
 			grupo.add(malla);
-		},
+		});
 }
+
 var setup=function()
 {
         escena = new THREE.Scene();
