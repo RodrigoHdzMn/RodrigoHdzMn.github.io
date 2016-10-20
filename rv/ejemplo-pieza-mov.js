@@ -18,6 +18,7 @@ function Pieza()
 var pieza;
 var escena;
 var renderizador;
+var camara;
 
 Pieza.prototype = new THREE.Object3D;
 
@@ -27,7 +28,7 @@ function setup()
       
       escena = new THREE.Scene();
     
-      var camara= new THREE.PerspectiveCamera(75,window.innerWidth / window.innerHeight,0.1,1000);
+      camara= new THREE.PerspectiveCamera(75,window.innerWidth / window.innerHeight,0.1,1000);
       
       camara.position.z=5;
       
@@ -39,5 +40,8 @@ function setup()
 function loop()
 {
     pieza.rotateY = 0.1;
-    renderizador.render(TEXTURA.escena,TEXTURA.camara)
+    renderizador.render(escena,camara)
 }
+
+setup();
+loop();
