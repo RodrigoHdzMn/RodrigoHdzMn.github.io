@@ -41,7 +41,7 @@ function loop()
 {
     requestAnimationFrame(loop);
     pieza.rotateY(0.01);
-    pieza.piernaIzq.rotate(0.05
+    pieza.piernaIzq.rotate(0.05);
     renderizador.render(escena,camara)
 }
 
