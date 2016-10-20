@@ -4,7 +4,7 @@ function Pieza()
     THREE.Object3D.call(this);
     
     this.piernaIzq = new THREE.Mesh(new THREE.BoxGeometry(1,5,1));
-    this.piernaDer = new THEEE.Mesh(new THREE.BoxGeometry(1,5,1));
+    this.piernaDer = new THREE.Mesh(new THREE.BoxGeometry(1,5,1));
     var cuerpo = new THREE.Mesh(new THREE.BoxGeometry(5,10,5));
     this.add(piernaDer, piernaIzq, cuerpo);
     
