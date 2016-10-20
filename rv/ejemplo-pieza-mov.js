@@ -30,7 +30,7 @@ function setup()
     
       camara= new THREE.PerspectiveCamera(75,window.innerWidth / window.innerHeight,0.1,1000);
       
-      camara.position.z=5;
+      camara.position.z=25;
       
       var lienzo=document.getElementById("ejemplo-pieza-mov");
       renderizador=new THREE.WebGLRenderer({canvas:lienzo, antialias: true});
