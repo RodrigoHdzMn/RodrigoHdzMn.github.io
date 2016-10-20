@@ -6,7 +6,7 @@ function Pieza()
     this.piernaIzq = new THREE.Mesh(new THREE.BoxGeometry(1,5,1));
     this.piernaDer = new THREE.Mesh(new THREE.BoxGeometry(1,5,1));
     var cuerpo = new THREE.Mesh(new THREE.BoxGeometry(5,10,5));
-    this.add(piernaDer, piernaIzq, cuerpo);
+    this.add(this.piernaDer,this.piernaIzq, cuerpo);
     
     this.piernaIzq.position.z = -2;
     this.piernaIzq.position.y = -2.5;
