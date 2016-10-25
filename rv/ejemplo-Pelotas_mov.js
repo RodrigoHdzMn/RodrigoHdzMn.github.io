@@ -84,7 +84,7 @@ Pelota.prototype.act = function(environment)
       this.position.x += this.step;
 }
 
-fucntion Pared (seze, x=0, y=0)
+fucntion Pared (size, x=0, y=0)
 {
       THREE.Object3D.call(this,x,y);
       
