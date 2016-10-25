@@ -47,7 +47,7 @@ Environment.prototype.act = function()
 }
 
 
-function Pelota(r, x=0, r=0)
+function Pelota(r, x=0, y=0)
 {
       Agent.call(this,x,y);
       this.add(new THREE.Mesh(new THREE.SphereGeometry(r),new THREE.MeshNormalMaterial()));
