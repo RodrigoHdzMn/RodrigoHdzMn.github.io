@@ -8,9 +8,9 @@ function Agent(x=0, y=0)
 
 Agent.prototype = new THREE.Object3D();
 
-Agent.prototype.sense= fucntion(environment) {};
-Agent.prototype.plan= fucntion(environment) {};
-Agent.prototype.act= fucntion(environment) {};
+Agent.prototype.sense= function(environment) {}
+Agent.prototype.plan= function(environment) {}
+Agent.prototype.act= function(environment) {}
 
 function Environment()
 {
