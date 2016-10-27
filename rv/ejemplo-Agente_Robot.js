@@ -63,7 +63,7 @@ function setup()
       mapa[12] = "X                       X";
       mapa[13] = "X                       X";
       mapa[14] = "X                       X";
-      mapa[15] =  X                       X";
+      mapa[15] = "X                       X";
       mapa[16] = "X                       X";
       mapa[17] = "X                       X";
       mapa[18] = "X                       X";
