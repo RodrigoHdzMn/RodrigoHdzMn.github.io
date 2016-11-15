@@ -83,11 +83,11 @@ function Robot(size, x, y)
       Agent.call(this, x, y);
       
       this.sensor = new Sensor();
-      this.actuador = new THREE.Mesh(
+      this.actuator = new THREE.Mesh(
                           new THREE.BoxGeometry(size,size,size),
                           new THREE.MeshBasicMaterial( {color:'#aa0000'} ) );
-      this.actuador.commands = [];
-      this.add(this.actuador);
+      this.actuator.commands = [];
+      this.add(this.actuator);
 }
 Robot.prototype = new Agent();
 
@@ -105,12 +105,12 @@ Robot.prototype.sense = function(environment)
 
 Robot.prototype.plan = function(environment)
 {
-      this.actuador.commands = [];
+      this.actuator.commands = [];
       
       if( this.sensor.colision == true )
-            this.actuador.commands.push('rotateCCW');
+            this.actuator.commands.push('rotateCCW');
       else
-            this.actuador.commands.push('goStraight');
+            this.actuator.commands.push('goStraight');
 }
 
 Robot.prototype.act(environment)
