@@ -59,7 +59,7 @@ Wall.prototype = new THREE.Mesh();
 
 Environment.prototype.setMap =  function(map)
 {
-      var _offst = Math.floor(map.length/2);
+      var _offset = Math.floor(map.length/2);
       
       for( var i=0; i<map.length; i++ )
       for( var j=0; j<map.length; j++ )
