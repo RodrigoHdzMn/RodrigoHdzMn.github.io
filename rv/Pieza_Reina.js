@@ -63,10 +63,10 @@ var Tb=0.8*2;//tamaño base
 	alfilForma.merge(forma3Malla.geometry, forma3Malla.matrix);
 	alfilForma.merge(forma4Malla.geometry, forma4Malla.matrix);
 	alfilForma.merge(forma5Malla.geometry, forma5Malla.matrix);
-     	alfilForma.merge(forma6Malla.geometry, forma6Malla.matrix);
+     	/*alfilForma.merge(forma6Malla.geometry, forma6Malla.matrix);
 	alfilForma.merge(forma7Malla.geometry, forma7Malla.matrix);
 	alfilForma.merge(forma8Malla.geometry, forma8Malla.matrix);
-	alfilForma.merge(forma9Malla.geometry, forma9Malla.matrix);
+	alfilForma.merge(forma9Malla.geometry, forma9Malla.matrix);*/
 
 	var material=new THREE.MeshNormalMaterial();
 	var alfilMalla= new THREE.Mesh(alfilForma,material);
