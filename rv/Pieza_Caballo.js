@@ -3,15 +3,13 @@
 //definicion de las figuras que generan nuestra pieza
 //Base
 var tallo = [];
-for ( var i = 0; i < 30; i ++ ) {
-	tallo.push(new THREE.Vector2(
-			Math.sin(i*0.2 )*15 +90 ,
-				(i - 5)*2) );
+for ( var i = 0; i < 30; i ++ ) 
+{
+	tallo.push(new THREE.Vector2(Math.sin(i*0.2 )*15 +90 ,(i - 5)*2) );
 }
-for ( i = 31; i < 50; i ++ ) {
-	tallo.push(new THREE.Vector2(
-			60 ,
-				(i - 5)*2) );
+for ( i = 31; i < 50; i ++ ) 
+{
+	tallo.push(new THREE.Vector2(60 ,(i - 5)*2) );
 }
 tallo.push(new THREE.Vector2(0,90));
 //Busto de caballo
@@ -67,7 +65,7 @@ var escena=new THREE.Scene();
 	escena.add(iluminacion);
 
 	var camara=new THREE.PerspectiveCamera();
-	camara.position.z=500;
+	camara.position.z=1000;
 	
 	renderizador=new THREE.WebGLRenderer();
 	renderizador.setSize(window.innerHeight*.75,window.innerHeight*.75 );
