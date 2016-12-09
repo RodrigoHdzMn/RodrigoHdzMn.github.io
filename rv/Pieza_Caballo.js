@@ -53,10 +53,10 @@ Caballo.merge(talloMalla.geometry,talloMalla.matrix);
 Caballo.merge(CaballoMalla.geometry,CaballoMalla.matrix);
 
 	var material=new THREE.MeshNormalMaterial();
-	var CaballoMalla= new THREE.Mesh(Caballo,material);
+	var CaballoMalla2= new THREE.Mesh(Caballo,material);
 
 var escena=new THREE.Scene();
-	escena.add(CaballoMalla);
+	escena.add(CaballoMalla2);
 	//escena.add(base);
 	//escena.add(iluminacion);
 
