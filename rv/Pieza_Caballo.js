@@ -51,3 +51,22 @@ var Caballo = new THREE.Geometry();
 //Unimos las mallas
 Caballo.merge(talloMalla.geometry,talloMalla.matrix);
 Caballo.merge(CaballoMalla.geometry,CaballoMalla.matrix);
+
+var escena=new THREE.Scene();
+	escena.add(Caballo);
+	//escena.add(base);
+	//escena.add(iluminacion);
+
+	var camara=new THREE.PerspectiveCamera();
+	camara.position.z=17;
+	
+	renderizador=new THREE.WebGLRenderer();
+	renderizador.setSize(window.innerHeight*.75,window.innerHeight*.75 );
+	document.body.appendChild(renderizador.domElement);
+	
+	renderizador.shadowMap.Enabled=true;
+	alfilMalla.castShadow=true;
+	base.receiveShadow=true;
+	iluminacion.castShadow=true;
+	
+	renderizador.render(escena,camara);
