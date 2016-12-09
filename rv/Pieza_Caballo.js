@@ -63,10 +63,10 @@ var escena=new THREE.Scene();
 	renderizador=new THREE.WebGLRenderer();
 	renderizador.setSize(window.innerHeight*.75,window.innerHeight*.75 );
 	document.body.appendChild(renderizador.domElement);
-	
+	/*
 	renderizador.shadowMap.Enabled=true;
 	alfilMalla.castShadow=true;
 	base.receiveShadow=true;
 	iluminacion.castShadow=true;
-	
+	*/
 	renderizador.render(escena,camara);
