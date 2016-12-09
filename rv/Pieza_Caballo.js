@@ -55,10 +55,16 @@ Caballo.merge(CaballoMalla.geometry,CaballoMalla.matrix);
 	var material=new THREE.MeshNormalMaterial();
 	var CaballoMalla2= new THREE.Mesh(Caballo,material);
 
+var iluminacion= new THREE.PointLight(0xFFFFFF);
+	iluminacion.position.x=20;
+	iluminacion.position.y=50;
+	iluminacion.position.z=-10;
+
+
 var escena=new THREE.Scene();
 	escena.add(CaballoMalla2);
 	//escena.add(base);
-	//escena.add(iluminacion);
+	escena.add(iluminacion);
 
 	var camara=new THREE.PerspectiveCamera();
 	camara.position.z=17;
