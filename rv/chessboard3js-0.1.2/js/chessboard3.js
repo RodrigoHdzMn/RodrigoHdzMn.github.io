@@ -1,11 +1,19 @@
 /**
- * chessboard3.js version 0.1.2
+ * chessboard3.js version 0.1.0
  *
- * Copyright 2016 Jason Tiscione
+ * Copyright 2015 Jason Tiscione
  * Portions copyright 2013 Chris Oakman
  * Released under MIT license
  * https://github.com/jtiscione/chessboard3js/blob/master/LICENSE
+ *
+ * Date: 7/1/2015
  */
+ var mat2 = false;
+ var mat1 = false;
+ var dragUpdate = 0;
+ var drag_cache;
+ var killed_mesh;
+ var killFlag=false;
 ;(function() {
     'use strict';
 
@@ -26,40 +34,8 @@
         sw1 : 'wK', sw2: 'wQ', sw3: 'wR', sw4: 'wB', sw5: 'wN', sw6: 'wP',
         sb1 : 'bK', sb2: 'bQ', sb3: 'bR', sb4: 'bB', sb5: 'bN', sb6: 'bP'
     };
+    var DEFAULT_WIDTH = 500;
     var ASPECT_RATIO = 0.75;
-
-    // ---------------------------------------------------------------------//
-    //                               ANIMATION                              //
-    // ---------------------------------------------------------------------//
-
-    var executingTweens = [];
-
-    function startTween(onUpdate, onComplete, duration) {
-        executingTweens.push({
-            onUpdate: onUpdate,
-            onComplete: onComplete,
-            duration: duration,
-            started: window.performance.now()
-        });
-        onUpdate(0);
-    }
-
-    // invoke frequently
-    function updateAllTweens() {
-        var tweenArray = [];
-        executingTweens.forEach(function(tween) {
-            var rightNow = window.performance.now();
-            var t = (rightNow - tween.started) / tween.duration;
-            if (t < 1) {
-                tween.onUpdate(t);
-                tweenArray.push(tween);
-            } else {
-                tween.onUpdate(1.0);
-                tween.onComplete();
-            }
-        });
-        executingTweens = tweenArray;
-    }
 
     // ---------------------------------------------------------------------//
     //                               UTILITIES                              //
@@ -287,6 +263,15 @@
             }
             var WHITE_MATERIAL = new THREE.MeshPhongMaterial({color: new THREE.Color(whitePieceColor)});
 
+
+        //     var fnWhite = function(textura) {
+        //        var WHITE_MATERIAL = new THREE.MeshBasicMaterial({map: textura});
+        //        mat2 = true;
+        //    }
+        //     var cargadorWhite=new THREE.TextureLoader();
+        //     cargadorWhite.load("https://luishdzupiita.github.io/rv/marmolBlanco.jpeg",
+        //                   fnWhite);
+
             var whitePieceSpecular = 0xCCFFFF;
             if (cfg.hasOwnProperty('whitePieceSpecular') && typeof cfg.whitePieceSpecular === 'number') {
                 whitePieceSpecular = cfg.whitePieceSpecular;
@@ -298,7 +283,18 @@
             if (cfg.hasOwnProperty('blackPieceColor') && typeof cfg.blackPieceColor === 'number') {
                 blackPieceColor = cfg.blackPieceColor;
             }
-            var BLACK_MATERIAL = new THREE.MeshPhongMaterial({color: new THREE.Color(blackPieceColor)});
+            var  BLACK_MATERIAL= new THREE.MeshPhongMaterial({color: new THREE.Color(blackPieceColor)});
+
+            // var fnBlack = function(textura) {
+            //    var BLACK_MATERIAL = new THREE.MeshBasicMaterial({map: textura});
+                //   BLACK_MATERIAL.specular = new THREE.Color(blackPieceSpecular);
+                //   BLACK_MATERIAL.transparent = true;
+            //    mat1 = true;
+            // }
+            // var cargadorBlack=new THREE.TextureLoader();
+            // cargadorBlack.load("https://luishdzupiita.github.io/rv/marmolNegro.jpeg",
+            //               fnBlack);
+
 
             var blackPieceSpecular = 0x553333;
             if (cfg.hasOwnProperty('blackPieceSpecular') && typeof cfg.blackPieceSpecular === 'number') {
@@ -341,7 +337,9 @@
                 R: undefined,
                 B: undefined,
                 N: undefined,
-                P: undefined
+                P: undefined,
+                LEG: undefined,
+                ARM: undefined
             };
 
             //------------------------------------------------------------------------------
@@ -407,6 +405,13 @@
                     console.log("ChessBoard3 Error 3006: Unable to find three.js revision 71 or greater. \n\nExiting...");
                     return false;
                 }
+                if (!window.JSON ||
+                    typeof JSON.stringify !== 'function' ||
+                    typeof JSON.parse !== 'function') {
+                    window.alert('ChessBoard3 Error 1004: JSON does not exist in this browser. ' +
+                        'Please include a JSON polyfill.\n\nExiting...');
+                    return false;
+                }
                 if (!webGLEnabled()) {
                     window.alert("ChessBoard3 Error 3001: WebGL is not enabled.\n\nExiting...");
                     return false;
@@ -460,10 +465,6 @@
 
                 if (cfg.showNotation !== false) {
                     cfg.showNotation = true;
-                    if (cfg.hasOwnProperty('fontData') !== true ||
-                        (typeof cfg.fontData !== 'string' && typeof cfg.fontData !== 'function')) {
-                        cfg.fontData = 'assets/fonts/helvetiker_regular.typeface.json';
-                    }
                 }
 
                 if (cfg.draggable !== true) {
@@ -479,7 +480,7 @@
                 }
 
                 // draggable must be true if sparePieces is enabled
-                if (cfg.sparePieces === true) {
+                if (cfg.spare  === true) {
                     cfg.draggable = true;
                 }
 
@@ -633,7 +634,7 @@
                 if (cfg.rotateControls || cfg.zoomControls) {
                     if (THREE.OrbitControls !== undefined) {
                         CAMERA_CONTROLS = new THREE.OrbitControls(CAMERA, RENDERER.domElement, RENDERER.domElement);
-                        CAMERA_CONTROLS.enablePan = false;
+                        CAMERA_CONTROLS.noPan = true;
                         if (cfg.rotateControls) {
                             CAMERA_CONTROLS.minPolarAngle = Math.PI / 2 * 0.1;
                             CAMERA_CONTROLS.maxPolarAngle = Math.PI / 2 * 0.8;
@@ -643,9 +644,8 @@
                         if (cfg.zoomControls) {
                             CAMERA_CONTROLS.minDistance = 12;
                             CAMERA_CONTROLS.maxDistance = 22;
-                            CAMERA_CONTROLS.enableZoom = true;
                         } else {
-                            CAMERA_CONTROLS.enableZoom = false;
+                            CAMERA_CONTROLS.noZoom = true;
                         }
                         CAMERA_CONTROLS.target.y = -3;
                         CAMERA_CONTROLS.enabled = true;
@@ -682,112 +682,92 @@
                     RENDER_FLAG = true;
                 };
 
-                startTween(function(t) {
-                    var theta = startTheta + t * (targetTheta - startTheta);
-                    var r = startRadius + t * (targetRadius - startRadius);
-                    CAMERA.position.set(r * Math.cos(theta),
-                        startY + t * (targetY - startY),
-                        r * Math.sin(theta));
-                    CAMERA.lookAt(new THREE.Vector3(0, -3, 0));
-                }, end, 1000);
+                if (window.TWEEN !== undefined && typeof TWEEN === 'object') {
+                    // interpolate: startingTheta -> targetTheta and startY -> targetY
+                    var tween = new TWEEN.Tween({t: 0})
+                        .to({t: 1}, 1000)
+                        //.easing(TWEEN.Easing.Elastic.InOut)
+                        .onUpdate(function() {
+                            var t = this.t;
+                            var theta = startTheta + t * (targetTheta - startTheta);
+                            var r = startRadius + t * (targetRadius - startRadius);
+                            CAMERA.position.set(r * Math.cos(theta),
+                                startY + t * (targetY - startY),
+                                r * Math.sin(theta));
+                            CAMERA.lookAt(new THREE.Vector3(0,-3,0));
+                        })
+                        .onComplete(end);
+                    tween.start();
+                } else {
+                    end(); // tween.js not available
+                }
             }
 
             function buildPieceMesh(square, piece) {
-
                 var coords = squareCoordinates(square);
 
                 var color = piece.charAt(0);
                 var species = piece.charAt(1);
 
                 var material;
-                if (color === 'w') {
-                    material = WHITE_MATERIAL.clone();
-                } else if (color === 'b') {
-                    material = BLACK_MATERIAL.clone();
-                }
+                // while (mat1===false || mat2===false) {
+                //     // wait
+                //     console.log(mat1+':'+mat2)
+                //     setTimeout(function(){},300);
+                // }
+                    if (color === 'w') {
+                        material = WHITE_MATERIAL.clone();
+                    } else if (color === 'b') {
+                        material = BLACK_MATERIAL.clone();
+                    }
 
-                var geometry, mesh;
+
+                var geometry, mesh, pataGeometry, meshPata1, meshPata2, brazoGeometry,meshBrazo;
+                var legOffset = 0.2;
+                var uplift = 0.8;
+                var legScale = 1.4;
+                var armScale = 3.0;
+
                 geometry = GEOMETRIES[species];
                 mesh = new THREE.Mesh(geometry, material);
                 mesh.position.x = coords.x;
                 mesh.position.z = coords.z;
+                mesh.position.y = uplift;
+
+                if (species==='k' || species==='K' || species==='q' || species==='Q') {
+                    mesh.scale.y = 0.8;
+                }
+
+                pataGeometry = GEOMETRIES['LEG'];
+                brazoGeometry = GEOMETRIES['ARM'];
+                meshPata1 = new THREE.Mesh(pataGeometry, material);
+                meshPata2 = new THREE.Mesh(pataGeometry, material);
+                meshBrazo = new THREE.Mesh(brazoGeometry, material);
+
+                //meshPata1.position.x = coords.x-legOffset;
+                //meshPata1.position.z = coords.z;
+                //meshPata2.position.x = coords.x+legOffset;
+                //meshPata2.position.z = coords.z;
+
                 if (color === 'w') {
                     mesh.rotation.y = Math.PI;
+
+                } else {
+
                 }
                 mesh.castShadow = true;
+                mesh.add(meshPata1, meshPata2, meshBrazo);
+                meshPata1.position.x = -legOffset;
+                meshPata1.position.y = -uplift;
+                meshPata2.position.x = legOffset;
+                meshPata2.position.y = -uplift;
+                meshBrazo.position.x = 0.6;
+                meshBrazo.position.y = 0.5;
+                meshPata1.rotateY(Math.PI)
+                meshPata1.scale.set(legScale,legScale,legScale);
+                meshPata2.scale.set(legScale,legScale,legScale);
+                meshBrazo.scale.set(armScale,armScale,armScale);
                 return mesh;
-            }
-
-            function addLabelsToScene() {
-
-                var loader = new THREE.FontLoader();
-
-                var url = null;
-                if (typeof cfg.fontData === 'function') {
-                    url = cfg.fontData();
-                } else if (typeof cfg.fontData === 'string') {
-                    url = cfg.fontData;
-                }
-
-                if (url === null) {
-                    cfg.showNotation = false;
-                    error(2354, e);
-                }
-
-                loader.load(url, function(font) {
-
-                    // Add the file / rank labels
-                    var opts = {
-                        font: font,
-                        size: 0.5,
-                        height: 0.0,
-                        weight: 'normal',
-                        style: 'normal',
-                        curveSegments: 12,
-                        steps: 1,
-                        bevelEnabled: false,
-                        material: 0,
-                        extrudeMaterial: 1
-                    };
-
-                    LABELS = [];
-                    var textGeom;
-                    var label;
-                    var columnLabelText = "abcdefgh".split('');
-                    for (var i = 0; i < 8; i++) {
-                        textGeom = new THREE.TextGeometry(columnLabelText[i], opts);
-                        textGeom.computeBoundingBox();
-                        textGeom.computeVertexNormals();
-                        label = new THREE.Mesh(textGeom, RANK_1_TEXT_MATERIAL);
-                        label.position.x = 2 * i - 7 - opts.size/2;
-                        label.position.y = -0.5;
-                        label.position.z = -9;
-                        LABELS.push(label);
-                        SCENE.add(label);
-                        label = new THREE.Mesh(textGeom, RANK_8_TEXT_MATERIAL);
-                        label.position.x = 2 * i - 7 - opts.size/2;
-                        label.position.y = -0.5;
-                        label.position.z = 9;
-                        LABELS.push(label);
-                        SCENE.add(label);
-                    }
-                    var rankLabelText = "12345678".split('');
-                    for (i = 0; i < 8; i++) {
-                        textGeom = new THREE.TextGeometry(rankLabelText[i], opts);
-                        label = new THREE.Mesh(textGeom, FILE_A_TEXT_MATERIAL);
-                        label.position.x = -9;
-                        label.position.y = -0.5;
-                        label.position.z = -7 - opts.size / 2 + 2 * (7 - i);
-                        LABELS.push(label);
-                        SCENE.add(label);
-                        label = new THREE.Mesh(textGeom, FILE_H_TEXT_MATERIAL);
-                        label.position.x = 9;
-                        label.position.y =  -0.5;
-                        label.position.z = -7 - opts.size / 2 + 2 * (7 - i);
-                        LABELS.push(label);
-                        SCENE.add(label);
-                    }
-                });
             }
 
             function buildBoard() {
@@ -809,9 +789,91 @@
                         SCENE.add(squareMesh);
                     }
                 }
+                var side1 = new THREE.BoxGeometry(20, 0.5, 2);
+               var side1Mesh = new THREE.Mesh(side1, squareMaterial.clone());
+               side1Mesh.position.set(0, -0.25, -9);
+               side1.computeFaceNormals();
+               side1.computeVertexNormals();
+               SCENE.add(side1Mesh);
 
+               var side2 = new THREE.BoxGeometry(20, 0.5, 2);
+               var side2Mesh = new THREE.Mesh(side2, squareMaterial.clone());
+               side2Mesh.position.set(0, -0.25, 9);
+               side2.computeFaceNormals();
+               side2.computeVertexNormals();
+               SCENE.add(side2Mesh);
+
+               var side3 = new THREE.BoxGeometry(2, 0.5, 20);
+               var side3Mesh = new THREE.Mesh(side3, squareMaterial.clone());
+               side3Mesh.position.set(-9, -0.25, 0);
+               side3.computeFaceNormals();
+               side3.computeVertexNormals();
+               SCENE.add(side3Mesh);
+
+               var side4 = new THREE.BoxGeometry(2, 0.5, 20);
+               var side4Mesh = new THREE.Mesh(side4, squareMaterial.clone());
+               side4Mesh.position.set(9, -0.25, 0);
+               side4.computeFaceNormals();
+               side4.computeVertexNormals();
+               SCENE.add(side4Mesh);
+
+                // Add the file / rank labels
+                var opts = {
+                    size: 0.5,
+                    height: 0.0,
+                    weight: 'normal',
+                    font: 'helvetiker',
+                    style: 'normal',
+                    curveSegments: 12,
+                    steps: 1
+                };
+
+                LABELS = [];
                 if (cfg.showNotation) {
-                    addLabelsToScene();
+                    var textGeom;
+                    var label;
+                    var columnLabelText = "abcdefgh".split('');
+                    for (i = 0; i < 8; i++) {
+                        try {
+                            textGeom = new THREE.TextGeometry(columnLabelText[i], opts);
+                        }
+                        catch (e) {
+                            cfg.showNotation = false;
+                            error(2354, e);
+                            break;
+                        }
+                        label = new THREE.Mesh(textGeom, RANK_1_TEXT_MATERIAL);
+                        label.position.x = 2 * i - 7 - opts.size/2;
+                        label.position.y = -0.5;
+                        label.position.z = -9;
+                        LABELS.push(label);
+                        SCENE.add(label);
+                        label = new THREE.Mesh(textGeom, RANK_8_TEXT_MATERIAL);
+                        label.position.x = 2 * i - 7 - opts.size/2;
+                        label.position.y = -0.5;
+                        label.position.z = 9;
+                        LABELS.push(label);
+                        SCENE.add(label);
+                    }
+                    if (LABELS.length > 0) {
+                        // no issue with misg font file
+                        var rankLabelText = "12345678".split('');
+                        for (i = 0; i < 8; i++) {
+                            textGeom = new THREE.TextGeometry(rankLabelText[i], opts);
+                            label = new THREE.Mesh(textGeom, FILE_A_TEXT_MATERIAL);
+                            label.position.x = -9;
+                            label.position.y = -0.5;
+                            label.position.z = -7 - opts.size / 2 + 2 * (7 - i);
+                            LABELS.push(label);
+                            SCENE.add(label);
+                            label = new THREE.Mesh(textGeom, FILE_H_TEXT_MATERIAL);
+                            label.position.x = 9;
+                            label.position.y =  -0.5;
+                            label.position.z = -7 - opts.size / 2 + 2 * (7 - i);
+                            LABELS.push(label);
+                            SCENE.add(label);
+                        }
+                    }
                 }
 
                 for (var k = 0; k < LIGHT_POSITIONS.length; k++) {
@@ -821,9 +883,10 @@
                     light.target = new THREE.Object3D();
                     if (k===0) {
                         light.castShadow = true;
-                        light.shadow.bias = 0.0001;
-                        light.shadow.mapSize.width = 2048;
-                        light.shadow.mapSize.height = 2048;
+                        light.shadowBias = 0.0001;
+                        light.shadowDarkness = 0.2;
+                        light.shadowMapWidth = 2048;
+                        light.shadowMapHeight = 2048;
                     }
                     SCENE.add(light);
                 }
@@ -863,6 +926,8 @@
             }
 
             function animateSquareToSquare(src, dest, completeFn) {
+
+                console.log('heara-868')
                 var destSquareMesh, pieceMesh;
                 if (PIECE_MESH_IDS.hasOwnProperty(src)) {
                     pieceMesh = SCENE.getObjectById(PIECE_MESH_IDS[src]);
@@ -878,18 +943,24 @@
                 if (destSquareMesh && pieceMesh) {
                     var tx_src = pieceMesh.position.x, tz_src = pieceMesh.position.z;
                     var tx_dest = destSquareMesh.position.x, tz_dest = destSquareMesh.position.z;
-                    startTween(function(t) {
-                        pieceMesh.position.x = tx_src + t * (tx_dest - tx_src);
-                        pieceMesh.position.z = tz_src + t * (tz_dest - tz_src);
-                    }, function() {
-                        PIECE_MESH_IDS[dest] = pieceMesh.id;
-                        if (validOrdinarySquare(src)) {
-                            if (pieceMesh.id === PIECE_MESH_IDS[src]) {
-                                delete PIECE_MESH_IDS[src];
+                    var tween = new TWEEN.Tween({t: 0})
+                        .to({t: 1}, cfg.moveSpeed)
+                        //.easing(TWEEN.Easing.Elastic.InOut)
+                        .onUpdate(function() {
+                            var t = this.t;
+                            pieceMesh.position.x = tx_src + t * (tx_dest - tx_src);
+                            pieceMesh.position.z = tz_src + t * (tz_dest - tz_src);
+                        })
+                        .onComplete(function() {
+                            PIECE_MESH_IDS[dest] = pieceMesh.id;
+                            if (validOrdinarySquare(src)) {
+                                if (pieceMesh.id === PIECE_MESH_IDS[src]) {
+                                    delete PIECE_MESH_IDS[src];
+                                }
                             }
-                        }
-                        completeFn();
-                    }, cfg.moveSpeed);
+                            completeFn();
+                        });
+                    tween.start();
                 }
             }
 
@@ -897,13 +968,16 @@
                 if (PIECE_MESH_IDS.hasOwnProperty(square)) {
                     if (validOrdinarySquare(square) && PIECE_MESH_IDS.hasOwnProperty(square)) {
                         var mesh = SCENE.getObjectById(PIECE_MESH_IDS[square]);
-                        startTween(function(t) {
-                            mesh.opacity = 1 - t;
-                        }, function() {
-                            SCENE.remove(mesh);
-                            delete PIECE_MESH_IDS[square];
-                            completeFn();
-                        }, cfg.trashSpeed);
+                        var tween = new TWEEN.Tween({t: 1})
+                            .to({t: 0}, cfg.trashSpeed)
+                            .onUpdate(function() {
+                                mesh.opacity = this.t;
+                            }).onComplete(function(){
+                                SCENE.remove(mesh);
+                                delete PIECE_MESH_IDS[square];
+                                completeFn();
+                            });
+                        tween.start();
                     }
                 }
             }
@@ -912,15 +986,18 @@
                 var mesh = buildPieceMesh(square, piece);
                 mesh.opacity = 0;
                 SCENE.add(mesh);
-                startTween(function(t) {
-                    mesh.opacity = t;
-                }, function() {
-                    PIECE_MESH_IDS[square] = mesh.id;
-                    completeFn();
-                }, cfg.appearSpeed);
+                var tween = new TWEEN.Tween({t: 0}).to({t: 1}, cfg.appearSpeed)
+                    .onUpdate(function() {
+                        mesh.opacity = this.t;
+                    }).onComplete(function() {
+                        PIECE_MESH_IDS[square] = mesh.id;
+                        completeFn();
+                    });
+                tween.start();
             }
 
             function doAnimations(a, oldPos, newPos) {
+                console.log('heara-938')
                 if (a.length === 0) {
                     return;
                 }
@@ -1322,10 +1399,20 @@
                         ANIMATION_HAPPENING = false;
                         RENDER_FLAG = true;
                     };
-                    startTween(function(t) {
-                        DRAG_INFO.mesh.position.x = tx_start + t * (tx_target - tx_start);
-                        DRAG_INFO.mesh.position.z = tz_start + t * (tz_target - tz_start);
-                    }, end, 100);
+                    if (window.TWEEN !== undefined && typeof TWEEN === 'object') {
+                        var tween = new TWEEN.Tween({t: 0})
+                            .to({t: 1}, 100)
+                            //.easing(TWEEN.Easing.Elastic.InOut)
+                            .onUpdate(function() {
+                                var t = this.t;
+                                DRAG_INFO.mesh.position.x = tx_start + t * (tx_target - tx_start);
+                                DRAG_INFO.mesh.position.z = tz_start + t * (tz_target - tz_start);
+                            })
+                            .onComplete(end);
+                        tween.start();
+                    } else {
+                        end(); // tween.js not available
+                    }
                 }
             }
 
@@ -1351,17 +1438,23 @@
                     delete newPosition[DRAG_INFO.source];
                     delete PIECE_MESH_IDS[DRAG_INFO.source];
                 }
+
                 if (newPosition[DRAG_INFO.location]) {
-                    SCENE.remove(SCENE.getObjectById(PIECE_MESH_IDS[DRAG_INFO.location]));
+                    killed_mesh = SCENE.getObjectById(PIECE_MESH_IDS[DRAG_INFO.location]);
+                    //SCENE.remove(SCENE.getObjectById(PIECE_MESH_IDS[DRAG_INFO.location]));
+                    killFlag = true;
+                    drag_cache = DRAG_INFO;
                 }
                 newPosition[DRAG_INFO.location] = DRAG_INFO.piece;
                 PIECE_MESH_IDS[DRAG_INFO.location] = DRAG_INFO.mesh.id;
                 var src = DRAG_INFO.source, tgt = DRAG_INFO.location, piece = DRAG_INFO.piece;
-                DRAG_INFO = null;
+
                 setCurrentPosition(newPosition);
                 if (cfg.hasOwnProperty('onSnapEnd') && typeof cfg.onSnapEnd === 'function') {
                     cfg.onSnapEnd(src, tgt, piece);
                 }
+
+                DRAG_INFO = null;
             }
 
             // ---------------------------------------------------------------------//
@@ -1429,7 +1522,7 @@
 
             function addSquareHighlight(sq, color) {
                 if (!color) {
-                    color = 0xFFFF00;
+                    color = 0x00EE00;
                 }
                 var squareMesh = SCENE.getObjectById(SQUARE_MESH_IDS[sq]);
                 var highlightMesh = null;
@@ -1485,22 +1578,35 @@
                         DRAG_INFO.piece,
                         deepCopy(CURRENT_POSITION),
                         CURRENT_ORIENTATION) === false) {
-                    DRAG_INFO = null;
                     return;
                 }
                 if (validSpareSquare(DRAG_INFO.source)) {
                     // dragging a spare piece
+                    console.log('spare')
                     DRAG_INFO.mesh = DRAG_INFO.mesh.clone();
                     DRAG_INFO.mesh.position.y = 0; // lift spare piece onto the board
                     SCENE.add(DRAG_INFO.mesh);
                     RENDER_FLAG = true;
                 } else if (validOrdinarySquare(DRAG_INFO.source)) {
                     // dragging an ordinary piece
+                    console.log('1525-spare');
+                    dragUpdate = 0;
+                    //DRAG_INFO.mesh.position.y = 5;
                     highlightSourceSquare(DRAG_INFO.source);
                 }
             }
 
             function updateDraggedPiece(mouse_x, mouse_y) {
+                dragUpdate += 1;
+                // console.log(dragUpdate);
+                // console.log(DRAG_INFO.piece)
+                // console.log(DRAG_INFO.mesh)
+                // console.log(DRAG_INFO.mesh.children[0])
+                var anAm = 0.4;
+                var anPer = 0.2;
+                DRAG_INFO.mesh.children[0].position.z = anAm*Math.sin(dragUpdate*anPer);
+                DRAG_INFO.mesh.children[1].position.z = -1*anAm*Math.sin(dragUpdate*anPer);
+
                 var priorLocation = DRAG_INFO.location;
                 updateLocation(DRAG_INFO, mouse_x, mouse_y);
                 //DRAG_INFO.updateLocation(mouse_x, mouse_y);
@@ -1564,6 +1670,7 @@
                 if (CAMERA_CONTROLS) {
                     CAMERA_CONTROLS.enabled = true;
                 }
+
                 RENDER_FLAG = true;
                 removeSquareHighlights();
             }
@@ -1596,6 +1703,19 @@
                 return widget.orientation('flip');
             };
 
+            widget.renderer = function() { return RENDERER;};
+            widget.scene = function() { return SCENE;};
+            widget.camera = function() { return CAMERA;};
+            widget.leg = function (){
+                var pataGeometry = GEOMETRIES['LEG'];
+                var pataMesh = new THREE.Mesh(pataGeometry, material);
+                return pataMesh;
+            }
+            widget.arm = function (){
+                var brazoGeometry = GEOMETRIES['ARM'];
+                var brazoMesh = new THREE.Mesh(brazoGeometry, material);
+                return brazoMesh;
+            }
             // highlight a square from client code
             widget.greySquare = function(sq) {
                 USER_HIGHLIGHT_MESHES.push(addSquareHighlight(sq, 0x404040));
@@ -1708,11 +1828,12 @@
                 }
 
                 var doDrawing = function() {
-                    if (useAnimation) {
+                    if (useAnimation === true && window.TWEEN !== undefined && typeof TWEEN === 'object') {
                         var anims = calculateAnimations(CURRENT_POSITION, position);
                         doAnimations(anims, CURRENT_POSITION, position); // invokes setCurrentPosition() from a callback
                     } else {
                         // instant update
+                        console.log('heara-1740');
                         setCurrentPosition(position);
                         drawPositionInstant();
                         RENDER_FLAG = true;
@@ -1737,11 +1858,15 @@
 
             widget.resize = function() {
                 var w = containerEl.clientWidth;
+                w &= 0xFFFC; // shrink to mod 4
+                var h = w * ASPECT_RATIO;
+                containerEl.style.width = w;
+                containerEl.style.height = h;
                 if (CAMERA) {
                     CAMERA.updateProjectionMatrix();
                 }
                 if (RENDERER) {
-                    RENDERER.setSize(w, w * ASPECT_RATIO);
+                    RENDERER.setSize(containerEl.clientWidth, containerEl.clientHeight);
                 }
                 RENDER_FLAG = true;
             };
@@ -1776,6 +1901,7 @@
             }
 
             function mouseDown(e, useTouchObject) {
+                console.log('heara-1808')
                 e.preventDefault();
                 if (DRAG_INFO) {
                     return;
@@ -1789,6 +1915,7 @@
                     DRAG_INFO = dragged;
                     MOUSEOVER_SQUARE = 'offboard';
                     beginDraggingPiece();
+                    console.log('heara-1822')
                 } else {
                     if (CAMERA_CONTROLS) {
                         CAMERA_CONTROLS.enabled = true;
@@ -1881,7 +2008,9 @@
                     && GEOMETRIES.B !== undefined
                     && GEOMETRIES.R !== undefined
                     && GEOMETRIES.Q !== undefined
-                    && GEOMETRIES.K !== undefined;
+                    && GEOMETRIES.K !== undefined
+                    && GEOMETRIES.LEG !== undefined
+                    && GEOMETRIES.ARM !== undefined;
             }
 
             function init() {
@@ -1889,6 +2018,17 @@
                     expandConfig() !== true) {
                     return;
                 }
+                var pxWidth = DEFAULT_WIDTH;
+                if (containerEl.style.width && containerEl.style.width.match(/px/)) {
+                    pxWidth = parseInt(containerEl.style.width.replace(/px/, ''));
+                }
+                var pxHeight = pxWidth * 3 / 4;
+                if (!containerEl.style.height && containerEl.style.height.match(/px/)) {
+                    pxHeight = Math.max(pxHeight, parseInt(containerEl.style.height.replace(/px/, '')));
+                }
+                containerEl.style.width = pxWidth.toString() + 'px';
+                containerEl.style.height = pxHeight.toString() + 'px';
+
                 widget.resize();
                 prepareScene();
                 buildBoard();
@@ -1898,6 +2038,8 @@
                 loadGeometry('B');
                 loadGeometry('N');
                 loadGeometry('P');
+                loadGeometry('LEG');
+                loadGeometry('ARM');
 
                 function checkInitialization() {
                     if (checkGeometriesLoaded()) {
@@ -1909,9 +2051,14 @@
                 }
                 checkInitialization();
 
+
+
                 function animate() {
                     requestAnimationFrame(animate);
-                    updateAllTweens();
+
+                    if (window.TWEEN !== undefined && typeof window.TWEEN === 'object') {
+                        TWEEN.update();
+                    }
                     var cameraPosition = CAMERA.position.clone();
                     if (CAMERA_CONTROLS && CAMERA_CONTROLS.enabled) {
                         CAMERA_CONTROLS.update();
@@ -1971,6 +2118,81 @@
                 }
             }
             init();
+            var tqr = 0;
+            var finishedZ = false;
+            var finishedX = false;
+            var killedPieceDown = false;
+            function mouselessLoop() {
+                var finalPosZ = Math.PI/2;
+                var finalPosX = Math.PI*1.95;
+                var negFinalPosX = -1*Math.PI + Math.PI*0.95;
+                if (killFlag) {
+                        var color = drag_cache.piece.charAt(0);
+                        console.log(killed_mesh.rotation.z)
+                        tqr = Math.PI/32;
+                        if (drag_cache.mesh.children[2].rotation.z >= finalPosZ) {
+                            finishedZ = true;
+                        }
+                        if (Math.abs(drag_cache.mesh.children[2].rotation.x) <= Math.abs(negFinalPosX) && drag_cache.mesh.children[2].rotation.x<-0.0001  ) {
+                            finishedX = true;
+                        }
+                        if (color=='w') {
+                        if (Math.abs(killed_mesh.rotation.z) >= Math.abs(finalPosZ)) {
+                            killedPieceDown = true;
+                        } }else {
+                            if (killed_mesh.rotation.z <= Math.abs(finalPosZ) && killed_mesh.rotation.z!=0) {
+                                killedPieceDown = true;
+                        }
+                      }
+
+
+                        if (!killedPieceDown) {
+                            if (color=='w') {
+                                console.log('Black falling')
+                            killed_mesh.rotateZ(tqr);
+                        } else {
+                            console.log('White falling')
+                            killed_mesh.rotateZ(-tqr);
+                            }
+                        }
+
+                        if (!finishedX && !finishedZ) {
+                          // console.log('Rotating Z')
+                            drag_cache.mesh.children[2].rotateZ(tqr);
+                            //drag_cache.mesh.children[2].rotateX(tqr);
+                        } else if (finishedX && !finishedZ) {
+                         //  console.log('Should not be here')
+                            drag_cache.mesh.children[2].rotateZ(tqr);
+                        } else if (!finishedX && finishedZ) {
+                            //console.log('Rotating X')
+
+                            if (color=='w') {
+                            drag_cache.mesh.children[2].rotateX(-tqr);
+                            } else {
+                            drag_cache.mesh.children[2].rotateX(-tqr);
+                            }
+                        } else if (finishedX && finishedZ){
+                            // Finished animation
+                            //console.log('Finished')
+                                killFlag = false;
+                                tqr = 0;
+                                finishedX = false;
+                                finishedZ = false;
+                                drag_cache.mesh.children[2].rotateX(-finalPosX);
+                                drag_cache.mesh.children[2].rotateZ(-finalPosZ);
+
+                                SCENE.remove(killed_mesh);
+                                killedPieceDown = false;
+
+                        } else {
+                            console.log('Wut')
+                        }
+
+                }
+                RENDERER.render(SCENE,CAMERA);
+            setTimeout(mouselessLoop, 6);
+            };
+            mouselessLoop();
             return widget;
         };
 
