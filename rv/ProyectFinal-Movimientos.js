@@ -1,4 +1,3 @@
-
 var cursor = 0;
 var moveList = [], scoreList =[];
 var game = new Chess(),
