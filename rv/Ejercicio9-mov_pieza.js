@@ -1,8 +1,6 @@
 var camara,escena,renderizador;
-var torre1,torre2,torre3,torre4;
-var rey1,rey2,rey3;
-var peonn1,peonn2,peonn3,peonn4,peonn5,peonn6,peonn7,peonn8;
-var peonb1,peonb2,peonb3,peonb4,peonb5,peonb6,peonb7,peonb8;
+var torre1;
+
 var malla1,malla2,malla3,grupo1,grupo2,grupo3;
 
 //
