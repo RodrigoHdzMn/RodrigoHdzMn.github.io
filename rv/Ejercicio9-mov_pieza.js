@@ -17,11 +17,11 @@ function init(){
   escena.rotateX(Math.PI*0.7);
 
   //Textura
-    var textura1 = new THREE.TextureLoader().load('marmolblanco.jpg');
-    var textura2 = new THREE.TextureLoader().load('marmolnegro.jpg');
-    var textura3 = new THREE.TextureLoader().load('ceramicablanca.jpg');
-    var textura4 = new THREE.TextureLoader().load('ceramicanegra.jpg');
-    var textura5 = new THREE.TextureLoader().load('madera.jpg');
+    var textura1 = new THREE.TextureLoader().load('Textura_madera.jpg');
+    var textura2 = new THREE.TextureLoader().load('Textura_madera_oscura.jpg');
+    var textura3 = new THREE.TextureLoader().load('Textura_marmol_blanco.jpg');
+    var textura4 = new THREE.TextureLoader().load('Textura_marmol_negro.jpg');
+    var textura5 = new THREE.TextureLoader().load('Textura_madera_cafe.jpg');
     
     var marmolblanco = new THREE.MeshBasicMaterial({map:textura1});
     var marmolnegro = new THREE.MeshBasicMaterial({map:textura2});
