@@ -1,4 +1,4 @@
-ar camara,escena,renderizador;
+var camara,escena,renderizador;
 var torre1,torre2,torre3,torre4;
 var rey1,rey2,rey3;
 var peonn1,peonn2,peonn3,peonn4,peonn5,peonn6,peonn7,peonn8;
