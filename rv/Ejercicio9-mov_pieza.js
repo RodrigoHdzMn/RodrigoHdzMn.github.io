@@ -129,7 +129,7 @@ torre1=new THREE.Mesh(torreForma,marmolblanco);
     torre1.rotateX(-Math.PI/2);
 
 //Tablero
- var cubo=new THREE.BoxGeometry(10,0.1,10);
+ var cubo=new THREE.BoxGeometry(10,10,0.1);
  grupo1=new THREE.Group();
  grupo2=new THREE.Group();
    var k=0;
