@@ -194,7 +194,7 @@ torre1=new THREE.Mesh(torreForma,marmolblanco);
   
   escena.add(torre1,grupo1,grupo2,grupo3,grupo4);
   renderizador = new THREE.WebGLRenderer();
-  renderizador.setSize( window.innerHeight*.95, window.innerHeight*.95 );
+  renderizador.setSize( window.innerHeight*.85, window.innerHeight*.85 );
   document.body.appendChild(renderizador.domElement);
   }
   
