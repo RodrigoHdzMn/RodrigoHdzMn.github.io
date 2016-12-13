@@ -883,7 +883,7 @@
                     }
                     SCENE.add(light);
                 }
-                var ambientLight = new THREE.AmbientLight(0x555555);
+                var ambientLight = new THREE.AmbientLight(0xFFFFFF);
                 SCENE.add(ambientLight);
             }
 
