@@ -716,7 +716,8 @@
                     if (color === 'w') {
                         material = WHITE_MATERIAL.clone();
                     } else if (color === 'b') {
-                        material = BLACK_MATERIAL.clone();
+                      material = BLACK_MATERIAL;
+                       // material = BLACK_MATERIAL.clone();
                     }
 
 
