@@ -298,7 +298,7 @@
             if (cfg.hasOwnProperty('blackPieceSpecular') && typeof cfg.blackPieceSpecular === 'number') {
                 blackPieceSpecular = cfg.blackPieceSpecular;
             }
-            BLACK_MATERIAL.s pecular = new THREE.Color(blackPieceSpecular);
+            BLACK_MATERIAL.specular = new THREE.Color(blackPieceSpecular);
            BLACK_MATERIAL.transparent = true;
 
             var textColor = 0x000000;
