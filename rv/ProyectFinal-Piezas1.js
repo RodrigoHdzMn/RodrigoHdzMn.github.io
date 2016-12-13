@@ -253,12 +253,12 @@
             var CAMERA_POSITION_BLACK = new THREE.Vector3(0,
                 CAMERA_DISTANCE * Math.cos(CAMERA_POLAR_ANGLE),
                 -CAMERA_DISTANCE * Math.sin(CAMERA_POLAR_ANGLE));
-/*
+
             var whitePieceColor = 0xFFFFFF;
             if (cfg.hasOwnProperty('whitePieceColor') && typeof cfg.whitePieceColor === 'number') {
                 whitePieceColor = cfg.whitePieceColor;
             }
-            var WHITE_MATERIAL = new THREE.MeshPhongMaterial({color: new THREE.Color(whitePieceColor)});*/
+            var WHITE_MATERIAL = new THREE.MeshPhongMaterial({color: new THREE.Color(whitePieceColor)});
 //////////////////////////////////////////////////////
 
              var fnWhite = function(textura) {
