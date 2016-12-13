@@ -3485,7 +3485,7 @@ function setup(){
 	
    camara = new THREE.PerspectiveCamera();
    camara.position.y = 120;
-   camara.position.x = 35;
+   camara.position.x = 40;
    camara.position.z = 200;
    camara.lookAt(new THREE.Vector3(40, 0, 40));
 
@@ -3520,7 +3520,7 @@ function setup(){
    y = 0;
    z = 0;
    var lado = 10;
-   var forma = new THREE.BoxBufferGeometry(lado,lado,lado);
+   var forma = new THREE.BoxBufferGeometry(lado,0.1,lado);
    cubos = [];
    var material = Blanco;
    
