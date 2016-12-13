@@ -13,7 +13,7 @@ var objetivo, referencia, indicador=0;
 //Texturas
 var Gris = new THREE.MeshLambertMaterial({ map: THREE.ImageUtils.loadTexture('Textura_marmol_negro.jpg') });
 var Blanco = new THREE.MeshLambertMaterial({ map: THREE.ImageUtils.loadTexture('Textura_marmol_blanco.jpg') });
-var Marco = new THREE.MeshLambertMaterial({ map: THREE.ImageUtils.loadTexture('Textura_madera_oscura.jpg') });
+var Marco = new THREE.MeshLambertMaterial({ map: THREE.ImageUtils.loadTexture('Textura_madera_cafe.jpg	') });
 var GrisLiso = new THREE.MeshLambertMaterial({color: 0xD3D3D3});
 var BlancoLiso = new THREE.MeshLambertMaterial({color: 0xFFFFFF});
 
