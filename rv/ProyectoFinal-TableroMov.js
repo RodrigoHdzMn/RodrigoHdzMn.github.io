@@ -3631,7 +3631,7 @@ function setup(){
 	referencia = new Referencia(5, 0, 75); 
 	
 	escena.add(referencia);
-	escena.add(luzPuntual1, luzPuntual2, luzPuntual3, luzPuntual4);
+	//escena.add(luzPuntual1, luzPuntual2, luzPuntual3, luzPuntual4);
    	
 }
 
