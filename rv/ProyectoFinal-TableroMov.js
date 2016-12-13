@@ -3541,7 +3541,7 @@ function setup(){
        }
    }
 
-   orilla1 = new THREE.BoxGeometry( 90, 10, 0.1 ); //Superior
+   orilla1 = new THREE.BoxGeometry( 90, 0.1, 5); //Superior
    var material1 = Marco;
    marco1 = new THREE.Mesh( orilla1, material1 );
    marco1.translateZ(-2.5+z);
@@ -3549,7 +3549,7 @@ function setup(){
    marco1.translateY(y);
    marco1.receiveShadow = true;
 
-   orilla2 = new THREE.BoxGeometry( 0.1, 10, 90 ); //Derecha
+   orilla2 = new THREE.BoxGeometry( 5, 0.1, 90 ); //Derecha
    var material2 = Marco;
    marco2 = new THREE.Mesh( orilla2, material2);
    marco2.translateZ(40+z);
@@ -3557,7 +3557,7 @@ function setup(){
    marco2.translateY(y);
    marco2.receiveShadow = true;
 
-   orilla3 = new THREE.BoxGeometry( 90, 10, 0.1 ); //Izquierda
+   orilla3 = new THREE.BoxGeometry( 90, 0.1, 5 ); //Izquierda
    var material3 = Marco;
    marco3 = new THREE.Mesh( orilla3, material3);
    marco3.translateZ(82.5+z);
@@ -3565,7 +3565,7 @@ function setup(){
    marco3.translateY(y);
    marco3.receiveShadow = true;
 
-   orilla4 = new THREE.BoxGeometry(0.1, 10, 80 ); //Baja
+   orilla4 = new THREE.BoxGeometry(5, 0.1, 80 ); //Baja
    var material4 = Marco;
    marco4 = new THREE.Mesh( orilla4, material4);
    marco4.translateZ(40+z);
