@@ -221,7 +221,7 @@ Objetivo.prototype = new Agent();
 function Referencia(x=0,y=0,z=0){
   Agent.call(this,x,y,z);
   var texturaReferencia = new THREE.MeshLambertMaterial({color: 0x00ff00});
-  this.add(new THREE.Mesh(new THREE.BoxGeometry(10, 10, 10), texturaReferencia));
+  this.add(new THREE.Mesh(new THREE.BoxGeometry(10, 0.2, 10), texturaReferencia));
   this.position.y=y;
   this.position.z=z;
   this.position.x=x;
@@ -3484,7 +3484,7 @@ function setup(){
    escena = new Environment();
 	
    camara = new THREE.PerspectiveCamera();
-   camara.position.y = 120;
+   camara.position.y = 100;
    camara.position.x = 40;
    camara.position.z = 200;
    camara.lookAt(new THREE.Vector3(40, 0, 40));
