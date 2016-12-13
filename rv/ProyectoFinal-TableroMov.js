@@ -3490,9 +3490,9 @@ function setup(){
    camara.lookAt(new THREE.Vector3(30, 0, 30));
 
    var luzPuntual1 = new THREE.PointLight(0xFFFFFF,1);
-   luzPuntual1.position.x = 10;
-   luzPuntual1.position.y = 300;
-   luzPuntual1.position.z = 10;
+   luzPuntual1.position.x = 25;
+   luzPuntual1.position.y = 200;
+   luzPuntual1.position.z = 50;
 	
    var luzPuntual2 = new THREE.PointLight(0xFFFFFF,1);
    luzPuntual2.position.x = 50;
