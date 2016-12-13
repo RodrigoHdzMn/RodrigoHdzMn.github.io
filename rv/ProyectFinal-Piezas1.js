@@ -258,7 +258,7 @@
             if (cfg.hasOwnProperty('whitePieceColor') && typeof cfg.whitePieceColor === 'number') {
                 whitePieceColor = cfg.whitePieceColor;
             }
-           // var WHITE_MATERIAL = new THREE.MeshPhongMaterial({color: new THREE.Color(whitePieceColor)});
+            var WHITE_MATERIAL = new THREE.MeshPhongMaterial({color: new THREE.Color(whitePieceColor)});
 //////////////////////////////////////////////////////
 
              var fnWhite = function(textura) {
@@ -274,8 +274,8 @@
             if (cfg.hasOwnProperty('whitePieceSpecular') && typeof cfg.whitePieceSpecular === 'number') {
                 whitePieceSpecular = cfg.whitePieceSpecular;
             }
-     //       WHITE_MATERIAL.specular = new THREE.Color(whitePieceSpecular);
-     //       WHITE_MATERIAL.transparent = true;
+            WHITE_MATERIAL.specular = new THREE.Color(whitePieceSpecular);
+            WHITE_MATERIAL.transparent = true;
 
             var blackPieceColor = 0x000000;
             if (cfg.hasOwnProperty('blackPieceColor') && typeof cfg.blackPieceColor === 'number') {
@@ -298,8 +298,8 @@
             if (cfg.hasOwnProperty('blackPieceSpecular') && typeof cfg.blackPieceSpecular === 'number') {
                 blackPieceSpecular = cfg.blackPieceSpecular;
             }
-          //  BLACK_MATERIAL.specular = new THREE.Color(blackPieceSpecular);
-           // BLACK_MATERIAL.transparent = true;
+            BLACK_MATERIAL.specular = new THREE.Color(blackPieceSpecular);
+            BLACK_MATERIAL.transparent = true;
 
             var textColor = 0x000000;
             if (cfg.hasOwnProperty('notationColor') && typeof cfg.notationColor === 'number') {
