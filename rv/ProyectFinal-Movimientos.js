@@ -32,9 +32,9 @@ function updateStatus() {
 
         // El juego continua
         else {
-
+             /*
             status += 'Mueven ' + moveColor;
-                alert("¡BIENVENIDO!");
+                alert("¡BIENVENIDO!"); */
             // Jaque?
             if (game.in_check() === true) {
                 status += ' ' + moveColor + ' esta en jaque.';      
