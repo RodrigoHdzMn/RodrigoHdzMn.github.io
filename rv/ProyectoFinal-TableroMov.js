@@ -11,11 +11,11 @@ var material;
 var objetivo, referencia, indicador=0;
 
 //Texturas
-var Gris = new THREE.MeshLambertMaterial({ map: THREE.ImageUtils.loadTexture('Textura_madera_oscura.jpg') });
-var Blanco = new THREE.MeshLambertMaterial({ map: THREE.ImageUtils.loadTexture('Textura_madera.jpg') });
-var Marco = new THREE.MeshLambertMaterial({ map: THREE.ImageUtils.loadTexture('Textura_madera_cafe.jpg	') });
-var MarmolBlanco = new THREE.MeshLambertMaterial({ map: THREE.ImageUtils.loadTexture('Textura_marmol_blanco.jpg	') });
-var MarmolNegro = new THREE.MeshLambertMaterial({ map: THREE.ImageUtils.loadTexture('Textura_marmol_negro.jpg	') });
+var Gris = new THREE.MeshBasicMaterial({ map: THREE.ImageUtils.loadTexture('Textura_madera_oscura.jpg') });
+var Blanco = new THREE.MeshBasicMaterial({ map: THREE.ImageUtils.loadTexture('Textura_madera.jpg') });
+var Marco = new THREE.MeshBasicMaterial({ map: THREE.ImageUtils.loadTexture('Textura_madera_cafe.jpg	') });
+var MarmolBlanco = new THREE.MeshBasicMaterial({ map: THREE.ImageUtils.loadTexture('Textura_marmol_blanco.jpg	') });
+var MarmolNegro = new THREE.MeshBasicMaterial({ map: THREE.ImageUtils.loadTexture('Textura_marmol_negro.jpg	') });
 var GrisLiso = new THREE.MeshLambertMaterial({color: 0xD3D3D3});
 var BlancoLiso = new THREE.MeshLambertMaterial({color: 0xFFFFFF});
 
@@ -138,7 +138,7 @@ function PeonBlanco(x=0,y=0,z=0){
 //AlfilNegro
 function AlfilNegro(x=0,y=0,z=0){
 	Agent.call(this,x,y,z);
-	this.actuator = new THREE.Mesh(torreForma, Gris);
+	this.actuator = new THREE.Mesh(alfilForma, Gris);
 	this.actuator.commands = [];
 	this.add(this.actuator);
 	this.position.y=y;
@@ -151,7 +151,7 @@ function AlfilNegro(x=0,y=0,z=0){
 //AlfilBlanco
 function AlfilBlanco(x=0,y=0,z=0){
 	Agent.call(this,x,y,z); 
-	this.actuator = new THREE.Mesh(torreForma, Blanco);
+	this.actuator = new THREE.Mesh(alfilForma, Blanco);
 	this.actuator.commands = [];
 	this.add(this.actuator);
 	this.position.y=y;
