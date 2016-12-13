@@ -3521,7 +3521,6 @@ function setup(){
    z = 0;
    var lado = 10;
    var forma = new THREE.BoxBufferGeometry(lado,0.1,lado);
-	forma.position.y=9.9;
    cubos = [];
    var material = Blanco;
    
@@ -3536,7 +3535,7 @@ function setup(){
        cubo = new THREE.Mesh(forma ,material);
        cubo.position.x = j*lado+5+x;
        cubo.position.z = i*lado+5+z;
-       cubo.position.y = y;
+       cubo.position.y = 9.9;
        cubos.push(cubo)
 
        }
