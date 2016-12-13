@@ -138,7 +138,7 @@ function PeonBlanco(x=0,y=0,z=0){
 //AlfilNegro
 function AlfilNegro(x=0,y=0,z=0){
 	Agent.call(this,x,y,z);
-	this.actuator = new THREE.Mesh(bishop, Gris);
+	this.actuator = new THREE.Mesh(alfilForma, Gris);
 	this.actuator.commands = [];
 	this.add(this.actuator);
 	this.position.y=y;
@@ -151,7 +151,7 @@ function AlfilNegro(x=0,y=0,z=0){
 //AlfilBlanco
 function AlfilBlanco(x=0,y=0,z=0){
 	Agent.call(this,x,y,z); 
-	this.actuator = new THREE.Mesh(bishop, Blanco);
+	this.actuator = new THREE.Mesh(alfilForma, Blanco);
 	this.actuator.commands = [];
 	this.add(this.actuator);
 	this.position.y=y;
