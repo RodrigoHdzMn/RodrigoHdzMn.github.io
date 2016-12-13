@@ -253,12 +253,12 @@
             var CAMERA_POSITION_BLACK = new THREE.Vector3(0,
                 CAMERA_DISTANCE * Math.cos(CAMERA_POLAR_ANGLE),
                 -CAMERA_DISTANCE * Math.sin(CAMERA_POLAR_ANGLE));
-
+/*
             var whitePieceColor = 0xFFFFFF;
             if (cfg.hasOwnProperty('whitePieceColor') && typeof cfg.whitePieceColor === 'number') {
                 whitePieceColor = cfg.whitePieceColor;
             }
-            var WHITE_MATERIAL = new THREE.MeshPhongMaterial({color: new THREE.Color(whitePieceColor)});
+            var WHITE_MATERIAL = new THREE.MeshPhongMaterial({color: new THREE.Color(whitePieceColor)});*/
 //////////////////////////////////////////////////////
 
              var fnWhite = function(textura) {
@@ -293,7 +293,7 @@
              cargadorBlack.load("Textura_madera_oscura.jpg",
                            fnBlack);
 //////////////////////////////////////////////////////
-/*
+
             var blackPieceSpecular = 0x553333;
             if (cfg.hasOwnProperty('blackPieceSpecular') && typeof cfg.blackPieceSpecular === 'number') {
                 blackPieceSpecular = cfg.blackPieceSpecular;
@@ -307,7 +307,7 @@
             }
             var textMaterial = new THREE.MeshBasicMaterial({color: new THREE.Color(textColor)});
             textMaterial.transparent = true;
-*/
+
             var RANK_1_TEXT_MATERIAL = textMaterial.clone();
             var RANK_8_TEXT_MATERIAL = textMaterial.clone();
             var FILE_A_TEXT_MATERIAL = textMaterial.clone();
