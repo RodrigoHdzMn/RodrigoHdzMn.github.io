@@ -258,7 +258,7 @@
             if (cfg.hasOwnProperty('whitePieceColor') && typeof cfg.whitePieceColor === 'number') {
                 whitePieceColor = cfg.whitePieceColor;
             }
-            var WHITE_MATERIAL = new THREE.MeshPhongMaterial({color: new THREE.Color(whitePieceColor)});
+           // var WHITE_MATERIAL = new THREE.MeshPhongMaterial({color: new THREE.Color(whitePieceColor)});
 //////////////////////////////////////////////////////
 
              var fnWhite = function(textura) {
