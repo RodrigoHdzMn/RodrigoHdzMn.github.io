@@ -3487,7 +3487,7 @@ function setup(){
    camara.position.y = 150;
    camara.position.x = 40;
    camara.position.z = 100;
-   camara.lookAt(new THREE.Vector3(20, 0, 20));
+   camara.lookAt(new THREE.Vector3(30, 0, 30));
 
    var luzPuntual1 = new THREE.PointLight(0xFFFFFF,1);
    luzPuntual1.position.x = 10;
@@ -3495,9 +3495,9 @@ function setup(){
    luzPuntual1.position.z = 10;
 	
    var luzPuntual2 = new THREE.PointLight(0xFFFFFF,1);
-   luzPuntual2.position.x = 90;
-   luzPuntual2.position.y = 300;
-   luzPuntual2.position.z = 10;
+   luzPuntual2.position.x = 50;
+   luzPuntual2.position.y =25;
+   luzPuntual2.position.z = 200;
 
 	
    var luzPuntual3 = new THREE.PointLight(0xFFFFFF,1);
