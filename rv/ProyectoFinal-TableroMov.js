@@ -3521,6 +3521,7 @@ function setup(){
    z = 0;
    var lado = 10;
    var forma = new THREE.BoxBufferGeometry(lado,0.1,lado);
+	forma.translate.y=9.9;
    cubos = [];
    var material = Blanco;
    
