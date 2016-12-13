@@ -379,7 +379,7 @@
 
 
 
-var Tb=0.8*2;//tamaño base
+var Tb=0.8*3;//tamaño base
 	var altura1=Tb/4;
 	var baseForma= new THREE.CylinderGeometry(Tb, Tb, altura1,60 );//dia.sup, dia.inf, altura
       	baseForma.translate(0,0,0);
@@ -515,7 +515,7 @@ var Tb=0.8*2;//tamaño base
   bishop.merge(mbola2.geometry,mbola2.matrix);
 */
 
-var Tb=0.8*2;//tamaño base
+var Tb=0.8*4.5;//tamaño base
         var altura1=Tb/4;
         var baseForma= new THREE.CylinderGeometry(Tb, Tb*1.25, altura1,60 );//dia.sup, dia.inf, altura
         baseForma.translate(0,0,0);
@@ -712,7 +712,7 @@ var Tb=0.8*2;//tamaño base
   rook.merge(mpiedra6.geometry,mpiedra6.matrix);
 */
 
-var Tb=0.8*2;//tamaño base
+var Tb=0.8*5;//tamaño base
 	var altura1=Tb/4;
 	var baseForma= new THREE.CylinderGeometry(Tb, Tb, altura1,60 );//dia.sup, dia.inf, altura
 	baseForma.translate(0,0,0);
