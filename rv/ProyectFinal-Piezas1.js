@@ -293,7 +293,7 @@
              cargadorBlack.load("Textura_madera_oscura.jpg",
                            fnBlack);
 //////////////////////////////////////////////////////
-
+/*
             var blackPieceSpecular = 0x553333;
             if (cfg.hasOwnProperty('blackPieceSpecular') && typeof cfg.blackPieceSpecular === 'number') {
                 blackPieceSpecular = cfg.blackPieceSpecular;
@@ -307,7 +307,7 @@
             }
             var textMaterial = new THREE.MeshBasicMaterial({color: new THREE.Color(textColor)});
             textMaterial.transparent = true;
-
+*/
             var RANK_1_TEXT_MATERIAL = textMaterial.clone();
             var RANK_8_TEXT_MATERIAL = textMaterial.clone();
             var FILE_A_TEXT_MATERIAL = textMaterial.clone();
