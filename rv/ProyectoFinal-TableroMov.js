@@ -3535,13 +3535,13 @@ function setup(){
        cubo = new THREE.Mesh(forma ,material);
        cubo.position.x = j*lado+5+x;
        cubo.position.z = i*lado+5+z;
-       cubo.position.y = 5;
+       cubo.position.y = y;
        cubos.push(cubo)
 
        }
    }
 
-   orilla1 = new THREE.BoxGeometry( 90, 10, 5 ); //Superior
+   orilla1 = new THREE.BoxGeometry( 90, 10, 0.1 ); //Superior
    var material1 = Marco;
    marco1 = new THREE.Mesh( orilla1, material1 );
    marco1.translateZ(-2.5+z);
@@ -3549,7 +3549,7 @@ function setup(){
    marco1.translateY(y);
    marco1.receiveShadow = true;
 
-   orilla2 = new THREE.BoxGeometry( 5, 10, 90 ); //Derecha
+   orilla2 = new THREE.BoxGeometry( 0.1, 10, 90 ); //Derecha
    var material2 = Marco;
    marco2 = new THREE.Mesh( orilla2, material2);
    marco2.translateZ(40+z);
@@ -3557,7 +3557,7 @@ function setup(){
    marco2.translateY(y);
    marco2.receiveShadow = true;
 
-   orilla3 = new THREE.BoxGeometry( 90, 10, 5 ); //Izquierda
+   orilla3 = new THREE.BoxGeometry( 90, 10, 0.1 ); //Izquierda
    var material3 = Marco;
    marco3 = new THREE.Mesh( orilla3, material3);
    marco3.translateZ(82.5+z);
@@ -3565,7 +3565,7 @@ function setup(){
    marco3.translateY(y);
    marco3.receiveShadow = true;
 
-   orilla4 = new THREE.BoxGeometry( 5, 10, 80 ); //Baja
+   orilla4 = new THREE.BoxGeometry(0.1, 10, 80 ); //Baja
    var material4 = Marco;
    marco4 = new THREE.Mesh( orilla4, material4);
    marco4.translateZ(40+z);
@@ -3581,53 +3581,53 @@ function setup(){
       escena.add(cubos[q]);
    }
 
-	reyNegro = new ReyNegro(45, 10, 5);
-  	reyBlanco = new ReyBlanco(45, 10, 75);
+	reyNegro = new ReyNegro(45, 0, 5);
+  	reyBlanco = new ReyBlanco(45, 0, 75);
 	escena.add(reyNegro, reyBlanco);
-   	reinaNegra = new ReinaNegra(35, 10, 5);
-	reinaBlanca = new ReinaBlanca(35, 10, 75);
+   	reinaNegra = new ReinaNegra(35, 0, 5);
+	reinaBlanca = new ReinaBlanca(35, 0, 75);
    	escena.add(reinaNegra, reinaBlanca);
-   	caballoNegro1 = new CaballoNegro(15, 10, 5);
-   	caballoBlanco1 = new CaballoBlanco(15, 10, 75); 
-   	caballoNegro2 = new CaballoNegro(65, 10, 5);
-   	caballoBlanco2 = new CaballoBlanco(65, 10, 75); 
+   	caballoNegro1 = new CaballoNegro(15, 0, 5);
+   	caballoBlanco1 = new CaballoBlanco(15, 0, 75); 
+   	caballoNegro2 = new CaballoNegro(65, 0, 5);
+   	caballoBlanco2 = new CaballoBlanco(65, 0, 75); 
    	escena.add(caballoNegro1, caballoBlanco1);
    	escena.add(caballoNegro2, caballoBlanco2);
-   	peonNegro1 = new PeonNegro(5, 10, 15);
-   	peonBlanco1 = new PeonBlanco(5, 10, 65); 
+   	peonNegro1 = new PeonNegro(5, 0, 15);
+   	peonBlanco1 = new PeonBlanco(5, 0, 65); 
    	escena.add(peonNegro1, peonBlanco1);
-   	peonNegro2 = new PeonNegro(15, 10, 15);
-   	peonBlanco2 = new PeonBlanco(15, 10, 65); 
+   	peonNegro2 = new PeonNegro(15, 0, 15);
+   	peonBlanco2 = new PeonBlanco(15, 0, 65); 
    	escena.add(peonNegro2, peonBlanco2);
-   	peonNegro3 = new PeonNegro(25, 10, 15);
-   	peonBlanco3 = new PeonBlanco(25, 10, 65); 
+   	peonNegro3 = new PeonNegro(25, 0, 15);
+   	peonBlanco3 = new PeonBlanco(25, 0, 65); 
    	escena.add(peonNegro3, peonBlanco3);
-   	peonNegro4 = new PeonNegro(35, 10, 15);
-   	peonBlanco4 = new PeonBlanco(35, 10, 65); 
+   	peonNegro4 = new PeonNegro(35, 0, 15);
+   	peonBlanco4 = new PeonBlanco(35, 0, 65); 
    	escena.add(peonNegro4, peonBlanco4);
-   	peonNegro5 = new PeonNegro(45, 10, 15);
-   	peonBlanco5 = new PeonBlanco(45, 10, 65); 
+   	peonNegro5 = new PeonNegro(45, 0, 15);
+   	peonBlanco5 = new PeonBlanco(45, 0, 65); 
    	escena.add(peonNegro5, peonBlanco5);
-   	peonNegro6 = new PeonNegro(55, 10, 15);
-   	peonBlanco6 = new PeonBlanco(55, 10, 65); 
+   	peonNegro6 = new PeonNegro(55,0, 15);
+   	peonBlanco6 = new PeonBlanco(55, 0, 65); 
    	escena.add(peonNegro6, peonBlanco6);
-   	peonNegro7 = new PeonNegro(65, 10, 15);
-   	peonBlanco7 = new PeonBlanco(65, 10, 65); 
+   	peonNegro7 = new PeonNegro(65, 0, 15);
+   	peonBlanco7 = new PeonBlanco(65, 0, 65); 
    	escena.add(peonNegro7, peonBlanco7);
-   	peonNegro8 = new PeonNegro(75, 10, 15);
-   	peonBlanco8 = new PeonBlanco(75, 10, 65); 
+   	peonNegro8 = new PeonNegro(75, 0, 15);
+   	peonBlanco8 = new PeonBlanco(75, 0, 65); 
    	escena.add(peonNegro8, peonBlanco8);
-   	alfilNegro1 = new PeonNegro(25, 10, 5);
-   	alfilBlanco1 = new PeonBlanco(25, 10, 75); 
+   	alfilNegro1 = new PeonNegro(25, 0, 5);
+   	alfilBlanco1 = new PeonBlanco(25, 0, 75); 
    	escena.add(alfilNegro1, alfilBlanco1);
-   	alfilNegro2 = new PeonNegro(55, 10, 5);
-   	alfilBlanco2 = new PeonBlanco(55, 10, 75); 
+   	alfilNegro2 = new PeonNegro(55, 0, 5);
+   	alfilBlanco2 = new PeonBlanco(55, 0, 75); 
    	escena.add(alfilNegro2, alfilBlanco2);
-   	torreNegra1 = new TorreNegra(5, 10, 5);
-	torreBlanca1 = new TorreBlanca(5, 10, 75);
+   	torreNegra1 = new TorreNegra(5, 0, 5);
+	torreBlanca1 = new TorreBlanca(5, 0, 75);
    	escena.add(torreNegra1, torreBlanca1);
-   	torreNegra2 = new TorreNegra(75, 10, 5);
-	torreBlanca2 = new TorreBlanca(75, 10, 75);
+   	torreNegra2 = new TorreNegra(75, 0, 5);
+	torreBlanca2 = new TorreBlanca(75, 0, 75);
    	escena.add(torreNegra2, torreBlanca2);
 	
 	referencia = new Referencia(5, 0, 75); 
