@@ -3484,15 +3484,15 @@ function setup(){
    escena = new Environment();
 	
    camara = new THREE.PerspectiveCamera();
-   camara.position.y = 150;
-   camara.position.x = 40;
-   camara.position.z = 100;
-   camara.lookAt(new THREE.Vector3(30, 0, 30));
+   camara.position.y = 250;
+   camara.position.x = 50;
+   camara.position.z = 200;
+   camara.lookAt(new THREE.Vector3(40, 0, 40));
 
    var luzPuntual1 = new THREE.PointLight(0xFFFFFF,1);
-   luzPuntual1.position.x = 25;
-   luzPuntual1.position.y = 200;
-   luzPuntual1.position.z = 50;
+   luzPuntual1.position.x = 10;
+   luzPuntual1.position.y = 300;
+   luzPuntual1.position.z = 10;
 	
    var luzPuntual2 = new THREE.PointLight(0xFFFFFF,1);
    luzPuntual2.position.x = 50;
