@@ -3535,7 +3535,7 @@ function setup(){
        cubo = new THREE.Mesh(forma ,material);
        cubo.position.x = j*lado+5+x;
        cubo.position.z = i*lado+5+z;
-       cubo.position.y = 9.9;
+       cubo.position.y = 5;
        cubos.push(cubo)
 
        }
