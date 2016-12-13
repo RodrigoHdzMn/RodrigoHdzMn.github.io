@@ -281,7 +281,7 @@
             if (cfg.hasOwnProperty('blackPieceColor') && typeof cfg.blackPieceColor === 'number') {
                 blackPieceColor = cfg.blackPieceColor;
             }
-            var  BLACK_MATERIAL= new THREE.MeshPhongMaterial({color: new THREE.Color(blackPieceColor)});
+       //     var  BLACK_MATERIAL= new THREE.MeshPhongMaterial({color: new THREE.Color(blackPieceColor)});
 //////////////////////////////////////////////////////
              var fnBlack = function(textura) {
                 var BLACK_MATERIAL = new THREE.MeshBasicMaterial({map: textura});
@@ -298,8 +298,8 @@
             if (cfg.hasOwnProperty('blackPieceSpecular') && typeof cfg.blackPieceSpecular === 'number') {
                 blackPieceSpecular = cfg.blackPieceSpecular;
             }
-            BLACK_MATERIAL.specular = new THREE.Color(blackPieceSpecular);
-            BLACK_MATERIAL.transparent = true;
+           // BLACK_MATERIAL.specular = new THREE.Color(blackPieceSpecular);
+           // BLACK_MATERIAL.transparent = true;
 
             var textColor = 0x000000;
             if (cfg.hasOwnProperty('notationColor') && typeof cfg.notationColor === 'number') {
