@@ -259,16 +259,17 @@
                 whitePieceColor = cfg.whitePieceColor;
             }
             var WHITE_MATERIAL = new THREE.MeshPhongMaterial({color: new THREE.Color(whitePieceColor)});
+//////////////////////////////////////////////////////
 
+             var fnWhite = function(textura) {
+                var WHITE_MATERIAL = new THREE.MeshBasicMaterial({map: textura});
+               mat2 = true;
+            }
+             var cargadorWhite=new THREE.TextureLoader();
+             cargadorWhite.load("Textura_madera.jpg",
+                           fnWhite);
 
-        //     var fnWhite = function(textura) {
-        //        var WHITE_MATERIAL = new THREE.MeshBasicMaterial({map: textura});
-        //        mat2 = true;
-        //    }
-        //     var cargadorWhite=new THREE.TextureLoader();
-        //     cargadorWhite.load("https://luishdzupiita.github.io/rv/marmolBlanco.jpeg",
-        //                   fnWhite);
-
+//////////////////////////////////////////////////////
             var whitePieceSpecular = 0xCCFFFF;
             if (cfg.hasOwnProperty('whitePieceSpecular') && typeof cfg.whitePieceSpecular === 'number') {
                 whitePieceSpecular = cfg.whitePieceSpecular;
@@ -281,17 +282,17 @@
                 blackPieceColor = cfg.blackPieceColor;
             }
             var  BLACK_MATERIAL= new THREE.MeshPhongMaterial({color: new THREE.Color(blackPieceColor)});
-
-            // var fnBlack = function(textura) {
-            //    var BLACK_MATERIAL = new THREE.MeshBasicMaterial({map: textura});
-                //   BLACK_MATERIAL.specular = new THREE.Color(blackPieceSpecular);
-                //   BLACK_MATERIAL.transparent = true;
-            //    mat1 = true;
-            // }
-            // var cargadorBlack=new THREE.TextureLoader();
-            // cargadorBlack.load("https://luishdzupiita.github.io/rv/marmolNegro.jpeg",
-            //               fnBlack);
-
+//////////////////////////////////////////////////////
+             var fnBlack = function(textura) {
+                var BLACK_MATERIAL = new THREE.MeshBasicMaterial({map: textura});
+                  BLACK_MATERIAL.specular = new THREE.Color(blackPieceSpecular);
+                   BLACK_MATERIAL.transparent = true;
+                mat1 = true;
+             }
+             var cargadorBlack=new THREE.TextureLoader();
+             cargadorBlack.load("Textura_madera_oscura.jpg",
+                           fnBlack);
+//////////////////////////////////////////////////////
 
             var blackPieceSpecular = 0x553333;
             if (cfg.hasOwnProperty('blackPieceSpecular') && typeof cfg.blackPieceSpecular === 'number') {
