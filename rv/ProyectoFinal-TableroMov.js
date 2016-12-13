@@ -11,9 +11,11 @@ var material;
 var objetivo, referencia, indicador=0;
 
 //Texturas
-var Gris = new THREE.MeshLambertMaterial({ map: THREE.ImageUtils.loadTexture('Textura_marmol_negro.jpg') });
-var Blanco = new THREE.MeshLambertMaterial({ map: THREE.ImageUtils.loadTexture('Textura_marmol_blanco.jpg') });
+var Gris = new THREE.MeshLambertMaterial({ map: THREE.ImageUtils.loadTexture('Textura_madera_oscura.jpg') });
+var Blanco = new THREE.MeshLambertMaterial({ map: THREE.ImageUtils.loadTexture('Textura_madera.jpg') });
 var Marco = new THREE.MeshLambertMaterial({ map: THREE.ImageUtils.loadTexture('Textura_madera_cafe.jpg	') });
+var MarmolBlanco = new THREE.MeshLambertMaterial({ map: THREE.ImageUtils.loadTexture('Textura_marmol_blanco.jpg	') });
+var MarmolNegro = new THREE.MeshLambertMaterial({ map: THREE.ImageUtils.loadTexture('Textura_marmol_negro.jpg	') });
 var GrisLiso = new THREE.MeshLambertMaterial({color: 0xD3D3D3});
 var BlancoLiso = new THREE.MeshLambertMaterial({color: 0xFFFFFF});
 
@@ -3525,10 +3527,10 @@ function setup(){
    for (var i=0;i<=7;i++){
    for (var j=0;j<=7;j++){
        if ((i+j) % 2 == 0){
-           material= Blanco;
+           material= MarmolBlanco;
            }
        else{
-           material= Gris;
+           material= MarmolNegro;
            }
        cubo = new THREE.Mesh(forma ,material);
        cubo.position.x = j*lado+5+x;
