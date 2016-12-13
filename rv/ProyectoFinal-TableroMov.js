@@ -119,7 +119,7 @@ function PeonNegro(x=0,y=0,z=0){
 	this.position.z=z;
 	this.position.x=x;
 	this.receiveShadow = true;
-	this.scale.set(0.70, 0.70, 0.70);
+	//this.scale.set(0.70, 0.70, 0.70);
 	this.sensor = new Sensor();
 }
 //PeonBlanco
@@ -132,7 +132,7 @@ function PeonBlanco(x=0,y=0,z=0){
 	this.position.z=z;
 	this.position.x=x;
 	this.receiveShadow = true;
-	this.scale.set(0.70, 0.70, 0.70);
+	//this.scale.set(0.70, 0.70, 0.70);
 	this.sensor = new Sensor();
 }
 //AlfilNegro
@@ -145,7 +145,7 @@ function AlfilNegro(x=0,y=0,z=0){
 	this.position.z=z;
 	this.position.x=x;
 	this.receiveShadow = true;
-	this.scale.set(0.70, 0.70, 0.70);
+	//this.scale.set(0.70, 0.70, 0.70);
 	this.sensor = new Sensor();
 }
 //AlfilBlanco
@@ -158,7 +158,7 @@ function AlfilBlanco(x=0,y=0,z=0){
 	this.position.z=z;
 	this.position.x=x;
 	this.receiveShadow = true;
-	this.scale.set(0.70, 0.70, 0.70);
+	//this.scale.set(0.70, 0.70, 0.70);
 	this.sensor = new Sensor();
 }
 //TorreNegra
@@ -171,7 +171,7 @@ function TorreNegra(x=0,y=0,z=0){
 	this.position.z=z;
 	this.position.x=x;
 	this.receiveShadow = true;
-	this.scale.set(0.70, 0.70, 0.70);
+	//this.scale.set(0.70, 0.70, 0.70);
 	this.sensor = new Sensor();
 }
 //TorreBlanca
@@ -184,7 +184,7 @@ function TorreBlanca(x=0,y=0,z=0){
 	this.position.z=z;
 	this.position.x=x;
 	this.receiveShadow = true;
-	this.scale.set(0.70, 0.70, 0.70);
+	//this.scale.set(0.70, 0.70, 0.70);
 	this.sensor = new Sensor();
 }
 
