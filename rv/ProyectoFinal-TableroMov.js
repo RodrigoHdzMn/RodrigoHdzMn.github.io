@@ -3541,14 +3541,14 @@ function setup(){
        }
    }
 
-   orilla1 = new THREE.BoxGeometry( 90, 0.1, 5); //Superior
+   orilla1 = new THREE.BoxGeometry( 90, 0.1, 90); //Superior
    var material1 = Marco;
    marco1 = new THREE.Mesh( orilla1, material1 );
    marco1.translateZ(-2.5+z);
    marco1.translateX(40+x);
    marco1.translateY(y);
    marco1.receiveShadow = true;
-
+/*
    orilla2 = new THREE.BoxGeometry( 5, 0.1, 90 ); //Derecha
    var material2 = Marco;
    marco2 = new THREE.Mesh( orilla2, material2);
@@ -3572,9 +3572,9 @@ function setup(){
    marco4.translateX(-2.5+x);
    marco4.translateY(y);
    marco4.receiveShadow = true;
-   
+   */
    //Agregar tablero a  escena
-   escena.add(marco1, marco2, marco3, marco4);
+   escena.add(marco1);
    
    for(var q=0; q<=63; q++){
       cubos[q].receiveShadow = true;
