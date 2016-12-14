@@ -3544,10 +3544,7 @@ function setup(){
    orilla1 = new THREE.BoxGeometry( 90, 0.1, 90); //Superior
    var material1 = Marco;
    marco1 = new THREE.Mesh( orilla1, material1 );
-   marco1.translateZ(-2.5+z);
-   marco1.translateX(40+x);
-   marco1.translateY(y);
-   marco1.receiveShadow = true;
+ 
 /*
    orilla2 = new THREE.BoxGeometry( 5, 0.1, 90 ); //Derecha
    var material2 = Marco;
