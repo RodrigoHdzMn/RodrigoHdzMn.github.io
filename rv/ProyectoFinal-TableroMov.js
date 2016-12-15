@@ -220,7 +220,7 @@ Objetivo.prototype = new Agent();
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function Referencia(x=0,y=0,z=0){
   Agent.call(this,x,y,z);
-  var texturaReferencia = new THREE.MeshLambertMaterial({color: 0xFF0000});
+  var texturaReferencia = new THREE.MeshLambertMaterial({color: 0x0000FF});
   this.add(new THREE.Mesh(new THREE.BoxGeometry(10, 0.2, 10), texturaReferencia));
   this.position.y=y;
   this.position.z=z;
