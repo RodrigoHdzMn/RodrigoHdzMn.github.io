@@ -3486,7 +3486,7 @@ function setup(){
    camara = new THREE.PerspectiveCamera();
    camara.position.y = 100;
    camara.position.x = 40;
-   camara.position.z = 100;
+   camara.position.z = 115;
    camara.lookAt(new THREE.Vector3(40, 0, 40));
 
    var luzPuntual1 = new THREE.PointLight(0xFFFFFF,1);
@@ -3548,31 +3548,6 @@ function setup(){
    marco1.position.y=-0.1;
    marco1.position.z=40;
  
-/*
-   orilla2 = new THREE.BoxGeometry( 5, 0.1, 90 ); //Derecha
-   var material2 = Marco;
-   marco2 = new THREE.Mesh( orilla2, material2);
-   marco2.translateZ(40+z);
-   marco2.translateX(82.5+x);
-   marco2.translateY(y);
-   marco2.receiveShadow = true;
-
-   orilla3 = new THREE.BoxGeometry( 90, 0.1, 5 ); //Izquierda
-   var material3 = Marco;
-   marco3 = new THREE.Mesh( orilla3, material3);
-   marco3.translateZ(82.5+z);
-   marco3.translateX(40+x);
-   marco3.translateY(y);
-   marco3.receiveShadow = true;
-
-   orilla4 = new THREE.BoxGeometry(5, 0.1, 80 ); //Baja
-   var material4 = Marco;
-   marco4 = new THREE.Mesh( orilla4, material4);
-   marco4.translateZ(40+z);
-   marco4.translateX(-2.5+x);
-   marco4.translateY(y);
-   marco4.receiveShadow = true;
-   */
    //Agregar tablero a  escena
    escena.add(marco1);
    
