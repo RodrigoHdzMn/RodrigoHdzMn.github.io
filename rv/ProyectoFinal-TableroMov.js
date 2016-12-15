@@ -3648,6 +3648,8 @@ function loop(){
      escena.act();
      
      renderizador.render(escena, camara);
+     renderizador.setSize( window.innerHeight*.85,window.innerHeight*.85);		
+     document.body.appendChild (renderizador.domElement);
 }
 
 setup();
