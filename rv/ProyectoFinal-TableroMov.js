@@ -3544,9 +3544,9 @@ function setup(){
    orilla1 = new THREE.BoxGeometry( 90, 0.1, 90); //Superior
    var material1 = Marco;
    marco1 = new THREE.Mesh( orilla1, material1 );
-   marco1.position.x=45;
+   marco1.position.x=40;
    marco1.position.y=-0.1;
-   marco1.position.z=45;
+   marco1.position.z=40;
  
 /*
    orilla2 = new THREE.BoxGeometry( 5, 0.1, 90 ); //Derecha
