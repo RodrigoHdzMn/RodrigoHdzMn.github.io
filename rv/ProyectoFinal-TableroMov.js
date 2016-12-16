@@ -86,7 +86,7 @@ function ReinaBlanca(x=0,y=0,z=0){
 //CaballoNegro
 function CaballoNegro(x=0,y=0,z=0){
 	Agent.call(this,x,y,z);
-	this.actuator = new THREE.Mesh(knight, Gris);
+	this.actuator = new THREE.Mesh(caballoForma, Gris);
 	this.actuator.commands = [];
 	this.add(this.actuator);
 	this.position.y=y;
@@ -99,7 +99,7 @@ function CaballoNegro(x=0,y=0,z=0){
 //CaballoBlanco
 function CaballoBlanco(x=0,y=0,z=0){
 	Agent.call(this,x,y,z); 
-	this.actuator = new THREE.Mesh(knight, Blanco);
+	this.actuator = new THREE.Mesh(caballoForma, Blanco);
 	this.actuator.commands = [];
 	this.add(this.actuator);
 	this.position.y=y;
