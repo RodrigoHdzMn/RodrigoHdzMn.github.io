@@ -67,7 +67,7 @@ var Tb=0.8*4.5;//tamaño base
 	alfilForma.merge(forma3Malla.geometry, forma3Malla.matrix);
 	alfilForma.merge(forma4Malla.geometry, forma4Malla.matrix);
 	alfilForma.merge(forma5Malla.geometry, forma5Malla.matrix);
-  alfilForma.merge(forma6Malla.geometry, forma6Malla.matrix);
+  	alfilForma.merge(forma6Malla.geometry, forma6Malla.matrix);
 	alfilForma.merge(forma7Malla.geometry, forma7Malla.matrix);
 	alfilForma.merge(forma8Malla.geometry, forma8Malla.matrix);
 	alfilForma.merge(forma9Malla.geometry, forma9Malla.matrix);
@@ -131,7 +131,7 @@ caballoForma.merge(CaballoMalla.geometry,CaballoMalla.matrix);
 //************************************
 //--------------Peon------------------
 //************************************
-var Tb=0.8*2;//tamaño base
+var Tb=0.8*2.5;//tamaño base
 	var altura1=Tb/4;
 	var baseForma= new THREE.CylinderGeometry(Tb, Tb, altura1,60 );//dia.sup, dia.inf, altura
       	baseForma.translate(0,0,0);
