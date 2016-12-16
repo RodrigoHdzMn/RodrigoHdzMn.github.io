@@ -121,10 +121,10 @@ BCaballo.translate(0,50,0);
 var talloMalla = new THREE.Mesh(forma);
 var CaballoMalla = new THREE.Mesh( BCaballo);
 //Creamos la Geometria Final
-var Caballo = new THREE.Geometry();
+var caballoForma = new THREE.Geometry();
 //Unimos las mallas
-Caballo.merge(talloMalla.geometry,talloMalla.matrix);
-Caballo.merge(CaballoMalla.geometry,CaballoMalla.matrix);
+caballoForma.merge(talloMalla.geometry,talloMalla.matrix);
+caballoForma.merge(CaballoMalla.geometry,CaballoMalla.matrix);
 
 
 
