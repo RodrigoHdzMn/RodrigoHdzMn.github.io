@@ -93,7 +93,7 @@ function CaballoNegro(x=0,y=0,z=0){
 	this.position.z=z;
 	this.position.x=x;
 	this.receiveShadow = true;
-	this.scale.set(0.03, 0.03, 0.03);
+	this.scale.set(0.035, 0.035, 0.035);
 	this.sensor = new Sensor();
 }
 //CaballoBlanco
@@ -106,7 +106,7 @@ function CaballoBlanco(x=0,y=0,z=0){
 	this.position.z=z;
 	this.position.x=x;
 	this.receiveShadow = true;
-	this.scale.set(0.03, 0.03, 0.03);
+	this.scale.set(0.035, 0.035, 0.035);
 	this.sensor = new Sensor();
 }
 //PeonNegro
