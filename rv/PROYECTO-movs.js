@@ -3839,7 +3839,7 @@ function init() {
   var madera = new THREE.MeshBasicMaterial({map:textura5});
   
   ////////////////////////////////////////////////////Tablero/////////////////////////////////////////////////////////////////////
-  var cubo=new THREE.BoxGeometry(10,0.1,10);
+  var cubo=new THREE.BoxGeometry(10,10,10);
   grupo= new THREE.Group();
   var k=0;
 
