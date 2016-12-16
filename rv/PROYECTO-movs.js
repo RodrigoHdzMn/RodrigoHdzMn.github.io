@@ -3809,8 +3809,10 @@ function init() {
 	
   //////////////////////////////////////////////////Camara///////////////////////////////////////////////////////////////////////
   camara = new THREE.PerspectiveCamera();
-  camara.position.z=130;
-  camara.position.x=50; 
+  camara.position.y = 100;
+  camara.position.x = 40;
+  camara.position.z = 125;
+  camara.lookAt(new THREE.Vector3(40, 0, 40));
   ///////////////////////////////////////////Renderizador//////////////////////////////////////////////////////////////////////////
   renderizador = new THREE.WebGLRenderer({antialias:true});
   renderizador.setSize( window.innerHeight*.95, window.innerHeight*.95 );
@@ -3829,15 +3831,15 @@ function init() {
   luzblan3.position.y=-300;  luzblan3.position.z=-50;  luzblan3.position.x=50;
   ///////////////////////////////////////////////Textura/////////////////////////////////////////////////////////////////////////////
 
-  var textura3 = new THREE.TextureLoader().load('cerablanca.jpg');
-  var textura4 = new THREE.TextureLoader().load('ceranegra.jpg');
-  var textura5 = new THREE.TextureLoader().load('madera.jpg');
-  var cerablanco = new THREE.MeshLambertMaterial({map:textura3});
-  var ceranegro = new THREE.MeshLambertMaterial({map:textura4});
-  var madera = new THREE.MeshLambertMaterial({map:textura5});
+  var textura3 = new THREE.TextureLoader().load('Textura_marmol_negro.jpg');
+  var textura4 = new THREE.TextureLoader().load('Textura_marmol_blanco.jpg');
+  var textura5 = new THREE.TextureLoader().load('Textura_madera_cafe.jpg');
+  var cerablanco = new THREE.MeshBasicMaterial({map:textura3});
+  var ceranegro = new THREE.MeshBasicMaterial({map:textura4});
+  var madera = new THREE.MeshBasicMaterial({map:textura5});
   
   ////////////////////////////////////////////////////Tablero/////////////////////////////////////////////////////////////////////
-  var cubo=new THREE.BoxGeometry(10,10,10);
+  var cubo=new THREE.BoxGeometry(10,0.1,10);
   grupo= new THREE.Group();
   var k=0;
 
