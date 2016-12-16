@@ -3592,11 +3592,11 @@ function setup(){
    	peonNegro8 = new PeonNegro(75, 0, 15);
    	peonBlanco8 = new PeonBlanco(75, 0, 65); 
    	escena.add(peonNegro8, peonBlanco8);
-   	alfilNegro1 = new PeonNegro(25, 0, 5);
-   	alfilBlanco1 = new PeonBlanco(25, 0, 75); 
+   	alfilNegro1 = new AlfilNegro(25, 0, 5);
+   	alfilBlanco1 = new AlfilBlanco(25, 0, 75); 
    	escena.add(alfilNegro1, alfilBlanco1);
-   	alfilNegro2 = new PeonNegro(55, 0, 5);
-   	alfilBlanco2 = new PeonBlanco(55, 0, 75); 
+   	alfilNegro2 = new AlfilNegro(55, 0, 5);
+   	alfilBlanco2 = new AlfilBlanco(55, 0, 75); 
    	escena.add(alfilNegro2, alfilBlanco2);
    	torreNegra1 = new TorreNegra(5, 0, 5);
 	torreBlanca1 = new TorreBlanca(5, 0, 75);
