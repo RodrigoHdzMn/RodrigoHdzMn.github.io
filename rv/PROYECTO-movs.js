@@ -221,7 +221,7 @@ BloqueRojo.prototype = new Agent();
 function BloqueMorado(x=0,y=0,z=0){
   Agent.call(this,x,y,z);
   var luzmorada = new THREE.MeshLambertMaterial({color: 0xff0000});
-  this.add(new THREE.Mesh(new THREE.BoxGeometry(10, 0.2, 10),luzmorada));
+  this.add(new THREE.Mesh(new THREE.BoxGeometry(10.1,10.1,10.1),luzmorada));
   this.position.y=y;
   this.position.z=z;
   this.position.x=x;
@@ -235,7 +235,7 @@ BloqueMorado.prototype = new Agent();
 function BloqueVerde(x=0,y=0,z=0){
   Agent.call(this,x,y,z);
   var luzverde = new THREE.MeshLambertMaterial({color: 0xffff00});
-  this.add(new THREE.Mesh(new THREE.BoxGeometry(10, 0.2, 10),luzverde));
+  this.add(new THREE.Mesh(new THREE.BoxGeometry(10.2,10.2,10.2),luzverde));
   this.position.y=y;
   this.position.z=z;
   this.position.x=x;
@@ -249,7 +249,7 @@ BloqueVerde.prototype = new Agent();
 function BloqueAzul(x=0,y=0,z=0){
   Agent.call(this,x,y,z);
   var luzazul =  new THREE.MeshLambertMaterial({color: 0x0000ff});
-  this.add(new THREE.Mesh(new THREE.BoxGeometry(10, 0.2, 10),luzazul));
+  this.add(new THREE.Mesh(new THREE.BoxGeometry(10.1,10.1,10.1),luzazul));
   this.position.y=y;
   this.position.z=z;
   this.position.x=x;
@@ -3888,56 +3888,56 @@ function init() {
     malla3.updateMatrix();
     grupo3.add(malla3);
   }}
-  ///////////////////////////////////////////Torres////////////////////////////////////////////////////////////////
-  torreblanca1 = new TorreBlanca(10,0,-10);
-  torreblanca2 = new TorreBlanca(10,0,-80);
-  torrenegra1 = new TorreNegra(80,0,-10);
-  torrenegra2 = new TorreNegra(80,0,-80);
+ ///////////////////////////////////////////Torres////////////////////////////////////////////////////////////////
+  torreblanca1 = new TorreBlanca(10,4.5,-10);
+  torreblanca2 = new TorreBlanca(10,4.5,-80);
+  torrenegra1 = new TorreNegra(80,4.5,-10);
+  torrenegra2 = new TorreNegra(80,4.5,-80);
 	
   escena.add(torreblanca1,torreblanca2,torrenegra1,torrenegra2);
   /////////////////////////////////////////Peones/////////////////////////////////////////////////////////////////
-  peonblanco1 = new PeonBlanco(20,0,-10);
-  peonblanco2 = new PeonBlanco(20,0,-20);
-  peonblanco3 = new PeonBlanco(20,0,-30);
-  peonblanco4 = new PeonBlanco(20,0,-40);
-  peonblanco5 = new PeonBlanco(20,0,-50);
-  peonblanco6 = new PeonBlanco(20,0,-60);
-  peonblanco7 = new PeonBlanco(20,0,-70);
-  peonblanco8 = new PeonBlanco(20,0,-80);
+  peonblanco1 = new PeonBlanco(20,4.5,-10);
+  peonblanco2 = new PeonBlanco(20,4.5,-20);
+  peonblanco3 = new PeonBlanco(20,4.5,-30);
+  peonblanco4 = new PeonBlanco(20,4.5,-40);
+  peonblanco5 = new PeonBlanco(20,4.5,-50);
+  peonblanco6 = new PeonBlanco(20,4.5,-60);
+  peonblanco7 = new PeonBlanco(20,4.5,-70);
+  peonblanco8 = new PeonBlanco(20,4.5,-80);
 	
-  peonnegro1 = new PeonNegro(70,0,-10);
-  peonnegro2 = new PeonNegro(70,0,-20);
-  peonnegro3 = new PeonNegro(70,0,-30);
-  peonnegro4 = new PeonNegro(70,0,-40);
-  peonnegro5 = new PeonNegro(70,0,-50);
-  peonnegro6 = new PeonNegro(70,0,-60);
-  peonnegro7 = new PeonNegro(70,0,-70);
-  peonnegro8 = new PeonNegro(70,0,-80);
+  peonnegro1 = new PeonNegro(70,4.5,-10);
+  peonnegro2 = new PeonNegro(70,4.5,-20);
+  peonnegro3 = new PeonNegro(70,4.5,-30);
+  peonnegro4 = new PeonNegro(70,4.5,-40);
+  peonnegro5 = new PeonNegro(70,4.5,-50);
+  peonnegro6 = new PeonNegro(70,4.5,-60);
+  peonnegro7 = new PeonNegro(70,4.5,-70);
+  peonnegro8 = new PeonNegro(70,4.5,-80);
 	
   escena.add(peonblanco1,peonblanco2,peonblanco3,peonblanco4,peonblanco5,peonblanco6,peonblanco7,peonblanco8);
   escena.add(peonnegro1,peonnegro2,peonnegro3,peonnegro4,peonnegro5,peonnegro6,peonnegro7,peonnegro8);
   /////////////////////////////////////////Alfiles/////////////////////////////////////////////////////////////////
-  alfilblanco1 = new AlfilBlanco(10,0,-30);
-  alfilblanco2 = new AlfilBlanco(10,0,-60);
-  alfilnegro1 = new AlfilNegro(80,0,-30);
-  alfilnegro2 = new AlfilNegro(80,0,-60);
+  alfilblanco1 = new AlfilBlanco(10,4.5,-30);
+  alfilblanco2 = new AlfilBlanco(10,4.5,-60);
+  alfilnegro1 = new AlfilNegro(80,4.5,-30);
+  alfilnegro2 = new AlfilNegro(80,4.5,-60);
 	
   escena.add(alfilblanco1,alfilblanco2,alfilnegro1,alfilnegro2);
   ////////////////////////////////////////////Caballos/////////////////////////////////////////////////////////////
-  caballoblanco1 = new CaballoBlanco(10,0,-20);
-  caballoblanco2 = new CaballoBlanco(10,0,-70);
-  caballonegro1 = new CaballoNegro(80,0,-20);
-  caballonegro2 = new CaballoNegro(80,0,-70);
+  caballoblanco1 = new CaballoBlanco(10,4.5,-20);
+  caballoblanco2 = new CaballoBlanco(10,4.5,-70);
+  caballonegro1 = new CaballoNegro(80,4.5,-20);
+  caballonegro2 = new CaballoNegro(80,4.5,-70);
 	
   escena.add(caballoblanco1,caballoblanco2,caballonegro1,caballonegro2);	
   ////////////////////////////////////////////Reinas/////////////////////////////////////////////////////////////////
-  reinablanca = new ReinaBlanca(10,0,-40);
-  reinanegra = new ReinaNegra(80,0,-40);
+  reinablanca = new ReinaBlanca(10,4.5,-40);
+  reinanegra = new ReinaNegra(80,4.5,-40);
 	
   escena.add(reinablanca,reinanegra);
   ///////////////////////////////////////////Reyes////////////////////////////////////////////////////////////////////
-  reyblanco = new ReyBlanco(10,0,-50);
-  reynegro = new ReyNegro(80,0,-50);
+  reyblanco = new ReyBlanco(10,4.5,-50);
+  reynegro = new ReyNegro(80,4.5,-50);
 	
   escena.add(reyblanco,reynegro);	
   /////////////////////////////////////////Bloques////////////////////////////////////////////////////////////////////
