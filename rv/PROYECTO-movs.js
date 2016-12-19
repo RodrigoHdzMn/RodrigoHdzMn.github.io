@@ -419,7 +419,7 @@ BloqueAzul.prototype.act = function(environment){
 			   (torreblanca1.position.x==caballoblanco2.position.x && torreblanca1.position.z==caballoblanco2.position.z))||
 			   (torreblanca1.position.x==reyblanco.position.x && torreblanca1.position.z==reyblanco.position.z))||
 			   (torreblanca1.position.x==reinablanca.position.x && torreblanca1.position.z==reinablanca.position.z)){
-				alert("No puedes comer piezas del mismo color");
+				alert("¡ Piezas del mismo color !");
 				torreblanca1.position.x=bloquerojo.position.x;torreblanca1.position.z=bloquerojo.position.z;
 				bloqueverde.position.x=bloquerojo.position.x;bloqueverde.position.z=bloquerojo.position.z;
 			}
@@ -515,7 +515,7 @@ BloqueAzul.prototype.act = function(environment){
 			   (torreblanca2.position.x==caballoblanco2.position.x && torreblanca2.position.z==caballoblanco2.position.z))||
 			   (torreblanca2.position.x==reyblanco.position.x && torreblanca2.position.z==reyblanco.position.z))||
 			   (torreblanca2.position.x==reinablanca.position.x && torreblanca2.position.z==reinablanca.position.z)){
-				alert("No puedes comer piezas del mismo color");
+				alert("¡ Piezas del mismo color !");
 				torreblanca2.position.x=bloquerojo.position.x;torreblanca2.position.z=bloquerojo.position.z;
 				bloqueverde.position.x=bloquerojo.position.x;bloqueverde.position.z=bloquerojo.position.z;
 			}
@@ -611,7 +611,7 @@ BloqueAzul.prototype.act = function(environment){
 			   (torrenegra1.position.x==caballonegro2.position.x && torrenegra1.position.z==caballonegro2.position.z))||
 			   (torrenegra1.position.x==reynegro.position.x && torrenegra1.position.z==reynegro.position.z))||
 			   (torrenegra1.position.x==reinanegra.position.x && torrenegra1.position.z==reinanegra.position.z)){
-				alert("No puedes comer piezas del mismo color");
+				alert("¡ Piezas del mismo color !");
 				torrenegra1.position.x=bloquerojo.position.x;torrenegra1.position.z=bloquerojo.position.z;
 				bloqueverde.position.x=bloquerojo.position.x;bloqueverde.position.z=bloquerojo.position.z;
 			}
@@ -707,7 +707,7 @@ BloqueAzul.prototype.act = function(environment){
 			   (torrenegra2.position.x==caballonegro2.position.x && torrenegra2.position.z==caballonegro2.position.z))||
 			   (torrenegra2.position.x==reynegro.position.x && torrenegra2.position.z==reynegro.position.z))||
 			   (torrenegra2.position.x==reinanegra.position.x && torrenegra2.position.z==reinanegra.position.z)){
-				alert("No puedes comer piezas del mismo color");
+				alert("¡ Piezas del mismo color !");
 				torrenegra2.position.x=bloquerojo.position.x;torrenegra2.position.z=bloquerojo.position.z;
 				bloqueverde.position.x=bloquerojo.position.x;bloqueverde.position.z=bloquerojo.position.z;
 			}
@@ -808,7 +808,7 @@ BloqueAzul.prototype.act = function(environment){
 			   (peonblanco1.position.x==caballoblanco2.position.x && peonblanco1.position.z==caballoblanco2.position.z))||
 			   (peonblanco1.position.x==reyblanco.position.x && peonblanco1.position.z==reyblanco.position.z))||
 			   (peonblanco1.position.x==reinablanca.position.x && peonblanco1.position.z==reinablanca.position.z)){
-				alert("No puedes comer piezas del mismo color");
+				alert("¡ Piezas del mismo color !");
 				peonblanco1.position.x=bloquerojo.position.x;peonblanco1.position.z=bloquerojo.position.z;
 				bloqueverde.position.x=bloquerojo.position.x;bloqueverde.position.z=bloquerojo.position.z;
 			}
@@ -905,7 +905,7 @@ BloqueAzul.prototype.act = function(environment){
 			   (peonblanco2.position.x==caballoblanco2.position.x && peonblanco2.position.z==caballoblanco2.position.z))||
 			   (peonblanco2.position.x==reyblanco.position.x && peonblanco2.position.z==reyblanco.position.z))||
 			   (peonblanco2.position.x==reinablanca.position.x && peonblanco2.position.z==reinablanca.position.z)){
-				alert("No puedes comer piezas del mismo color");
+				alert("¡ Piezas del mismo color !");
 				peonblanco2.position.x=bloquerojo.position.x;peonblanco2.position.z=bloquerojo.position.z;
 				bloqueverde.position.x=bloquerojo.position.x;bloqueverde.position.z=bloquerojo.position.z;
 			}
@@ -1002,7 +1002,7 @@ BloqueAzul.prototype.act = function(environment){
 			   (peonblanco3.position.x==caballoblanco2.position.x && peonblanco3.position.z==caballoblanco2.position.z))||
 			   (peonblanco3.position.x==reyblanco.position.x && peonblanco3.position.z==reyblanco.position.z))||
 			   (peonblanco3.position.x==reinablanca.position.x && peonblanco3.position.z==reinablanca.position.z)){
-				alert("No puedes comer piezas del mismo color");
+				alert("¡ Piezas del mismo color !");
 				peonblanco3.position.x=bloquerojo.position.x;peonblanco3.position.z=bloquerojo.position.z;
 				bloqueverde.position.x=bloquerojo.position.x;bloqueverde.position.z=bloquerojo.position.z;
 			}
@@ -1099,7 +1099,7 @@ BloqueAzul.prototype.act = function(environment){
 			   (peonblanco4.position.x==caballoblanco2.position.x && peonblanco4.position.z==caballoblanco2.position.z))||
 			   (peonblanco4.position.x==reyblanco.position.x && peonblanco4.position.z==reyblanco.position.z))||
 			   (peonblanco4.position.x==reinablanca.position.x && peonblanco4.position.z==reinablanca.position.z)){
-				alert("No puedes comer piezas del mismo color");
+				aalert("¡ Piezas del mismo color !");
 				peonblanco4.position.x=bloquerojo.position.x;peonblanco4.position.z=bloquerojo.position.z;
 				bloqueverde.position.x=bloquerojo.position.x;bloqueverde.position.z=bloquerojo.position.z;
 			}
@@ -1196,7 +1196,7 @@ BloqueAzul.prototype.act = function(environment){
 			   (peonblanco5.position.x==caballoblanco2.position.x && peonblanco5.position.z==caballoblanco2.position.z))||
 			   (peonblanco5.position.x==reyblanco.position.x && peonblanco5.position.z==reyblanco.position.z))||
 			   (peonblanco5.position.x==reinablanca.position.x && peonblanco5.position.z==reinablanca.position.z)){
-				alert("No puedes comer piezas del mismo color");
+				alert("¡ Piezas del mismo color !");
 				peonblanco5.position.x=bloquerojo.position.x;peonblanco5.position.z=bloquerojo.position.z;
 				bloqueverde.position.x=bloquerojo.position.x;bloqueverde.position.z=bloquerojo.position.z;
 			}
@@ -1293,7 +1293,7 @@ BloqueAzul.prototype.act = function(environment){
 			   (peonblanco6.position.x==caballoblanco2.position.x && peonblanco6.position.z==caballoblanco2.position.z))||
 			   (peonblanco6.position.x==reyblanco.position.x && peonblanco6.position.z==reyblanco.position.z))||
 			   (peonblanco6.position.x==reinablanca.position.x && peonblanco6.position.z==reinablanca.position.z)){
-				alert("No puedes comer piezas del mismo color");
+				alert("¡ Piezas del mismo color !");
 				peonblanco6.position.x=bloquerojo.position.x;peonblanco6.position.z=bloquerojo.position.z;
 				bloqueverde.position.x=bloquerojo.position.x;bloqueverde.position.z=bloquerojo.position.z;
 			}
@@ -1390,7 +1390,7 @@ BloqueAzul.prototype.act = function(environment){
 			   (peonblanco7.position.x==caballoblanco2.position.x && peonblanco7.position.z==caballoblanco2.position.z))||
 			   (peonblanco7.position.x==reyblanco.position.x && peonblanco7.position.z==reyblanco.position.z))||
 			   (peonblanco7.position.x==reinablanca.position.x && peonblanco7.position.z==reinablanca.position.z)){
-				alert("No puedes comer piezas del mismo color");
+				alert("¡ Piezas del mismo color !");
 				peonblanco7.position.x=bloquerojo.position.x;peonblanco7.position.z=bloquerojo.position.z;
 				bloqueverde.position.x=bloquerojo.position.x;bloqueverde.position.z=bloquerojo.position.z;
 			}
@@ -1487,7 +1487,7 @@ BloqueAzul.prototype.act = function(environment){
 			   (peonblanco8.position.x==caballoblanco2.position.x && peonblanco8.position.z==caballoblanco2.position.z))||
 			   (peonblanco8.position.x==reyblanco.position.x && peonblanco8.position.z==reyblanco.position.z))||
 			   (peonblanco8.position.x==reinablanca.position.x && peonblanco8.position.z==reinablanca.position.z)){
-				alert("No puedes comer piezas del mismo color");
+				alert("¡ Piezas del mismo color !");
 				peonblanco8.position.x=bloquerojo.position.x;peonblanco8.position.z=bloquerojo.position.z;
 				bloqueverde.position.x=bloquerojo.position.x;bloqueverde.position.z=bloquerojo.position.z;
 			}
@@ -1584,7 +1584,7 @@ BloqueAzul.prototype.act = function(environment){
 			   (peonnegro1.position.x==caballonegro2.position.x && peonnegro1.position.z==caballonegro2.position.z))||
 			   (peonnegro1.position.x==reynegro.position.x && peonnegro1.position.z==reynegro.position.z))||
 			   (peonnegro1.position.x==reinanegra.position.x && peonnegro1.position.z==reinanegra.position.z)){
-				alert("No puedes comer piezas del mismo color");
+				alert("¡ Piezas del mismo color !");
 				peonnegro1.position.x=bloquerojo.position.x;peonnegro1.position.z=bloquerojo.position.z;
 				bloqueverde.position.x=bloquerojo.position.x;bloqueverde.position.z=bloquerojo.position.z;
 			}
@@ -1681,7 +1681,7 @@ BloqueAzul.prototype.act = function(environment){
 			   (peonnegro2.position.x==caballonegro2.position.x && peonnegro2.position.z==caballonegro2.position.z))||
 			   (peonnegro2.position.x==reynegro.position.x && peonnegro2.position.z==reynegro.position.z))||
 			   (peonnegro2.position.x==reinanegra.position.x && peonnegro2.position.z==reinanegra.position.z)){
-				alert("No puedes comer piezas del mismo color");
+				alert("¡ Piezas del mismo color !");
 				peonnegro2.position.x=bloquerojo.position.x;peonnegro2.position.z=bloquerojo.position.z;
 				bloqueverde.position.x=bloquerojo.position.x;bloqueverde.position.z=bloquerojo.position.z;
 			}
@@ -1778,7 +1778,7 @@ BloqueAzul.prototype.act = function(environment){
 			   (peonnegro3.position.x==caballonegro2.position.x && peonnegro3.position.z==caballonegro2.position.z))||
 			   (peonnegro3.position.x==reynegro.position.x && peonnegro3.position.z==reynegro.position.z))||
 			   (peonnegro3.position.x==reinanegra.position.x && peonnegro3.position.z==reinanegra.position.z)){
-				alert("No puedes comer piezas del mismo color");
+				alert("¡ Piezas del mismo color !");
 				peonnegro3.position.x=bloquerojo.position.x;peonnegro3.position.z=bloquerojo.position.z;
 				bloqueverde.position.x=bloquerojo.position.x;bloqueverde.position.z=bloquerojo.position.z;
 			}
@@ -1875,7 +1875,7 @@ BloqueAzul.prototype.act = function(environment){
 			   (peonnegro4.position.x==caballonegro2.position.x && peonnegro4.position.z==caballonegro2.position.z))||
 			   (peonnegro4.position.x==reynegro.position.x && peonnegro4.position.z==reynegro.position.z))||
 			   (peonnegro4.position.x==reinanegra.position.x && peonnegro4.position.z==reinanegra.position.z)){
-				alert("No puedes comer piezas del mismo color");
+				alert("¡ Piezas del mismo color !");
 				peonnegro4.position.x=bloquerojo.position.x;peonnegro4.position.z=bloquerojo.position.z;
 				bloqueverde.position.x=bloquerojo.position.x;bloqueverde.position.z=bloquerojo.position.z;
 			}
@@ -1972,7 +1972,7 @@ BloqueAzul.prototype.act = function(environment){
 			   (peonnegro5.position.x==caballonegro2.position.x && peonnegro5.position.z==caballonegro2.position.z))||
 			   (peonnegro5.position.x==reynegro.position.x && peonnegro5.position.z==reynegro.position.z))||
 			   (peonnegro5.position.x==reinanegra.position.x && peonnegro5.position.z==reinanegra.position.z)){
-				alert("No puedes comer piezas del mismo color");
+				alert("¡ Piezas del mismo color !");
 				peonnegro5.position.x=bloquerojo.position.x;peonnegro5.position.z=bloquerojo.position.z;
 				bloqueverde.position.x=bloquerojo.position.x;bloqueverde.position.z=bloquerojo.position.z;
 			}
@@ -2069,7 +2069,7 @@ BloqueAzul.prototype.act = function(environment){
 			   (peonnegro6.position.x==caballonegro2.position.x && peonnegro6.position.z==caballonegro2.position.z))||
 			   (peonnegro6.position.x==reynegro.position.x && peonnegro6.position.z==reynegro.position.z))||
 			   (peonnegro6.position.x==reinanegra.position.x && peonnegro6.position.z==reinanegra.position.z)){
-				alert("No puedes comer piezas del mismo color");
+				alert("¡ Piezas del mismo color !");
 				peonnegro6.position.x=bloquerojo.position.x;peonnegro6.position.z=bloquerojo.position.z;
 				bloqueverde.position.x=bloquerojo.position.x;bloqueverde.position.z=bloquerojo.position.z;
 			}
@@ -2166,7 +2166,7 @@ BloqueAzul.prototype.act = function(environment){
 			   (peonnegro7.position.x==caballonegro2.position.x && peonnegro7.position.z==caballonegro2.position.z))||
 			   (peonnegro7.position.x==reynegro.position.x && peonnegro7.position.z==reynegro.position.z))||
 			   (peonnegro7.position.x==reinanegra.position.x && peonnegro7.position.z==reinanegra.position.z)){
-				alert("No puedes comer piezas del mismo color");
+				alert("¡ Piezas del mismo color !");
 				peonnegro7.position.x=bloquerojo.position.x;peonnegro7.position.z=bloquerojo.position.z;
 				bloqueverde.position.x=bloquerojo.position.x;bloqueverde.position.z=bloquerojo.position.z;
 			}
@@ -2263,7 +2263,7 @@ BloqueAzul.prototype.act = function(environment){
 			   (peonnegro8.position.x==caballonegro2.position.x && peonnegro8.position.z==caballonegro2.position.z))||
 			   (peonnegro8.position.x==reynegro.position.x && peonnegro8.position.z==reynegro.position.z))||
 			   (peonnegro8.position.x==reinanegra.position.x && peonnegro8.position.z==reinanegra.position.z)){
-				alert("No puedes comer piezas del mismo color");
+				alert("¡ Piezas del mismo color !");
 				peonnegro8.position.x=bloquerojo.position.x;peonnegro8.position.z=bloquerojo.position.z;
 				bloqueverde.position.x=bloquerojo.position.x;bloqueverde.position.z=bloquerojo.position.z;
 			}
@@ -2363,7 +2363,7 @@ BloqueAzul.prototype.act = function(environment){
 			   (alfilblanco1.position.x==caballoblanco2.position.x && alfilblanco1.position.z==caballoblanco2.position.z))||
 			   (alfilblanco1.position.x==reyblanco.position.x && alfilblanco1.position.z==reyblanco.position.z))||
 			   (alfilblanco1.position.x==reinablanca.position.x && alfilblanco1.position.z==reinablanca.position.z)){
-				alert("No puedes comer piezas del mismo color");
+				alert("¡ Piezas del mismo color !");
 				alfilblanco1.position.x=bloquerojo.position.x;alfilblanco1.position.z=bloquerojo.position.z;
 				bloqueverde.position.x=bloquerojo.position.x;bloqueverde.position.z=bloquerojo.position.z;
 			}
@@ -2459,7 +2459,7 @@ BloqueAzul.prototype.act = function(environment){
 			   (alfilblanco2.position.x==caballoblanco2.position.x && alfilblanco2.position.z==caballoblanco2.position.z))||
 			   (alfilblanco2.position.x==reyblanco.position.x && alfilblanco2.position.z==reyblanco.position.z))||
 			   (alfilblanco2.position.x==reinablanca.position.x && alfilblanco2.position.z==reinablanca.position.z)){
-				alert("No puedes comer piezas del mismo color");
+				alert("¡ Piezas del mismo color !");
 				alfilblanco2.position.x=bloquerojo.position.x;alfilblanco2.position.z=bloquerojo.position.z;
 				bloqueverde.position.x=bloquerojo.position.x;bloqueverde.position.z=bloquerojo.position.z;
 			}
@@ -2555,7 +2555,7 @@ BloqueAzul.prototype.act = function(environment){
 			   (alfilnegro1.position.x==caballonegro2.position.x && alfilnegro1.position.z==caballonegro2.position.z))||
 			   (alfilnegro1.position.x==reynegro.position.x && alfilnegro1.position.z==reynegro.position.z))||
 			   (alfilnegro1.position.x==reinanegra.position.x && alfilnegro1.position.z==reinanegra.position.z)){
-				alert("No puedes comer piezas del mismo color");
+				alert("¡ Piezas del mismo color !");
 				alfilnegro1.position.x=bloquerojo.position.x;alfilnegro1.position.z=bloquerojo.position.z;
 				bloqueverde.position.x=bloquerojo.position.x;bloqueverde.position.z=bloquerojo.position.z;
 			}
@@ -2651,7 +2651,7 @@ BloqueAzul.prototype.act = function(environment){
 			   (alfilnegro2.position.x==caballonegro2.position.x && alfilnegro2.position.z==caballonegro2.position.z))||
 			   (alfilnegro2.position.x==reynegro.position.x && alfilnegro2.position.z==reynegro.position.z))||
 			   (alfilnegro2.position.x==reinanegra.position.x && alfilnegro2.position.z==reinanegra.position.z)){
-				alert("No puedes comer piezas del mismo color");
+				alert("¡ Piezas del mismo color !");
 				alfilnegro2.position.x=bloquerojo.position.x;alfilnegro2.position.z=bloquerojo.position.z;
 				bloqueverde.position.x=bloquerojo.position.x;bloqueverde.position.z=bloquerojo.position.z;
 			}
@@ -2751,7 +2751,7 @@ BloqueAzul.prototype.act = function(environment){
 			   (reinablanca.position.x==caballoblanco2.position.x && reinablanca.position.z==caballoblanco2.position.z))||
 			   (reinablanca.position.x==reyblanco.position.x && reinablanca.position.z==reyblanco.position.z))||
 			   (reinablanca.position.x==alfilblanco1.position.x && reinablanca.position.z==alfilblanco1.position.z)){
-				alert("No puedes comer piezas del mismo color");
+				alert("¡ Piezas del mismo color !");
 				reinablanca.position.x=bloquerojo.position.x;reinablanca.position.z=bloquerojo.position.z;
 				bloqueverde.position.x=bloquerojo.position.x;bloqueverde.position.z=bloquerojo.position.z;
 			}
@@ -2847,7 +2847,7 @@ BloqueAzul.prototype.act = function(environment){
 			   (reinanegra.position.x==caballonegro2.position.x && reinanegra.position.z==caballonegro2.position.z))||
 			   (reinanegra.position.x==reynegro.position.x && reinanegra.position.z==reynegro.position.z))||
 			   (reinanegra.position.x==torrenegra1.position.x && reinanegra.position.z==torrenegra1.position.z)){
-				alert("No puedes comer piezas del mismo color");
+				alert("¡ Piezas del mismo color !");
 				reinanegra.position.x=bloquerojo.position.x;reinanegra.position.z=bloquerojo.position.z;
 				bloqueverde.position.x=bloquerojo.position.x;bloqueverde.position.z=bloquerojo.position.z;
 			}
@@ -2948,7 +2948,7 @@ BloqueAzul.prototype.act = function(environment){
 			   (reyblanco.position.x==caballoblanco2.position.x && reyblanco.position.z==caballoblanco2.position.z))||
 			   (reyblanco.position.x==alfilblanco1.position.x && reyblanco.position.z==alfilblanco1.position.z))||
 			   (reyblanco.position.x==reinablanca.position.x && reyblanco.position.z==reinablanca.position.z)){
-				alert("No puedes comer piezas del mismo color");
+				alert("¡ Piezas del mismo color !");
 				reyblanco.position.x=bloquerojo.position.x;reyblanco.position.z=bloquerojo.position.z;
 				bloqueverde.position.x=bloquerojo.position.x;bloqueverde.position.z=bloquerojo.position.z;
 			}
@@ -3044,7 +3044,7 @@ BloqueAzul.prototype.act = function(environment){
 			   (reynegro.position.x==caballonegro2.position.x && reynegro.position.z==caballonegro2.position.z))||
 			   (reynegro.position.x==torrenegra1.position.x && reynegro.position.z==torrenegra1.position.z))||
 			   (reynegro.position.x==reinanegra.position.x && reynegro.position.z==reinanegra.position.z)){
-				alert("No puedes comer piezas del mismo color");
+				alert("¡ Piezas del mismo color !");
 				reynegro.position.x=bloquerojo.position.x;reynegro.position.z=bloquerojo.position.z;
 				bloqueverde.position.x=bloquerojo.position.x;bloqueverde.position.z=bloquerojo.position.z;
 			}
@@ -3084,7 +3084,7 @@ BloqueAzul.prototype.act = function(environment){
 			if(caballoblanco1.position.x!=bvcb1.position.x || caballoblanco1.position.z!=bvcb1.position.z)
 			   {caballoblanco1.position.y += this.step/2;}
 			else
-			   {caballoblanco1.position.y = 4.5;}
+			   {caballoblanco1.position.y = 0;}
 		      }//fin if posicion y
 			if((caballoblanco1.position.x==torrenegra1.position.x && caballoblanco1.position.z==torrenegra1.position.z)&&
 			  (caballoblanco1.position.y==torrenegra1.position.y))
@@ -3150,8 +3150,8 @@ BloqueAzul.prototype.act = function(environment){
 			   (caballoblanco1.position.x==caballoblanco2.position.x && caballoblanco1.position.z==caballoblanco2.position.z))||
 			   (caballoblanco1.position.x==reyblanco.position.x && caballoblanco1.position.z==reyblanco.position.z))||
 			   (caballoblanco1.position.x==reinablanca.position.x && caballoblanco1.position.z==reinablanca.position.z))&&
-			   (caballoblanco1.position.y==4.5)){
-				alert("No puedes comer piezas del mismo color");
+			   (caballoblanco1.position.y==0)){
+				alert("¡ Piezas del mismo color !");
 				caballoblanco1.position.x=bloquerojo.position.x;caballoblanco1.position.z=bloquerojo.position.z;
 				bloqueverde.position.x=bloquerojo.position.x;bloqueverde.position.z=bloquerojo.position.z;
 			}
@@ -3187,7 +3187,7 @@ BloqueAzul.prototype.act = function(environment){
 			if(caballoblanco2.position.x!=bvcb2.position.x || caballoblanco2.position.z!=bvcb2.position.z)
 			   {caballoblanco2.position.y += this.step/2;}
 			else
-			   {caballoblanco2.position.y = 4.5;}
+			   {caballoblanco2.position.y = 0;}
 		      }//fin if posicion y
 			if((caballoblanco2.position.x==torrenegra1.position.x && caballoblanco2.position.z==torrenegra1.position.z)&&
 			  (caballoblanco2.position.y==torrenegra1.position.y))
@@ -3253,8 +3253,8 @@ BloqueAzul.prototype.act = function(environment){
 			   (caballoblanco2.position.x==alfilblanco1.position.x && caballoblanco2.position.z==alfilblanco1.position.z))||
 			   (caballoblanco2.position.x==reyblanco.position.x && caballoblanco2.position.z==reyblanco.position.z))||
 			   (caballoblanco2.position.x==reinablanca.position.x && caballoblanco2.position.z==reinablanca.position.z))&&
-				(caballoblanco2.position.y==4.5)){
-				alert("No puedes comer piezas del mismo color");
+				(caballoblanco2.position.y==0)){
+				alert("¡ Piezas del mismo color !");
 				caballoblanco2.position.x=bloquerojo.position.x;caballoblanco2.position.z=bloquerojo.position.z;
 				bloqueverde.position.x=bloquerojo.position.x;bloqueverde.position.z=bloquerojo.position.z;
 			}
@@ -3290,7 +3290,7 @@ BloqueAzul.prototype.act = function(environment){
 			if(caballonegro1.position.x!=bvcn1.position.x || caballonegro1.position.z!=bvcn1.position.z)
 			   {caballonegro1.position.y += this.step/2;}
 			else
-			   {caballonegro1.position.y = 4.5;}
+			   {caballonegro1.position.y = 0;}
 		      }//fin if posicion y
 			if((caballonegro1.position.x==torreblanca1.position.x && caballonegro1.position.z==torreblanca1.position.z)&&
 			  (caballonegro1.position.y==torreblanca1.position.y))
@@ -3356,8 +3356,8 @@ BloqueAzul.prototype.act = function(environment){
 			   (caballonegro1.position.x==caballonegro2.position.x && caballonegro1.position.z==caballonegro2.position.z))||
 			   (caballonegro1.position.x==reynegro.position.x && caballonegro1.position.z==reynegro.position.z))||
 			   (caballonegro1.position.x==reinanegra.position.x && caballonegro1.position.z==reinanegra.position.z))&&
-				(caballonegro1.position.y==4.5)){
-				alert("Movimiento inválido");
+				(caballonegro1.position.y==0)){
+				alert("¡ Piezas del mismo color !");
 				caballonegro1.position.x=bloquerojo.position.x;caballonegro1.position.z=bloquerojo.position.z;
 				bloqueverde.position.x=bloquerojo.position.x;bloqueverde.position.z=bloquerojo.position.z;
 			}
@@ -3393,7 +3393,7 @@ BloqueAzul.prototype.act = function(environment){
 			if(caballonegro2.position.x!=bvcn2.position.x || caballonegro2.position.z!=bvcn2.position.z)
 			   {caballonegro2.position.y += this.step/2;}
 			else
-			   {caballonegro2.position.y = 4.5;}
+			   {caballonegro2.position.y = 0;}
 		      }//fin if posicion y
 			if((caballonegro2.position.x==torreblanca1.position.x && caballonegro2.position.z==torreblanca1.position.z)&&
 			  (caballonegro2.position.y==torreblanca1.position.y))
@@ -3459,8 +3459,8 @@ BloqueAzul.prototype.act = function(environment){
 			   (caballonegro2.position.x==torrenegra1.position.x && caballonegro2.position.z==torrenegra1.position.z))||
 			   (caballonegro2.position.x==reynegro.position.x && caballonegro2.position.z==reynegro.position.z))||
 			   (caballonegro2.position.x==reinanegra.position.x && caballonegro2.position.z==reinanegra.position.z))&&
-				(caballonegro2.position.y==4.5)){
-				alert("Movimiento inválido");
+				(caballonegro2.position.y==0)){
+				alert("¡ Piezas del mismo color !");
 				caballonegro2.position.x=bloquerojo.position.x;caballonegro2.position.z=bloquerojo.position.z;
 				bloqueverde.position.x=bloquerojo.position.x;bloqueverde.position.z=bloquerojo.position.z;
 			}
@@ -3809,7 +3809,7 @@ function init() {
 	
   //////////////////////////////////////////////////Camara///////////////////////////////////////////////////////////////////////
   camara = new THREE.PerspectiveCamera();
-  camara.position.y = 135;
+  camara.position.y = 160;
   camara.position.x = 40;
   camara.position.z = 100;
   camara.lookAt(new THREE.Vector3(40, 0, 40));
