@@ -249,7 +249,7 @@ BloqueVerde.prototype = new Agent();
 function BloqueAzul(x=0,y=0,z=0){
   Agent.call(this,x,y,z);
   var luzazul =  new THREE.MeshLambertMaterial({color: 0x0000ff});
-  this.add(new THREE.Mesh(new THREE.BoxGeometry(10.1,10.1,10.1),luzazul));
+  this.add(new THREE.Mesh(new THREE.BoxGeometry(10.1,0.1,10.1),luzazul));
   this.position.y=y;
   this.position.z=z;
   this.position.x=x;
@@ -3811,7 +3811,7 @@ function init() {
   camara = new THREE.PerspectiveCamera();
   camara.position.y = 100;
   camara.position.x = 40;
-  camara.position.z = 85;
+  camara.position.z = 150;
   camara.lookAt(new THREE.Vector3(40, 0, 40));
   ///////////////////////////////////////////Renderizador//////////////////////////////////////////////////////////////////////////
   renderizador = new THREE.WebGLRenderer({antialias:true});
