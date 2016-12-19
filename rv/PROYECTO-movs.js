@@ -3945,7 +3945,7 @@ function init() {
   escena.add(grupo,grupo2,grupo3,bloqueazul);
   //Luces
   escena.add(luzblan,luzblan2,luzblan3);
-  escena.rotateZ(Math.PI/4);
+  escena.rotateX(Math.PI/4);
 }
 
 function loop() {
