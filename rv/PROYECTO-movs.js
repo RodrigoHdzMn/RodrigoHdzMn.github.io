@@ -3809,10 +3809,12 @@ function init() {
 	
   //////////////////////////////////////////////////Camara///////////////////////////////////////////////////////////////////////
   camara = new THREE.PerspectiveCamera();
+  camara.position.z=130;
+  camara.position.x=50;/*
   camara.position.y = 120;
   camara.position.x = 0;
   camara.position.z = -200;
-  camara.lookAt(new THREE.Vector3(40, 40, 40));
+  camara.lookAt(new THREE.Vector3(40, 40, 40));  */
   ///////////////////////////////////////////Renderizador//////////////////////////////////////////////////////////////////////////
   renderizador = new THREE.WebGLRenderer({antialias:true});
   renderizador.setSize( window.innerHeight*.85, window.innerHeight*.85 );
