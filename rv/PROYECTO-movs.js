@@ -3809,9 +3809,9 @@ function init() {
 	
   //////////////////////////////////////////////////Camara///////////////////////////////////////////////////////////////////////
   camara = new THREE.PerspectiveCamera();
-  camara.position.y = 200;
-  camara.position.x = 100;
-  camara.position.z = 100;
+  camara.position.y = 90;
+  camara.position.x = 45;
+  camara.position.z = -100;
   //camara.lookAt(new THREE.Vector3(40, 0, 40));
   ///////////////////////////////////////////Renderizador//////////////////////////////////////////////////////////////////////////
   renderizador = new THREE.WebGLRenderer({antialias:true});
