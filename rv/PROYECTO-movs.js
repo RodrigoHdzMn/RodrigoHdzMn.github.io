@@ -3811,7 +3811,7 @@ function init() {
   camara = new THREE.PerspectiveCamera();
   camara.position.y = 160;
   camara.position.x = 40;
-  camara.position.z = -50;
+  camara.position.z = -20;
   camara.lookAt(new THREE.Vector3(40, 0, 40));
   ///////////////////////////////////////////Renderizador//////////////////////////////////////////////////////////////////////////
   renderizador = new THREE.WebGLRenderer({antialias:true});
