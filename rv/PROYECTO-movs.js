@@ -206,7 +206,7 @@ AlfilBlanco.prototype = new Agent();
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function BloqueRojo(x=0,y=0,z=0){
   Agent.call(this,x,y,z);
-  var luzroja =  new THREE.MeshLambertMaterial({color: 0x04FF00});//FF0000
+  var luzroja =  new THREE.MeshLambertMaterial({color: 0xFF00});//FF0000
   this.add(new THREE.Mesh(new THREE.BoxGeometry(10.2,0.2,10.2),luzroja));
   this.position.y=y;
   this.position.z=z;
@@ -220,7 +220,7 @@ BloqueRojo.prototype = new Agent();
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function BloqueMorado(x=0,y=0,z=0){
   Agent.call(this,x,y,z);
-  var luzmorada = new THREE.MeshLambertMaterial({color: 0x04FF00});//FF0000
+  var luzmorada = new THREE.MeshLambertMaterial({color: 0xFF0000});//FF0000
   this.add(new THREE.Mesh(new THREE.BoxGeometry(10.1,0.1,10.1),luzmorada));
   this.position.y=y;
   this.position.z=z;
@@ -234,7 +234,7 @@ BloqueMorado.prototype = new Agent();
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function BloqueVerde(x=0,y=0,z=0){
   Agent.call(this,x,y,z);
-  var luzverde = new THREE.MeshLambertMaterial({color: 0x005AFF});//FFFF00
+  var luzverde = new THREE.MeshLambertMaterial({color: 0xFFFF00});//FFFF00
   this.add(new THREE.Mesh(new THREE.BoxGeometry(10.2,0.2,10.2),luzverde));
   this.position.y=y;
   this.position.z=z;
@@ -248,7 +248,7 @@ BloqueVerde.prototype = new Agent();
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function BloqueAzul(x=0,y=0,z=0){
   Agent.call(this,x,y,z);
-  var luzazul =  new THREE.MeshLambertMaterial({color: 0xff0000});//0000FF
+  var luzazul =  new THREE.MeshLambertMaterial({color: 0x0000FF});//0000FF
   this.add(new THREE.Mesh(new THREE.BoxGeometry(10.1,0.1,10.1),luzazul));
   this.position.y=y;
   this.position.z=z;
@@ -3767,7 +3767,7 @@ BloqueAzul.prototype.act = function(environment){
 ////////////////////////////////////Bloque Rojo///////////////////////////////////////////////////////////////////////////////////////
 function BloqueRojo(x=0,y=0,z=0){
   Agent.call(this,x,y,z);
-  var luzroja =  new THREE.MeshLambertMaterial({color: 0x04FF00});//FF0000
+  var luzroja =  new THREE.MeshLambertMaterial({color: 0xFF0000});//FF0000
   this.add(new THREE.Mesh(new THREE.BoxGeometry(10.2,0.2,10.2),luzroja));
   this.position.y=y;
   this.position.z=z;
@@ -3778,7 +3778,7 @@ BloqueRojo.prototype = new Agent();
 ///////////////////////////////////Bloque Morado//////////////////////////////////////////////////////////////////////////////////////	    
 function BloqueMorado(x=0,y=0,z=0){
   Agent.call(this,x,y,z);
-  var luzmorada = new THREE.MeshLambertMaterial({color: 0x04FF00});//FF0000
+  var luzmorada = new THREE.MeshLambertMaterial({color: 0xFF0000});//FF0000
   this.add(new THREE.Mesh(new THREE.BoxGeometry(10.1,0.1,10.1),luzmorada));
   this.position.y=y;
   this.position.z=z;
@@ -3789,7 +3789,7 @@ BloqueMorado.prototype = new Agent();
 ///////////////////////////////////////Bloque verde//////////////////////////////////////////////////////////////////////////////
 function BloqueVerde(x=0,y=0,z=0){
   Agent.call(this,x,y,z);
-  var luzverde = new THREE.MeshLambertMaterial({color: 0x005AFF});//FFFF00
+  var luzverde = new THREE.MeshLambertMaterial({color: 0xFFFF00});//FFFF00
   this.add(new THREE.Mesh(new THREE.BoxGeometry(10.2,0.2,10.2),luzverde));
   this.position.y=y;
   this.position.z=z;
@@ -3810,8 +3810,8 @@ function init() {
   //////////////////////////////////////////////////Camara///////////////////////////////////////////////////////////////////////
   camara = new THREE.PerspectiveCamera();
   camara.position.z=130;//130
-  camara.position.x=-20;//50
-  camara.position.y=50;/*
+  camara.position.x=-40;//50
+  camara.position.y=65;/*
   camara.position.y = 120;
   camara.position.x = 0;
   camara.position.z = -200;
