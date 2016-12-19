@@ -263,17 +263,17 @@ BloqueAzul.prototype.act = function(environment){
       var tecla = pieza.which;
         switch (tecla){
           case 37 : //Izquierda
-			if (bandera===1){
-		  if (bloqueverde.position.z<=-20){
-		    bloqueverde.translateZ(10);
+	            if (bandera===1){
+		  if (bloqueverde.position.z>=-70){
+		    bloqueverde.translateZ(-10);
 		  }
 		}
 		else{
 	  	   escena.remove(grupomorado);
 	           escena.remove(bloquerojo);
 	           escena.remove(bloqueverde);
-		   if (bloqueazul.position.z<=-20){
-		     bloqueazul.translateZ(10);
+		   if (bloqueazul.position.z>=-70){
+	             bloqueazul.translateZ(-10);
 		   }
 		}
 		
@@ -295,20 +295,21 @@ BloqueAzul.prototype.act = function(environment){
 		
                 break;
           case 39 :  //Derecha 
+			
+			//++++++++++++++++++++++++++
 			if (bandera===1){
-		  if (bloqueverde.position.z>=-70){
-		    bloqueverde.translateZ(-10);
+		  if (bloqueverde.position.z<=-20){
+		    bloqueverde.translateZ(10);
 		  }
 		}
 		else{
 	  	   escena.remove(grupomorado);
 	           escena.remove(bloquerojo);
 	           escena.remove(bloqueverde);
-		   if (bloqueazul.position.z>=-70){
-	             bloqueazul.translateZ(-10);
+		   if (bloqueazul.position.z<=-20){
+		     bloqueazul.translateZ(10);
 		   }
 		}
-			//++++++++++++++++++++++++++
 		
                 break;
           case 40 :  //Abajo
