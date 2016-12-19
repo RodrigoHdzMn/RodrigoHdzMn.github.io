@@ -214,10 +214,10 @@ function loop() {
                   	          torre1.translateX(-10);
                   break;
               case 38 :  //Arriba
-			   if(torre1.position.y===80)
+			   if(torre1.position.y===10)
 				  torre1.translateZ(0);//No hacer Nada
 			  else
-                                  torre1.translateZ(10);
+                                  torre1.translateZ(-10);
                   break;
               case 39 :  //Derecha 
 			   if(torre1.position.x===80)
@@ -226,10 +226,10 @@ function loop() {
                                   torre1.translateX(10);
                   break;
               case 40 :  //Abajo
-			   if(torre1.position.y===10)
+			   if(torre1.position.y===80)
 				  torre1.translateZ(0);//No hacer Nada
 			  else
-                                  torre1.translateZ(-10);
+                                  torre1.translateZ(10);
                   break;
           default :alert("Pulsar las flechas del teclado");
           }
