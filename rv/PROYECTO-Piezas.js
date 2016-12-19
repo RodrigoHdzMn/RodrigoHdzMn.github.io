@@ -1,7 +1,7 @@
 
-//************************************
+//************************************************************************
 //-------------Alfil------------------
-//************************************
+//************************************************************************
 var Tb=0.8*4.5;//tamaño base
         var altura1=Tb/4;
         var baseForma= new THREE.CylinderGeometry(Tb, Tb*1.25, altura1,60 );//dia.sup, dia.inf, altura
@@ -74,9 +74,9 @@ var Tb=0.8*4.5;//tamaño base
 
 
 
-//************************************
+//************************************************************************
 //-------------Caballo----------------
-//************************************
+//************************************************************************
 //Base
 var tallo = [];
 for ( var i = 0; i < 30; i ++ ) 
@@ -128,9 +128,9 @@ caballoForma.merge(CaballoMalla.geometry,CaballoMalla.matrix);
 
 
 
-//************************************
+//************************************************************************
 //--------------Peon------------------
-//************************************
+//************************************************************************
 var Tb=0.8*3.25;//tamaño base
 	var altura1=Tb/4;
 	var baseForma= new THREE.CylinderGeometry(Tb, Tb, altura1,60 );//dia.sup, dia.inf, altura
@@ -180,19 +180,246 @@ var Tb=0.8*3.25;//tamaño base
 
 
 
-//************************************
+//************************************************************************
 //--------------Rey-------------------
-//************************************
+//************************************************************************
+var base = new THREE.CylinderGeometry(5,5,3,50);
+  var material = new THREE.MeshNormalMaterial();
 
+  var columna1 = new THREE.CylinderGeometry(3.5,4,2,50);
+  columna1.translate(0,2.5,0);
 
-//************************************
+  var toroide1 = new THREE.TorusGeometry(3.5,.5,50,50);
+  toroide1.rotateX(Math.PI/2);
+  toroide1.translate(0,3.5,0);
+
+  var columna2 = new THREE.CylinderGeometry(2,3.5,14,50);
+  columna2.translate(0,10.5,0);
+
+  var btecho = new THREE.CylinderGeometry(2,3.2,2,50);
+  btecho.translate(0,16.5,0);
+
+  var toroide2 = new THREE.TorusGeometry(2,.35,50,50);
+  toroide2.rotateX(Math.PI/2);
+  toroide2.translate(0,17.6,0);
+
+  var toroide3 = new THREE.TorusGeometry(1.75,.35,50,50);
+  toroide3.rotateX(Math.PI/2);
+  toroide3.translate(0,17.8,0);
+
+  var corona1 = new THREE.CylinderGeometry(2,1.5,3,50);
+  corona1.translate(0,19,0);
+
+  var corona2 = new THREE.CylinderGeometry(1,2,.5,50);
+  corona2.translate(0,20.75,0);
+
+  //Cruz
+  var forma=new THREE.Shape();
+
+  forma.moveTo(-1,1);
+  forma.lineTo(-10,3);
+  forma.lineTo(-10,-3);
+  forma.lineTo(-1,-1);
+  forma.lineTo(-3,-10);
+  forma.lineTo(3,-10);
+  forma.lineTo(1,-1);
+  forma.lineTo(10,-3);
+  forma.lineTo(10,3);
+  forma.lineTo(1,1);
+  forma.lineTo(3,10);
+  forma.lineTo(-3,10);
+  forma.lineTo(-1,1);
+
+  var cruz= new THREE.ExtrudeGeometry(forma,{amount:2});
+  cruz.scale(.12,.12,.12);
+  cruz.translate(0,22.2,0);
+
+  //Mallas
+  var mbase = new THREE.Mesh(base);
+  var mcolumna1 = new THREE.Mesh(columna1);
+  var mtoroide1 = new THREE.Mesh(toroide1);
+  var mcolumna2 = new THREE.Mesh(columna2);
+  var mbtecho = new THREE.Mesh(btecho);
+  var mtoroide2 = new THREE.Mesh(toroide2);
+  var mtoroide3 = new THREE.Mesh(toroide3);
+  var mcorona1 = new THREE.Mesh(corona1);
+  var mcorona2 = new THREE.Mesh(corona2);
+  var mcruz = new THREE.Mesh(cruz);
+
+//Cuerpo completo
+
+  var reyfinal = new THREE.Geometry();
+  reyfinal.merge(mbase.geometry,mbase.matrix);
+  reyfinal.merge(mcolumna1.geometry,mcolumna1.matrix);
+
+  var mreyfinal = new THREE.Mesh(reyfinal);
+
+  var reyfinal2 = new THREE.Geometry();
+  reyfinal2.merge(mreyfinal.geometry,mreyfinal.matrix);
+  reyfinal2.merge(mcolumna1.geometry,mcolumna1.matrix);
+
+  var mreyfinal2 = new THREE.Mesh(reyfinal2);
+
+  var reyfinal3 = new THREE.Geometry();
+  reyfinal3.merge(mreyfinal2.geometry,mreyfinal2.matrix);
+  reyfinal3.merge(mtoroide1.geometry,mtoroide1.matrix);
+
+  var mreyfinal3 = new THREE.Mesh(reyfinal3);
+
+  var reyfinal4 = new THREE.Geometry();
+  reyfinal4.merge(mreyfinal3.geometry,mreyfinal3.matrix);
+  reyfinal4.merge(mcolumna2.geometry,mcolumna2.matrix);
+
+  var mreyfinal4 = new THREE.Mesh(reyfinal4);
+
+  var reyfinal5 = new THREE.Geometry();
+  reyfinal5.merge(mreyfinal4.geometry,mreyfinal4.matrix);
+  reyfinal5.merge(mbtecho.geometry,mbtecho.matrix);
+
+  var mreyfinal5 = new THREE.Mesh(reyfinal5);
+
+  var reyfinal6 = new THREE.Geometry();
+  reyfinal6.merge(mreyfinal5.geometry,mreyfinal5.matrix);
+  reyfinal6.merge(mtoroide2.geometry,mtoroide2.matrix);
+
+  var mreyfinal6 = new THREE.Mesh(reyfinal6);
+
+  var reyfinal7 = new THREE.Geometry();
+  reyfinal7.merge(mreyfinal6.geometry,mreyfinal6.matrix);
+  reyfinal7.merge(mtoroide3.geometry,mtoroide3.matrix);
+
+  var mreyfinal7 = new THREE.Mesh(reyfinal7);
+
+  var reyfinal8 = new THREE.Geometry();
+  reyfinal8.merge(mreyfinal7.geometry,mreyfinal7.matrix);
+  reyfinal8.merge(mcorona1.geometry,mcorona1.matrix);
+
+  var mreyfinal8 = new THREE.Mesh(reyfinal8);
+
+  var reyfinal9 = new THREE.Geometry();
+  reyfinal9.merge(mreyfinal8.geometry,mreyfinal8.matrix);
+  reyfinal9.merge(mcorona2.geometry,mcorona2.matrix);
+
+  var mreyfinal9 = new THREE.Mesh(reyfinal9);
+
+  var king= new THREE.Geometry();
+  king.merge(mreyfinal9.geometry,mreyfinal9.matrix);
+  king.merge(mcruz.geometry,mcruz.matrix);
+  
+  
+
+//************************************************************************
 //--------------Reina-----------------
-//************************************
+//************************************************************************
+var base = new THREE.CylinderGeometry(5,5,3,50);
+  var material = new THREE.MeshNormalMaterial();
+
+  var columna1 = new THREE.CylinderGeometry(3.5,4,2,50);
+  columna1.translate(0,2.5,0);
+
+  var toroide1 = new THREE.TorusGeometry(3.5,.5,50,50);
+  toroide1.rotateX(Math.PI/2);
+  toroide1.translate(0,3.5,0);
+
+  var columna2 = new THREE.CylinderGeometry(1.75,3.5,14,50);
+  columna2.translate(0,10.5,0);
+
+  var btecho = new THREE.CylinderGeometry(2,3,2,50);
+  btecho.translate(0,16.5,0);
+
+  var toroide2 = new THREE.TorusGeometry(2,.35,50,50);
+  toroide2.rotateX(Math.PI/2);
+  toroide2.translate(0,17.6,0);
+
+  var toroide3 = new THREE.TorusGeometry(1.75,.35,50,50);
+  toroide3.rotateX(Math.PI/2);
+  toroide3.translate(0,17.8,0);
+
+  var corona1 = new THREE.CylinderGeometry(2,1.5,3,50);
+  corona1.translate(0,19,0);
+
+  var corona2 = new THREE.SphereGeometry(1.8,50,50);
+  corona2.translate(0,19.5,0);
+
+  var bola = new THREE.SphereGeometry(.5,50,50);
+  bola.translate(0,21.5,0);
+  //Mallas
+  var mbase = new THREE.Mesh(base);
+  var mcolumna1 = new THREE.Mesh(columna1);
+  var mtoroide1 = new THREE.Mesh(toroide1);
+  var mcolumna2 = new THREE.Mesh(columna2);
+  var mbtecho = new THREE.Mesh(btecho);
+  var mtoroide2 = new THREE.Mesh(toroide2);
+  var mtoroide3 = new THREE.Mesh(toroide3);
+  var mcorona1 = new THREE.Mesh(corona1);
+  var mcorona2 = new THREE.Mesh(corona2);
+  var mbola = new THREE.Mesh(bola);
+
+//Cuerpo completo
+
+  var reinafinal = new THREE.Geometry();
+  reinafinal.merge(mbase.geometry,mbase.matrix);
+  reinafinal.merge(mcolumna1.geometry,mcolumna1.matrix);
+
+  var mreinafinal = new THREE.Mesh(reinafinal);
+
+  var reinafinal2 = new THREE.Geometry();
+  reinafinal2.merge(mreinafinal.geometry,mreinafinal.matrix);
+  reinafinal2.merge(mcolumna1.geometry,mcolumna1.matrix);
+
+  var mreinafinal2 = new THREE.Mesh(reinafinal2);
+
+  var reinafinal3 = new THREE.Geometry();
+  reinafinal3.merge(mreinafinal2.geometry,mreinafinal2.matrix);
+  reinafinal3.merge(mtoroide1.geometry,mtoroide1.matrix);
+
+  var mreinafinal3 = new THREE.Mesh(reinafinal3);
+
+  var reinafinal4 = new THREE.Geometry();
+  reinafinal4.merge(mreinafinal3.geometry,mreinafinal3.matrix);
+  reinafinal4.merge(mcolumna2.geometry,mcolumna2.matrix);
+
+  var mreinafinal4 = new THREE.Mesh(reinafinal4);
+
+  var reinafinal5 = new THREE.Geometry();
+  reinafinal5.merge(mreinafinal4.geometry,mreinafinal4.matrix);
+  reinafinal5.merge(mbtecho.geometry,mbtecho.matrix);
+
+  var mreinafinal5 = new THREE.Mesh(reinafinal5);
+
+  var reinafinal6 = new THREE.Geometry();
+  reinafinal6.merge(mreinafinal5.geometry,mreinafinal5.matrix);
+  reinafinal6.merge(mtoroide2.geometry,mtoroide2.matrix);
+
+  var mreinafinal6 = new THREE.Mesh(reinafinal6);
+
+  var reinafinal7 = new THREE.Geometry();
+  reinafinal7.merge(mreinafinal6.geometry,mreinafinal6.matrix);
+  reinafinal7.merge(mtoroide3.geometry,mtoroide3.matrix);
+
+  var mreinafinal7 = new THREE.Mesh(reinafinal7);
+
+  var reinafinal8 = new THREE.Geometry();
+  reinafinal8.merge(mreinafinal7.geometry,mreinafinal7.matrix);
+  reinafinal8.merge(mcorona1.geometry,mcorona1.matrix);
+
+  var mreinafinal8 = new THREE.Mesh(reinafinal8);
+
+  var reinafinal9 = new THREE.Geometry();
+  reinafinal9.merge(mreinafinal8.geometry,mreinafinal8.matrix);
+  reinafinal9.merge(mcorona2.geometry,mcorona2.matrix);
+
+  var mreinafinal9 = new THREE.Mesh(reinafinal9);
+
+  var queen = new THREE.Geometry();
+  queen.merge(mreinafinal9.geometry,mreinafinal9.matrix);
+  queen.merge(mbola.geometry,mbola.matrix);
 
 
-//************************************
+
+//************************************************************************
 //--------------Torre-----------------
-//************************************
+//************************************************************************
 var Tb=0.8*5;//tamaño base
 	var altura1=Tb/4;
 	var baseForma= new THREE.CylinderGeometry(Tb, Tb, altura1,60 );//dia.sup, dia.inf, altura
