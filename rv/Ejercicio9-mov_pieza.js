@@ -229,7 +229,7 @@ function loop() {
 			   if(torre1.position.y===10)
 				  torre1.translateZ(0);//No hacer Nada
 			  else
-                                  torre1.translateZ(10);
+                                  torre1.translateZ(-10);
                   break;
           default :alert("Pulsar las flechas del teclado");
           }
