@@ -120,7 +120,7 @@ function init(){
     var madera = new THREE.MeshBasicMaterial({map:textura5});
     
 torre1=new THREE.Mesh(torreForma,marmolblanco);
-    torre1.position.y=10;
+    torre1.position.y=80;
     torre1.position.x=10;
     torre1.rotateX(-Math.PI/2);
 
