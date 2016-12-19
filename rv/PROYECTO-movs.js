@@ -3944,7 +3944,7 @@ function init() {
   bloqueazul = new BloqueAzul(10,0,-10);
   escena.add(grupo,grupo2,grupo3,bloqueazul);
   //Luces
-  escena.add(luzblan,luzblan2,luzblan3);
+ // escena.add(luzblan,luzblan2,luzblan3);
   escena.rotateY(Math.PI/2);
 }
 
