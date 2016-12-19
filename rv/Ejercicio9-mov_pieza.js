@@ -217,7 +217,7 @@ function loop() {
 			   if(torre1.position.y===80)
 				  torre1.translateZ(0);//No hacer Nada
 			  else
-                                  torre1.translateZ(-10);
+                                  torre1.translateZ(10);
                   break;
               case 39 :  //Derecha 
 			   if(torre1.position.x===80)
