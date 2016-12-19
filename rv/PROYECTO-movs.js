@@ -3956,6 +3956,7 @@ function init() {
   //Luces
  // escena.add(luzblan,luzblan2,luzblan3);
   escena.rotateY(Math.PI/2);
+  escena.rotateX(Math.PI/6);
 }
 
 function loop() {
