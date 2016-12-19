@@ -3767,7 +3767,7 @@ BloqueAzul.prototype.act = function(environment){
 ////////////////////////////////////Bloque Rojo///////////////////////////////////////////////////////////////////////////////////////
 function BloqueRojo(x=0,y=0,z=0){
   Agent.call(this,x,y,z);
-  var luzroja =  new THREE.MeshLambertMaterial({color: 0xff0000});
+  var luzroja =  new THREE.MeshLambertMaterial({color: 0x04FF00});//verde
   this.add(new THREE.Mesh(new THREE.BoxGeometry(10.2,0.2,10.2),luzroja));
   this.position.y=y;
   this.position.z=z;
@@ -3778,7 +3778,7 @@ BloqueRojo.prototype = new Agent();
 ///////////////////////////////////Bloque Morado//////////////////////////////////////////////////////////////////////////////////////	    
 function BloqueMorado(x=0,y=0,z=0){
   Agent.call(this,x,y,z);
-  var luzmorada = new THREE.MeshLambertMaterial({color: 0xff0000});
+  var luzmorada = new THREE.MeshLambertMaterial({color: 0x04FF00});//verde
   this.add(new THREE.Mesh(new THREE.BoxGeometry(10.1,0.1,10.1),luzmorada));
   this.position.y=y;
   this.position.z=z;
@@ -3789,7 +3789,7 @@ BloqueMorado.prototype = new Agent();
 ///////////////////////////////////////Bloque verde//////////////////////////////////////////////////////////////////////////////
 function BloqueVerde(x=0,y=0,z=0){
   Agent.call(this,x,y,z);
-  var luzverde = new THREE.MeshLambertMaterial({color: 0xffff00});
+  var luzverde = new THREE.MeshLambertMaterial({color: 0x00DEFF});//AZUL
   this.add(new THREE.Mesh(new THREE.BoxGeometry(10.2,0.2,10.2),luzverde));
   this.position.y=y;
   this.position.z=z;
@@ -3810,7 +3810,7 @@ function init() {
   //////////////////////////////////////////////////Camara///////////////////////////////////////////////////////////////////////
   camara = new THREE.PerspectiveCamera();
   camara.position.y = 120;
-  camara.position.x = 40;
+  camara.position.x = 80;
   camara.position.z = -190;
   camara.lookAt(new THREE.Vector3(40, 0, 40));
   ///////////////////////////////////////////Renderizador//////////////////////////////////////////////////////////////////////////
