@@ -3812,7 +3812,7 @@ function init() {
   camara.position.y = 200;
   camara.position.x = 40;
   camara.position.z = 40;
-  camara.lookAt(new THREE.Vector3(40, 0, 40));
+  //camara.lookAt(new THREE.Vector3(40, 0, 40));
   ///////////////////////////////////////////Renderizador//////////////////////////////////////////////////////////////////////////
   renderizador = new THREE.WebGLRenderer({antialias:true});
   renderizador.setSize( window.innerHeight*.85, window.innerHeight*.85 );
