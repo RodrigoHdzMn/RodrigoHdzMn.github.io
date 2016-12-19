@@ -3815,7 +3815,7 @@ function init() {
 	
   //////////////////////////////////////////////////Camara///////////////////////////////////////////////////////////////////////
   camara = new THREE.PerspectiveCamera();
-  camara.position.z=100;//130
+  camara.position.z=160;//130
   camara.position.x=-40;//50
   camara.position.y=65;/*
   camara.position.y = 120;
