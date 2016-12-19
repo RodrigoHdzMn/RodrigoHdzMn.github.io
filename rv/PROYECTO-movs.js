@@ -3810,7 +3810,7 @@ function init() {
   //////////////////////////////////////////////////Camara///////////////////////////////////////////////////////////////////////
   camara = new THREE.PerspectiveCamera();
   camara.position.y = 120;
-  camara.position.x = 40;
+  camara.position.x = 80;
   camara.position.z = -200;
   camara.lookAt(new THREE.Vector3(40, 40, 40));
   ///////////////////////////////////////////Renderizador//////////////////////////////////////////////////////////////////////////
@@ -3818,7 +3818,7 @@ function init() {
   renderizador.setSize( window.innerHeight*.85, window.innerHeight*.85 );
   renderizador.shadowMap.enabled=true;
   document.body.appendChild(renderizador.domElement);
-  
+  /*
   /////////////////////////////////////////////////////Luces/////////////////////////////////////////////////////////////////////
   var luzblan= new THREE.PointLight(0xFFFFFF);
   var luzblan2=new THREE.PointLight(0xFFFFFF);
@@ -3830,7 +3830,7 @@ function init() {
   luzblan2.position.y=300;  luzblan2.position.z=-150; luzblan2.position.x=50;
   luzblan3.position.y=-300;  luzblan3.position.z=-50;  luzblan3.position.x=50;
   ///////////////////////////////////////////////Textura/////////////////////////////////////////////////////////////////////////////
-
+*/
   var textura3 = new THREE.TextureLoader().load('Textura_marmol_negro.jpg');
   var textura4 = new THREE.TextureLoader().load('Textura_marmol_blanco.jpg');
   var textura5 = new THREE.TextureLoader().load('Textura_madera_cafe.jpg');
